@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .sk-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .step-row { display:grid; grid-template-columns:32px 1fr; gap:14px; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.1); align-items:baseline; }
+  .step-num { font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 08 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-AGENT-SKILLS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 08 · Capabilities, Not Personas</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Agent Skill Library</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Reusable AI capabilities — each one a specification of what an agent can do, shared across every agent that needs it. Improve a skill once; every agent using it improves immediately.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Skill ≠ Agent. A Skill is a capability spec (this library). An Agent (Discovery, Proposal, Research, PM, Meeting Notes, Invoice, QA, Client Success, Knowledge, Expansion) is a role that composes one or more Skills — agents are defined elsewhere, not on this page.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-001</span>Sprint 01 — Discovery Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-002</span>Sprint 02 — Proposal Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-003</span>Sprint 03 — SOW Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-004</span>Sprint 04 — Financial Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-005</span>Sprint 05 — Project Manager Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-006</span>Sprint 06 — Meeting Intelligence Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-007</span>Sprint 07 — Quality Assurance Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-008</span>Sprint 08 — Client Success Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-009</span>Sprint 09 — Knowledge Capture Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">SKILL-010</span>Sprint 10 — Expansion Skill</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as skills are defined — send each skill's spec (purpose, trigger, inputs, processing logic, decision points, templates, workflows, outputs, success criteria, human review, escalation, future automation) to add it here.</div>
+</div>
+
+<!-- ============ SKILL-001 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Discovery Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Conduct discovery and produce structured outputs — the reusable capability underneath PB-001, callable by any agent that needs to run a discovery pass.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:420px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Receive Discovery Context</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Ask Questions</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Capture Answers</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Identify Problems</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Generate Summary <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-006)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Recommend Next Steps</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This is a capability, not an agent — a Discovery Agent, a Research Agent, or a future client-facing intake tool could all call this same Skill.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Identify Problems</div><div class="field-val">If the stated problem doesn't map to any known Client Package pattern, flag for human review rather than forcing a fit.</div></div>
+  </div>
+</div>
+
+<!-- ============ SKILL-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Discovery Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-001</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Discovery Skill</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Conduct discovery and produce a structured, decision-ready summary from unstructured client conversation.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A confirmed Discovery meeting begins, or raw meeting transcript/notes become available (WF-001).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Qualification call notes, meeting transcript or live notes, the standard discovery question set.</div></div>
+    <div class="field-row"><div class="field-label">Process</div><div class="field-val">Ask the standard question set → capture answers verbatim → cluster answers into problem statements → draft summary → propose Next Steps.</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">A structured Discovery Report draft, a list of identified problems ranked by client-stated urgency, a Next Steps recommendation.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-006 — Discovery Report</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-001 — Lead to Discovery · Related Playbook: PB-001</div></div>
+    <div class="field-row"><div class="field-label">Quality Rules</div><div class="field-val">Every problem statement must trace to a direct client quote; no inferred needs presented as stated needs.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Escalation Conditions</div><div class="field-val">Escalate to a human if the client's stated problem contradicts earlier qualification data, or matches no known Package pattern.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Human Review Requirement: the Discovery Report draft is always reviewed by the Engagement Lead before it is shared with the client — this Skill drafts, it does not finalize.</div>
+</div>
+
+<!-- ============ SKILL-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Proposal Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Generate Proposal Version 1 — a first-draft assembly for human review, not a client-ready send.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-002</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Proposal Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A reviewed Discovery Report exists and a Client Package has been matched (WF-002).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Discovery Report, matched Client Package, pricing inputs.</div></div>
+    <div class="field-row"><div class="field-label">Proposal Structure</div><div class="field-val">Cover → Executive Summary → Diagnosis → Recommended Package → Pricing → Timeline → Approval Block.</div></div>
+    <div class="field-row"><div class="field-label">Component References</div><div class="field-val mono">COMP-703 Feature Card · COMP-301 Pricing Table · COMP-405 Phase Card</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-001 — Proposal</div></div>
+    <div class="field-row"><div class="field-label">Review Rules</div><div class="field-val">Executive Summary is regenerated last, after every other section, so it reflects the finished draft.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Outputs</div><div class="field-val">A Proposal v1 draft routed to Internal Review (PB-002) — never sent to a client directly from this Skill.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Human Review Requirement: mandatory Internal Review before send. Escalation: any pricing deviating from the matched Package's norms routes to a human before drafting continues.</div>
+</div>
+
+<!-- ============ SKILL-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — SOW Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Generate a Statement of Work from an approved Proposal — converting agreed intent into binding, unambiguous scope.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-003</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">SOW Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Proposal Approved (WF-003).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Approved Proposal, matched Client Package's typical timeline.</div></div>
+    <div class="field-row"><div class="field-label">Scope Rules</div><div class="field-val">Every deliverable in the SOW must trace to a line in the approved Proposal — no scope introduced that wasn't priced.</div></div>
+    <div class="field-row"><div class="field-label">Deliverables</div><div class="field-val">Enumerated as discrete, checkable items — never a paragraph description a client can't verify against.</div></div>
+    <div class="field-row"><div class="field-label">Timeline</div><div class="field-val">Built from the matched Package's typical timeline, adjusted only for stated client constraints.</div></div>
+    <div class="field-row"><div class="field-label">Assumptions</div><div class="field-val">Any dependency on client-provided access, content, or decisions is listed explicitly, not implied.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Acceptance Criteria</div><div class="field-val">Each deliverable gets a plain-language definition of "done" the client can confirm without technical interpretation.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: TEMP-002 — Statement of Work. Related Workflow: WF-003 — Proposal to Agreement. Human Review Requirement: legal/Engagement Lead review before signature request. Escalation: any deliverable that can't be traced to the Proposal routes to a human before the SOW is finalized.</div>
+</div>
+
+<!-- ============ SKILL-004 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Financial Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Handle financial documentation — invoices, receipts, and payment schedules generated with zero arithmetic drift from the signed Agreement.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-004</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Financial Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Agreement signed (WF-004); recurring billing date reached for standing engagements.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Signed Agreement pricing terms, billing contact, payment status feed.</div></div>
+    <div class="field-row"><div class="field-label">Invoice Generation</div><div class="field-val">Line items pulled directly from Agreement pricing — no manually re-typed figures.</div></div>
+    <div class="field-row"><div class="field-label">Receipt Generation</div><div class="field-val">Issued same-day on confirmed payment, referencing the originating Invoice ID.</div></div>
+    <div class="field-row"><div class="field-label">Payment Schedule</div><div class="field-val">For multi-installment engagements, schedule is generated once from the Agreement and never manually re-edited without a logged reason.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Financial Validation</div><div class="field-val">Every generated figure is checked against the Agreement total before sending — any mismatch blocks send and escalates.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: TEMP-003 Invoice · TEMP-004 Receipt. Related Workflow: WF-004 — Agreement to Payment. Human Review Requirement: none for standard invoices matching Agreement terms exactly; Finance reviews any flagged mismatch. Escalation: any figure that doesn't reconcile with the Agreement halts generation and notifies Finance immediately.</div>
+</div>
+
+<!-- ============ SKILL-005 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Project Manager Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Manage project execution — the recurring cadence engine underneath PB-004's Weekly Operations Playbook.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-005</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Project Manager Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Project Active (WF-006); runs weekly for the life of the engagement.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Task tracker status, project Timeline and Milestones, prior week's risk log.</div></div>
+    <div class="field-row"><div class="field-label">Weekly Review</div><div class="field-val">Compiles task status, blockers, and upcoming deadlines into a structured internal summary.</div></div>
+    <div class="field-row"><div class="field-label">Risk Detection</div><div class="field-val">Flags any task slipping against its Milestone date and rates it red, yellow, or green against the risk log.</div></div>
+    <div class="field-row"><div class="field-label">Milestone Tracking</div><div class="field-val">Updates the Timeline/Gate Indicator components as milestones move toward or reach completion.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Progress Reports</div><div class="field-val">Drafts the Weekly Report (TEMP-007) from the above for human approval before it reaches the client.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: TEMP-007 Weekly Report · COMP-401–406 Timeline family. Related Workflow: WF-007 — Delivery &amp; Weekly Operations. Human Review Requirement: Engagement Lead approves every Weekly Report before it is sent. Escalation: any risk newly rated red is surfaced to the Engagement Lead the same day, not held for the weekly cycle.</div>
+</div>
+
+<!-- ============ SKILL-006 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Meeting Intelligence Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Convert meetings into knowledge — a cross-cutting capability any workflow's meeting (Discovery, Kickoff, Weekly Sync, Milestone Review) can call.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-006</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Meeting Intelligence Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Any recorded or live-noted client or internal meeting concludes.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Meeting transcript or live notes, attendee list, meeting type (Discovery, Kickoff, Weekly, Milestone).</div></div>
+    <div class="field-row"><div class="field-label">Meeting Notes</div><div class="field-val">Structured summary organized by topic, not chronology.</div></div>
+    <div class="field-row"><div class="field-label">Action Items</div><div class="field-val">Extracted with an owner and implied or stated deadline for each.</div></div>
+    <div class="field-row"><div class="field-label">Decisions</div><div class="field-val">Logged as Decision Boxes (COMP-504) distinct from open discussion points.</div></div>
+    <div class="field-row"><div class="field-label">Risks</div><div class="field-val">Any concern raised is captured and routed to SKILL-005's risk log for rating.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Follow-ups</div><div class="field-val">Unresolved questions compiled into a follow-up list with suggested next contact date.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: COMP-504 Decision Box · COMP-706 Checklist. Related Workflows: feeds WF-001, WF-005, WF-007, WF-008 wherever a meeting occurs. Human Review Requirement: Action Items and Decisions are confirmed by a human attendee before being marked final. Escalation: any Decision that appears to contradict a signed Agreement or SOW routes to the Engagement Lead before being logged.</div>
+</div>
+
+<!-- ============ SKILL-007 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Quality Assurance Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Validate deliverables before release — the last gate every document or asset passes through before a client sees it.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-007</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Quality Assurance Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Any document drafted by SKILL-002/003/004 or produced under any Playbook, immediately before send.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">The draft document, its source Template ID, and the metadata it was assembled from.</div></div>
+    <div class="field-row"><div class="field-label">QA Checklist</div><div class="field-val">Runs the document against its Template's own Required Output checklist before anything else.</div></div>
+    <div class="field-row"><div class="field-label">Brand Compliance</div><div class="field-val">Confirms only approved SOS colors, type, and components are used — no invented styling.</div></div>
+    <div class="field-row"><div class="field-label">Component Validation</div><div class="field-val">Every component reference in the document exists in the Component Library at its cited COMP-ID.</div></div>
+    <div class="field-row"><div class="field-label">Metadata Validation</div><div class="field-val">All thirteen mandatory metadata fields are present and non-empty, or explicitly marked em-dash.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completeness Review</div><div class="field-val">Confirms every section named in the source Template's spec is present in the draft, none silently dropped.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: none — this Skill validates against every Template's own spec rather than producing new content. Related Workflows: runs inside every Workflow at its document-producing step. Human Review Requirement: any failed check blocks send and requires human resolution — QA never auto-corrects and re-sends. Escalation: repeated failures of the same check across documents route to PB-010 Internal Operations as a systemic issue, not a one-off fix.</div>
+</div>
+
+<!-- ============ SKILL-008 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Client Success Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Monitor client satisfaction — the early-warning system that keeps Support relationships (WF-010) stable before they need rescuing.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-008</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Client Success Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Runs continuously for any client with an active engagement or in Support (post WF-009).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Weekly Report history, response times to Client Updates, Meeting Intelligence sentiment, Support ticket volume.</div></div>
+    <div class="field-row"><div class="field-label">Health Score</div><div class="field-val">A composite signal from engagement responsiveness, sentiment, and delivery consistency — trend, not a single snapshot.</div></div>
+    <div class="field-row"><div class="field-label">Risks</div><div class="field-val">Declining responsiveness or repeated red risk ratings surfaced as a relationship risk, distinct from a project risk.</div></div>
+    <div class="field-row"><div class="field-label">Opportunities</div><div class="field-val">Sustained high health score flagged as a candidate for SKILL-009's expansion or referral outreach.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Communication Recommendations</div><div class="field-val">Suggests when to increase touchpoint frequency, or when a Health Score decline warrants a direct Engagement Lead call.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: COMP-802 KPI Card. Related Workflows: WF-007 (health input), WF-010 (Support, Expansion &amp; Referral). Human Review Requirement: none for score calculation; a declining score triggers a mandatory human check-in, not an automated message. Escalation: any Health Score drop of two consecutive cycles routes directly to the Engagement Lead, bypassing the normal weekly cadence.</div>
+</div>
+
+<!-- ============ SKILL-009 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Knowledge Capture Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Convert every engagement into reusable knowledge — the only Skill that feeds back into the SOS system itself rather than a client deliverable.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-009</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Knowledge Capture Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Project Closeout (WF-009/WF-010), or any recurring gap flagged by PB-010's Continuous Improvement review.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Closeout Report, Continuous Improvement Notes across Playbooks, recurring QA (SKILL-007) findings.</div></div>
+    <div class="field-row"><div class="field-label">Lessons Learned</div><div class="field-val">Extracts what went well and what didn't, tied to a specific Workflow or Playbook step, not general impressions.</div></div>
+    <div class="field-row"><div class="field-label">New Components</div><div class="field-val">Flags a recurring layout need not covered by the existing Component Library as a proposed future component — never invents one silently.</div></div>
+    <div class="field-row"><div class="field-label">New Templates</div><div class="field-val">Same discipline as components — proposes, does not create, a new Template when a document type recurs outside TEMP-001–010.</div></div>
+    <div class="field-row"><div class="field-label">Knowledge Base Updates</div><div class="field-val">Routes confirmed lessons into the relevant Playbook's Continuous Improvement Notes for PB-010 to action.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Case Study Candidates</div><div class="field-val">Surfaces engagements with strong, quantifiable outcomes to PB-009's Expansion Playbook for case study development.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: none — proposes additions to the library rather than producing client documents. Related Workflows: WF-009, WF-010. Human Review Requirement: any proposed new Component or Template requires design and Operations sign-off before it enters the library. Escalation: a lesson that implicates a signed Agreement's terms routes to the Engagement Lead, not directly into a Playbook update.</div>
+</div>
+
+<!-- ============ SKILL-010 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="sk-id">SKILL-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Expansion Skill</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Identify future opportunities — the analytical layer underneath PB-009's Expansion Playbook, turning Client Success signals into concrete recommendations.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-010</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Expansion Skill</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">SKILL-008 flags a sustained high Health Score, or an engagement approaches its Closeout / renewal date.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Health Score history, Closeout Report, current Package terms, Case Study candidates from SKILL-009.</div></div>
+    <div class="field-row"><div class="field-label">Expansion Recommendations</div><div class="field-val">Proposes a specific next-phase scope drawn from PKG-007, backed by concrete Phase One outcomes.</div></div>
+    <div class="field-row"><div class="field-label">Referral Opportunities</div><div class="field-val">Flags clients with high Health Scores and a completed testimonial as ready for a referral ask.</div></div>
+    <div class="field-row"><div class="field-label">Cross-sell Opportunities</div><div class="field-val">Identifies adjacent Client Packages the client hasn't purchased that match their stated goals from Discovery.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Renewal Recommendations</div><div class="field-val">For recurring engagements (PKG-004 Advisory), surfaces renewal timing before the current term lapses, not after.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Templates Used: TEMP-001 Proposal (via PB-009) · COMP-405 Phase Card. Related Workflows: WF-010 — Support, Expansion &amp; Referral. Human Review Requirement: every recommendation is reviewed by the Engagement Lead before any client conversation — this Skill surfaces opportunities, it never initiates outreach directly. Escalation: a renewal recommendation surfacing inside 30 days of term expiry escalates immediately rather than waiting for the next scheduled review.</div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Agent Skill Library — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Skills Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

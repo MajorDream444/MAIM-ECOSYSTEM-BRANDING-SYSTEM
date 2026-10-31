@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:56px 58px 40px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; display:flex; flex-direction:column; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .footer-901 { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #D8AF55; padding-top:12px; margin-top:auto; }
+  .sec-eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:4px; }
+  .sec-title { font-family:Archivo,sans-serif; font-weight:900; font-size:26px; text-transform:uppercase; margin-bottom:8px; }
+  .info-box { border-left:3px solid; padding:12px 16px; max-width:560px; font-size:12px; line-height:1.6; }
+  .info-lbl { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px; display:block; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- PAGE 1 — Header + Metadata + Summary Box (Executive Summary) -->
+<div class="sos-page" data-screen-label="Discovery — 01 Cover">
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:20px 24px; margin-bottom:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:34px; height:34px; border-radius:50%; border:2px solid #D8AF55; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:7px; color:rgba(247,244,234,0.4); text-align:center;">CROWN<br/>SEAL</div>
+        <div><div class="lbl">Major AI Mindset</div><div style="font-family:Archivo,sans-serif; font-weight:900; font-size:19px; text-transform:uppercase; margin-top:2px;">Discovery Report</div></div>
+      </div>
+      <div style="text-align:right;" class="mono"><div style="font-size:10px; color:rgba(247,244,234,0.6);">DOC-2026-00530</div><div style="font-size:10px; color:rgba(247,244,234,0.6);">v1.0 · 06/10/2026</div></div>
+    </div>
+    <div class="tribar" style="width:100%; height:4px; margin-top:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div style="border:1px solid #D8AF55; padding:16px 20px; margin-bottom:20px;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px 20px;">
+      <div><div class="lbl">Client</div><div style="font-size:11.5px; margin-top:2px;">Aurelia Capital Partners</div></div>
+      <div><div class="lbl">Project</div><div style="font-size:11.5px; margin-top:2px;">Q3 Advisory Engagement</div></div>
+      <div><div class="lbl">Owner</div><div style="font-size:11.5px; margin-top:2px;">J. Alvarez</div></div>
+    </div>
+  </div>
+
+  <div style="background:#F7F4EA; color:#050505; padding:18px 20px; margin-bottom:8px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#8C6D2F; margin-bottom:8px;">Executive Summary</div>
+    <div style="font-size:12.5px; line-height:1.65;">Six discovery interviews and an operational audit surfaced three connected issues: fragmented reporting, slow decision cycles, and onboarding debt. All three trace back to a single root cause — no shared source of truth across regional teams.</div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00530 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 1 of 4</div></div>
+</div>
+
+<!-- PAGE 2 — Business Overview + Findings (Three Column + Card) -->
+<div class="sos-page" data-screen-label="Discovery — 02 Findings">
+  <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:16px; margin-bottom:6px;">Business Overview</div>
+  <div style="height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px;"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Aurelia Capital Partners operates three regional advisory desks, each running its own reporting cadence and tooling. Leadership currently reconciles figures manually each quarter.</p>
+
+  <div class="sec-eyebrow">02 · Findings</div>
+  <div class="sec-title">Findings</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Fragmented Reporting</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">No single source of truth across three regional teams.</div></div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Slow Decision Cycles</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">Leadership waits an average of 9 days for a data-backed answer.</div></div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Onboarding Debt</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">New hires take 6+ weeks to reach full productivity.</div></div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00530 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 2 of 4</div></div>
+</div>
+
+<!-- PAGE 3 — Pain Points + Opportunities (Bullet List) -->
+<div class="sos-page" data-screen-label="Discovery — 03 Pain Points + Opportunities">
+  <div class="sec-eyebrow">03 · Pain Points</div>
+  <div class="sec-title">Pain Points</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:18px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:28px;">
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Regional teams reconcile numbers by hand each quarter close.</span></div>
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>No standardized onboarding path for new advisory hires.</span></div>
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Leadership dashboards go stale between quarterly refreshes.</span></div>
+  </div>
+
+  <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:16px; margin-bottom:6px;">Opportunities</div>
+  <div style="height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px;"></div>
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>A single quarterly reporting template rolled out across all three regions.</span></div>
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>A documented onboarding path cutting ramp time by half.</span></div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00530 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 3 of 4</div></div>
+</div>
+
+<!-- PAGE 4 — Recommendations (Best Practice + AI Recommendation) + Next Steps -->
+<div class="sos-page" data-screen-label="Discovery — 04 Recommendations">
+  <div class="sec-eyebrow">04 · Recommendations</div>
+  <div class="sec-title">Recommendations</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:20px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:28px;">
+    <div class="info-box" style="border-color:#1F7A3A;"><span class="info-lbl" style="color:#3FA96A;">Best Practice</span>Standardize on one quarterly reporting template before adding any new tooling — teams that sequence it this way see faster adoption.</div>
+    <div class="info-box" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);"><span class="info-lbl" style="color:#D8AF55;">AI Recommendation</span>Based on interview transcripts, onboarding debt is most acute in the Northeast desk — prioritize that team's rollout first.</div>
+  </div>
+
+  <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:16px; margin-bottom:6px;">Next Steps</div>
+  <div style="height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px;"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px;">A Statement of Work covering the reporting rollout and onboarding redesign will follow this report within one week.</p>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00530 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 4 of 4</div></div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

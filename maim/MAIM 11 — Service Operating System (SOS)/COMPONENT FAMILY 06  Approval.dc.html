@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 06</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Approval</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Components that record who signed off, who's still pending, and what was decided.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Every approval component is built for evidence — it must hold up as a record months after the document was signed.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);">
+    <div><span style="color:#D8AF55;">COMP-501</span> Approval Block</div>
+    <div><span style="color:#D8AF55;">COMP-502</span> Signature Block</div>
+    <div><span style="color:#D8AF55;">COMP-503</span> Approval Timeline</div>
+    <div><span style="color:#D8AF55;">COMP-504</span> Review Notes</div>
+    <div><span style="color:#D8AF55;">COMP-505</span> Decision Box</div>
+    <div><span style="color:#D8AF55;">COMP-506</span> Acceptance Certificate</div>
+  </div>
+</div>
+
+<!-- ============ COMP-501 APPROVAL BLOCK ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-501</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Approval Block</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Lists everyone required to sign off, and where each stands. <b style="color:#F7F4EA;">Used on:</b> the closing pages of Proposals, SOWs, and Agreements.</p>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:18px;">
+    <thead><tr style="border-bottom:1px solid #D8AF55;"><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em;">Role</th><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em;">Name</th><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em;">Status</th><th style="text-align:right; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em;">Date</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16);"><td style="padding:8px 10px;">Engagement Lead</td><td style="padding:8px 10px;">J. Alvarez</td><td style="padding:8px 10px;"><span class="mono" style="background:#F7F4EA; color:#050505; font-size:9.5px; padding:3px 8px; letter-spacing:0.06em; text-transform:uppercase;">Approved</span></td><td class="mono" style="padding:8px 10px; text-align:right;">07/08/2026</td></tr>
+      <tr><td style="padding:8px 10px;">Client Sponsor</td><td style="padding:8px 10px;">A. Whitfield</td><td style="padding:8px 10px;"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:9.5px; padding:3px 8px; letter-spacing:0.06em; text-transform:uppercase;">Pending</span></td><td class="mono" style="padding:8px 10px; text-align:right; color:rgba(247,244,234,0.5);">—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Table: role, name, status badge, date. Rows always ordered by approval sequence, not alphabetically.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Status cell reuses the Status Badge component exactly (Family 03) — never a re-drawn variant.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">7–8px cell padding, matching the Approval Chain pattern established in the Financial and Timeline tables.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Pending rows always show an em dash in the date column, never a blank cell.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Header repeats if the chain spans a page break; a row is never split from its status badge.</div></div>
+</div>
+
+<!-- ============ COMP-502 SIGNATURE BLOCK ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-502</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Signature Block</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Physical or digital signing line for a named signer. <b style="color:#F7F4EA;">Used on:</b> the final page of any Agreement or SOW requiring wet or e-signature.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:18px;">
+    <div>
+      <div style="height:40px; border-bottom:1px solid #F7F4EA;"></div>
+      <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:10.5px; color:rgba(247,244,234,0.55);"><span>Signature</span><span>Date</span></div>
+      <div style="font-size:12px; font-weight:600; margin-top:8px;">J. Alvarez</div>
+      <div style="font-size:10.5px; color:rgba(247,244,234,0.5);">Engagement Lead, Major AI Mindset</div>
+    </div>
+    <div>
+      <div style="height:40px; border-bottom:1px solid #F7F4EA;"></div>
+      <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:10.5px; color:rgba(247,244,234,0.55);"><span>Signature</span><span>Date</span></div>
+      <div style="font-size:12px; font-weight:600; margin-top:8px;">A. Whitfield</div>
+      <div style="font-size:10.5px; color:rgba(247,244,234,0.5);">Client Sponsor, Aurelia Capital Partners</div>
+    </div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Two-column grid by default (signer + counter-signer); scales to a single column when only one party signs.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Name Archivo 600, 12px; title/company Archivo 400, 10.5px muted — signature line itself carries no type.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">28px column gap; 40px signature line height to leave room for wet or digital ink.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">"Signature" and "Date" labels are always printed beneath the blank line — the line is never presented unlabeled.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Never split across a page break; the whole block, name, and title move together.</div></div>
+</div>
+
+<!-- ============ COMP-503 APPROVAL TIMELINE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-503</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Approval Timeline</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Shows the sequence and dates a document moved through review to approval. <b style="color:#F7F4EA;">Used on:</b> audit-sensitive documents — Agreements, formal Change Orders.</p>
+
+  <div style="display:flex; flex-direction:column; gap:0; margin-bottom:18px;">
+    <div style="display:flex; gap:12px; padding:9px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><div class="mono" style="width:80px; font-size:10px; color:rgba(247,244,234,0.5);">06/28/26</div><div style="width:8px; height:8px; border-radius:50%; background:#F7F4EA; margin-top:3px;"></div><div style="font-size:12px;">Drafted and submitted for internal review</div></div>
+    <div style="display:flex; gap:12px; padding:9px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><div class="mono" style="width:80px; font-size:10px; color:rgba(247,244,234,0.5);">07/02/26</div><div style="width:8px; height:8px; border-radius:50%; background:#F7F4EA; margin-top:3px;"></div><div style="font-size:12px;">Internal approval — Finance, Legal</div></div>
+    <div style="display:flex; gap:12px; padding:9px 0;"><div class="mono" style="width:80px; font-size:10px; color:#D8AF55;">07/08/26</div><div style="width:8px; height:8px; border-radius:50%; background:#D8AF55; margin-top:3px;"></div><div style="font-size:12px; color:#F7F4EA;">Sent to client for signature</div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Vertical log: date column (fixed width) + dot + event text. Most recent event in gold, prior events in ivory.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Date in mono 10px; event text Archivo 400, 12px.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">9px row padding, 12px gap between date/dot/text columns, fixed 80px date column width for alignment.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Reads top-to-bottom in chronological order — the log never reverses order to "most recent first."</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">A log entry never splits from its date and dot across a page break.</div></div>
+</div>
+
+<!-- ============ COMP-504 REVIEW NOTES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-504</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Review Notes</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Captures a reviewer's comment attached to an approval step. <b style="color:#F7F4EA;">Used on:</b> Approval Blocks and Decision Boxes where a sign-off carries a condition or caveat.</p>
+
+  <div style="border-left:2px solid #D8AF55; padding-left:14px; margin-bottom:18px; max-width:520px;">
+    <div style="display:flex; justify-content:space-between; margin-bottom:6px;"><span style="font-weight:600; font-size:11.5px;">R. Chen — Finance</span><span class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">07/09/2026</span></div>
+    <div style="font-size:11.5px; line-height:1.6; color:rgba(247,244,234,0.7);">Approved pending confirmation of the payment schedule in Section 4 — please reissue before countersignature.</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Gold left-border note, reviewer + date on one line, comment text below — same accent treatment as a Highlight Card.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Reviewer name Archivo 600, 11.5px; date mono, muted; comment Archivo 400, 11.5px.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">14px left padding from the border, 6px between the byline row and comment text, max-width 520px for readable line length.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Reviewer role is always stated alongside the name — never name alone, which can be ambiguous across a large org.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Kept whole; a note is never allowed to print with its comment separated from its byline.</div></div>
+</div>
+
+<!-- ============ COMP-505 DECISION BOX ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-505</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary + Alternates</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Decision Box</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> States a single final outcome plainly — approved, declined, or deferred. <b style="color:#F7F4EA;">Used on:</b> Change Order responses and formal decision memos.</p>
+
+  <div style="display:flex; gap:14px; margin-bottom:18px;">
+    <div style="border:1px solid #1F7A3A; padding:12px 18px; flex:1;"><div class="lbl" style="color:#3FA96A;">Decision</div><div style="font-weight:900; font-size:16px; text-transform:uppercase; margin-top:4px;">Approved</div></div>
+    <div style="border:1px solid #F58426; padding:12px 18px; flex:1;"><div class="lbl" style="color:#F58426;">Decision</div><div style="font-weight:900; font-size:16px; text-transform:uppercase; margin-top:4px;">Declined</div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Bordered box, label above outcome — outcome is the single largest word in the box, no supporting copy inside it.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Outcome in Archivo Black 900, 16px, uppercase — one of the few places display weight sits inside a bordered card.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">12/18px padding; 14px gap when Approved/Declined appear side by side for comparison.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Border color (green/orange) always paired with the outcome word itself — never a colored box with no text.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Always followed immediately by any Review Notes explaining the decision — never left to stand alone without rationale.</div></div>
+</div>
+
+<!-- ============ COMP-506 ACCEPTANCE CERTIFICATE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-506</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Acceptance Certificate</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Formal, standalone confirmation that a full engagement or deliverable was accepted. <b style="color:#F7F4EA;">Used on:</b> the closing page of a Final Delivery Package.</p>
+
+  <div style="border:1px solid #D8AF55; padding:32px 30px; text-align:center; margin-bottom:18px;">
+    <div class="lbl" style="margin-bottom:14px;">Certificate of Acceptance</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:22px; text-transform:uppercase; margin-bottom:10px;">Q3 Advisory Engagement</div>
+    <div style="font-size:12px; color:rgba(247,244,234,0.65); margin-bottom:18px;">Accepted as fully and satisfactorily delivered by Aurelia Capital Partners.</div>
+    <div class="tribar" style="width:120px; height:4px; margin:0 auto 18px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">DOC-2026-00417 · Accepted 09/30/2026</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Centered, gold-bordered, full-width card — the one Approval component that breaks the system's default left-alignment.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Certificate label in tracked mono; engagement name in Archivo Black 900, 22px, uppercase, centered.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">32/30px generous padding; centered tri-bar closes the statement before the identifier line.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Always carries the Document Identifier and acceptance date — a certificate with no traceable ID is never valid.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Always occupies its own page, centered top-to-bottom — treated as a closing ceremony, not a data page.</div></div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Approval Components, Assembled</h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:11px; margin-bottom:16px;">
+    <thead><tr style="border-bottom:1px solid #D8AF55;"><th style="text-align:left; padding:6px 10px; color:rgba(247,244,234,0.55); font-size:9.5px; text-transform:uppercase;">Role</th><th style="text-align:left; padding:6px 10px; color:rgba(247,244,234,0.55); font-size:9.5px; text-transform:uppercase;">Status</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.12);"><td style="padding:7px 10px;">Engagement Lead</td><td style="padding:7px 10px;"><span class="mono" style="background:#F7F4EA; color:#050505; font-size:9px; padding:2px 7px;">Approved</span></td></tr>
+      <tr><td style="padding:7px 10px;">Client Sponsor</td><td style="padding:7px 10px;"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:9px; padding:2px 7px;">Pending</span></td></tr>
+    </tbody>
+  </table>
+
+  <div style="border-left:2px solid #D8AF55; padding-left:12px; margin-bottom:16px; max-width:480px;">
+    <div style="font-size:10.5px; color:rgba(247,244,234,0.7); line-height:1.55;">"Approved pending confirmation of the payment schedule — reissue before countersignature."</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:20px;">
+    <div><div style="height:30px; border-bottom:1px solid #F7F4EA;"></div><div style="font-size:9.5px; color:rgba(247,244,234,0.5); margin-top:4px;">J. Alvarez, Engagement Lead</div></div>
+    <div><div style="height:30px; border-bottom:1px solid #F7F4EA;"></div><div style="font-size:9.5px; color:rgba(247,244,234,0.5); margin-top:4px;">A. Whitfield, Client Sponsor</div></div>
+  </div>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px;">The Approval Block (501) tracks who's signed; a Review Note (504) attaches a condition to a pending line; the Signature Block (502) closes the page once every party clears. Approval Timeline (503), Decision Box (505), and Acceptance Certificate (506) attach for audit-grade or ceremonial documents.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

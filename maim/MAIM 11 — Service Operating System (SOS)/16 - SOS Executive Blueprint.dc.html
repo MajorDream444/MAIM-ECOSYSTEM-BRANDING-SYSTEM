@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:11px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .ex-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 16 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-EXECUTIVE-BLUEPRINT · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 16 · The Front Door</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">SOS Executive Blueprint</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Presents the complete MAIM Service Operating System as one executive architecture — understandable in 10–15 minutes by someone completely new to MAIM.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This page introduces nothing new. It summarizes and connects the architecture already defined across Pages 01–15.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-001</span>Sprint 01 — Executive Vision</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-002</span>Sprint 02 — The SOS Story</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-003</span>Sprint 03 — Architecture Overview</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-004</span>Sprint 04 — Platform Ecosystem</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-005</span>Sprint 05 — Object Model</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-006</span>Sprint 06 — Service Lifecycle</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-007</span>Sprint 07 — AI Workforce Overview</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-008</span>Sprint 08 — Governance &amp; Versioning</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-009</span>Sprint 09 — Implementation Roadmap</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">EXEC-010</span>Sprint 10 — Executive One-Page Blueprint</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as sprints are defined — send each sprint's spec (purpose, executive summary, key concepts, visual architecture, related SOS pages, platform responsibilities, governance, AI integration, implementation context, success measures, future vision, completion criteria) to add it here.</div>
+</div>
+
+<!-- ============ EXEC-001 — VISION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Vision</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Executive Vision</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Introduce SOS and its mission — the opening page anyone new to MAIM should read first.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:16px 18px;">
+    <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Vision Statement</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:15px; line-height:1.5; color:#F7F4EA;">The MAIM Service Operating System is a reusable operating architecture that transforms how services are designed, delivered, and scaled — with AI agents operating inside it, not bolted onto it.</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-001 — MISSION & WHY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Mission &amp; Why It Exists</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Executive Vision</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Mission Statement</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Enable every future client engagement to be delivered through one consistent, reusable, AI-assisted operating model — the same Success Statement carried through Page 15's Implementation Roadmap.</p>
+
+  <div class="sub-title">Why SOS Exists</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Most agencies stop at branding. Most consultants stop at playbooks. SOS goes further — it is the operating architecture underneath the business itself: a shared visual language, a defined document system, and a governed AI workforce, all built to run together rather than assembled ad hoc per engagement.</p>
+
+  <div class="sub-title">Key Benefits</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:5px; font-size:12px; color:rgba(247,244,234,0.8);">
+    <div>· One consistent client experience across every engagement type</div>
+    <div>· No document created outside the approved system</div>
+    <div>· Full visibility into status without asking anyone directly</div>
+    <div>· AI agents draft and validate; humans stay in control of every client-facing decision</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-001 — PRINCIPLES, SUCCESS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Principles, Success &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Executive Vision</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Guiding Principles</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:22px;">
+    <div style="border-left:2px solid #D8AF55; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Agents execute. Humans approve.</div>
+    <div style="border-left:2px solid #1F7A3A; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">GitHub defines. Airtable operates. Notion explains.</div>
+    <div style="border-left:2px solid #8A5A44; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9); font-weight:600;">No agent owns the system. Every agent is accountable.</div>
+  </div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Blueprint ID</div><div class="field-val mono">EXEC-001</div></div>
+    <div class="field-row"><div class="field-label">Executive Summary</div><div class="field-val">SOS is the version-controlled, AI-assisted operating architecture behind every MAIM client engagement — spanning design, documents, workflows, packages, playbooks, AI skills, automation, and governance.</div></div>
+    <div class="field-row"><div class="field-label">Success Definition</div><div class="field-val">The Success Statement above is demonstrably true for at least one real client engagement, start to finish (per IMP-007/010).</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Page 01 Foundation Board, Page 15 IMP-001 Vision &amp; Success Criteria</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Vision, Mission, and Guiding Principles are stated once here and never restated differently anywhere else in SOS.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-002 — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — The SOS Story</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Tell the story of why SOS was created — not as a feature list, but as a natural escalation from one small insight.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">One Client</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">One Receipt</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">One Template</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">One System</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">One Operating System</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px; margin-top:16px;">A single client artifact — one receipt, produced once, for one engagement — surfaced a question no individual document could answer: what happens the next time, and the time after that? That question, asked honestly, is what turns a document into a Template, a Template into a Library, and a Library into an Operating System.</p>
+</div>
+
+<!-- ============ EXEC-002 — PROBLEM & OPPORTUNITY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Problem &amp; Opportunity</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — The SOS Story</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">The Problem</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Every one-off document is a decision made in isolation — its own layout, its own tone, its own metadata (or none). Multiplied across proposals, invoices, reports, and agreements, that isolation compounds into inconsistency the client eventually notices, and a growing pile of small decisions nobody remembers making.</p>
+
+  <div class="sub-title">The Opportunity</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Design the reusable pieces once — Components, Templates, Workflows — and every future document assembles from approved parts instead of being drawn from scratch. The same discipline that makes a brand system work for visuals works for operations.</p>
+</div>
+
+<!-- ============ EXEC-002 — EVOLUTION, PHILOSOPHY & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Evolution, Philosophy &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — The SOS Story</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">The Evolution</div><div class="field-val">Foundation and Components first, then Templates and Workflows, then Playbooks and Skills, then Automations and governance — each layer built only once the one beneath it was solid (mirroring IMP-001's guiding principle).</div></div>
+    <div class="field-row"><div class="field-label">Why Systems Matter</div><div class="field-val">A system outlives any single person's memory of "how we usually do it" — new team members, contractors, and AI agents can all operate consistently from the same defined source.</div></div>
+    <div class="field-row"><div class="field-label">Lessons Learned</div><div class="field-val">Naming conventions and metadata standards (Page 10) had to come before automation (Page 09) — trying to automate an inconsistent system just automates the inconsistency faster.</div></div>
+    <div class="field-row"><div class="field-label">Design Philosophy</div><div class="field-val">Restraint over decoration, hierarchy by type not color, every document traceable — the same principles from Page 01's Foundation Board, applied at the scale of an entire operating system.</div></div>
+    <div class="field-row"><div class="field-label">Future Vision</div><div class="field-val">A system mature enough that a new service line can be added by assembling existing Components and Skills, rarely by inventing something new.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Journey and Story read clearly to someone who has never seen a MAIM client artifact, without referencing any specific client by name.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-003 — FULL ARCHITECTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Full Architecture</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Architecture Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:20px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12px; line-height:1.5; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 16px;">Present the entire SOS architecture on one page — every layer, in build order, top to bottom.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:6px 14px; width:100%; box-sizing:border-box; font-weight:600;">Brand <span style="color:#D8AF55; font-size:9px;">MAIM 00</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Foundation <span style="color:#D8AF55; font-size:9px;">01</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Components <span style="color:#D8AF55; font-size:9px;">02</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Templates <span style="color:#D8AF55; font-size:9px;">03</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Workflows <span style="color:#D8AF55; font-size:9px;">04</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Client Journey <span style="color:#D8AF55; font-size:9px;">05</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Packages <span style="color:#D8AF55; font-size:9px;">06</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Playbooks <span style="color:#D8AF55; font-size:9px;">07</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:6px 14px; width:100%; box-sizing:border-box;">Agent Skills <span style="color:#D8AF55; font-size:9px;">08</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:6px 14px; width:100%; box-sizing:border-box;">Automations <span style="color:#D8AF55; font-size:9px;">09</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Data Standards <span style="color:#D8AF55; font-size:9px;">10</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Implementation <span style="color:#D8AF55; font-size:9px;">11–13</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.5); padding:6px 14px; width:100%; box-sizing:border-box; font-weight:600;">Execution <span style="color:#D8AF55; font-size:9px;">14–15</span></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-003 — READING THE MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Reading the Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Architecture Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Brand → Foundation</div><div class="field-val">MAIM 00 is inherited, not redefined — Page 01 extends it into a document operating system.</div></div>
+    <div class="field-row"><div class="field-label">Foundation → Workflows</div><div class="field-val">Design layer: what things look like and how they're assembled (Pages 02–04).</div></div>
+    <div class="field-row"><div class="field-label">Client Journey → Packages</div><div class="field-val">Commercial layer: what the client experiences and what MAIM sells (Pages 05–06).</div></div>
+    <div class="field-row"><div class="field-label">Playbooks → Automations</div><div class="field-val">Execution layer: how humans and AI actually do the work (Pages 07–09) — highlighted gold, the layer where AI agents live.</div></div>
+    <div class="field-row"><div class="field-label">Data Standards → Implementation</div><div class="field-val">Control layer: the shared language and the real systems it's built into (Pages 10–13).</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Execution</div><div class="field-val">Governance and the plan that brings all thirteen layers above to life (Pages 14–15).</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Architecture Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">All Pages 01–15, in build order</div></div>
+    <div class="field-row"><div class="field-label">Platform Responsibilities</div><div class="field-val">Detailed in EXEC-004; this sprint shows only the conceptual layer, not the platform each lives on.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">One reader unfamiliar with SOS can trace a single arrow chain from Brand to Execution and correctly guess what each layer contains before reading its label.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-004 — PLATFORM FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Platform Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Platform Ecosystem</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Show how every platform contributes — the concrete systems behind the conceptual layers in EXEC-003.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Claude Design</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">GitHub</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Airtable</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Notion</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Google Workspace</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">AI Agents</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-004 — RESPONSIBILITY STATEMENTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Responsibility Statements</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Platform Ecosystem</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Claude Design</div><div class="field-val">Authors the visual system — every Component, Template, and Foundation Board page is designed here first.</div></div>
+    <div class="field-row"><div class="field-label">GitHub</div><div class="field-val">Holds the canonical, version-controlled definition of everything designed — the source of truth every other platform reads from.</div></div>
+    <div class="field-row"><div class="field-label">Airtable</div><div class="field-val">Tracks what is happening right now — live clients, projects, artifacts, approvals, and payments.</div></div>
+    <div class="field-row"><div class="field-label">Notion</div><div class="field-val">Explains why — decisions, playbooks, training, and the knowledge that doesn't fit in a database field.</div></div>
+    <div class="field-row"><div class="field-label">Google Workspace</div><div class="field-val">Delivers to the client — Drive for files, Gmail and Calendar for communication, never a source of definitions.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">AI Agents</div><div class="field-val">Read Approved definitions from GitHub, operate on live records in Airtable, and execute Skills — never redefining the system they operate inside.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-004 — INTEGRATION & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Integration &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Platform Ecosystem</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Data Flow</div><div class="field-val">GitHub's registries sync one-way into Airtable and Notion — neither ever writes a canonical definition back.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Design Lead (GitHub), Operations Lead (Airtable, Notion), Engagement Leads (Google Drive per project) — full detail in Page 15's IMP-006 Platform Ownership Matrix.</div></div>
+    <div class="field-row"><div class="field-label">Integration Points</div><div class="field-val">GH-010, AT-010, and NT integration sections (Pages 11–13) define exactly how each platform connects — this sprint summarizes, it doesn't replace them.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Pages 11–13, IMP-006</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every platform has exactly one responsibility statement here, matching its Page 11–13 definition without contradiction.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-005 — OBJECT HIERARCHY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Object Hierarchy</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Object Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Present the official SOS object language — the vocabulary every platform, playbook, and agent shares.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Component <span style="color:#D8AF55; font-size:9.5px;">COMP-XXX</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Template <span style="color:#D8AF55; font-size:9.5px;">TEMP-XXX</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Workflow <span style="color:#D8AF55; font-size:9.5px;">WF-XXX</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Artifact <span style="color:#D8AF55; font-size:9.5px;">DOC-YYYY-NNNNN</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Project <span style="color:#D8AF55; font-size:9.5px;">PROJ-XXXX</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Client <span style="color:#D8AF55; font-size:9.5px;">CLIENT-XXXX</span></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-005 — DEFINITIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Definitions</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Object Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Component</div><div class="field-val">A reusable design element with defined layout, type, and spacing rules.</div></div>
+    <div class="field-row"><div class="field-label">Template</div><div class="field-val">A fixed document structure assembled from Components.</div></div>
+    <div class="field-row"><div class="field-label">Workflow</div><div class="field-val">A defined internal sequence with a trigger, steps, and an output.</div></div>
+    <div class="field-row"><div class="field-label">Artifact</div><div class="field-val">Any generated document or record with standard SOS metadata.</div></div>
+    <div class="field-row"><div class="field-label">Project</div><div class="field-val">A single active or completed client engagement.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Client</div><div class="field-val">A company or individual with an active or historical MAIM engagement.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-005 — RELATIONSHIPS, LIFECYCLE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Relationships, Lifecycle &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Object Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">A Template uses many Components; a Workflow generates an Artifact from a Template; every Artifact belongs to one Project, and every Project to one Client (DS-008 Relationship Map).</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle</div><div class="field-val">Every object carries a Status drawn from the same enum — Draft, In Review, Approved, Signed, Void, Expired — regardless of which platform it lives in.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Page 10 Data &amp; Metadata Standards, DS-008 Relationship Map</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">This six-term hierarchy is the only object vocabulary used across every other SOS page — no synonym or alternate term is introduced elsewhere.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-006 — LIFECYCLE DIAGRAM ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Lifecycle Diagram</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Service Lifecycle</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:20px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12px; line-height:1.5; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 16px;">Show the complete service journey — one executive lifecycle diagram spanning Lead to Expansion.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:420px;">
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box; font-weight:600;">Lead <span style="color:#D8AF55; font-size:9px;">WF-001</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Discovery <span style="color:#D8AF55; font-size:9px;">TEMP-006</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Proposal <span style="color:#D8AF55; font-size:9px;">TEMP-001, PKG-XXX</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Agreement <span style="color:#D8AF55; font-size:9px;">TEMP-002</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Payment <span style="color:#D8AF55; font-size:9px;">TEMP-003/004</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:6px 14px; width:100%; box-sizing:border-box;">Onboarding <span style="color:#D8AF55; font-size:9px;">TEMP-005</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Delivery <span style="color:#D8AF55; font-size:9px;">TEMP-007, PB-004</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Approval <span style="color:#D8AF55; font-size:9px;">COMP-501</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Handover <span style="color:#D8AF55; font-size:9px;">TEMP-009/010</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.25); padding:6px 14px; width:100%; box-sizing:border-box;">Support <span style="color:#D8AF55; font-size:9px;">PB-008</span></div>
+    <div style="color:#D8AF55; font-size:11px; margin:0 0 0 20px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:6px 14px; width:100%; box-sizing:border-box; font-weight:600;">Expansion <span style="color:#D8AF55; font-size:9px;">WF-010 → re-enters WF-002</span></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-006 — SUPPORTING LIBRARIES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Supporting Libraries &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Service Lifecycle</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Every Stage</div><div class="field-val">Backed by a Workflow (Page 04), a Template (Page 03), and — from Onboarding onward — a Playbook (Page 07) and one or more Agent Skills (Page 08).</div></div>
+    <div class="field-row"><div class="field-label">Client Experience</div><div class="field-val">Page 05's Client Journey mirrors this exact sequence, told from the client's seat instead of MAIM's.</div></div>
+    <div class="field-row"><div class="field-label">Loop Closure</div><div class="field-val">Expansion re-enters at Proposal (WF-002) rather than starting over — the lifecycle is a loop, not a line.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Pages 03, 04, 05, 07, 08</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every one of the 11 stages names at least one concrete Template, Workflow, or Playbook a reader could go look up.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-007 — CORE PRINCIPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Principle</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — AI Workforce Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Explain how AI fits into SOS — in one sentence, before any detail.</p>
+
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="border-left:2px solid #1F7A3A; padding-left:14px; font-size:14px; color:rgba(247,244,234,0.9);">Humans own outcomes.</div>
+    <div style="border-left:2px solid #D8AF55; padding-left:14px; font-size:14px; color:rgba(247,244,234,0.9);">AI accelerates execution.</div>
+    <div style="border-left:2px solid #006BB6; padding-left:14px; font-size:14px; color:rgba(247,244,234,0.9); font-weight:600;">SOS governs both.</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-007 — MODEL & CATEGORIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Model &amp; Categories</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — AI Workforce Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Human-in-the-Loop Model</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">An agent drafts, validates, or recommends by default; only one exact-match financial path runs unattended end to end. Every other output waits for a named human before reaching a client (AG-005).</p>
+
+  <div class="sub-title">Agent Categories</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+    <div class="chip">Operations</div>
+    <div class="chip">Sales</div>
+    <div class="chip">Client Success</div>
+    <div class="chip">Finance</div>
+    <div class="chip">Knowledge</div>
+    <div class="chip" style="opacity:0.5;">Creative (reserved)</div>
+    <div class="chip" style="opacity:0.5;">Engineering (reserved)</div>
+  </div>
+
+  <div class="sub-title">Skills</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every agent maps to exactly one reusable Skill from Page 08 (Discovery, Proposal, SOW, Financial, Project Manager, Meeting Intelligence, QA, Client Success, Knowledge Capture, Expansion) — this registry governs, never invents, new capability.</p>
+</div>
+
+<!-- ============ EXEC-007 — GOVERNANCE, OVERSIGHT & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance, Oversight &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — AI Workforce Overview</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Governance</div><div class="field-val">Every agent is scoped, permissioned, monitored, and versioned identically to any other SOS object — Page 14 is its complete specification.</div></div>
+    <div class="field-row"><div class="field-label">Oversight</div><div class="field-val">Agent Health Score (AG-007) tracks Approval Rate, Revision Rate, and Escalation Rate; a declining score triggers human review before it triggers removal.</div></div>
+    <div class="field-row"><div class="field-label">Escalation</div><div class="field-val">An agent that cannot complete its task with confidence escalates to a named human rather than guessing — silence is never an acceptable outcome.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Page 08 Agent Skill Library, Page 14 AI Agent Registry &amp; Governance</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The three-line Core Principle above is quotable on its own, and every subsequent claim in this sprint traces to a real AG-XXX sprint on Page 14.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-008 — OBJECT LIFECYCLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Object Lifecycle</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Governance &amp; Versioning</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Explain how SOS stays trustworthy over time — one lifecycle every object in the system, regardless of type, moves through.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Idea</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Draft</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Approved</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #1F7A3A; padding:9px 16px; width:100%; box-sizing:border-box;">Released</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Maintained</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600; opacity:0.7;">Superseded</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-008 — GOVERNANCE & VERSIONING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance &amp; Versioning</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Governance &amp; Versioning</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Governance Model</div><div class="field-val">Domain Maintainers (GH-001) own their own object types; cross-cutting changes require the Operations Lead's sign-off regardless of domain.</div></div>
+    <div class="field-row"><div class="field-label">Versioning Strategy</div><div class="field-val">Semantic versioning everywhere — a MAJOR bump is a breaking change, MINOR is backward-compatible addition, PATCH is a correction (GH-009).</div></div>
+    <div class="field-row"><div class="field-label">Approval Process</div><div class="field-val">All changes move through a pull request; no direct commits to the canonical source, even by Maintainers.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Release Cycle</div><div class="field-val">Individual objects version independently until formal release/* branches activate — a reserved capability, not yet in use.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-008 — IMPROVEMENT & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Improvement &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Governance &amp; Versioning</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Continuous Improvement</div><div class="field-val">Real engagement lessons feed a single cycle — Observation → Lesson Captured → Pattern Identified → Change Proposed → Decision Approved → System Updated (NT-009).</div></div>
+    <div class="field-row"><div class="field-label">Change Management</div><div class="field-val">Every change is logged with what changed, why, objects affected, and migration requirements — never a silent edit (GH-009).</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">GH-008, GH-009, NT-009</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The seven-stage lifecycle above is the only lifecycle referenced anywhere in SOS — Component, Template, Agent, and Automation all move through it identically.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-009 — HIGH-LEVEL ROADMAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">High-Level Roadmap</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Implementation Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Summarize implementation without replacing Page 15 — six words, in order, for anyone who only has one minute.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Architecture</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #1F7A3A; padding:9px 16px; width:100%; box-sizing:border-box;">Platform Build</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Automation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #006BB6; padding:9px 16px; width:100%; box-sizing:border-box;">Pilot</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Optimization</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Scale</div>
+  </div>
+</div>
+
+<!-- ============ EXEC-009 — MILESTONES & CHECKPOINTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Milestones &amp; Checkpoints</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Implementation Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Architecture</div><div class="field-val">This 16-page specification — complete before any real build begins.</div></div>
+    <div class="field-row"><div class="field-label">Platform Build</div><div class="field-val">GitHub, Airtable, Notion stood up (Days 1–30). Checkpoint: one real engagement runs Lead → Agreement inside SOS.</div></div>
+    <div class="field-row"><div class="field-label">Automation</div><div class="field-val">First agents and automations piloting (Days 31–60). Checkpoint: two stable weekly cycles with a healthy Agent Health Score.</div></div>
+    <div class="field-row"><div class="field-label">Pilot</div><div class="field-val">A real Pilot Client engagement runs fully inside SOS before general rollout (Days 61–90).</div></div>
+    <div class="field-row"><div class="field-label">Optimization</div><div class="field-val">First quarterly governance review processes real KPI data and at least one Change Request end to end.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Scale</div><div class="field-val">General rollout to all Active clients, and Version 2 Backlog items (Creative/Engineering AI, new integrations) considered.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-009 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ex-id">EXEC-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Implementation Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Related SOS Pages</div><div class="field-val mono">Page 15 Implementation Roadmap (full detail lives there)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">This six-stage summary never contradicts Page 15's IMP-003 through IMP-010 — if the two ever disagree, Page 15 is corrected to match, per its own IMP-007 rule.</div></div>
+  </div>
+</div>
+
+<!-- ============ EXEC-010 — THE WALL POSTER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column; padding:44px 48px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:14px; border-bottom:1px solid rgba(247,244,234,0.25);">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="width:24px; height:24px; border-radius:50%; background:#F7F4EA; display:flex; align-items:center; justify-content:center; color:#0E0D0C; font-family:Archivo,sans-serif; font-weight:900; font-size:12px;">M</div>
+      <div class="mono" style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(247,244,234,0.7);">Major AI Mindset · Service Operating System</div>
+    </div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.1em; color:#D8AF55;">v1.0 · APPROVED</div>
+  </div>
+
+  <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:18px 0 6px; text-transform:uppercase; text-align:center;">The Service Operating System</h1>
+  <p style="text-align:center; font-family:Archivo,sans-serif; font-style:italic; font-weight:500; font-size:13px; color:#D8AF55; margin:0 0 22px;">Agents execute. Humans approve. SOS governs both.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; flex:1;">
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Vision &amp; Mission</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">One consistent, reusable, AI-assisted operating model for every future client engagement.</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">SOS Architecture</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Brand → Foundation → Components → Templates → Workflows → Journey → Packages → Playbooks → Skills → Automations → Standards → Implementation → Execution.</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Platform Ecosystem</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Claude Design (visuals) → GitHub (definitions) → Airtable (operations) → Notion (knowledge) → Google Workspace (delivery) → AI Agents (execution).</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Service Lifecycle</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Lead → Discovery → Proposal → Agreement → Payment → Onboarding → Delivery → Approval → Handover → Support → Expansion (loops to Proposal).</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Object Model</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Component → Template → Workflow → Artifact → Project → Client. Every object: 13 metadata fields, one status enum.</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">AI Workforce</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Every agent maps to one Skill, one scoped permission set, one named human approver. No agent owns the system.</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Governance</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.8);">Idea → Draft → Review → Approved → Released → Maintained → Superseded. SemVer everywhere. No direct commits.</div>
+    </div>
+    <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:14px;">
+      <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Current Version &amp; Roadmap</div>
+      <div style="font-size:10.5px; line-height:1.5; color:rgba(247,244,234,0.9);">v1.0 — Approved, Operational, AI Enabled. Architecture → Platform Build → Automation → Pilot → Optimization → Scale.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(247,244,234,0.4);">SOS Executive Blueprint — End of Cycle</div>
+    <div class="mono" style="font-size:9px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

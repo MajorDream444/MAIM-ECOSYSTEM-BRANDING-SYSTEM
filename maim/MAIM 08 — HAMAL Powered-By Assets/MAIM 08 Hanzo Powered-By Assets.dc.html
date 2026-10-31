@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #050505; }
+  ::selection { background: #D8AF55; color: #050505; }
+</style>
+</helmet>
+
+<div style="background:#050505; color:#F7F4EA; font-family:'Archivo',sans-serif; min-height:100vh; padding:0 0 120px 0; overflow-x:hidden;">
+
+  <!-- ===================== COVER ===================== -->
+  <section data-screen-label="Cover" style="max-width:1240px; margin:0 auto; padding:96px 56px 72px; position:relative;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:80px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:#D8AF55; text-transform:uppercase;">Major&nbsp;AI&nbsp;Mindset</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:rgba(247,244,234,.45); text-transform:uppercase; text-align:right;">HAMAL&nbsp;Powered-By&nbsp;/&nbsp;Volume&nbsp;08<br>Version&nbsp;1.0&nbsp;·&nbsp;June&nbsp;2026</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;">
+      <div style="aspect-ratio:1; border-radius:18px; overflow:hidden; border:1px solid rgba(216,175,85,.18); background:radial-gradient(120% 120% at 50% 35%,#15120d,#050505); box-shadow:0 30px 80px rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; padding:34px;">
+        <img src="./start-here-highlight-mqwim2dq.png" alt="MAIM crown seal" style="width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(0 16px 36px rgba(0,0,0,.55));">
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:5px; color:#D8AF55; text-transform:uppercase; margin-bottom:24px;">The Invisible Operating System</div>
+        <h1 style="font-weight:900; font-size:74px; line-height:.9; letter-spacing:-2px; margin:0 0 8px; text-transform:uppercase;">HaMAL<br><span style="font-weight: 500; font-size: 38px; letter-spacing: 5px; color: rgb(247, 244, 234);">Powered-By&nbsp;Assets</span></h1>
+        <div style="width:200px; height:6px; border-radius:3px; margin:26px 0 28px; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+        <p style="font-size:22px; line-height:1.4; margin:0; max-width:540px; color:rgba(247,244,234,.85);">Every lesson is human. <span style="color:#1F7A3A; font-weight:700;">Every system is powered by HAMAL.</span></p>
+      </div>
+    </div>
+
+    <div style="margin-top:64px; display:flex; flex-wrap:wrap; gap:14px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Operate Like a Team of 100</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Reference Architecture</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Reusable Across Every Venture</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Powered by HAMAL</div>
+    </div>
+
+    <div style="margin-top:48px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.4); margin-right:6px;">POWERS</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#D8AF55; padding:7px 13px; border-radius:7px; background:rgba(216,175,85,.08); border:1px solid rgba(216,175,85,.25);">MAIM 04 · Content Engine</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3FA45C; padding:7px 13px; border-radius:7px; background:rgba(31,122,58,.08); border:1px solid rgba(31,122,58,.3);">MAIM 06 · Conversion Engine</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3a9be0; padding:7px 13px; border-radius:7px; background:rgba(0,107,182,.08); border:1px solid rgba(0,107,182,.3);">MAIM 07 · Course + Cohort</span>
+    </div>
+  </section>
+
+  <div style="max-width:1240px; margin:0 auto; height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent);"></div>
+
+  <!-- ===================== DOCTRINE BAND ===================== -->
+  <section data-screen-label="Doctrine" style="max-width:1240px; margin:0 auto; padding:80px 56px 72px;">
+    <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:stretch;">
+      <div style="background:linear-gradient(135deg,#0d0d0f,#0a0a0c); border:1px solid rgba(247,244,234,.1); border-radius:18px; padding:48px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:22px;">THE CORE QUESTION</div>
+        <h2 style="font-weight:900; font-size:46px; line-height:1.02; letter-spacing:-1px; margin:0 0 18px;">How can one person operate like a team of one hundred?</h2>
+        <p style="font-size:16px; line-height:1.6; color:rgba(247,244,234,.6); margin:0; max-width:520px;">Up until now, every MAIM volume designed what <strong style="color:#F7F4EA;">people see.</strong> This one is what <strong style="color:#F7F4EA;">nobody sees</strong> — the invisible intelligence layer beneath the entire ecosystem.</p>
+      </div>
+      <div style="background:#1F7A3A; border-radius:18px; padding:48px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:rgba(255,255,255,.7); margin-bottom:20px;">CORE DOCTRINE</div>
+        <p style="font-size:26px; font-weight:800; line-height:1.25; margin:0 0 20px; color:#F7F4EA;">Don't automate people.<br>Automate everything around people.</p>
+        <div style="display:flex; gap:18px; align-items:center; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:2px; color:rgba(247,244,234,.85);">
+          <span><span style="color:#fff; font-weight:700;">Humans</span> create.</span>
+          <span style="opacity:.5;">·</span>
+          <span><span style="color:#D8AF55; font-weight:700;">HAMAL</span> orchestrates.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 01 HAMAL ECOSYSTEM ===================== -->
+  <section data-screen-label="01 HAMAL Ecosystem" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">01</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">HAMAL Ecosystem</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The executive flywheel.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Ten stages, one self-reinforcing loop. Major creates, HAMAL OS orchestrates, and every cycle of growth feeds the next — the more it runs, the faster it compounds.</p>
+
+    <div style="background:#0a0a0c; border:1px solid rgba(216,175,85,.2); border-radius:20px; padding:40px;">
+      <!-- row 1 L→R -->
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px; align-items:stretch;">
+        <div style="background:#100d07; border:1px solid rgba(216,175,85,.45); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:8px;">01</div><div style="font-weight:800; font-size:18px;">Major</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">The human. Vision &amp; judgment.</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.45); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:8px;">02</div><div style="font-weight:800; font-size:18px;">HAMAL OS</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">The orchestration engine.</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:8px;">03</div><div style="font-weight:800; font-size:18px;">AI Agents</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">The workforce.</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:8px;">04</div><div style="font-weight:800; font-size:18px;">Automation</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">Friction removed.</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:8px;">05</div><div style="font-weight:800; font-size:18px;">Community</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">The people served.</div></div>
+      </div>
+      <!-- serpentine connectors -->
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 8px; font-family:'JetBrains Mono',monospace; font-size:18px; color:rgba(216,175,85,.6);">
+        <span style="flex:1; text-align:center;">↓</span><span style="flex:1;"></span><span style="flex:1;"></span><span style="flex:1;"></span><span style="flex:1; text-align:center;">↓</span>
+      </div>
+      <!-- row 2 R→L (reversed) -->
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px; align-items:stretch; direction:rtl;">
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:8px;">06</div><div style="font-weight:800; font-size:18px;">Students</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">Transformation in motion.</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:8px;">07</div><div style="font-weight:800; font-size:18px;">Data</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">Signal from every touch.</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:8px;">08</div><div style="font-weight:800; font-size:18px;">Improvement</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">The system learns.</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:8px;">09</div><div style="font-weight:800; font-size:18px;">Content</div><div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:5px; line-height:1.4;">Created once, deployed everywhere.</div></div>
+        <div style="direction:ltr; background:#D8AF55; border:1px solid #D8AF55; border-radius:14px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(5,5,5,.6); margin-bottom:8px;">10</div><div style="font-weight:900; font-size:18px; color:#050505;">Growth</div><div style="font-size:11px; color:rgba(5,5,5,.7); margin-top:5px; line-height:1.4;">Compounds &amp; feeds Major.</div></div>
+      </div>
+      <!-- loop back caption -->
+      <div style="margin-top:22px; display:flex; align-items:center; gap:12px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(216,175,85,.75);">
+        <span style="font-size:16px;">↻</span><span>GROWTH LOOPS BACK INTO MAJOR — THE FLYWHEEL NEVER STOPS</span>
+        <span style="flex:1; height:1px; background:linear-gradient(90deg,rgba(216,175,85,.4),transparent);"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 02 PRODUCTION RHYTHM ===================== -->
+  <section data-screen-label="02 Production Rhythm" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">02</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Production Rhythm</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The weekly operator rhythm.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:780px; margin:0 0 18px;">This is <strong style="color:#F58426;">not</strong> the member experience — it's the production pipeline. Seven days of orchestrated work behind every Sunday broadcast.</p>
+    <div style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426; padding:7px 14px; border:1px solid rgba(245,132,38,.35); border-radius:99px; margin-bottom:40px;">⚙ PIPELINE · NOT MEMBER-FACING</div>
+
+    <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:12px; align-items:stretch;">
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3a9be0; margin-bottom:14px;">MON</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Review analytics</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Review webinar</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Plan the week</div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:14px;">TUE</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">AI writing</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Slides</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Prompt generation</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Image generation</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Video generation</div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3FA45C; margin-bottom:14px;">WED</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Office hours</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Community support</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">QA</div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:14px;">THU</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Newsletter</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Social media</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Email</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Automation checks</div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:14px;">FRI</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Live rehearsal</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Slides</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Technical review</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Prompt testing</div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:14px;">SAT</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Promotion</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Reminder emails</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Community engagement</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8);">Final rehearsal</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(170deg,#1F7A3A,#0f3d1d); border:1px solid #1F7A3A; border-radius:14px; padding:20px 14px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:14px;">SUN</div>
+        <div style="font-weight:900; font-size:17px; line-height:1.1; text-transform:uppercase;">Major AI Mindset Live</div>
+        <div style="margin-top:auto; padding-top:14px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.75);">THE BROADCAST →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 AGENT ARCHITECTURE ===================== -->
+  <section data-screen-label="03 Agent Architecture" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">03</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Agent Architecture</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">An org chart of agents.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">One CEO Agent routes the work; eleven specialist agents do it. Each one owns a function a human used to. The roster scales toward a full <strong style="color:#3FA45C;">144-agent</strong> company.</p>
+
+    <!-- CEO -->
+    <div style="display:flex; justify-content:center; margin-bottom:0;">
+      <div style="background:linear-gradient(135deg,#1a1409,#0a0a0c); border:1px solid rgba(216,175,85,.5); border-radius:16px; padding:24px 40px; text-align:center; min-width:260px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55; margin-bottom:8px;">THE ROUTER</div>
+        <div style="font-weight:900; font-size:26px; text-transform:uppercase;">CEO Agent</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.6); margin-top:6px;">Reads intent · assigns work · reports up</div>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:20px; color:rgba(216,175,85,.6); padding:8px 0;">↓</div>
+
+    <!-- specialist grid -->
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Content</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Writes &amp; repurposes.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Curriculum</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Builds lessons.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Prompt</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Engineers &amp; tests.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Design</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Slides &amp; key art.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Video</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Renders &amp; edits.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Community</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Engages members.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Support</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Answers questions.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">CRM</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Tracks the journey.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Analytics</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Measures leverage.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:18px 16px;"><div style="font-weight:800; font-size:16px;">Research</div><div style="font-size:11px; color:rgba(247,244,234,.5); margin-top:4px;">Feeds the loop.</div></div>
+      <div style="background:linear-gradient(135deg,#0f1a10,#0a0a0c); border:1px dashed rgba(63,164,92,.5); border-radius:13px; padding:18px 16px; display:flex; flex-direction:column; justify-content:center;"><div style="font-weight:900; font-size:22px; color:#3FA45C;">+133</div><div style="font-size:11px; color:rgba(247,244,234,.6); margin-top:4px;">toward 144 agents.</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 CONTENT FACTORY ===================== -->
+  <section data-screen-label="04 Content Factory" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">04</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Content Factory</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">One piece. Infinite assets.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Everything starts once — then explodes. A single Sunday broadcast becomes a transcript, runs through the AI stack, and fans out across every channel the brand touches.</p>
+
+    <div style="display:grid; grid-template-columns:0.85fr 0.7fr 1.4fr; gap:20px; align-items:stretch;">
+      <!-- source -->
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="background:linear-gradient(170deg,#1F7A3A,#0f3d1d); border-radius:16px; padding:26px; flex:1; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">THE SOURCE · ONCE</div>
+          <div style="font-weight:900; font-size:30px; line-height:1; text-transform:uppercase;">Sunday Live</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.8); margin-top:10px; line-height:1.5;">One broadcast. The single origin of everything downstream.</div>
+        </div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-bottom:4px;">↓ CAPTURE</div><div style="font-weight:700; font-size:16px;">Transcript</div></div>
+      </div>
+
+      <!-- AI processors -->
+      <div style="display:flex; flex-direction:column; justify-content:center; gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; text-align:center; margin-bottom:2px;">PROCESSED BY</div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:11px; padding:13px; text-align:center; font-weight:700; font-size:15px;">NotebookLM</div>
+        <div style="display:flex; justify-content:center; font-family:'JetBrains Mono',monospace; color:rgba(0,107,182,.6);">↓</div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:11px; padding:13px; text-align:center; font-weight:700; font-size:15px;">Claude</div>
+        <div style="display:flex; justify-content:center; font-family:'JetBrains Mono',monospace; color:rgba(0,107,182,.6);">↓</div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:11px; padding:13px; text-align:center; font-weight:700; font-size:15px;">ChatGPT</div>
+      </div>
+
+      <!-- explosion grid -->
+      <div style="background:#0a0a0c; border:1px solid rgba(245,132,38,.3); border-radius:16px; padding:24px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:16px;">EXPLODES INTO →</div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Articles</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Carousels</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Instagram</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">X</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">LinkedIn</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Threads</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Email</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">YouTube</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600;">Podcast</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600; color:#E8C77A;">Prompt Pack</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600; color:#E8C77A;">Workbook</div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:9px; padding:11px 8px; text-align:center; font-size:12px; font-weight:600; color:#E8C77A;">Course Update</div>
+        </div>
+        <div style="margin-top:16px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:rgba(247,244,234,.45);">13 ASSETS FROM 1 BROADCAST</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 05 AUTOMATION MAP ===================== -->
+  <section data-screen-label="05 Automation Map" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">05</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Automation Map</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Exactly what runs itself.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">A registration triggers a chain reaction. Eleven systems hand off to each other with no human in the loop — from first signup to issued certificate.</p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+      <div style="background:linear-gradient(135deg,#1a1409,#0a0a0c); border:1px solid rgba(216,175,85,.45); border-radius:12px; padding:16px 20px; font-weight:800; font-size:16px;">Registration</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(216,175,85,.6); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">CRM</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Calendar</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Email</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Discord / Skool</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Airtable</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Notion</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">GitHub</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px;">Google Drive</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,.35); font-size:18px;">→</span>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 20px; font-weight:700; font-size:15px; color:#E8C77A;">Certificates</div>
+      <span style="font-family:'JetBrains Mono',monospace; color:rgba(216,175,85,.6); font-size:18px;">→</span>
+      <div style="background:#D8AF55; border-radius:12px; padding:16px 20px; font-weight:800; font-size:15px; color:#050505;">Analytics</div>
+    </div>
+
+    <div style="margin-top:28px; background:rgba(245,132,38,.06); border:1px solid rgba(245,132,38,.3); border-radius:14px; padding:20px 26px; display:flex; gap:16px; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426; flex:none;">EVERYTHING</span>
+      <p style="font-size:15px; line-height:1.5; color:rgba(247,244,234,.8); margin:0;">If a task happens more than once, it gets automated. The operator's job is to design the chain — never to run it by hand.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 06 AI STACK ===================== -->
+  <section data-screen-label="06 AI Stack" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">06</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">AI Stack</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The full toolbox.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Every tool in the production stack, grouped by job. HAMAL sits at the center as the orchestration layer that ties them together.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+      <!-- Core intelligence -->
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:16px; padding:26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:18px;">CORE INTELLIGENCE</div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="background:linear-gradient(135deg,#1a1409,#0a0a0c); border:1px solid rgba(216,175,85,.5); border-radius:8px; padding:9px 14px; font-weight:800; font-size:14px;">HAMAL</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Claude</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">ChatGPT</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Gemini</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">NotebookLM</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Opal</span>
+        </div>
+      </div>
+      <!-- Automation & code -->
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.35); border-radius:16px; padding:26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3FA45C; margin-bottom:18px;">AUTOMATION &amp; CODE</div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">ManyChat</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">n8n</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Zapier</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">GitHub</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Codex</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Cursor</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Windsurf</span>
+        </div>
+      </div>
+      <!-- Media & design -->
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:16px; padding:26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3a9be0; margin-bottom:18px;">MEDIA &amp; DESIGN</div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Remotion</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Sora</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Google Flow</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">ElevenLabs</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Voicebox</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Figma</span>
+          <span style="background:#070707; border:1px solid rgba(247,244,234,.14); border-radius:8px; padding:9px 14px; font-weight:600; font-size:14px;">Canva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 07 KNOWLEDGE SYSTEM ===================== -->
+  <section data-screen-label="07 Knowledge System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">07</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Knowledge System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">A learning loop, not a library.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Information flows in a circle. Research feeds the systems, the systems feed the Live, students feed back, and feedback becomes the next round of research.</p>
+
+    <div style="background:#0a0a0c; border:1px solid rgba(31,122,58,.25); border-radius:20px; padding:40px;">
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px;">
+        <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3FA45C; margin-bottom:6px;">INPUT</div><div style="font-weight:700; font-size:14px;">Research</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:6px;">STORE</div><div style="font-weight:700; font-size:14px;">GitHub</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:6px;">STORE</div><div style="font-weight:700; font-size:14px;">Notion</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:6px;">STORE</div><div style="font-weight:700; font-size:14px;">Airtable</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:6px;">STORE</div><div style="font-weight:700; font-size:14px;">Google Drive</div></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3a9be0; margin-bottom:6px;">SYNTHESIZE</div><div style="font-weight:700; font-size:14px;">Claude</div></div>
+      </div>
+      <div style="display:flex; justify-content:flex-end; align-items:center; gap:10px; padding:12px 4px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(0,107,182,.7);"><span>SYNTHESIZE</span><span style="font-size:16px;">↓</span></div>
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px; direction:rtl;">
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3a9be0; margin-bottom:6px;">SYNTHESIZE</div><div style="font-weight:700; font-size:14px;">ChatGPT</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3a9be0; margin-bottom:6px;">SYNTHESIZE</div><div style="font-weight:700; font-size:14px;">NotebookLM</div></div>
+        <div style="direction:ltr; background:linear-gradient(170deg,#1F7A3A,#0f3d1d); border:1px solid #1F7A3A; border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#D8AF55; margin-bottom:6px;">TEACH</div><div style="font-weight:800; font-size:14px;">Live</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#D8AF55; margin-bottom:6px;">RECEIVE</div><div style="font-weight:700; font-size:14px;">Students</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 12px; text-align:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#D8AF55; margin-bottom:6px;">RETURN</div><div style="font-weight:700; font-size:14px;">Feedback</div></div>
+        <div style="direction:ltr; background:#0c0c0e; border:1px dashed rgba(63,164,92,.5); border-radius:12px; padding:16px 12px; text-align:center; display:flex; flex-direction:column; justify-content:center;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3FA45C; margin-bottom:6px;">↻ LOOP</div><div style="font-weight:700; font-size:14px; color:#3FA45C;">Research</div></div>
+      </div>
+      <div style="margin-top:22px; display:flex; align-items:center; gap:12px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(63,164,92,.75);">
+        <span style="font-size:16px;">↻</span><span>FEEDBACK BECOMES THE NEXT ROUND OF RESEARCH</span>
+        <span style="flex:1; height:1px; background:linear-gradient(90deg,rgba(63,164,92,.4),transparent);"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 08 METRICS DASHBOARD ===================== -->
+  <section data-screen-label="08 Metrics Dashboard" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">08</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Metrics Dashboard</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Measure leverage, not vanity.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Ten numbers that prove the system is working. Not likes and follows — real output, real time saved, real transformation. <span style="color:rgba(247,244,234,.4); font-family:'JetBrains Mono',monospace; font-size:13px;">(sample figures)</span></p>
+
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px; color:#D8AF55;">1,240</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">HOURS SAVED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px;">3,800</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">ASSETS CREATED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px;">412</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">VIDEOS PUBLISHED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px;">2,600</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">PROMPTS CREATED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px; color:#3FA45C;">9,150</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">STUDENTS HELPED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px;">14,300</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">QUESTIONS ANSWERED</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px;">186</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">AUTOMATIONS BUILT</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px; color:#D8AF55;">$284K</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">REVENUE</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px; color:#3a9be0;">+38%</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.55); margin-top:6px;">LEAD VELOCITY</div></div>
+      <div style="background:linear-gradient(135deg,#1a1409,#0a0a0c); border:1px solid rgba(216,175,85,.5); border-radius:14px; padding:22px 20px;"><div style="font-weight:900; font-size:38px; letter-spacing:-1px; color:#D8AF55;">8.7</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.7); margin-top:6px;">TRANSFORMATION SCORE</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 09 INFRASTRUCTURE ===================== -->
+  <section data-screen-label="09 Infrastructure" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">09</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Infrastructure</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The digital nervous system.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Ten platforms, all connected. HAMAL is the spine; each tool is an organ that signals to the rest. Nothing operates in isolation.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3a9be0; margin-bottom:8px;">CODE</div><div style="font-weight:800; font-size:17px;">GitHub</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">DOCS</div><div style="font-weight:800; font-size:17px;">Notion</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">DATA</div><div style="font-weight:800; font-size:17px;">Airtable</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">FILES</div><div style="font-weight:800; font-size:17px;">Google Drive</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">CHAT</div><div style="font-weight:800; font-size:17px;">Slack</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">TIME</div><div style="font-weight:800; font-size:17px;">Google Calendar</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#3FA45C; margin-bottom:8px;">REACH</div><div style="font-weight:800; font-size:17px;">ManyChat</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.4); margin-bottom:8px;">SEND</div><div style="font-weight:800; font-size:17px;">Email</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:#D8AF55; margin-bottom:8px;">JOURNEY</div><div style="font-weight:800; font-size:17px;">CRM</div></div>
+      <div style="background:#D8AF55; border-radius:13px; padding:20px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(5,5,5,.6); margin-bottom:8px;">MEASURE</div><div style="font-weight:900; font-size:17px; color:#050505;">Analytics</div></div>
+    </div>
+
+    <div style="margin-top:22px; display:flex; align-items:center; gap:12px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(216,175,85,.7);">SPINE</span>
+      <div style="flex:1; height:6px; border-radius:3px; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(216,175,85,.7);">HAMAL OS TIES IT ALL TOGETHER</span>
+    </div>
+  </section>
+
+  <!-- ===================== 10 HAMAL COMMAND CENTER ===================== -->
+  <section data-screen-label="10 Command Center" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">10</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">HAMAL Command Center</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Everything in three columns.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">People create. HAMAL orchestrates. Systems carry it out. This is the whole operating model on one screen.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1.1fr 1fr; gap:20px; align-items:stretch;">
+      <!-- People -->
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:18px; padding:32px 28px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3FA45C; margin-bottom:8px;">THE HERO</div>
+        <div style="font-weight:900; font-size:30px; text-transform:uppercase; margin-bottom:22px;">People</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #1F7A3A;">Teach</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #1F7A3A;">Coach</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #1F7A3A;">Create</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #1F7A3A;">Lead</div>
+        </div>
+      </div>
+      <!-- HAMAL -->
+      <div style="background:linear-gradient(160deg,#15110a,#0a0a0c); border:1px solid rgba(216,175,85,.45); border-radius:18px; padding:32px 28px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:8px;">THE ORCHESTRATOR</div>
+        <div style="font-weight:900; font-size:30px; text-transform:uppercase; margin-bottom:22px;">HAMAL</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Think</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Organize</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Generate</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Automate</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Remember</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55;">Route</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #D8AF55; grid-column:1 / -1;">Measure</div>
+        </div>
+      </div>
+      <!-- Systems -->
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:18px; padding:32px 28px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3a9be0; margin-bottom:8px;">THE OUTPUT</div>
+        <div style="font-weight:900; font-size:30px; text-transform:uppercase; margin-bottom:22px;">Systems</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Content</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Community</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">CRM</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Projects</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Assets</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Analytics</div>
+          <div style="font-size:17px; font-weight:600; padding-left:14px; border-left:2px solid #006BB6;">Revenue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AGENT COMMAND MATRIX ===================== -->
+  <section data-screen-label="Agent Command Matrix" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#F58426;">★</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Agent Command Matrix · The Master Blueprint</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">144 agents, eight divisions.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:820px; margin:0 0 44px;">The bridge into every future venture. Each division is a department of agents with a mission, the tools it runs, the KPIs it owns, and the MAIM volumes it powers. This single map is the reference architecture for the entire HAMAL company.</p>
+
+    <!-- header row -->
+    <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; background:#0a0a0c; border:1px solid rgba(247,244,234,.12); border-radius:14px 14px 0 0; overflow:hidden;">
+      <div style="padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; border-right:1px solid rgba(247,244,234,.08);">DIVISION</div>
+      <div style="padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; border-right:1px solid rgba(247,244,234,.08);">MISSION → OUTPUT</div>
+      <div style="padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; border-right:1px solid rgba(247,244,234,.08);">TOOLS</div>
+      <div style="padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; border-right:1px solid rgba(247,244,234,.08);">KPIs</div>
+      <div style="padding:16px 18px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">POWERS</div>
+    </div>
+
+    <!-- rows -->
+    <div style="border:1px solid rgba(247,244,234,.12); border-top:none; border-radius:0 0 14px 14px; overflow:hidden;">
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #D8AF55;"><div style="font-weight:800; font-size:16px;">Executive</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">CEO · Strategy · Routing</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Read intent, assign work, report leverage.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">HAMAL · Claude · Notion</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Hours saved · Throughput</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">All</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #F58426;"><div style="font-weight:800; font-size:16px;">Marketing</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Content · Social · CRM</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Turn one broadcast into omni-channel reach.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">ChatGPT · ManyChat · Canva</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Lead velocity · Reach</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3FA45C;">04 · 06</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #3FA45C;"><div style="font-weight:800; font-size:16px;">Education</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Curriculum · Prompt · Design</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Build lessons, slides, and prompt packs.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Claude · NotebookLM · Figma</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Assets created · Score</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3a9be0;">03 · 07</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #3a9be0;"><div style="font-weight:800; font-size:16px;">Community</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Engage · Support · Moderate</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Answer fast, nurture members, keep the room warm.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Discord · Skool · ManyChat</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Questions answered</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3a9be0;">05 · 07</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #D8AF55;"><div style="font-weight:800; font-size:16px;">Research</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Scan · Synthesize · Feed</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Keep the system current and the loop turning.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Gemini · NotebookLM · GitHub</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Insights shipped</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">01 · 07</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #3FA45C;"><div style="font-weight:800; font-size:16px;">Finance</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Revenue · Billing · Reporting</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Track every dollar in and out, automatically.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Airtable · Zapier · CRM</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Revenue · Margin</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3FA45C;">02 · 06</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0; border-bottom:1px solid rgba(247,244,234,.08);">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #3a9be0;"><div style="font-weight:800; font-size:16px;">Operations</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Automation · Infra · QA</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Wire the chains and keep them running clean.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">n8n · Zapier · GitHub</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Automations · Uptime</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#3a9be0;">08 · 09</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1.5fr 1.2fr 1fr 0.9fr; gap:0;">
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); border-left:3px solid #F58426;"><div style="font-weight:800; font-size:16px;">Wellness</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.4); margin-top:4px;">Members · Cohorts · Ventures</div></div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:13px; color:rgba(247,244,234,.75); line-height:1.5;">Extend the model to Lux, Artmob &amp; partner ecosystems.</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">HAMAL · Notion · CRM</div>
+        <div style="padding:18px; border-right:1px solid rgba(247,244,234,.08); font-size:12px; color:rgba(247,244,234,.6); line-height:1.6;">Transformation score</div>
+        <div style="padding:18px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#F58426;">09 →</div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px; background:rgba(216,175,85,.06); border:1px solid rgba(216,175,85,.3); border-radius:14px; padding:24px 28px; display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:center;">
+      <div style="width:60px; height:60px; border-radius:10px; overflow:hidden; border:1px solid rgba(216,175,85,.3);"><img src="assets/crown-coin.png" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
+      <p style="font-size:16px; line-height:1.55; color:rgba(247,244,234,.8); margin:0;"><strong style="color:#D8AF55;">MAIM 08 isn't about building a business — it's about building a company that builds businesses.</strong> HAMAL is the reusable operating layer that can power MAIM, Lux, Artmob, athlete ecosystems, wellness brands, client projects, and every future venture.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="max-width:1240px; margin:0 auto; padding:40px 56px;">
+    <div style="height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent); margin-bottom:32px;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:44px; height:44px; border-radius:8px; overflow:hidden; border:1px solid rgba(216,175,85,.3);"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div><div style="font-weight:800; font-size:14px; letter-spacing:1px;">MAJOR AI MINDSET</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45);">HAMAL POWERED-BY · VOL 08</div></div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.45); text-align:right;">HUMANS CREATE. <span style="color:#F58426;">HAMAL</span> ORCHESTRATES.<br>Powered by HAMAL · major@hanzo.ai</div>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#050505">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#050505"></rect>
+    <image href="assets/crown-coin.png" x="475" y="170" width="250" height="250" preserveAspectRatio="xMidYMid meet"></image>
+    <rect x="510" y="470" width="56" height="12" rx="6" fill="#1F7A3A"></rect>
+    <rect x="572" y="470" width="56" height="12" rx="6" fill="#D8AF55"></rect>
+    <rect x="634" y="470" width="56" height="12" rx="6" fill="#006BB6"></rect>
+    <text x="600" y="552" font-family="Arial, sans-serif" font-weight="bold" font-size="48" letter-spacing="5" fill="#F7F4EA" text-anchor="middle">HAMAL POWERED-BY</text>
+    <text x="600" y="598" font-family="monospace" font-size="21" letter-spacing="5" fill="rgba(247,244,234,0.5)" text-anchor="middle">VOLUME 08</text>
+  </svg>
+</template>
+</x-dc>
+</body>
+</html>

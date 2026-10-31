@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 02</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase; text-wrap:balance;">Navigation</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Components that orient a reader inside a document — where they are, what's next, and how the parts relate.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Inherits the MAIM 00 Brand System and SOS Foundation Board. Every rule below is an assembly instruction, not a new design.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);">
+    <div><span style="color:#D8AF55;">COMP-101</span> Section Header</div>
+    <div><span style="color:#D8AF55;">COMP-102</span> Subsection Header</div>
+    <div><span style="color:#D8AF55;">COMP-103</span> Divider</div>
+    <div><span style="color:#D8AF55;">COMP-104</span> Chapter Banner</div>
+    <div><span style="color:#D8AF55;">COMP-105</span> Table of Contents</div>
+    <div><span style="color:#D8AF55;">COMP-106</span> Breadcrumb</div>
+    <div><span style="color:#D8AF55;">COMP-107</span> Page Marker</div>
+  </div>
+</div>
+
+<!-- ============ COMP-101 SECTION HEADER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-101</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Section Header</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Opens a major document section (Scope, Pricing, Timeline, Terms). <b style="color:#F7F4EA;">Used on:</b> the first line of any top-level section in a Proposal, SOW, or Report.</p>
+
+  <div style="margin-bottom:16px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:4px;">02 · Scope of Work</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; text-transform:uppercase; margin-bottom:8px;">Scope of Work</div>
+    <div class="tribar" style="width:100%; height:3px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Numbered eyebrow above the title; tri-bar spans full content width beneath it, closing the header.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow: JetBrains Mono 500, 10px, tracked, gold. Title: Archivo Black 900, 26px, uppercase.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">4px between eyebrow and title, 8px between title and tri-bar. 32px clearance before body content starts.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Numbering is textual (02 ·), not decorative — screen readers get section order without relying on layout position.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Never orphaned — a Section Header cannot be the last line on a printed page; it moves with its first paragraph.</div></div>
+</div>
+
+<!-- ============ COMP-102 SUBSECTION HEADER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-102</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Subsection Header</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Breaks a section into named parts. <b style="color:#F7F4EA;">Used on:</b> nested topics inside a Section Header's content — e.g. "Deliverables" inside "Scope of Work".</p>
+
+  <div style="margin-bottom:16px;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:17px; margin-bottom:6px;">Deliverables</div>
+    <div style="height:1px; background:rgba(247,244,234,0.2); width:100%;"></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Title with a single hairline rule beneath — no eyebrow, no tri-bar. One tier down from Section Header.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Archivo 600, 17px, sentence case — never uppercase, to visually separate it from Section Header.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">6px to the rule below; 24px clearance above from the preceding paragraph, 16px below to next content.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Maps to an h3-equivalent in document structure — always nested under a Section Header, never used standalone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Keeps with its following line; the hairline never prints alone at the bottom of a sheet.</div></div>
+</div>
+
+<!-- ============ COMP-103 DIVIDER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-103</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary + Alternates</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Divider</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Separates unrelated blocks without introducing a new heading. <b style="color:#F7F4EA;">Used on:</b> between a table and its footnote, between line items, before a signature block.</p>
+
+  <div style="display:flex; flex-direction:column; gap:22px; margin-bottom:18px;">
+    <div style="height:1px; background:rgba(247,244,234,0.16); width:100%;"></div>
+    <div style="display:flex; align-items:center; gap:12px;"><div style="height:1px; background:rgba(247,244,234,0.16); flex:1;"></div><div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Labeled</div><div style="height:1px; background:rgba(247,244,234,0.16); flex:1;"></div></div>
+    <div class="tribar" style="width:60px; height:3px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Plain hairline is default; labeled variant centers a mono tag; tri-bar variant is reserved for a true section boundary only.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Labeled variant: JetBrains Mono 500, 9px, tracked, muted ivory — never gold (gold tri-bar already signals boundary elsewhere).</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">16px clearance above and below any divider variant, regardless of context.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Purely visual — carries no semantic heading, so it never replaces a Section or Subsection Header.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">1px hairlines hold at 300dpi print; the mini tri-bar variant never appears smaller than 60px wide.</div></div>
+</div>
+
+<!-- ============ COMP-104 CHAPTER BANNER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-104</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Chapter Banner</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Full-page divider announcing a new major part of a long document. <b style="color:#F7F4EA;">Used on:</b> multi-part deliverables — e.g. splitting an Onboarding Guide into "Getting Started" / "Tools" / "Support" parts.</p>
+
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:36px 30px; margin-bottom:16px; display:flex; flex-direction:column; justify-content:center; min-height:160px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#D8AF55; margin-bottom:12px;">Part Two</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:36px; text-transform:uppercase; margin-bottom:14px;">Tools &amp; Access</div>
+    <div class="tribar" style="width:140px; height:5px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Occupies its own full page; centered vertically in the content column, left-aligned text.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow "Part N" in tracked mono; title in Archivo Black 900 at 36px — the largest in-document title after the cover.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">12px eyebrow-to-title, 14px title-to-tri-bar. Always its own page — never shares a sheet with other content.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Always paired with a Table of Contents entry so the part is reachable without paging through the document.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Forces a page break before and after; never printed back-to-back with another Chapter Banner.</div></div>
+</div>
+
+<!-- ============ COMP-105 TABLE OF CONTENTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-105</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Table of Contents</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Maps a long document's structure up front. <b style="color:#F7F4EA;">Used on:</b> page 2 of any document exceeding six pages — Reports, Delivery Packets, Onboarding Guides.</p>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:18px;">
+    <div style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(247,244,234,0.12); font-size:13px;"><span><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; margin-right:10px;">01</span>Engagement Overview</span><span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">03</span></div>
+    <div style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(247,244,234,0.12); font-size:13px;"><span><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; margin-right:10px;">02</span>Scope of Work</span><span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">04</span></div>
+    <div style="display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(247,244,234,0.12); font-size:13px;"><span><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; margin-right:10px;">03</span>Pricing &amp; Terms</span><span style="font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">07</span></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Numbered rows, flex-justified: number + title left, page reference right. Hairline between every row.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Row number in JetBrains Mono, gold; title in Archivo 400, 13px; page reference in muted mono, right-aligned.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">9px vertical padding per row; 10px gap between number and title.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Entries are real links to their target Section Header when viewed digitally — never decorative text alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Page references reflect final printed pagination, not authoring order — regenerate on export.</div></div>
+</div>
+
+<!-- ============ COMP-106 BREADCRUMB ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-106</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Breadcrumb</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Shows where the current section sits within the document hierarchy. <b style="color:#F7F4EA;">Used on:</b> below the Compact Header on interior pages of long, multi-part documents.</p>
+
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.04em; color:rgba(247,244,234,0.5); margin-bottom:18px;">Statement of Work <span style="color:rgba(247,244,234,0.3); margin:0 6px;">/</span> Scope of Work <span style="color:rgba(247,244,234,0.3); margin:0 6px;">/</span> <span style="color:#D8AF55;">Deliverables</span></div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Single inline row, slash-separated, ordered outermost to innermost. Current level highlighted, rest muted.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">JetBrains Mono 400, 10px, no uppercase — the one navigation label kept in sentence case for legibility at small size.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">6px around each slash separator; sits with 8px clearance below the Compact Header's hairline.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Current level is bolded in weight as well as gold — never color-only differentiation.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Optional in print — omit on short (under 6 page) documents where it adds no navigational value.</div></div>
+</div>
+
+<!-- ============ COMP-107 PAGE MARKER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-107</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Page Marker</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> States position within the total page count. <b style="color:#F7F4EA;">Used on:</b> the footer of every page, paired with the Document Identifier and Confidentiality Label.</p>
+
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,0.5); margin-bottom:18px;">Page 4 of 12</div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Right-aligned in the footer band, last of the three footer elements (ID, confidentiality, page marker).</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">JetBrains Mono 400, 9.5–10px, matching the Document Identifier's footer weight exactly.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">No internal padding; inherits the footer band's spacing from Footer Family components.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Always states total page count ("of 12"), not just current page — orients a reader holding loose printed sheets.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Computed at export time from final pagination — never hand-authored, so it can't drift from the printed sheet count.</div></div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Navigation Components, Assembled</h2>
+
+  <div style="border-bottom:1px solid rgba(247,244,234,0.2); padding-bottom:10px; margin-bottom:8px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:12px; text-transform:uppercase;">Statement of Work</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(247,244,234,0.5);">DOC-2026-00417 · v2.3</div>
+  </div>
+  <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:rgba(247,244,234,0.5); margin-bottom:24px;">Statement of Work <span style="color:rgba(247,244,234,0.3); margin:0 5px;">/</span> Scope of Work <span style="color:rgba(247,244,234,0.3); margin:0 5px;">/</span> <span style="color:#D8AF55;">Deliverables</span></div>
+
+  <div style="margin-bottom:16px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:4px;">02 · Scope of Work</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:24px; text-transform:uppercase; margin-bottom:8px;">Scope of Work</div>
+    <div class="tribar" style="width:100%; height:3px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px;">Deliverables</div>
+  <div style="height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:16px;"></div>
+  <div style="height:1px; background:rgba(247,244,234,0.16); width:100%; margin-bottom:24px;"></div>
+
+  <div style="display:flex; justify-content:space-between; border-top:1px solid #D8AF55; padding-top:10px; font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(247,244,234,0.5);">
+    <span>DOC-2026-00417 · v2.3</span>
+    <span style="color:#D8AF55; text-transform:uppercase; letter-spacing:0.1em;">Confidential — Client &amp; Internal</span>
+    <span>Page 4 of 12</span>
+  </div>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px; margin-top:22px;">Breadcrumb (106) sits below the Compact Header (Family 01); Section Header (101) and Subsection Header (102) establish hierarchy; a plain Divider (103) closes the block; the footer row carries the Page Marker (107) alongside Family 01's Document Identifier and Confidentiality Label. Chapter Banner (104) and Table of Contents (105) are reserved for longer, multi-part documents.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

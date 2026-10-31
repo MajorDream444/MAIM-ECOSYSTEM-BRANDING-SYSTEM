@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .info-box { border-left:3px solid; padding:12px 16px; max-width:560px; font-size:12px; line-height:1.6; }
+  .info-lbl { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px; display:block; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 07</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Information</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Six flavors of one shape — a left-bordered box that interrupts the reading flow to flag something the reader shouldn't skim past.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Only the border color, eyebrow word, and icon glyph change between variants — the box geometry never does.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);">
+    <div><span style="color:#D8AF55;">COMP-601</span> Callout</div>
+    <div><span style="color:#D8AF55;">COMP-602</span> Warning</div>
+    <div><span style="color:#D8AF55;">COMP-603</span> Tip</div>
+    <div><span style="color:#D8AF55;">COMP-604</span> Best Practice</div>
+    <div><span style="color:#D8AF55;">COMP-605</span> AI Recommendation</div>
+    <div><span style="color:#D8AF55;">COMP-606</span> Important Note</div>
+  </div>
+</div>
+
+<!-- ============ COMP-601 CALLOUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-601</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Callout</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Neutral emphasis — a fact worth pausing on, no urgency implied. <b style="color:#F7F4EA;">Used on:</b> any document body, to lift a key figure or statement out of running text.</p>
+
+  <div class="info-box" style="border-color:rgba(247,244,234,0.4);"><span class="info-lbl" style="color:rgba(247,244,234,0.6);">Callout</span>Engagements under this SOW renew automatically each quarter unless cancelled with 30 days' notice.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">3px left border, no fill, no icon — the plainest of the six, reserved for neutral emphasis.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow in tracked mono 9.5px; body in Archivo 400, 12px.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">12/16px padding, max-width 560px so the box never spans the full text column.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Eyebrow word is mandatory even at neutral emphasis — a border alone never carries meaning.</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Border renders at full 3px in print; kept whole, never split by a page break.</div></div>
+  </div>
+</div>
+
+<!-- ============ COMP-602 WARNING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-602</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Warning</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Flags a real risk or consequence the reader must not miss. <b style="color:#F7F4EA;">Used on:</b> Agreements (liability, termination clauses) and Onboarding Guides (irreversible actions).</p>
+
+  <div class="info-box" style="border-color:#F58426; background:rgba(245,132,38,0.06);"><span class="info-lbl" style="color:#F58426;">Warning</span>Missed payments beyond 15 days past due suspend all active service delivery until the balance is cleared.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Orange border with a 6% orange tint fill — the only Information variant permitted a background tint.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow "Warning" always in orange, uppercase, tracked — matches the system's single-orange-accent rule.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Identical box geometry to Callout: 12/16px padding, 560px max-width.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">The word "Warning" is never abbreviated or replaced with an icon alone.</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Tint remains visible at low-ink/grayscale print settings — verified against 15% minimum fill contrast.</div></div>
+  </div>
+</div>
+
+<!-- ============ COMP-603 TIP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-603</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Tip</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Optional, helpful, low-stakes — the reader loses nothing by skipping it. <b style="color:#F7F4EA;">Used on:</b> Onboarding Guides and Weekly Reports.</p>
+
+  <div class="info-box" style="border-color:#006BB6;"><span class="info-lbl" style="color:#3F9BE0;">Tip</span>Export your weekly report as a PDF before sharing externally — it keeps every component's spacing intact.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Blue border, no fill — the informational-blue accent reserved for this and Client Review states only.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Same type scale as Callout; eyebrow color follows the blue accent.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Identical geometry to Callout and Warning — the family never varies box shape by state.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Framed as genuinely optional in copy — never phrased in a way that implies a requirement.</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Safe to omit from condensed print layouts if space is tight — the only Information variant marked optional-to-print.</div></div>
+  </div>
+</div>
+
+<!-- ============ COMP-604 BEST PRACTICE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-604</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Best Practice</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Recommends a proven approach based on prior engagements. <b style="color:#F7F4EA;">Used on:</b> Onboarding Guides and Executive Summaries.</p>
+
+  <div class="info-box" style="border-color:#1F7A3A;"><span class="info-lbl" style="color:#3FA96A;">Best Practice</span>Schedule your weekly sync for Monday morning — teams that do report 20% faster resolution on open items.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Green border, no fill — the culture-green accent used here for "proven, recommended" rather than status.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">"Best Practice" is the longest eyebrow label in the family — tracking reduces slightly (0.1em) to keep it on one line.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Same 12/16px padding, 560px max-width as all Information variants.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Always cites the basis for the recommendation (a stat, a pattern) — never asserted without support.</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Green holds distinct from the Approved/Completed green states elsewhere since it never appears in the same component (badges vs. info boxes don't compete for meaning).</div></div>
+  </div>
+</div>
+
+<!-- ============ COMP-605 AI RECOMMENDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-605</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">AI Recommendation</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Attributes a suggestion specifically to MAIM's AI systems, distinct from a human best practice. <b style="color:#F7F4EA;">Used on:</b> Weekly Reports and Executive Summaries generated with AI-assisted analysis.</p>
+
+  <div class="info-box" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);"><span class="info-lbl" style="color:#D8AF55;">AI Recommendation</span>Based on this week's ticket volume, consider reallocating one support hour from Tuesday to Thursday.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Gold border with a 6% gold tint — the only Information variant sharing the tint treatment with Warning, distinguishing it as system-generated, not human-authored.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow always reads "AI Recommendation" in full — never shortened to "AI Rec" or an icon.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Same geometry as the family; the gold tint is the sole differentiator from Callout.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Always disclosed as AI-generated in the label itself — never presented as if written by a human analyst.</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Same tint-contrast rule as Warning — legible at low-ink print settings.</div></div>
+  </div>
+</div>
+
+<!-- ============ COMP-606 IMPORTANT NOTE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-606</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Important Note</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> The strongest non-Warning emphasis — must-read, but not a risk or consequence. <b style="color:#F7F4EA;">Used on:</b> any document, ahead of a step that's easy to miss but not dangerous to skip.</p>
+
+  <div class="info-box" style="border-color:#F7F4EA; border-left-width:4px;"><span class="info-lbl" style="color:#F7F4EA;">Important</span>This proposal's pricing is valid for 30 days from the Effective Date shown in the metadata block above.</div>
+
+  <div style="margin-top:18px;">
+    <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">The one variant with a thicker (4px) border and full white-clarity color — visually the loudest without using orange.</div></div>
+    <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow "Important" in full ivory, not gold or a culture color — reserves those hues for their specific meanings.</div></div>
+    <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Same 12/16px padding; the thicker border is the only spacing deviation in the family.</div></div>
+    <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Reserved for genuinely time- or condition-bound facts — overuse dilutes its one distinguishing signal (border weight).</div></div>
+    <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">4px border holds clearly at any print resolution, including black-and-white fax-quality output.</div></div>
+  </div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 20px; text-transform:uppercase;">Information Components, Assembled</h2>
+
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:640px; margin:0 0 16px;">An excerpt from an Onboarding Guide, showing how Information components punctuate body copy without ever competing with each other on the same page:</p>
+
+  <div style="display:flex; flex-direction:column; gap:14px;">
+    <div class="info-box" style="border-color:#006BB6; max-width:520px;"><span class="info-lbl" style="color:#3F9BE0;">Tip</span>Bookmark your client portal login — you'll use it every week.</div>
+    <div class="info-box" style="border-color:#F58426; background:rgba(245,132,38,0.06); max-width:520px;"><span class="info-lbl" style="color:#F58426;">Warning</span>Revoking portal access for a team member cannot be undone from your side — contact support instead.</div>
+    <div class="info-box" style="border-color:#1F7A3A; max-width:520px;"><span class="info-lbl" style="color:#3FA96A;">Best Practice</span>Review your Weekly Report every Friday before it rolls into the next cycle.</div>
+  </div>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px; margin-top:22px;">Each box (601–606) shares identical geometry — only border color, eyebrow word, and fill/no-fill change. No two variants appear back-to-back with the same border color, so the eye always registers a state change.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 03 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-TEMPLATES · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 03</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:56px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Template Library</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">The catalog of finished documents this operating system assembles — each one built entirely from Component Families 01–10, never a new component.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Each template ships in the same order: metadata, then layout, then component wiring, then a full example. Sprint 01 begins the pattern.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-001</span>Sprint 01 — Proposal</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-002</span>Sprint 02 — Statement of Work</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-003</span>Sprint 03 — Invoice</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-004</span>Sprint 04 — Receipt</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-005</span>Sprint 05 — Payment Schedule</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-006</span>Sprint 06 — Discovery Report</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-007</span>Sprint 07 — Weekly Report</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-008</span>Sprint 08 — Executive Summary</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-009</span>Sprint 09 — Final Delivery</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">TEMP-010</span>Sprint 10 — Project Closeout</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 01 — PROPOSAL — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 22px;">Before any layout is drawn, every template starts here: what it is, who it's for, and where it sits in the client lifecycle. This structure repeats identically for all ten sprints.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-001</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Proposal</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Present a recommended solution, scope, timeline, pricing, and next steps to a prospective client.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Prospective Client</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Proposal</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 01 — PROPOSAL — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">No new layout is invented here. This template is a specific, ordered assembly of existing components from Families 01–10. If a need arises that no listed component covers, that's a signal to add a component to the library — never to draw something bespoke inside a template.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Primary Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-003</div><div class="field-val">Metadata Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-101</div><div class="field-val">Section Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Navigation</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-201</div><div class="field-val">Status Badge</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Status</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-704</div><div class="field-val">Feature Card</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-401</div><div class="field-val">Timeline</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-301</div><div class="field-val">Pricing Table</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-601</div><div class="field-val">Callout</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Information</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-502</div><div class="field-val">Signature Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Approval</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">10 components, 8 of the 10 families. Timeline and Financial appear once each since a Proposal states a plan and a price, but doesn't yet track payment or approval history — those activate in later sprints (SOW, Invoice).</div>
+</div>
+
+<!-- ============ SPRINT 01 — PROPOSAL — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">The fixed top-to-bottom sequence a reader moves through — the blueprint every finished Proposal follows, regardless of client or deal size.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Proposal</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Header</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Metadata</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Executive Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Client Challenges</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Recommended Solution</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Scope</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Deliverables</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Timeline</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Investment</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Acceptance</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Signature</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Gold-highlighted sections (Recommended Solution, Investment) are the two moments a Feature Card or Highlight treatment is expected — everywhere else stays in the system's plain Card default.</div>
+</div>
+
+<!-- ============ SPRINT 01 — PROPOSAL — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">Every template closes by naming what it depends on. If any of these documents change, this template's assembly must be re-checked against them — dependencies are never assumed current.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Financial Components</div><div class="field-val">Family 04 — Pricing Table (301) drives the Investment section.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Status Components</div><div class="field-val">Family 03 — Status Badge (201) marks this Proposal's own lifecycle state in its Metadata Block.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Approval Components</div><div class="field-val">Family 06 — Signature Block (502) closes the Acceptance and Signature sections.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 02 — SOW — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Statement of Work</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-002</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Statement of Work</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Define exactly what will be delivered — scope, deliverables, assumptions, exclusions, timeline, roles, and acceptance criteria — as a binding commitment following an accepted Proposal.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Signing Client</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Contracting</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 02 — SOW — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Statement of Work</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">Deliberately narrower than Sprint 01: an SOW commits to scope and delivery, not pricing or persuasion — so only five families activate.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Primary Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-003</div><div class="field-val">Metadata Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-101</div><div class="field-val">Section Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Navigation</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-102</div><div class="field-val">Subsection Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Navigation</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-103</div><div class="field-val">Divider</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Navigation</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-401</div><div class="field-val">Timeline</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-405</div><div class="field-val">Phase Card</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-501</div><div class="field-val">Approval Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Approval</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-502</div><div class="field-val">Signature Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Approval</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">10 components, 5 of the 10 families: Identity, Navigation, Timeline, Approval, Footer. Roles &amp; Responsibilities, Acceptance Criteria, and the scope/deliverables/assumptions/exclusions sections are carried as structured body copy under Navigation headers — no Financial, Status, Content, Information, or Data component is required for this template.</div>
+</div>
+
+<!-- ============ SPRINT 02 — SOW — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Statement of Work</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Statement of Work</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Header</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Metadata</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Project Overview</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Objectives</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Scope</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Deliverables</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Assumptions</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Exclusions</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Timeline</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Roles &amp; Responsibilities</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Acceptance Criteria</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Signatures</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Gold-highlighted sections (Scope, Deliverables, Timeline) are the three the client will re-read most — everything else exists to remove ambiguity around them.</div>
+</div>
+
+<!-- ============ SPRINT 02 — SOW — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Statement of Work</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Identity Components</div><div class="field-val">Family 01 — Primary Header (001) and Metadata Block (003) open the document.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Navigation Components</div><div class="field-val">Family 02 — Section Header (101) and Subsection Header (102) structure every scope, deliverable, and terms subsection.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Timeline Components</div><div class="field-val">Family 05 — Timeline (401) and Phase Card (405) carry the delivery schedule.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Approval Components</div><div class="field-val">Family 06 — Approval Block (501) tracks sign-off; Signature Block (502) closes it.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Footer Components</div><div class="field-val">Family 10 — Footer (901) repeats on every page.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 03 — INVOICE — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Invoice</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-003</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Invoice</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Request payment for a specific, already-agreed scope of work — states what's owed, by when, and how to pay it.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Billing Contact</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Billing</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 03 — INVOICE — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Invoice</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">The narrowest template so far: an Invoice states a number and a deadline, nothing more — four families cover it completely.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Compact Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-003</div><div class="field-val">Metadata Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-201</div><div class="field-val">Status Badge</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Status</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-301</div><div class="field-val">Pricing Table</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-302</div><div class="field-val">Invoice Summary</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-306</div><div class="field-val">Tax Summary</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-308</div><div class="field-val">Currency Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">7 components, 4 families: Identity, Financial, Status, Footer. Due Date and Payment Instructions are carried as plain metadata fields and body copy — no Navigation, Timeline, or Approval component is required for a single-page billing document.</div>
+</div>
+
+<!-- ============ SPRINT 03 — INVOICE — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Invoice</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Invoice</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Invoice Details</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Client Information</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Line Items</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Tax</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Totals</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Due Date</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Payment Instructions</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Terms</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Line Items and Totals are the gold-highlighted core — an Invoice's entire job is getting a reader to those two blocks as fast as possible.</div>
+</div>
+
+<!-- ============ SPRINT 03 — INVOICE — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Invoice</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Identity Components</div><div class="field-val">Family 01 — Compact Header (001) and Metadata Block (003) open the document.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Financial Components</div><div class="field-val">Family 04 — Pricing Table (301), Invoice Summary (302), Tax Summary (306), and Currency Block (308) carry the entire billing body.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Status Components</div><div class="field-val">Family 03 — Status Badge (201) marks this Invoice's state using its existing vocabulary (Draft → Approved → Completed). "Paid" and "Overdue" are not current Status Badge states — see the proposed-future-component note on the assembled template.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-002 Statement of Work — this Invoice's line items should trace back to an accepted SOW's scope and pricing.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 04 — RECEIPT — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Receipt</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-004</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Receipt</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Confirm a payment was received, tie it to the engagement it settles, and show where the engagement now stands.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Billing Contact</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Billing</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 04 — RECEIPT — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Receipt</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">A Receipt differs from an Invoice in tense — it looks backward at a payment already made, and forward at what that payment unlocks. Timeline replaces Status here for exactly that reason.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Compact Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-004</div><div class="field-val">Document Identifier</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-304</div><div class="field-val">Receipt Summary</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-305</div><div class="field-val">Outstanding Balance</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-403</div><div class="field-val">Progress Bar</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">6 components, 4 families. Receipt Number is the Document Identifier (004), not a new field type. "Thank You" is plain body copy under the Payment Summary — a tone of voice, not a component.</div>
+</div>
+
+<!-- ============ SPRINT 04 — RECEIPT — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Receipt</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Receipt</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Receipt Number</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Payment Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Transaction Details</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Payment Method</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Project Progress</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Remaining Balance</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Thank You</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Payment Summary is the sole gold-highlighted block — a Receipt has exactly one number the reader needs to confirm, and everything else supports it.</div>
+</div>
+
+<!-- ============ SPRINT 04 — RECEIPT — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Receipt</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Identity Components</div><div class="field-val">Family 01 — Compact Header (001) and Document Identifier (004) serve as the Receipt Number.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Financial Components</div><div class="field-val">Family 04 — Receipt Summary (304) states what was paid; Outstanding Balance (305) states what's left.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Timeline Components</div><div class="field-val">Family 05 — Progress Bar (403) shows Project Progress after this payment is applied.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-003 Invoice — every Receipt settles a specific Invoice's Document Identifier, referenced in Transaction Details.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT SCHEDULE — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment Schedule</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-005</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Payment Schedule</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Show the financial roadmap of an engagement — every milestone payment, when it's due, and where it stands.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Billing Contact</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Billing</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT SCHEDULE — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment Schedule</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">The leanest template in the library — no Identity or Footer components at all, since this is designed to slot inside a larger document (an SOW or Report) rather than stand alone.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-303</div><div class="field-val">Payment Schedule</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-305</div><div class="field-val">Outstanding Balance</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Financial</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-401</div><div class="field-val">Timeline</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-201</div><div class="field-val">Status Badge</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Status</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">4 components, 3 families: Financial, Timeline, Status. This is a component-level assembly, not a full document — it's meant to be embedded inside TEMP-002 (SOW) or TEMP-007 (Weekly Report), which supply the Identity and Footer context around it.</div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT SCHEDULE — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment Schedule</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Payment Schedule</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Milestone Payments</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Due Dates</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Amounts</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Status</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Remaining Balance</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Due Dates, Amounts, and Status are the three columns of the one Milestone Payments table — they are not separate sections, but the anatomy of COMP-303 itself.</div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT SCHEDULE — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment Schedule</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Financial Components</div><div class="field-val">Family 04 — Payment Schedule (303) is the core table; Outstanding Balance (305) closes it.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Timeline Components</div><div class="field-val">Family 05 — Timeline (401) plots due dates against the engagement's broader schedule.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Status Components</div><div class="field-val">Family 03 — Status Badge (201) marks each milestone's payment status using PAID / UPCOMING / OVERDUE text per COMP-303's own spec, not the badge's standard eight states.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Host Templates</div><div class="field-val">Designed to embed inside TEMP-002 (Statement of Work) and TEMP-007 (Weekly Report) rather than ship as a standalone document.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 06 — DISCOVERY REPORT — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Discovery Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-006</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Discovery Report</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Document what was learned during discovery — the client's business context, findings, pain points, opportunities, and a recommended path forward.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Client Stakeholders</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Delivery</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 06 — DISCOVERY REPORT — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Discovery Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">The first template to lean entirely on Content and Information — this is the library's most narrative document, with nothing to price and nothing to sign.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Primary Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-003</div><div class="field-val">Metadata Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-705</div><div class="field-val">Summary Box</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-703</div><div class="field-val">Three Column Layout</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-701</div><div class="field-val">Card</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-708</div><div class="field-val">Bullet List</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-604</div><div class="field-val">Best Practice</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Information</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-605</div><div class="field-val">AI Recommendation</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Information</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">9 components, 4 families. Findings and Pain Points share the Card/Three Column pattern already proven in TEMP-001's Client Challenges section — the library reuses its own patterns, never redraws them.</div>
+</div>
+
+<!-- ============ SPRINT 06 — DISCOVERY REPORT — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Discovery Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Discovery Report</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Header</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Metadata</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Executive Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Business Overview</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Findings</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Pain Points</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Opportunities</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Recommendations</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Next Steps</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Executive Summary, Findings, and Recommendations are gold-highlighted — the three sections a busy stakeholder reads even if they skip everything else.</div>
+</div>
+
+<!-- ============ SPRINT 06 — DISCOVERY REPORT — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Discovery Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Identity Components</div><div class="field-val">Family 01 — Primary Header (001) and Metadata Block (003) open the document.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Content Components</div><div class="field-val">Family 08 — Summary Box (705), Three Column Layout (703), Card (701), and Bullet List (708) carry Findings, Pain Points, and Opportunities.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Information Components</div><div class="field-val">Family 07 — Best Practice (604) and AI Recommendation (605) frame the Recommendations section.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-001 Proposal — Discovery findings frequently seed a follow-on Proposal's Client Challenges section.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 07 — WEEKLY REPORT — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Weekly Progress Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-007</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Weekly Progress Report</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Keep the client informed — what shipped this week, what's in flight, what's at risk, and what's next.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Client Sponsor</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Delivery</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 07 — WEEKLY REPORT — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Weekly Progress Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">Deliberately no Identity components beyond what's needed to identify the week — this is a recurring, lightweight cadence document, not a formal deliverable.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-403</div><div class="field-val">Progress Bar</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Timeline</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-201</div><div class="field-val">Status Badge</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Status</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-705</div><div class="field-val">Summary Box</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-707</div><div class="field-val">Checklist</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-708</div><div class="field-val">Bullet List</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">5 components, 3 families: Timeline, Status, Content. Completed Tasks reuses Checklist (707) already ticked off; In Progress reuses the same Checklist unticked; Risks and Decisions run as Bullet List (708) with an inline Status Badge (201) per line where relevant.</div>
+</div>
+
+<!-- ============ SPRINT 07 — WEEKLY REPORT — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Weekly Progress Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Weekly Progress Report</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Week Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Progress Bar</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Completed Tasks</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">In Progress</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Risks</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Decisions</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Next Week</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Week Summary and Risks are gold-highlighted — a sponsor skimming this report on a Friday afternoon should catch both in ten seconds. No Footer or Header block is specified; this template assumes it's delivered inline (email body or portal post), not as a standalone printed page.</div>
+</div>
+
+<!-- ============ SPRINT 07 — WEEKLY REPORT — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Weekly Progress Report</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Timeline Components</div><div class="field-val">Family 05 — Progress Bar (403) quantifies overall engagement progress.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Status Components</div><div class="field-val">Family 03 — Status Badge (201) flags individual risk items inline within the Bullet List.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Content Components</div><div class="field-val">Family 08 — Summary Box (705), Checklist (707), and Bullet List (708) carry every section.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-005 Payment Schedule — may embed inline if a milestone payment falls due that week.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 08 — EXECUTIVE SUMMARY — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Executive Summary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-008</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Executive Summary</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Give a senior decision-maker everything they need in one sitting — key findings, hard numbers, and exactly what they're being asked to decide.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Executive Sponsor</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Delivery</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 08 — EXECUTIVE SUMMARY — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Executive Summary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">Built to be read in under two minutes. Data does the heavy lifting; Information components carry the one or two things that genuinely need a decision.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-001</div><div class="field-val">Compact Header</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Identity</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-803</div><div class="field-val">KPI Card</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Data</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-804</div><div class="field-val">Metric Tile</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Data</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-601</div><div class="field-val">Callout</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Information</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-606</div><div class="field-val">Important Note</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Information</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">5 components, 3 families. Objectives, Key Findings, Recommendations, and Next Actions run as short plain-copy lines under the KPI row — this template is deliberately too short for Section Headers or dividers to earn their space.</div>
+</div>
+
+<!-- ============ SPRINT 08 — EXECUTIVE SUMMARY — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Executive Summary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Executive Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Objectives</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">KPIs</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Key Findings</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Recommendations</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Decisions Needed</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Next Actions</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">KPIs and Decisions Needed are gold-highlighted — the numbers that frame the conversation, and the one thing the executive must actually decide. No Footer is specified; this is designed as a single page attached to an email or portal message, not a standalone printed packet.</div>
+</div>
+
+<!-- ============ SPRINT 08 — EXECUTIVE SUMMARY — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Executive Summary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Identity Components</div><div class="field-val">Family 01 — Compact Header (001) is the only Identity element; no full Metadata Block, kept intentionally light.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Data Components</div><div class="field-val">Family 09 — KPI Card (803) leads the page; Metric Tile (804) covers any additional secondary numbers.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Information Components</div><div class="field-val">Family 07 — Callout (601) frames a key finding; Important Note (606) carries the Decisions Needed.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-006 Discovery Report and TEMP-007 Weekly Progress Report both feed this summary's KPIs and findings.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY PACKAGE — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-009</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Final Delivery Package</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Officially hand off everything the client needs to run independently — deliverables, assets, credentials, documentation, training, and support.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Client Team</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Handoff</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY PACKAGE — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">No Identity family at all — this package assumes it's the final artifact inside a larger delivery folder, not a document that needs to introduce itself.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-707</div><div class="field-val">Checklist</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-701</div><div class="field-val">Card</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-708</div><div class="field-val">Bullet List</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-506</div><div class="field-val">Acceptance Certificate</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Approval</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">5 components, 3 families. Asset Register, Credentials, Documentation, Training, and Support Information all reuse Card (701) as a repeating unit — one card per asset, credential set, or resource — rather than each inventing its own layout.</div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY PACKAGE — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Final Delivery Package</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Deliverables Checklist</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Asset Register</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Credentials</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Documentation</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Training</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Support Information</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; width:100%; box-sizing:border-box;">Acceptance</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Deliverables Checklist and Acceptance are gold-highlighted — the opening confirms everything promised is present, the closing confirms the client agrees. No Footer per page here; the Acceptance Certificate (506) already carries the Document Identifier and date, per its own spec.</div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY PACKAGE — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Approval Components</div><div class="field-val">Family 06 — Acceptance Certificate (506) is the formal, ceremonial close of the engagement.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Content Components</div><div class="field-val">Family 08 — Checklist (707), Card (701), and Bullet List (708) organize every register and resource list.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Footer Components</div><div class="field-val">Family 10 — Footer (901) repeats on working pages; the closing Acceptance Certificate page carries its own identifier instead per COMP-506's spec.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-002 Statement of Work — the Deliverables Checklist here should match the SOW's Deliverables section line for line.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 10 — PROJECT CLOSEOUT — PART 1 METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 1 of 4 — Template Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Project Closeout</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-010</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Project Closeout</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Close the engagement professionally — reflect on outcomes and lessons, invite feedback, and open the door to what comes next.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Client Sponsor</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Closeout</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:10px; padding:3px 10px; letter-spacing:0.06em; text-transform:uppercase;">Version 1</span></div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 10 — PROJECT CLOSEOUT — PART 2 COMPONENTS USED ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 2 of 4 — Components Used</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Project Closeout</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 24px;">The tenth and final sprint closes the loop on the same three families as Sprint 09 — Content, Approval, Footer — but in a warmer register: this is the one document meant to end a relationship well, not just conclude a scope.</p>
+
+  <div class="lbl" style="margin-bottom:12px; font-size:10px;">Uses Components</div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-705</div><div class="field-val">Summary Box</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-708</div><div class="field-val">Bullet List</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-706</div><div class="field-val">Quote Block</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Content</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px;"><div class="field-val mono" style="color:#D8AF55;">COMP-506</div><div class="field-val">Acceptance Certificate</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Approval</div></div>
+    <div class="field-row" style="grid-template-columns:110px 1fr 140px; border-bottom:none;"><div class="field-val mono" style="color:#D8AF55;">COMP-901</div><div class="field-val">Footer</div><div class="field-val" style="color:rgba(247,244,234,0.45); font-size:11px;">Footer</div></div>
+  </div>
+
+  <div style="margin-top:26px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; border-top:1px dashed #D8AF55; padding-top:14px; max-width:600px;">5 components, 3 families. Quote Block (706) carries the Testimonial Request as an invitation, not a form — Client Feedback and Referral Invitation are asked for in plain body copy rather than built as data-capture components, which this system doesn't define.</div>
+</div>
+
+<!-- ============ SPRINT 10 — PROJECT CLOSEOUT — PART 3 DOCUMENT STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 3 of 4 — Document Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Project Closeout</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:380px;">
+    <div class="mono" style="font-size:13px; border:1px solid rgba(247,244,234,0.4); padding:8px 18px; margin-bottom:2px; font-weight:600;">Project Closeout</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Project Summary</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Outcomes</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Lessons Learned</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Client Feedback</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Testimonial Request</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Referral Invitation</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div style="font-size:12px; border:1px solid rgba(247,244,234,0.2); padding:7px 16px; margin-bottom:2px; width:100%; box-sizing:border-box;">Future Opportunities</div>
+    <div style="font-size:13px; color:#D8AF55; margin:0 0 2px 22px;">↓</div>
+    <div class="mono" style="font-size:11px; border:1px solid rgba(247,244,234,0.4); padding:7px 16px; width:100%; box-sizing:border-box; color:rgba(247,244,234,0.6);">Footer</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Project Summary and Outcomes are gold-highlighted — the record of what actually happened. Everything after Lessons Learned shifts tone from reporting to relationship, closing on an invitation rather than a data point.</div>
+</div>
+
+<!-- ============ SPRINT 10 — PROJECT CLOSEOUT — PART 4 DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px;">TEMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Part 4 of 4 — Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:32px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Project Closeout</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Foundation Board</div><div class="field-val">Grid, type, color roles, and print rules this template inherits without exception.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Component Library</div><div class="field-val">The full set this template assembles from — see Part 2 for the exact components used.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Content Components</div><div class="field-val">Family 08 — Summary Box (705), Bullet List (708), and Quote Block (706) carry the full narrative arc.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Approval Components</div><div class="field-val">Family 06 — Acceptance Certificate (506) reappears here as the formal closing record, distinct from TEMP-009's copy of the same component.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr;"><div class="field-label">Footer Components</div><div class="field-val">Family 10 — Footer (901) repeats on every page.</div></div>
+    <div class="field-row" style="grid-template-columns:220px 1fr; border-bottom:none;"><div class="field-label">Related Template</div><div class="field-val">TEMP-009 Final Delivery Package — Closeout follows immediately after delivery is accepted, closing the ten-sprint template set.</div></div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

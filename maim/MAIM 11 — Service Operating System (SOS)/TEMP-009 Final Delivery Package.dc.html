@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:56px 58px 40px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; display:flex; flex-direction:column; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .footer-901 { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #D8AF55; padding-top:12px; margin-top:auto; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- PAGE 1 — Deliverables Checklist -->
+<div class="sos-page" data-screen-label="Final Delivery — 01 Checklist">
+  <div class="sub-title" style="font-size:18px; margin-bottom:4px;">Final Delivery Package</div>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Deliverables Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:9px;">
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12.5px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Discovery findings report</span></div>
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12.5px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Operational audit and roadmap</span></div>
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12.5px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Standardized quarterly reporting template</span></div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00612 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 1 of 3</div></div>
+</div>
+
+<!-- PAGE 2 — Asset Register + Credentials + Documentation + Training + Support (Card) -->
+<div class="sos-page" data-screen-label="Final Delivery — 02 Assets + Resources">
+  <div class="sub-title">Asset Register</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Reporting Template</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">Standardized quarterly template, delivered as an editable workbook.</div></div>
+    <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Operational Roadmap</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">Phased roadmap document with owner and target dates per initiative.</div></div>
+  </div>
+
+  <div class="sub-title">Credentials</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:24px;">
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Reporting workbook access — shared via secure link, sent separately.</span></div>
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>No system credentials issued — this engagement did not include tooling access.</span></div>
+  </div>
+
+  <div class="sub-title">Documentation</div>
+  <div class="sub-rule"></div>
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px; max-width:480px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Reporting Template — User Guide</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">Step-by-step guide for the regional leads maintaining the new template each quarter.</div></div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00612 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 2 of 3</div></div>
+</div>
+
+<!-- PAGE 3 — Training + Support + COMP-506 Acceptance Certificate -->
+<div class="sos-page" data-screen-label="Final Delivery — 03 Training + Acceptance">
+  <div class="sub-title">Training</div>
+  <div class="sub-rule"></div>
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px; max-width:480px; margin-bottom:24px;"><div style="font-weight:600; font-size:13px; margin-bottom:6px;">Regional Lead Walkthrough</div><div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.6);">60-minute recorded session covering the reporting template and roadmap handoff, delivered 06/28/2026.</div></div>
+
+  <div class="sub-title">Support Information</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 30px;">For questions on any deliverable above, contact J. Alvarez at j.alvarez@majoraimindset.com. Support is available for 30 days following delivery at no additional charge.</p>
+
+  <div style="border:1px solid #D8AF55; padding:28px 26px; text-align:center; margin-bottom:16px;">
+    <div class="lbl" style="margin-bottom:12px;">Certificate of Acceptance</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:20px; text-transform:uppercase; margin-bottom:8px;">Q3 Advisory Engagement</div>
+    <div style="font-size:11.5px; color:rgba(247,244,234,0.65); margin-bottom:16px;">Accepted as fully and satisfactorily delivered by Aurelia Capital Partners.</div>
+    <div class="tribar" style="width:110px; height:4px; margin:0 auto 16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00612 · Accepted [date]</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

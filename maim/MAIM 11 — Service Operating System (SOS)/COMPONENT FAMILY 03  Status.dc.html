@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .badge { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:5px 14px; display:inline-flex; align-items:center; gap:7px; }
+  .dot { width:6px; height:6px; border-radius:50%; display:inline-block; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 03</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Status</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Components that communicate progress — where a document, task, or engagement stands right now.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">One component, eight states. Inherits the MAIM 00 palette exactly — no state introduces a color outside the five inherited hues.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);"><span style="color:#D8AF55;">COMP-201</span> Status Badge — 8 states</div>
+  </div>
+</div>
+
+<!-- ============ COMP-201 STATUS BADGE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-201</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">8 States</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Status Badge</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 20px;"><b style="color:#F7F4EA;">Purpose:</b> States the current lifecycle position of a document or line item in one glance. <b style="color:#F7F4EA;">Used on:</b> headers, metadata blocks, approval chains, and any list of documents or deliverables.</p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px;">
+    <div class="badge" style="border:1px dashed rgba(247,244,234,0.4); color:rgba(247,244,234,0.65);"><span class="dot" style="background:rgba(247,244,234,0.4);"></span>Draft</div>
+    <div class="badge" style="border:1px solid #D8AF55; color:#D8AF55;"><span class="dot" style="background:#D8AF55;"></span>Internal Review</div>
+    <div class="badge" style="border:1px solid #006BB6; color:#3F9BE0;"><span class="dot" style="background:#006BB6;"></span>Client Review</div>
+    <div class="badge" style="background:#F7F4EA; color:#050505;"><span class="dot" style="background:#050505;"></span>Approved</div>
+    <div class="badge" style="background:#1F7A3A; color:#F7F4EA;"><span class="dot" style="background:#F7F4EA;"></span>Completed</div>
+    <div class="badge" style="border:1px solid #F58426; color:#F58426;"><span class="dot" style="background:#F58426;"></span>Blocked</div>
+    <div class="badge" style="border:1px dashed #F58426; color:rgba(245,132,38,0.75);"><span class="dot" style="background:#F58426;"></span>On Hold</div>
+    <div class="badge" style="border:1px solid rgba(247,244,234,0.3); color:rgba(247,244,234,0.4); text-decoration:line-through;"><span class="dot" style="background:rgba(247,244,234,0.3);"></span>Cancelled</div>
+  </div>
+
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(247,244,234,0.5); margin-bottom:10px;">State Logic</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; font-size:11.5px; color:rgba(247,244,234,0.65); margin-bottom:24px;">
+    <div><span style="color:#F7F4EA; font-weight:600;">Draft</span> — dashed ivory outline, not yet in circulation.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Internal Review</span> — solid gold outline, inside the org.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Client Review</span> — solid blue outline, with the client now.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Approved</span> — solid white-clarity fill, internally cleared.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Completed</span> — solid green fill, work delivered and closed.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Blocked</span> — solid orange outline, needs immediate attention.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">On Hold</span> — dashed orange outline, paused, not urgent.</div>
+    <div><span style="color:#F7F4EA; font-weight:600;">Cancelled</span> — muted outline with strikethrough, terminated.</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Inline pill: 6px status dot + label, never label alone — the dot repeats the state for quick scanning down a list.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">JetBrains Mono 500, 11px, uppercase, 0.08em tracking — identical weight and size across all eight states.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">5px vertical / 14px horizontal padding; 7px gap between dot and label; 12px minimum gap between adjacent badges.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Every state pairs a distinct border style (solid/dashed/fill/strikethrough) with color — never color as the only signal. Text label is always present, never icon-only.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Outline and fill states remain distinguishable in grayscale via line weight and fill vs. no-fill; Cancelled's strikethrough is the fallback cue when color desaturates entirely.</div></div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Status, In a Deliverable List</h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:24px;">
+    <thead><tr style="border-bottom:1px solid #D8AF55;"><th style="text-align:left; padding:8px 10px; color:rgba(247,244,234,0.55); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Deliverable</th><th style="text-align:left; padding:8px 10px; color:rgba(247,244,234,0.55); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Status</th><th style="text-align:right; padding:8px 10px; color:rgba(247,244,234,0.55); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Due</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.12);"><td style="padding:9px 10px;">Discovery Workshop Notes</td><td style="padding:9px 10px;"><div class="badge" style="background:#1F7A3A; color:#F7F4EA; font-size:9.5px; padding:3px 10px;"><span class="dot" style="background:#F7F4EA; width:5px; height:5px;"></span>Completed</div></td><td style="padding:9px 10px; text-align:right; font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">06/10/26</td></tr>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.12);"><td style="padding:9px 10px;">Phase 1 Statement of Work</td><td style="padding:9px 10px;"><div class="badge" style="border:1px solid #006BB6; color:#3F9BE0; font-size:9.5px; padding:3px 10px;"><span class="dot" style="background:#006BB6; width:5px; height:5px;"></span>Client Review</div></td><td style="padding:9px 10px; text-align:right; font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">07/15/26</td></tr>
+      <tr><td style="padding:9px 10px;">Data Migration Plan</td><td style="padding:9px 10px;"><div class="badge" style="border:1px solid #F58426; color:#F58426; font-size:9.5px; padding:3px 10px;"><span class="dot" style="background:#F58426; width:5px; height:5px;"></span>Blocked</div></td><td style="padding:9px 10px; text-align:right; font-family:'JetBrains Mono',monospace; color:rgba(247,244,234,0.5);">—</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px;">The Status Badge (201) drops directly into a table cell, a header, or a metadata field with no resizing — the pill's fixed padding and type size hold at any density.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

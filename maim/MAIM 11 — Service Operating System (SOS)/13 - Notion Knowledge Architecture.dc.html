@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .nt-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 13 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-NOTION-ARCHITECTURE · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 13 · Why, Not Just What</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Notion Knowledge Architecture</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">GitHub owns canonical system definitions. Airtable owns live operational records. Notion owns explanation, context, decisions, learning, and team knowledge — the readable operating manual.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Notion should help anyone answer: what is SOS, how does this process work, which playbook applies, what decision was made and why, where is the approved source, what changed, and what to do next.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-001</span>Sprint 01 — Workspace Purpose &amp; Governance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-002</span>Sprint 02 — SOS Home &amp; Navigation</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-003</span>Sprint 03 — System Map &amp; Architecture Pages</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-004</span>Sprint 04 — Knowledge Database Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-005</span>Sprint 05 — Playbook &amp; Guide Publishing Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-006</span>Sprint 06 — Decision Log Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-007</span>Sprint 07 — Meeting Notes &amp; Knowledge Capture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-008</span>Sprint 08 — Training &amp; Onboarding Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-009</span>Sprint 09 — Research, Lessons &amp; Continuous Improvement</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">NT-010</span>Sprint 10 — Permissions, Publishing &amp; Maintenance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as sprints are defined — send each sprint's spec (purpose, knowledge scope, page/database structure, required/optional properties, relationships, navigation rules, ownership, status lifecycle, review/approval rules, permissions, related SOS objects, related systems, example page/record, completion criteria, future enhancements) to add it here.</div>
+</div>
+
+<!-- ============ NT-001 — GOVERNANCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Workspace Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define Notion's role inside SOS — the third leg alongside GitHub's definitions and Airtable's live records.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div>
+      <div class="sub-title" style="color:#1F7A3A;">Notion Owns</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✓ Operating manuals</div>
+        <div>✓ Playbooks</div>
+        <div>✓ Decision records</div>
+        <div>✓ System explanations</div>
+        <div>✓ Training materials</div>
+        <div>✓ Meeting notes</div>
+        <div>✓ Research</div>
+        <div>✓ Implementation guides</div>
+        <div>✓ Team knowledge</div>
+        <div>✓ Change context</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="color:#8A5A44;">Notion Does Not Own</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✕ Canonical schemas</div>
+        <div>✕ Approved machine-readable templates</div>
+        <div>✕ Live project status</div>
+        <div>✕ Payment records</div>
+        <div>✕ Final client deliverables</div>
+        <div>✕ Raw code</div>
+        <div>✕ Design master files</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NT-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Workspace Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Notion Guide ID</div><div class="field-val mono">NT-001</div></div>
+    <div class="field-row"><div class="field-label">Workspace Purpose</div><div class="field-val">Turn the SOS architecture into a readable, navigable operating manual — the place a human goes to understand why and how, not what the raw definition is.</div></div>
+    <div class="field-row"><div class="field-label">Knowledge Scope</div><div class="field-val">Explanation, context, decisions, learning, and team knowledge across every SOS page (01–12).</div></div>
+    <div class="field-row"><div class="field-label">Source-of-Truth Boundaries</div><div class="field-val">Notion never redefines a Template, Component, or Schema — it links to GitHub for structure and to Airtable for live status, and explains both in prose.</div></div>
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead — overall workspace structure and publishing standards.</div></div>
+    <div class="field-row"><div class="field-label">Editors</div><div class="field-val">Any team member may draft; only a domain Maintainer (per GH-001) can publish a page to Approved status.</div></div>
+    <div class="field-row"><div class="field-label">Readers</div><div class="field-val">All internal team members; clients never get workspace access.</div></div>
+    <div class="field-row"><div class="field-label">Publishing Rules</div><div class="field-val">A page is Draft until reviewed; only Approved pages appear in the main navigation and search-surfaced results.</div></div>
+    <div class="field-row"><div class="field-label">Review Cadence</div><div class="field-val">Quarterly review of every Approved page for accuracy against the current GitHub/Airtable state.</div></div>
+    <div class="field-row"><div class="field-label">Archive Rules</div><div class="field-val">A superseded page moves to an Archive section with a link to its replacement — never deleted outright.</div></div>
+    <div class="field-row"><div class="field-label">Related Systems</div><div class="field-val">GitHub (linked definitions), Airtable (linked live records), Claude Design (linked visual references).</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The workspace exists with Operations Lead as owner, and every team member has Reader access with Editor rights scoped to their domain.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-002 — HOME STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Home Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — SOS Home &amp; Navigation</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Create the front door to the entire operating system — one page anyone can start from, regardless of what they're trying to do.</p>
+
+  <div class="code-block">MAIM SERVICE OPERATING SYSTEM
+├── Start Here
+├── System Map
+├── Service Journey
+├── Template Library
+├── Workflow Library
+├── Playbook Library
+├── Agent Skills
+├── Automation Library
+├── Implementation Guides
+├── Decision Log
+├── Knowledge Vault
+└── Change Log</div>
+</div>
+
+<!-- ============ NT-002 — ENTRY PATHWAYS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Entry Pathways</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — SOS Home &amp; Navigation</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Audience Pathways</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:22px;">
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I am new to SOS" — links to Start Here + System Map</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need to run a workflow" — links to Workflow Library</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need a template" — links to Template Library</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need a playbook" — links to Playbook Library</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need to find a decision" — links to Decision Log</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need to report a problem" — links to escalation path below</span></div>
+    <div style="display:flex; gap:12px; font-size:12.5px;"><span class="mono" style="color:#D8AF55; min-width:20px;">→</span><span style="color:rgba(247,244,234,0.85);">"I need to propose an improvement" — links to Change Log's proposal form</span></div>
+  </div>
+
+  <div class="sub-title">Quick Links, Priorities &amp; Recent Changes</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A "Quick Links" block surfaces the 5 most-used pages; "Current Priorities" pulls live from an Airtable-linked view; "Recent Changes" pulls the latest 5 entries from the Change Log automatically, never hand-curated.</p>
+</div>
+
+<!-- ============ NT-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — SOS Home &amp; Navigation</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Notion Guide ID</div><div class="field-val mono">NT-002</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">SOS Home &amp; Navigation</div></div>
+    <div class="field-row"><div class="field-label">Search Guidance</div><div class="field-val">Search results are scoped to Approved pages by default; a toggle reveals Draft pages only for Editors, keeping search results trustworthy for everyone else.</div></div>
+    <div class="field-row"><div class="field-label">Owner Information</div><div class="field-val">Each top-level section (Template Library, Playbook Library, etc.) displays its Maintainer's name directly on the section landing page.</div></div>
+    <div class="field-row"><div class="field-label">Help and Escalation Path</div><div class="field-val">A fixed "Report a Problem" link routes to a simple form that creates a tracked item in the Decision Log's open-questions view — never an untracked Slack message.</div></div>
+    <div class="field-row"><div class="field-label">Navigation Rules</div><div class="field-val">The 12-item top-level list is fixed, mirroring GH-002/GH-003's frozen-root philosophy — new content nests inside these sections rather than adding new top-level items.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Pages 01–12 — SOS Home is the human index over all of them.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">SOS Home exists with all 12 sections linked and populated with at least a landing stub, and every audience pathway resolves to a real destination.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-003 — CORE MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — System Map &amp; Architecture Pages</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Explain how all SOS objects connect — the readable counterpart to DS-008's Relationship Map.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Foundation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Components</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Templates</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Workflows</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Client Journeys</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Packages</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Playbooks</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Agent Skills</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Automations</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Data Standards</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Implementation Systems</div>
+  </div>
+</div>
+
+<!-- ============ NT-003 — PLATFORM MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Platform Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — System Map &amp; Architecture Pages</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Claude Design</div><div class="field-val">Visual system — where every Component, Template, and Foundation Board page is authored.</div></div>
+    <div class="field-row"><div class="field-label">GitHub</div><div class="field-val">Canonical definitions — the version-controlled source of truth (GH-001).</div></div>
+    <div class="field-row"><div class="field-label">Airtable</div><div class="field-val">Live operations — clients, projects, artifacts, approvals, payments (AT-001).</div></div>
+    <div class="field-row"><div class="field-label">Notion</div><div class="field-val">Knowledge and guidance — this workspace (NT-001).</div></div>
+    <div class="field-row"><div class="field-label">Google Drive</div><div class="field-val">Client-facing exports — generated documents, never a source of definitions.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">AI Agents</div><div class="field-val">Controlled execution — read Approved definitions, write operational records, never redefine the system.</div></div>
+  </div>
+
+  <div class="sub-title" style="margin-top:26px;">Dependency Map &amp; Cross-Links</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every node in the Core Map links to its GitHub folder (source-of-truth reference) and its Airtable registry mirror where one exists — a reader can go from "what is a Playbook" straight to PB-004's live GitHub file without hunting.</p>
+</div>
+
+<!-- ============ NT-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — System Map &amp; Architecture Pages</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Notion Guide ID</div><div class="field-val mono">NT-003</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">System Map &amp; Architecture Pages</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Map</div><div class="field-val">A second view of the same map re-ordered by the client's Workflow sequence (WF-001–010), for readers thinking about "what happens when" rather than "what object is this."</div></div>
+    <div class="field-row"><div class="field-label">Audience Notes</div><div class="field-val">New team members are directed here from NT-002's "I am new to SOS" pathway before anything else.</div></div>
+    <div class="field-row"><div class="field-label">Source-of-Truth References</div><div class="field-val">Every object type on this map links directly to its GH-004 folder and, where applicable, its AT registry table — never restated in Notion.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-008 Relationship Map (this page's prose counterpart)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Core Map and Platform Map both exist as linked, browsable pages with every node cross-linked to its GitHub and Airtable source.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-004 — CORE RULE & DATABASE MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Rule &amp; Database Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Knowledge Database Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Define the structured databases used inside Notion — knowledge content, not operational tracking.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:14px 18px; margin-bottom:22px;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:13px; color:#F7F4EA;">Do not duplicate every Airtable operational table inside Notion. These ten databases hold explanation and context — not live client or project status.</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip" style="padding:8px 12px;">Knowledge Articles</div>
+    <div class="chip" style="padding:8px 12px;">Playbooks</div>
+    <div class="chip" style="padding:8px 12px;">Decisions</div>
+    <div class="chip" style="padding:8px 12px;">Meeting Notes</div>
+    <div class="chip" style="padding:8px 12px;">Research</div>
+    <div class="chip" style="padding:8px 12px;">Implementation Guides</div>
+    <div class="chip" style="padding:8px 12px;">Training Resources</div>
+    <div class="chip" style="padding:8px 12px;">Change Requests</div>
+    <div class="chip" style="padding:8px 12px;">Lessons Learned</div>
+    <div class="chip" style="padding:8px 12px;">FAQs</div>
+  </div>
+</div>
+
+<!-- ============ NT-004 — PROPERTIES & RELATIONSHIPS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Properties &amp; Relationships</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Knowledge Database Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Required Properties (Every Database)</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8); margin-bottom:20px;">
+    <div>Title <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Status (Draft/In Review/Approved/Archived)</div>
+    <div>Owner</div>
+    <div>Related SOS Objects (link)</div>
+    <div>Created Date</div>
+    <div>Last Reviewed Date</div>
+  </div>
+
+  <div class="sub-title">Relationships</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Every database links to "Related SOS Objects" using the GH-009 ID convention as plain text (e.g. <span class="mono">WF-004</span>) so a search for an ID surfaces the relevant Notion pages alongside the GitHub folder.</p>
+
+  <div class="sub-title">Templates &amp; Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Each database ships a Notion page template pre-filled with the required properties; default view is "Approved, by Owner" — Draft items only surface in a separate "My Drafts" view.</p>
+</div>
+
+<!-- ============ NT-004 — OWNERSHIP, ARCHIVE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Ownership, Archive &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Knowledge Database Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Notion Guide ID</div><div class="field-val mono">NT-004</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">Knowledge Database Architecture</div></div>
+    <div class="field-row"><div class="field-label">Purpose of Each Database</div><div class="field-val">Knowledge Articles (general explanation), Playbooks (published PB-XXX prose), Decisions (see NT-006), Meeting Notes (see NT-007), Research, Implementation Guides (GH/AT/NT prose), Training Resources, Change Requests (proposal intake), Lessons Learned, FAQs.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Each database has one named Owner responsible for review cadence; contributors may be anyone with Editor rights.</div></div>
+    <div class="field-row"><div class="field-label">Archive Rules</div><div class="field-val">Status = Archived removes a page from default views but never deletes it — matching GH-008's superseded-object handling.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">All Pages 01–12 — every database cross-references them by ID</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">All ten databases exist with their required properties and a page template, even before every article is written.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-005 — METADATA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Metadata</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Playbook &amp; Guide Publishing Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Standardize how operational knowledge is written and published — every PB-XXX reads the same way once it lands in Notion.</p>
+
+  <div class="sub-title">Required Metadata</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Playbook ID</div>
+    <div>Title</div>
+    <div>Purpose</div>
+    <div>Owner</div>
+    <div>Status</div>
+    <div>Version</div>
+    <div>Effective Date</div>
+    <div>Last Reviewed</div>
+    <div>Related Workflow</div>
+    <div>Related Templates</div>
+    <div>Related Skills</div>
+    <div>GitHub Source</div>
+    <div>Airtable Reference</div>
+    <div>Audience</div>
+    <div>Confidentiality</div>
+  </div>
+</div>
+
+<!-- ============ NT-005 — PAGE STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Page Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Playbook &amp; Guide Publishing Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">Purpose
+When to Use
+Required Inputs
+Step-by-Step Process
+Decision Points
+Outputs
+Quality Checklist
+Common Mistakes
+Escalation
+Related Resources
+Change History</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">This order is fixed across every published Playbook and Guide — a reader who knows one page's structure can navigate any other instantly.</p>
+</div>
+
+<!-- ============ NT-005 — LINKING, REVIEW & CHECKLIST ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Linking, Review &amp; Checklist</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Playbook &amp; Guide Publishing Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Linking Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">GitHub Source and Airtable Reference are always live links, never plain text IDs — a reader can click straight through to the canonical definition or live record.</p>
+
+  <div class="sub-title">Review Requirements &amp; Status Lifecycle</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Draft → In Review (Owner reviews structure and accuracy) → Approved (visible in navigation) → Archived (superseded, per NT-004). A page cannot skip In Review even for a small edit.</p>
+
+  <div class="sub-title">Publishing Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8);">
+    <div>☐ All 15 metadata fields populated, none left blank</div>
+    <div>☐ All 11 sections present, in the fixed order</div>
+    <div>☐ GitHub Source and Airtable Reference links verified working</div>
+    <div>☐ Change History includes this publish as its latest entry</div>
+  </div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:16px;">Related SOS Objects: Page 07 Playbook Library (source content), GH-003 Documentation Architecture (parallel GitHub docs standard).</p>
+</div>
+
+<!-- ============ NT-006 — FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Decision Log Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Preserve why important choices were made — so "why was it done this way" always has a durable answer, not institutional memory alone.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Decision ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Decision Title</div>
+    <div>Date</div>
+    <div>Context</div>
+    <div>Problem</div>
+    <div>Options Considered</div>
+    <div>Decision</div>
+    <div>Rationale</div>
+    <div>Owner</div>
+    <div>Approvers</div>
+    <div>Objects Affected</div>
+    <div>Systems Affected</div>
+    <div>Effective Date</div>
+    <div>Status</div>
+    <div>Supersedes</div>
+    <div>Superseded By</div>
+    <div>Related Evidence</div>
+  </div>
+</div>
+
+<!-- ============ NT-006 — STATUS & SUPERSEDING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Status &amp; Superseding</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Decision Log Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Decision Status</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px;">
+    <div class="chip">Proposed</div>
+    <div class="chip">Under Review</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Approved</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Active</div>
+    <div class="chip" style="opacity:0.5;">Superseded</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Rejected</div>
+    <div class="chip" style="opacity:0.4;">Archived</div>
+  </div>
+
+  <div class="sub-title">Superseded-Decision Handling</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A new decision that overrides an old one links back via Supersedes; the old record's Superseded By field is set automatically and its Status moves to Superseded — never edited to reflect the new choice in place.</p>
+
+  <div class="sub-title">Approval Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A decision touching a canonical GitHub object (e.g. a Template structure change) requires the same Maintainer sign-off as GH-008's pull request approval — the Decision record and the GitHub PR reference each other.</p>
+</div>
+
+<!-- ============ NT-006 — EXAMPLE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Example &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Decision Log Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">Decision ID: DEC-014
+Decision Title: Introduce Engagement as a distinct table from Project
+Date: 2026-07-09
+Problem: One commercial relationship can span multiple parallel delivery projects
+Decision: Add an Engagements table between Clients and Projects (AT-004)
+Owner: Operations Lead
+Status: Active
+Objects Affected: DS-003, AT-002, AT-004</div>
+
+  <div style="margin-top:20px; display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Notion Guide ID</div><div class="field-val mono">NT-006</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">Decision Log Architecture</div></div>
+    <div class="field-row"><div class="field-label">Relationship to Projects &amp; System Objects</div><div class="field-val">Objects Affected links by ID to any GH/AT/DS object the decision touches, so a future reader of DS-003 sees DEC-014 referenced directly.</div></div>
+    <div class="field-row"><div class="field-label">Review Process</div><div class="field-val">Under Review requires the same domain Maintainer sign-off as any GitHub pull request touching the same object.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-008 Branching, Review &amp; Approval (parallel approval logic)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Decisions database exists with all 16 fields and at least the DEC-014 example seeded as a template record.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-007 — FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Meeting Notes &amp; Knowledge Capture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Turn conversations into reusable knowledge — the Notion-side counterpart to SKILL-006 Meeting Intelligence and AUTO-007 Knowledge Automation.</p>
+
+  <div class="sub-title">Meeting Note Structure</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Meeting ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Meeting Type</div>
+    <div>Date</div>
+    <div>Participants</div>
+    <div>Purpose</div>
+    <div>Context</div>
+    <div>Summary</div>
+    <div>Decisions</div>
+    <div>Action Items</div>
+    <div>Risks</div>
+    <div>Questions</div>
+    <div>Related Project</div>
+    <div>Related Client</div>
+    <div>Related Workflow</div>
+    <div>Related Artifacts</div>
+    <div>Next Meeting</div>
+  </div>
+</div>
+
+<!-- ============ NT-007 — KNOWLEDGE FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Knowledge Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Meeting Notes &amp; Knowledge Capture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Meeting</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Notes <span style="color:#D8AF55; font-size:9.5px;">(SKILL-006)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Decisions</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Action Items</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Airtable Updates</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Knowledge Article</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Playbook Improvement</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">Decisions extracted here create a linked record in the Decisions database (NT-006) rather than living only inside the meeting note — a decision should be findable without knowing which meeting produced it.</p>
+</div>
+
+<!-- ============ NT-007 — HANDLING RULES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Handling Rules &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Meeting Notes &amp; Knowledge Capture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Meeting Types</div><div class="field-val">Discovery, Kickoff, Weekly Sync, Milestone Review, Internal — matching the meeting touchpoints across WF-001–010.</div></div>
+    <div class="field-row"><div class="field-label">Action-Item Handling</div><div class="field-val">Each Action Item carries an owner and due date; unresolved items roll forward into the next Meeting Note automatically rather than being lost.</div></div>
+    <div class="field-row"><div class="field-label">Decision Extraction</div><div class="field-val">Any line marked as a Decision creates a linked Decisions database record (NT-006) with Related Evidence pointing back to this Meeting Note.</div></div>
+    <div class="field-row"><div class="field-label">Risk Extraction</div><div class="field-val">Risks feed directly into SKILL-005's risk log (AT-004 Project Health Status) rather than staying siloed in the note.</div></div>
+    <div class="field-row"><div class="field-label">Follow-Up Rules</div><div class="field-val">A Next Meeting date is required for any note whose Action Items remain open — no meeting note closes without a stated next checkpoint.</div></div>
+    <div class="field-row"><div class="field-label">Archive Process</div><div class="field-val">Meeting Notes are never archived — they remain a permanent record, searchable by Related Project or Client indefinitely.</div></div>
+    <div class="field-row"><div class="field-label">AI Assistance Opportunities</div><div class="field-val">AUTO-007 Knowledge Automation drafts the entire Meeting Note from a transcript; a human confirms Decisions and Action Items before the note is marked final.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Meeting Notes database exists with all 16 fields, and the Decision/Risk extraction links are configured to the Decisions database and Airtable respectively.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-008 — LEARNING TRACKS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Learning Tracks</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Training &amp; Onboarding Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Help new team members, contractors, and agents learn SOS — role-based, not one generic onboarding deck.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55; padding:8px 12px;">SOS Orientation (all roles)</div>
+    <div class="chip" style="padding:8px 12px;">Service Operations</div>
+    <div class="chip" style="padding:8px 12px;">Project Management</div>
+    <div class="chip" style="padding:8px 12px;">Client Success</div>
+    <div class="chip" style="padding:8px 12px;">Finance Operations</div>
+    <div class="chip" style="padding:8px 12px;">Template &amp; Artifact Management</div>
+    <div class="chip" style="padding:8px 12px;">Quality Assurance</div>
+    <div class="chip" style="padding:8px 12px;">Automation Operations</div>
+    <div class="chip" style="padding:8px 12px;">AI Agent Supervision</div>
+    <div class="chip" style="padding:8px 12px;">Leadership &amp; Governance</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:12px;">Every new team member takes SOS Orientation regardless of role; the other nine tracks are assigned based on their actual responsibilities.</p>
+</div>
+
+<!-- ============ NT-008 — NEW-USER JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">New-User Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Training &amp; Onboarding Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Welcome to SOS</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Understand the System Map <span style="color:#D8AF55; font-size:9.5px;">(NT-003)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Learn Your Role</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Review Required Playbooks <span style="color:#D8AF55; font-size:9.5px;">(NT-005)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Complete Practice Scenario</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Pass Readiness Check</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Receive Access</div>
+  </div>
+</div>
+
+<!-- ============ NT-008 — MODULES, ASSESSMENT & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Modules, Assessment &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Training &amp; Onboarding Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Required Modules</div><div class="field-val">Every track's required modules pull directly from the Training Resources database (NT-004) — no separate slide deck maintained outside Notion.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Every required module for the assigned track marked read, plus a passed Readiness Check.</div></div>
+    <div class="field-row"><div class="field-label">Assessments</div><div class="field-val">The Practice Scenario uses a real (anonymized) past engagement — new hires draft a Proposal or run a Weekly Report against it before touching a live client.</div></div>
+    <div class="field-row"><div class="field-label">Certification or Signoff</div><div class="field-val">The track Owner (per NT-004) signs off Readiness Check completion before Access is granted in Airtable and GitHub.</div></div>
+    <div class="field-row"><div class="field-label">Training Owners</div><div class="field-val">Each of the ten tracks has a named Owner accountable for keeping its modules current.</div></div>
+    <div class="field-row"><div class="field-label">Refresh Cadence</div><div class="field-val">Every track is reviewed alongside NT-001's quarterly cadence — a track referencing a superseded Playbook is caught at the same review, not separately.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria (Page)</div><div class="field-val">All ten tracks exist with at least SOS Orientation fully populated and the New-User Journey page linked from SOS Home's "I am new to SOS" pathway.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-009 — LESSON FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Lesson Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Research, Lessons &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Turn project experience into system improvement — the Notion-side counterpart to SKILL-009 Knowledge Capture Skill.</p>
+
+  <div class="sub-title">Lesson Record</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Lesson ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Project</div>
+    <div>Client</div>
+    <div>What Happened</div>
+    <div>Impact</div>
+    <div>Root Cause</div>
+    <div>What Worked</div>
+    <div>What Failed</div>
+    <div>Recommendation</div>
+    <div>Objects Affected</div>
+    <div>Proposed Change</div>
+    <div>Owner</div>
+    <div>Status</div>
+  </div>
+</div>
+
+<!-- ============ NT-009 — IMPROVEMENT CYCLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Improvement Cycle</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Research, Lessons &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Observation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Lesson Captured <span style="color:#D8AF55; font-size:9.5px;">(SKILL-009)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Pattern Identified</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Change Proposed</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Decision Approved <span style="color:#D8AF55; font-size:9.5px;">(NT-006)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">GitHub Updated <span style="color:#D8AF55; font-size:9.5px;">(GH-008)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Notion Updated</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Team Notified</div>
+  </div>
+</div>
+
+<!-- ============ NT-009 — PROCESS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Process &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Research, Lessons &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Improvement Intake Process</div><div class="field-val">Any team member can log a Lesson via the Lessons Learned database (NT-004); Pattern Identified requires the Owner to see the same root cause recur across 2+ Lessons before proposing a Change.</div></div>
+    <div class="field-row"><div class="field-label">Review Cadence</div><div class="field-val">Lessons are reviewed at the same quarterly cadence as NT-001/NT-008, alongside PB-010's Internal Operations Playbook KPI review.</div></div>
+    <div class="field-row"><div class="field-label">Approval Process</div><div class="field-val">A proposed Change becomes a Decision record (NT-006); Decision Approved is the same approval gate as GH-008's pull request review when GitHub objects are affected.</div></div>
+    <div class="field-row"><div class="field-label">Relationship to GitHub Changes</div><div class="field-val">GitHub Updated corresponds to a merged pull request referencing the Decision ID in its commit message.</div></div>
+    <div class="field-row"><div class="field-label">Relationship to Airtable Operations</div><div class="field-val">If the Lesson points to an operational gap (not a definition change), the fix lands directly in Airtable's automation rules (AT-010) instead of GitHub.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Lessons Learned database exists with all 13 fields, and the cycle from Observation through Team Notified is documented as a linked walkthrough page.</div></div>
+  </div>
+</div>
+
+<!-- ============ NT-010 — PERMISSIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Permissions</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Permissions, Publishing &amp; Maintenance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Keep the knowledge system trustworthy and current — the closing sprint of Page 13.</p>
+
+  <div class="sub-title">Permission Levels</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="chip" style="opacity:0.6;">Public</div>
+    <div class="chip">Internal</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Restricted</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Confidential</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Client-Specific</div>
+    <div class="chip" style="opacity:0.5;">Leadership Only</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:12px;">Every page inherits Confidentiality from its Related SOS Objects where one exists (matching DS-001) — a page about a Confidential Client is never left at default Internal visibility.</p>
+</div>
+
+<!-- ============ NT-010 — PAGE LIFECYCLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Page Lifecycle</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Permissions, Publishing &amp; Maintenance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Idea</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Draft</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Internal Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Approved</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #1F7A3A; padding:9px 16px; width:100%; box-sizing:border-box;">Active</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.5); padding:9px 16px; width:100%; box-sizing:border-box;">Needs Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.3); padding:9px 16px; width:100%; box-sizing:border-box; opacity:0.7;">Superseded</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600; opacity:0.6;">Archived</div>
+  </div>
+</div>
+
+<!-- ============ NT-010 — MAINTENANCE RULES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="nt-id">NT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Maintenance Rules &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Permissions, Publishing &amp; Maintenance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Every Active Page Must Have</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:4px; font-size:12px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>· Owner</div>
+    <div>· Version</div>
+    <div>· Last Reviewed Date</div>
+    <div>· Next Review Date</div>
+    <div>· Status</div>
+    <div>· Source of Truth</div>
+    <div>· Related Objects</div>
+  </div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Stale-Content Detection</div><div class="field-val">A page auto-flags to Needs Review when Next Review Date passes, surfaced in a workspace-wide "Needs Review" view the Operations Lead checks weekly.</div></div>
+    <div class="field-row"><div class="field-label">Archive Process</div><div class="field-val">Superseded → Archived after a fixed grace period, matching GH-008 and NT-004's non-destructive archive pattern.</div></div>
+    <div class="field-row"><div class="field-label">Client-Specific Content Handling</div><div class="field-val">Client-Specific pages live in a walled-off section with per-client permission groups — never mixed into the general Knowledge Articles database.</div></div>
+    <div class="field-row"><div class="field-label">Change Notification System</div><div class="field-val">Any page moving to Active or Superseded posts to a workspace-wide Change Log feed, the same feed SOS Home's "Recent Changes" block reads from (NT-002).</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Page 13 Completion Criteria</div><div class="field-val">One workspace purpose (NT-001) · one SOS home (NT-002) · one navigation model (NT-002) · one system map (NT-003) · one knowledge database structure (NT-004) · one playbook publishing standard (NT-005) · one decision log (NT-006) · one meeting capture system (NT-007) · one training architecture (NT-008) · one maintenance and permissions model (NT-010) — all ten now defined.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Notion Knowledge Architecture — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

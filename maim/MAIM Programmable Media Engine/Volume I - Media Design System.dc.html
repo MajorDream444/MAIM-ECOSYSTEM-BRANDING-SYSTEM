@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<meta name="ext-resource-dependency" content="./assets/crown-coin-seal.png" data-resource-id="seal">
+<meta name="ext-resource-dependency" content="./assets/md-monogram.png" data-resource-id="mono">
+<style>
+  :root{
+    --maim-black:#0A0A0B; --maim-ink:#121316; --maim-panel:#17181C; --maim-line:#26272D;
+    --maim-ivory:#F4EDE1; --maim-ivory-dim:#B9B3A7; --maim-muted:#7C7A74;
+    --maim-gold:#C9A227; --maim-gold-soft:#E4C766;
+    --maim-green:#009B4D; --maim-blue:#2E6BE6;
+    --disp:'Archivo',sans-serif; --exp:'Archivo Expanded','Archivo',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--maim-black);color:var(--maim-ivory);font-family:var(--disp);-webkit-font-smoothing:antialiased;}
+  a{color:var(--maim-gold-soft);text-decoration:none;}
+  a:hover{color:var(--maim-gold);}
+  ::selection{background:var(--maim-gold);color:var(--maim-black);}
+</style>
+</helmet>
+<template id="__bundler_thumbnail" data-bg-color="#0A0A0B">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0A0A0B"/>
+    <rect x="470" y="300" width="86" height="16" rx="8" fill="#009B4D"/>
+    <rect x="562" y="300" width="86" height="16" rx="8" fill="#C9A227"/>
+    <rect x="654" y="300" width="86" height="16" rx="8" fill="#2E6BE6"/>
+    <text x="600" y="440" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="96" letter-spacing="-2" fill="#F4EDE1">MAIM</text>
+    <text x="600" y="500" text-anchor="middle" font-family="monospace" font-size="22" letter-spacing="8" fill="#C9A227">VOL I · MEDIA DESIGN SYSTEM</text>
+  </svg>
+</template>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 28px 120px;">
+
+  <header style="padding:64px 0 40px;border-bottom:1px solid var(--maim-line);">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:30px;">
+      <div style="display:flex;height:8px;width:150px;border-radius:99px;overflow:hidden;">
+        <span style="flex:1;background:var(--maim-green);"></span>
+        <span style="flex:1;background:var(--maim-gold);"></span>
+        <span style="flex:1;background:var(--maim-blue);"></span>
+      </div>
+      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;">Tri-bar · continuity mark</span>
+    </div>
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.32em;color:var(--maim-gold);text-transform:uppercase;margin-bottom:18px;">MAIM Programmable Media Engine</div>
+    <h1 style="font-family:var(--exp);font-weight:800;font-size:clamp(38px,6.4vw,78px);line-height:.96;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance;">Volume&nbsp;I<span style="color:var(--maim-gold);">.</span><br>Media&nbsp;Design&nbsp;System</h1>
+    <p style="max-width:660px;font-size:19px;line-height:1.5;color:var(--maim-ivory-dim);margin:0 0 28px;text-wrap:pretty;">Not a style guide, and not a component library — a <em style="color:var(--maim-ivory);font-style:normal;">media operating system</em>. Organized around seven media capabilities, not visual categories. Every component sits under a capability and carries an executable skill set, so an agent can generate, adapt, and publish it. This volume is the foundation; later volumes build the runtime on top.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--maim-muted);text-transform:uppercase;">
+      <span style="color:var(--maim-gold);">Vol I · Media Design System</span><span>·</span><span>Vol II · Media Skills</span><span>·</span><span>Vol III · Production Runtime</span><span>·</span><span>Vol IV · Publishing</span><span>·</span><span>Vol V · Knowledge Graph</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 13px;border:1px solid var(--maim-line);border-radius:99px;color:var(--maim-ivory-dim);">Humans are the hero</span>
+      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 13px;border:1px solid var(--maim-line);border-radius:99px;color:var(--maim-ivory-dim);">One primary motion per shot</span>
+      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 13px;border:1px solid var(--maim-line);border-radius:99px;color:var(--maim-ivory-dim);">No sci-fi · no invented marks</span>
+      <span style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:7px 13px;border:1px solid var(--maim-line);border-radius:99px;color:var(--maim-ivory-dim);">Every element is programmable</span>
+    </div>
+  </header>
+
+  <section style="padding:56px 0;border-bottom:1px solid var(--maim-line);">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">00 · Foundations</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 30px;">The source of truth</h2>
+
+    <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:16px;padding:26px 28px;margin-bottom:34px;">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--maim-gold);text-transform:uppercase;margin-bottom:6px;">The operating system — seven media capabilities</div>
+      <p style="font-size:13px;color:var(--maim-muted);margin:0 0 18px;line-height:1.5;">A design system organizes by <em style="font-style:normal;color:var(--maim-ivory-dim);">what things look like</em>. An operating system organizes by <em style="font-style:normal;color:var(--maim-ivory-dim);">what it can do</em>. Components live under a capability; skills make each one executable.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;">
+        <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="7">
+          <div style="flex:1;min-width:118px;background:var(--maim-panel);border:1px solid var(--maim-line);border-radius:12px;padding:14px;position:relative;">
+            <div style="font-family:var(--mono);font-size:9px;color:var(--maim-muted);margin-bottom:6px;">{{ cap.n }}</div>
+            <div style="font-family:var(--exp);font-weight:800;font-size:16px;margin-bottom:5px;color:{{ cap.color }};">{{ cap.name }}</div>
+            <div style="font-size:11.5px;color:var(--maim-ivory-dim);line-height:1.35;">{{ cap.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:12px;color:var(--maim-muted);margin:16px 0 0;line-height:1.5;">Volume I fully specifies <strong style="color:var(--maim-ivory-dim);font-weight:600;">Compose</strong>; the other six capabilities are scaffolded here and mature across later volumes.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+      <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:16px;padding:24px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;">
+          <div style="font-weight:700;font-size:16px;">Color tokens</div>
+          <span style="font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--maim-black);background:var(--maim-gold);padding:3px 8px;border-radius:99px;font-weight:700;">PROVISIONAL</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-black);border:1px solid var(--maim-line);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--black<br>#0A0A0B</div></div>
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-ivory);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--ivory<br>#F4EDE1</div></div>
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-gold);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--gold<br>#C9A227</div></div>
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-green);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--green<br>#009B4D</div></div>
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-blue);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--blue<br>#2E6BE6</div></div>
+          <div><div style="height:52px;border-radius:9px;background:var(--maim-panel);border:1px solid var(--maim-line);"></div><div style="font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);margin-top:6px;">--panel<br>#17181C</div></div>
+        </div>
+        <p style="font-size:12px;color:var(--maim-muted);margin:16px 0 0;line-height:1.5;">Never hard-coded downstream. Components read these tokens; the library resolves them. Final HEX must be sampled from approved MAIM source assets before any release is marked canonical.</p>
+      </div>
+      <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:16px;padding:24px;">
+        <div style="font-weight:700;font-size:16px;margin-bottom:16px;">Typography & marks</div>
+        <div style="border-bottom:1px solid var(--maim-line);padding-bottom:16px;margin-bottom:16px;">
+          <div style="font-family:var(--exp);font-weight:800;font-size:32px;line-height:1;">Archivo</div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-top:8px;">Display · titles · foundation words · ≤5 words per card</div>
+        </div>
+        <div style="border-bottom:1px solid var(--maim-line);padding-bottom:16px;margin-bottom:16px;">
+          <div style="font-family:var(--mono);font-weight:500;font-size:22px;">JetBrains Mono</div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-top:8px;">Metadata · timecodes · system language · straps</div>
+        </div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-bottom:8px;">Marks — approved assets (vault)</div>
+        <div style="display:flex;gap:10px;">
+          <div style="flex:1;text-align:center;border:1px solid var(--maim-line);border-radius:10px;padding:12px 8px;background:var(--maim-panel);"><img src="assets/crown-coin-seal.png" alt="Crown coin seal" style="width:40px;height:40px;margin:0 auto 8px;display:block;"><div style="font-size:10px;color:var(--maim-muted);">Crown coin</div></div>
+          <div style="flex:1;text-align:center;border:1px solid var(--maim-line);border-radius:10px;padding:12px 8px;background:var(--maim-panel);"><img src="assets/md-monogram.png" alt="MD signature" style="width:40px;height:40px;margin:0 auto 8px;display:block;object-fit:contain;"><div style="font-size:10px;color:var(--maim-muted);">Signature</div></div>
+          <div style="flex:1;text-align:center;border:1px solid var(--maim-line);border-radius:10px;padding:12px 8px;background:var(--maim-panel);"><img src="assets/md-emblem-gold.png" alt="MD hat emblem" style="width:48px;height:40px;margin:0 auto 8px;display:block;object-fit:contain;"><div style="font-size:10px;color:var(--maim-muted);">Hat emblem</div></div>
+        </div>
+        <p style="font-size:12px;color:var(--maim-muted);margin:16px 0 0;line-height:1.5;">Do not draw, recolor or approximate official marks. Components pull these exact files from the vault.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:16px;padding:24px;margin-top:22px;">
+      <div style="font-weight:700;font-size:16px;margin-bottom:16px;">Safe areas — every component knows all three formats</div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;">
+        <div>
+          <div style="position:relative;width:220px;height:124px;background:var(--maim-panel);border:1px solid var(--maim-line);border-radius:6px;overflow:hidden;">
+            <div style="position:absolute;inset:9px;border:1px dashed rgba(201,162,39,.6);border-radius:3px;"></div>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10px;color:var(--maim-ivory-dim);">title-safe</div>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-top:8px;">16:9 master · 1920×1080</div>
+        </div>
+        <div>
+          <div style="position:relative;width:124px;height:124px;background:var(--maim-panel);border:1px solid var(--maim-line);border-radius:6px;overflow:hidden;">
+            <div style="position:absolute;inset:9px;border:1px dashed rgba(201,162,39,.6);border-radius:3px;"></div>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-top:8px;">1:1 square</div>
+        </div>
+        <div>
+          <div style="position:relative;width:70px;height:124px;background:var(--maim-panel);border:1px solid var(--maim-line);border-radius:6px;overflow:hidden;">
+            <div style="position:absolute;left:0;right:0;top:0;height:18%;background:rgba(46,107,230,.16);"></div>
+            <div style="position:absolute;left:0;right:0;bottom:0;height:22%;background:rgba(46,107,230,.16);"></div>
+            <div style="position:absolute;left:6px;right:6px;top:18%;bottom:22%;border:1px dashed rgba(201,162,39,.6);"></div>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);margin-top:8px;">9:16 · top 18% / bottom 22% clear</div>
+        </div>
+        <p style="flex:1;min-width:220px;font-size:13px;color:var(--maim-ivory-dim);line-height:1.55;margin:0;">Master format and derivative crops are declared before composition. Every component ships with a responsive contract for all three, plus caption-collision, eye-line, logo and platform-UI protection.</p>
+      </div>
+    </div>
+  </section>
+
+    <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:16px;padding:24px;margin-top:22px;">
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:22px;">
+        <img src="assets/maim-badge.png" alt="MAJOR AI MINDSET badge" style="width:150px;height:150px;border-radius:14px;flex-shrink:0;">
+        <div style="flex:1;min-width:240px;">
+          <div style="font-weight:700;font-size:16px;margin-bottom:6px;">Brand signatures & the Crown Highlight Series</div>
+          <p style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.55;margin:0 0 10px;">The primary badge and the crown-coin highlight system. Every highlight icon shares the straw-hat coin base — the recurring trust mark. Icons map directly to the content pillars agents produce.</p>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--maim-muted);line-height:1.6;">Black foundation · Gold authority · Jamaican-green legacy · Knicks blue/orange energy · White clarity</div>
+        </div>
+      </div>
+      <img src="assets/crown-highlight-series.png" alt="Crown Highlight Series — 8 icons" style="width:100%;border-radius:12px;border:1px solid var(--maim-line);display:block;">
+      <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-top:12px;font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;color:var(--maim-muted);text-align:center;text-transform:uppercase;">
+        <span>Start Here</span><span>ABCs of AI</span><span>Webinar</span><span>Build With Me</span><span>AI Tools</span><span>Community</span><span>Testimonials</span><span>The Crown</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:56px 0;border-bottom:1px solid var(--maim-line);">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">01 · Media Skills</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 12px;">What can an agent <em style="font-style:italic;color:var(--maim-gold);">do</em> with this?</h2>
+    <p style="max-width:660px;font-size:16px;color:var(--maim-ivory-dim);line-height:1.55;margin:0 0 28px;">Every component answers one question before it ships: what can an AI agent do with it? These universal skill verbs turn a visual into an executable building block. Each verb is a callable operation with typed inputs and a QA gate.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;">
+      <sc-for list="{{ skillVerbs }}" as="v" hint-placeholder-count="9">
+        <div style="background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:12px;padding:16px;">
+          <div style="font-family:var(--exp);font-weight:800;font-size:16px;color:var(--maim-ivory);margin-bottom:5px;">{{ v.name }}</div>
+          <div style="font-size:12.5px;color:var(--maim-ivory-dim);line-height:1.4;">{{ v.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:56px 0 0;">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">02 · Capability: Compose</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 12px;">The Compose components</h2>
+    <p style="max-width:660px;font-size:16px;color:var(--maim-ivory-dim);line-height:1.55;margin:0 0 8px;">These nine components live under <strong style="color:var(--maim-ivory);font-weight:600;">Compose</strong> — the capability Volume I specifies in full. Each is a rendered specimen followed by its complete contract, its executable skill set, and an <em style="color:var(--maim-ivory);font-style:normal;">Execution Stack</em> showing how the design becomes a production asset.</p>
+  </section>
+
+  <sc-for list="{{ components }}" as="c" hint-placeholder-count="8">
+    <article style="padding:48px 0;border-bottom:1px solid var(--maim-line);">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+        <span style="font-family:var(--mono);font-size:13px;color:var(--maim-gold);">{{ c.code }}</span>
+        <h3 style="font-family:var(--exp);font-weight:700;font-size:28px;letter-spacing:-.01em;margin:0;">{{ c.name }}</h3>
+        <span style="font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--maim-gold);border:1px solid rgba(201,162,39,.4);border-radius:99px;padding:4px 10px;">Compose</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:start;">
+
+        <div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:10px;">Example render · 16:9</div>
+          <div style="position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--maim-line);background:var(--maim-black);">
+            {{ c.render }}
+          </div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--maim-muted);text-transform:uppercase;margin:18px 0 10px;">Responsive contract</div>
+          <div style="display:flex;gap:12px;">
+            <div style="flex:1;">
+              <div style="aspect-ratio:1/1;border-radius:8px;border:1px solid var(--maim-line);background:var(--maim-panel);display:flex;align-items:center;justify-content:center;padding:10px;text-align:center;">{{ c.crop11 }}</div>
+              <div style="font-family:var(--mono);font-size:10px;color:var(--maim-muted);margin-top:6px;">1:1 · {{ c.crop11note }}</div>
+            </div>
+            <div style="width:34%;">
+              <div style="aspect-ratio:9/16;border-radius:8px;border:1px solid var(--maim-line);background:var(--maim-panel);display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;">{{ c.crop916 }}</div>
+              <div style="font-family:var(--mono);font-size:10px;color:var(--maim-muted);margin-top:6px;">9:16 · {{ c.crop916note }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-size:15px;color:var(--maim-ivory);line-height:1.5;margin:0 0 20px;">{{ c.tagline }}</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
+            <div style="background:rgba(0,155,77,.08);border:1px solid rgba(0,155,77,.35);border-radius:10px;padding:13px;">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--maim-green);text-transform:uppercase;margin-bottom:6px;">Use when</div>
+              <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.45;">{{ c.useWhen }}</div>
+            </div>
+            <div style="background:rgba(226,71,71,.06);border:1px solid rgba(226,71,71,.3);border-radius:10px;padding:13px;">
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:#E07A7A;text-transform:uppercase;margin-bottom:6px;">Never</div>
+              <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.45;">{{ c.never }}</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-gold);text-transform:uppercase;margin-bottom:8px;">Anatomy</div>
+            <sc-for list="{{ c.anatomy }}" as="a" hint-placeholder-count="3">
+              <div style="display:flex;gap:8px;font-size:13px;color:var(--maim-ivory-dim);line-height:1.5;margin-bottom:3px;"><span style="color:var(--maim-gold);">·</span><span>{{ a }}</span></div>
+            </sc-for>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;">
+            <div>
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-gold);text-transform:uppercase;margin-bottom:6px;">Motion</div>
+              <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.45;">{{ c.motion }}</div>
+            </div>
+            <div>
+              <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-gold);text-transform:uppercase;margin-bottom:6px;">Accessibility</div>
+              <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.45;">{{ c.a11y }}</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-blue);text-transform:uppercase;margin-bottom:8px;">Media skills · executable</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;">
+              <sc-for list="{{ c.skills }}" as="s" hint-placeholder-count="6">
+                <span style="font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:99px;border:1px solid rgba(46,107,230,.4);background:rgba(46,107,230,.09);color:#9DBBF3;">{{ s }}</span>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="background:var(--maim-black);border:1px solid var(--maim-line);border-radius:10px;overflow:hidden;">
+            <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-muted);text-transform:uppercase;padding:11px 14px;border-bottom:1px solid var(--maim-line);">Remotion props → JSON config</div>
+            <pre style="margin:0;padding:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--maim-ivory-dim);white-space:pre-wrap;overflow-x:auto;">{{ c.json }}</pre>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:9px;align-items:flex-start;background:rgba(201,162,39,.06);border:1px solid rgba(201,162,39,.25);border-radius:10px;padding:13px;">
+            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--maim-gold);text-transform:uppercase;white-space:nowrap;padding-top:1px;">Agent →</span>
+            <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.5;">{{ c.agent }}</div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">Execution stack</div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;">
+              <sc-for list="{{ execStack }}" as="e" hint-placeholder-count="6">
+                <span style="font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--maim-ivory-dim);background:var(--maim-panel);border:1px solid var(--maim-line);border-radius:6px;padding:6px 9px;">{{ e }}</span>
+                <span style="color:var(--maim-gold);font-size:11px;">→</span>
+              </sc-for>
+              <span style="font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--maim-black);background:var(--maim-gold);border-radius:6px;padding:6px 9px;font-weight:700;">Rendered Output</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </sc-for>
+
+  <section style="padding:60px 0 0;border-bottom:1px solid var(--maim-line);">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">03 · First assembly</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 12px;">The 30-second Welcome Film</h2>
+    <p style="max-width:640px;font-size:16px;color:var(--maim-ivory-dim);line-height:1.55;margin:0 0 34px;">Not a marketing video — the first <em style="color:var(--maim-ivory);font-style:normal;">executable demonstration</em> of the engine. It composes the eight components above; every shot cites the component it instantiates. One transformation, told once.</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;">
+      <div style="flex:1;min-width:150px;background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:12px;padding:18px;"><div style="font-family:var(--mono);font-size:10px;color:var(--maim-muted);margin-bottom:8px;">01</div><div style="font-family:var(--exp);font-weight:700;font-size:17px;line-height:1.15;">Human<br>Experience</div></div>
+      <div style="align-self:center;color:var(--maim-gold);font-size:20px;">→</div>
+      <div style="flex:1;min-width:150px;background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:12px;padding:18px;"><div style="font-family:var(--mono);font-size:10px;color:var(--maim-muted);margin-bottom:8px;">02</div><div style="font-family:var(--exp);font-weight:700;font-size:17px;line-height:1.15;">Structured<br>Knowledge</div></div>
+      <div style="align-self:center;color:var(--maim-gold);font-size:20px;">→</div>
+      <div style="flex:1;min-width:150px;background:var(--maim-ink);border:1px solid var(--maim-line);border-radius:12px;padding:18px;"><div style="font-family:var(--mono);font-size:10px;color:var(--maim-muted);margin-bottom:8px;">03</div><div style="font-family:var(--exp);font-weight:700;font-size:17px;line-height:1.15;">Programmable<br>Intelligence</div></div>
+      <div style="align-self:center;color:var(--maim-gold);font-size:20px;">→</div>
+      <div style="flex:1;min-width:150px;background:var(--maim-ink);border:1px solid var(--maim-gold);border-radius:12px;padding:18px;"><div style="font-family:var(--mono);font-size:10px;color:var(--maim-gold);margin-bottom:8px;">04</div><div style="font-family:var(--exp);font-weight:700;font-size:17px;line-height:1.15;color:var(--maim-gold);">Lasting<br>Legacy</div></div>
+    </div>
+
+    <div style="border:1px solid var(--maim-line);border-radius:14px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:70px 1fr 1.3fr 150px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--maim-muted);text-transform:uppercase;padding:13px 18px;background:var(--maim-ink);border-bottom:1px solid var(--maim-line);">
+        <div>Time</div><div>Beat</div><div>On screen</div><div>Component</div>
+      </div>
+      <sc-for list="{{ shots }}" as="s" hint-placeholder-count="7">
+        <div style="display:grid;grid-template-columns:70px 1fr 1.3fr 150px;gap:10px;padding:15px 18px;border-bottom:1px solid var(--maim-line);align-items:start;">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--maim-gold);">{{ s.t }}</div>
+          <div style="font-size:13px;color:var(--maim-ivory);font-weight:600;">{{ s.beat }}</div>
+          <div style="font-size:13px;color:var(--maim-ivory-dim);line-height:1.45;">{{ s.screen }}</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#9DBBF3;">{{ s.comp }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:26px;background:var(--maim-black);border:1px solid var(--maim-gold);border-radius:14px;padding:28px;text-align:center;">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:20px;">Fixed ABC progression → resolve</div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;font-family:var(--exp);font-weight:800;">
+        <span style="font-size:clamp(20px,4vw,34px);color:var(--maim-ivory);">AWARENESS</span>
+        <span style="color:var(--maim-gold);font-size:22px;">→</span>
+        <span style="font-size:clamp(20px,4vw,34px);color:var(--maim-ivory);">BELIEF</span>
+        <span style="color:var(--maim-gold);font-size:22px;">→</span>
+        <span style="font-size:clamp(20px,4vw,34px);color:var(--maim-ivory);">CONTEXT</span>
+      </div>
+      <div style="margin:22px auto 0;height:1px;width:60px;background:var(--maim-gold);"></div>
+      <div style="font-family:var(--exp);font-weight:800;font-size:clamp(28px,5.5vw,52px);letter-spacing:-.01em;margin-top:22px;">MAJOR AI MINDSET</div>
+      <div style="font-family:var(--mono);font-size:13px;color:var(--maim-gold);margin-top:14px;letter-spacing:.04em;">Awareness becomes architecture.</div>
+    </div>
+  </section>
+
+  <section style="padding:60px 0 0;">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">04 · Prioritized first build</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 30px;">Ship order for the proof</h2>
+    <sc-for list="{{ buildList }}" as="b" hint-placeholder-count="6">
+      <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--maim-line);">
+        <div style="font-family:var(--exp);font-weight:800;font-size:26px;color:var(--maim-gold);min-width:44px;">{{ b.n }}</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:17px;margin-bottom:4px;">{{ b.title }}</div>
+          <div style="font-size:14px;color:var(--maim-ivory-dim);line-height:1.5;">{{ b.detail }}</div>
+        </div>
+        <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--maim-muted);border:1px solid var(--maim-line);border-radius:99px;padding:5px 11px;white-space:nowrap;">{{ b.tag }}</span>
+      </div>
+    </sc-for>
+    <div style="margin-top:40px;display:flex;align-items:center;gap:14px;">
+      <div style="display:flex;height:8px;width:120px;border-radius:99px;overflow:hidden;"><span style="flex:1;background:var(--maim-green);"></span><span style="flex:1;background:var(--maim-gold);"></span><span style="flex:1;background:var(--maim-blue);"></span></div>
+      <span style="font-family:var(--mono);font-size:12px;color:var(--maim-muted);letter-spacing:.1em;">Likkle by likkle, we build the future.</span>
+    </div>
+  </section>
+
+  <section style="padding:64px 0 0;">
+    <div style="font-family:var(--mono);font-size:12px;letter-spacing:.28em;color:var(--maim-muted);text-transform:uppercase;margin-bottom:8px;">05 · The roadmap</div>
+    <h2 style="font-family:var(--exp);font-weight:700;font-size:34px;letter-spacing:-.01em;margin:0 0 12px;">Five volumes to a media operating system</h2>
+    <p style="max-width:660px;font-size:16px;color:var(--maim-ivory-dim);line-height:1.55;margin:0 0 30px;">This document is the foundation, not the destination. Each volume adds a layer of the engine; the design system is where everything anchors.</p>
+    <sc-for list="{{ volumes }}" as="v" hint-placeholder-count="5">
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--maim-line);opacity:{{ v.op }};">
+        <div style="font-family:var(--exp);font-weight:800;font-size:15px;color:var(--maim-gold);min-width:64px;letter-spacing:.02em;">{{ v.vol }}</div>
+        <div style="flex:1;">
+          <div style="font-weight:700;font-size:17px;margin-bottom:4px;">{{ v.title }}</div>
+          <div style="font-size:14px;color:var(--maim-ivory-dim);line-height:1.5;">{{ v.detail }}</div>
+        </div>
+        <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:{{ v.tagColor }};border:1px solid var(--maim-line);border-radius:99px;padding:5px 11px;white-space:nowrap;">{{ v.status }}</span>
+      </div>
+    </sc-for>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const h = React.createElement;
+    const T = {
+      black:'#0A0A0B', ivory:'#F4EDE1', ivoryDim:'#B9B3A7', muted:'#7C7A74',
+      gold:'#C9A227', goldSoft:'#E4C766', green:'#009B4D', blue:'#2E6BE6',
+      panel:'#17181C', line:'#26272D',
+      disp:"'Archivo',sans-serif", exp:"'Archivo Expanded','Archivo',sans-serif", mono:"'JetBrains Mono',monospace"
+    };
+    const tribar = (w) => h('div',{style:{display:'flex',height:'5px',width:w||'64px',borderRadius:'99px',overflow:'hidden'}},
+      h('span',{style:{flex:1,background:T.green}}), h('span',{style:{flex:1,background:T.gold}}), h('span',{style:{flex:1,background:T.blue}}));
+    const frame = (children, extra) => h('div',{style:Object.assign({position:'absolute',inset:0,display:'flex',flexDirection:'column',justifyContent:'center',padding:'26px 30px'},extra||{})}, children);
+    const R = (window.__resources)||{};
+    const SEAL = R.seal || './assets/crown-coin-seal.png';
+    const MONO = R.mono || './assets/md-monogram.png';
+    const md = h('img',{src:MONO,alt:'MD signature',style:{position:'absolute',right:'12px',bottom:'8px',height:'30px',opacity:.6}});
+
+    const renderHero = h('div',{style:{position:'absolute',inset:0,background:'radial-gradient(120% 90% at 50% 40%, #17181C 0%, #0A0A0B 70%)'}},
+      frame([
+        h('div',{key:1,style:{margin:'0 auto 18px'}},tribar('80px')),
+        h('div',{key:2,style:{fontFamily:T.mono,fontSize:'11px',letterSpacing:'.3em',color:T.gold,textAlign:'center',marginBottom:'14px'}},'FOUNDATION WORD'),
+        h('div',{key:3,style:{fontFamily:T.exp,fontWeight:800,fontSize:'clamp(26px,6.5vw,54px)',lineHeight:.95,letterSpacing:'-.02em',textAlign:'center',color:T.ivory}},'MAJOR AI MINDSET')
+      ],{alignItems:'center'}), md);
+
+    const renderLower = h('div',{style:{position:'absolute',inset:0}},
+      h('image-slot',{id:'maim-lib-founder',shape:'rect',placeholder:'Founder frame · warm, human-first'}),
+      h('div',{style:{position:'absolute',inset:0,background:'linear-gradient(90deg, rgba(10,10,11,.85) 0%, rgba(10,10,11,.15) 55%, transparent 100%)',pointerEvents:'none'}}),
+      h('div',{style:{position:'absolute',left:'28px',bottom:'26px',pointerEvents:'none'}},
+        h('div',{style:{marginBottom:'10px'}},tribar('54px')),
+        h('div',{style:{fontFamily:T.exp,fontWeight:800,fontSize:'26px',color:T.ivory,lineHeight:1}},'MAJOR DREAM'),
+        h('div',{style:{fontFamily:T.mono,fontSize:'12px',color:T.goldSoft,marginTop:'6px',letterSpacing:'.06em'}},'Founder · MAIM')
+      ));
+
+    const abcStep = (word, active) => h('div',{style:{display:'flex',alignItems:'center',gap:'12px',opacity:active?1:.4}},
+      h('span',{style:{fontFamily:T.mono,fontSize:'11px',color:active?T.gold:T.muted,width:'14px'}},active?'▸':'·'),
+      h('span',{style:{fontFamily:T.exp,fontWeight:800,fontSize:'clamp(16px,3.4vw,26px)',color:active?T.ivory:T.ivoryDim,letterSpacing:'-.01em'}},word));
+    const renderABC = h('div',{style:{position:'absolute',inset:0,background:T.black}},
+      frame([
+        h('div',{key:0,style:{marginBottom:'16px'}},tribar('54px')),
+        h('div',{key:1,style:{display:'flex',flexDirection:'column',gap:'12px'}},[
+          h('div',{key:'a'},abcStep('AWARENESS',true)),
+          h('div',{key:'b'},abcStep('BELIEF',true)),
+          h('div',{key:'c'},abcStep('CONTEXT',false))
+        ])
+      ]));
+
+    const renderQuote = h('div',{style:{position:'absolute',inset:0,background:'radial-gradient(120% 100% at 20% 20%, #17181C 0%, #0A0A0B 65%)'}},
+      frame([
+        h('div',{key:0,style:{fontFamily:T.exp,fontWeight:800,fontSize:'44px',color:T.gold,lineHeight:.6,height:'26px'}},'“'),
+        h('div',{key:1,style:{fontFamily:T.disp,fontWeight:600,fontSize:'clamp(18px,3.6vw,28px)',lineHeight:1.25,color:T.ivory,maxWidth:'86%'}},'AI is the Intelligence. You are the Wisdom.'),
+        h('div',{key:2,style:{marginTop:'18px',display:'flex',alignItems:'center',gap:'10px'}},tribar('40px'),
+          h('span',{key:'x',style:{fontFamily:T.mono,fontSize:'11px',color:T.ivoryDim,letterSpacing:'.08em'}},'MAIM DOCTRINE'))
+      ]), md);
+
+    const knot = (label, top) => h('div',{style:{display:'flex',alignItems:'center',gap:'12px'}},
+      h('div',{style:{width:'9px',height:'9px',borderRadius:'50%',background:top?T.gold:T.green,flexShrink:0}}),
+      h('div',{style:{fontFamily:T.disp,fontWeight:600,fontSize:'14px',color:T.ivory}},label));
+    const renderDiagram = h('div',{style:{position:'absolute',inset:0,background:T.black}},
+      frame([
+        h('div',{key:0,style:{fontFamily:T.mono,fontSize:'10px',letterSpacing:'.2em',color:T.muted,marginBottom:'16px'}},'THE TRANSFORMATION'),
+        h('div',{key:1,style:{display:'flex',flexDirection:'column',gap:'11px',position:'relative'}},[
+          h('div',{key:'l',style:{position:'absolute',left:'4px',top:'8px',bottom:'8px',width:'1px',background:'linear-gradient(#009B4D,#C9A227)'}}),
+          knot('Human Experience'), knot('Structured Knowledge'), knot('Programmable Intelligence'), knot('Lasting Legacy',true)
+        ])
+      ]));
+
+    const netNode = (x,y,r,c) => h('circle',{cx:x,cy:y,r:r,fill:c});
+    const renderNetwork = h('div',{style:{position:'absolute',inset:0,background:'radial-gradient(100% 100% at 50% 50%, #15161A 0%, #0A0A0B 70%)'}},
+      h('svg',{viewBox:'0 0 320 180',style:{position:'absolute',inset:0,width:'100%',height:'100%'},preserveAspectRatio:'xMidYMid slice'},[
+        h('g',{key:'lines',stroke:'rgba(201,162,39,.35)',strokeWidth:'1'},[
+          h('line',{key:1,x1:160,y1:90,x2:70,y2:44}), h('line',{key:2,x1:160,y1:90,x2:250,y2:50}),
+          h('line',{key:3,x1:160,y1:90,x2:60,y2:130}), h('line',{key:4,x1:160,y1:90,x2:255,y2:132}),
+          h('line',{key:5,x1:160,y1:90,x2:160,y2:30})
+        ]),
+        h('g',{key:'nodes'},[
+          netNode(70,44,4,T.green), netNode(250,50,4,T.blue), netNode(60,130,4,T.blue),
+          netNode(255,132,4,T.green), netNode(160,30,4,T.gold)
+        ]),
+        h('circle',{key:'halo',cx:160,cy:90,r:16,fill:'none',stroke:T.gold,strokeWidth:'1',opacity:.5}),
+        h('circle',{key:'hub',cx:160,cy:90,r:9,fill:T.gold})
+      ]),
+      h('div',{style:{position:'absolute',left:'50%',bottom:'20px',transform:'translateX(-50%)',fontFamily:T.mono,fontSize:'10px',letterSpacing:'.16em',color:T.ivoryDim}},'ONE ARCHIVE · INFINITE EXPRESSIONS'));
+
+    const renderClose = h('div',{style:{position:'absolute',inset:0,background:'radial-gradient(120% 100% at 50% 45%, #17181C 0%, #0A0A0B 72%)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}},
+      h('img',{src:SEAL,alt:'Crown coin seal',style:{width:'62px',height:'62px',marginBottom:'14px'}}),
+      h('div',{style:{fontFamily:T.exp,fontWeight:800,fontSize:'30px',color:T.ivory,letterSpacing:'.02em'}},'MAIM'),
+      h('div',{style:{margin:'12px 0'}},tribar('64px')),
+      h('div',{style:{fontFamily:T.mono,fontSize:'10px',letterSpacing:'.2em',color:T.muted}},'POWERED BY MAIM · MD'));
+
+    const renderCTA = h('div',{style:{position:'absolute',inset:0,background:T.black,display:'flex',flexDirection:'column',justifyContent:'center',padding:'26px 30px'}},
+      h('div',{style:{marginBottom:'14px'}},tribar('54px')),
+      h('div',{style:{fontFamily:T.exp,fontWeight:800,fontSize:'clamp(20px,4.2vw,32px)',lineHeight:1,color:T.ivory,marginBottom:'8px'}},'See it. Believe it. Build it.'),
+      h('div',{style:{fontFamily:T.disp,fontSize:'14px',color:T.ivoryDim,marginBottom:'18px'}},'Start your archive with MAIM.'),
+      h('div',{style:{display:'inline-flex',alignSelf:'flex-start',fontFamily:T.mono,fontSize:'12px',letterSpacing:'.08em',color:T.black,background:T.gold,fontWeight:700,padding:'11px 20px',borderRadius:'99px'}},'JOIN THE MOVEMENT →'));
+
+    const bracket = (pos) => { const b={position:'absolute',width:'18px',height:'18px',borderColor:'rgba(201,162,39,.7)',borderStyle:'solid',borderWidth:'0'}; const m={tl:{top:'10px',left:'10px',borderTopWidth:'1.5px',borderLeftWidth:'1.5px'},tr:{top:'10px',right:'10px',borderTopWidth:'1.5px',borderRightWidth:'1.5px'},bl:{bottom:'10px',left:'10px',borderBottomWidth:'1.5px',borderLeftWidth:'1.5px'},br:{bottom:'10px',right:'10px',borderBottomWidth:'1.5px',borderRightWidth:'1.5px'}}; return h('div',{key:pos,style:Object.assign({},b,m[pos])}); };
+    const renderLesson = h('div',{style:{position:'absolute',inset:0,background:T.black,display:'flex',alignItems:'center',justifyContent:'center'}},
+      h('div',{style:{position:'relative',height:'100%',aspectRatio:'1/1',background:'radial-gradient(120% 90% at 78% 68%, rgba(201,162,39,.05) 0%, #060606 60%)',padding:'20px 26px',display:'flex',flexDirection:'column'}},
+        bracket('tl'), bracket('tr'), bracket('bl'), bracket('br'),
+        h('div',{key:'ghost',style:{position:'absolute',right:'8px',bottom:'34px',fontFamily:T.exp,fontWeight:800,fontSize:'120px',lineHeight:.7,color:'rgba(201,162,39,.05)'}},'A'),
+        h('img',{key:'seal',src:SEAL,alt:'Crown coin seal',style:{width:'40px',height:'40px',alignSelf:'center'}}),
+        h('div',{key:'body',style:{flex:1,display:'flex',flexDirection:'column',justifyContent:'center',position:'relative',zIndex:1}},[
+          h('div',{key:1,style:{fontFamily:T.mono,fontSize:'8px',letterSpacing:'.24em',color:T.gold,marginBottom:'2px'}},'ABC LESSON · 01 OF 26'),
+          h('div',{key:2,style:{fontFamily:T.exp,fontWeight:800,fontSize:'54px',lineHeight:.85,color:T.gold}},'A'),
+          h('div',{key:3,style:{fontFamily:T.mono,fontSize:'9px',letterSpacing:'.2em',color:T.muted,margin:'2px 0'}},'IS FOR'),
+          h('div',{key:4,style:{fontFamily:T.exp,fontWeight:800,fontSize:'30px',lineHeight:.9,color:T.ivory,letterSpacing:'-.01em'}},'AWARENESS'),
+          h('div',{key:5,style:{margin:'8px 0 10px'}},tribar('44px')),
+          h('div',{key:6,style:{fontFamily:T.disp,fontWeight:500,fontSize:'12px',lineHeight:1.35,color:T.ivoryDim}},'Notice where AI can help. That is where you begin.'),
+          h('div',{key:7,style:{marginTop:'12px',borderLeft:'2px solid '+T.gold,paddingLeft:'10px'}},[
+            h('div',{key:'a',style:{fontFamily:T.mono,fontSize:'7.5px',letterSpacing:'.16em',color:T.gold,marginBottom:'3px'}},'5-MINUTE ACTION'),
+            h('div',{key:'b',style:{fontFamily:T.disp,fontSize:'11px',color:T.ivory,lineHeight:1.3}},'Write down 3 tasks that drain your time every week.')
+          ])
+        ]),
+        h('div',{key:'foot',style:{display:'flex',justifyContent:'space-between',alignItems:'center',fontFamily:T.mono,fontSize:'7.5px',letterSpacing:'.1em',color:T.muted,borderTop:'1px solid '+T.line,paddingTop:'8px'}},[
+          h('span',{key:1},'@major_ai_mindset'), h('span',{key:2},'MAJORAIMINDSET.COM')
+        ])
+      ));
+
+    const cropLabel = (txt,c) => h('div',{style:{fontFamily:T.mono,fontSize:'9px',letterSpacing:'.1em',color:c||T.ivoryDim,lineHeight:1.4,whiteSpace:'pre-line'}},txt);
+
+    const components = [
+      {code:'A · 01', name:'Hero Titles',
+        tagline:'Premium word and title reveals for foundation words and the film’s resolving mark. The single loudest voice in any sequence.',
+        render:renderHero,
+        crop11:cropLabel('MAJOR\nAI\nMINDSET',T.ivory), crop11note:'stack, re-center',
+        crop916:cropLabel('MAJOR\nAI\nMINDSET',T.ivory), crop916note:'lift into title-safe',
+        useWhen:'Naming a foundation word, section, or the resolving MAJOR AI MINDSET mark.',
+        never:'As body copy or when a human face should carry the beat. No paragraphs.',
+        anatomy:['Kicker (JetBrains Mono, gold, letterspaced)','Title (Archivo Expanded 800, ≤5 words)','Tri-bar rule above or below','MD watermark, corner-safe'],
+        motion:'Single mask-reveal or weight-shift push-in. Hold ≥18f after resolve for breathing room.',
+        a11y:'Ivory on black ≥ 12:1. Min 24px at 1080p. Never gold text on green.',
+        skills:['Generate','Animate','Adapt 9:16','Translate','Export','QA safe-area'],
+        agent:'Given a foundation word, emit a Hero Title recipe for all three formats; verify ≤5 words and hold time before returning.',
+        json:'{\n  "component": "hero-title",\n  "kicker": "FOUNDATION WORD",\n  "title": "MAJOR AI MINDSET",\n  "reveal": "mask-up",\n  "holdFrames": 18,\n  "tribar": "above",\n  "format": "16:9 | 1:1 | 9:16"\n}'},
+
+      {code:'B · 02', name:'Documentary Lower Thirds',
+        tagline:'Identity straps over founder and human footage. Names the speaker without stealing the frame from the person.',
+        render:renderLower,
+        crop11:cropLabel('name strap\nbottom-left',T.ivory), crop11note:'keep off face',
+        crop916:cropLabel('raise above\n22% zone',T.ivory), crop916note:'clear bottom UI',
+        useWhen:'A human is on screen and the audience needs their name and role.',
+        never:'Over a face or eye-line. Not on title cards. Never full-width bars.',
+        anatomy:['Left-anchored scrim, feathered','Tri-bar tick','Name (Archivo Expanded)','Role (JetBrains Mono, gold)'],
+        motion:'Tri-bar wipes in, text follows 4f later. Out on cut, never lingering.',
+        a11y:'Scrim guarantees ≥ 4.5:1 behind text. Respect 22% bottom clear on 9:16.',
+        skills:['Generate','Animate','Adapt 9:16','Translate','Export','QA collision'],
+        agent:'Read name/role from the shot manifest; place strap on the least-busy lower corner, auto-raising inside vertical safe zones.',
+        json:'{\n  "component": "lower-third",\n  "name": "Major Dream",\n  "role": "Founder \\u00b7 MAIM",\n  "anchor": "bottom-left",\n  "scrim": "feather-right",\n  "inFrame": 8, "outOnCut": true\n}'},
+
+      {code:'C · 03', name:'ABC Progression',
+        tagline:'The fixed AWARENESS → BELIEF → CONTEXT sequence. Steps illuminate one at a time, then resolve to MAJOR AI MINDSET.',
+        render:renderABC,
+        crop11:cropLabel('vertical\nstack',T.ivory), crop11note:'even spacing',
+        crop916:cropLabel('one word\nper beat',T.ivory), crop916note:'full-height rhythm',
+        useWhen:'Teaching the core mindset ladder. Once per film, as the spine.',
+        never:'Reordered or reworded. Never more than 3 steps. No competing motion.',
+        anatomy:['Ordered step rows','Active marker (gold ▸)','Dimmed pending steps','Resolve card handoff to Hero Title'],
+        motion:'Sequential illumination synced to beat; each step holds before the next. One idea only.',
+        a11y:'Active vs pending distinguished by contrast + marker, not color alone.',
+        skills:['Generate','Animate','Sequence','Translate','Export','QA sync'],
+        agent:'Steps are locked constants (Awareness · Belief · Context). Agent may only retime illumination to the audio grid and hand off to the Hero Title resolve.',
+        json:'{\n  "component": "abc-progression",\n  "steps": ["AWARENESS","BELIEF","CONTEXT"],\n  "resolve": "MAJOR AI MINDSET",\n  "beatSync": true,\n  "illuminate": "sequential"\n}'},
+
+      {code:'D · 04', name:'Quote Cards',
+        tagline:'Doctrine and quote frames. Give a single line of earned wisdom the whole screen and silence around it.',
+        render:renderQuote,
+        crop11:cropLabel('quote\ncentered',T.ivory), crop11note:'tighten measure',
+        crop916:cropLabel('large mark\nshort line',T.ivory), crop916note:'top-third quote',
+        useWhen:'A doctrine line or attributed quote needs to land as a beat.',
+        never:'For multi-sentence text. No stock quote decoration or excess particles.',
+        anatomy:['Oversized gold quote mark','Line (Archivo 600, ≤12 words)','Tri-bar + attribution','MD watermark'],
+        motion:'Line fades up word-group by word-group; quote mark settles first. Long tail hold.',
+        a11y:'Max ~12 words. Line length ≤ 28ch. Ivory on black.',
+        skills:['Generate','Animate','Adapt','Translate','Export','QA readability'],
+        agent:'Reject inputs over 12 words or 2 lines; suggest splitting into two Quote Cards instead of shrinking type.',
+        json:'{\n  "component": "quote-card",\n  "quote": "AI is the Intelligence. You are the Wisdom.",\n  "attribution": "MAIM DOCTRINE",\n  "maxWords": 12,\n  "reveal": "word-group",\n  "tail": 24\n}'},
+
+      {code:'E · 05', name:'Diagram / Knowledge Cards',
+        tagline:'Labeled progression and knowledge diagrams. Carries the Human Experience → Lasting Legacy transformation spine.',
+        render:renderDiagram,
+        crop11:cropLabel('4 nodes\nstacked',T.ivory), crop11note:'shorten labels',
+        crop916:cropLabel('vertical\nspine',T.ivory), crop916note:'ideal format',
+        useWhen:'Showing a process, ladder, or structured relationship between stages.',
+        never:'As decoration. No unlabeled nodes. Never dashboard/HUD clichés.',
+        anatomy:['Connector spine (green→gold gradient)','Labeled nodes','Terminal node highlighted gold','Mono section kicker'],
+        motion:'Spine draws, nodes pop in sequence, terminal node accented last.',
+        a11y:'Every node labeled in text; state shown by position + label, not color alone.',
+        skills:['Generate','Animate','Adapt','Translate','Export','QA legibility'],
+        agent:'Accept an ordered stage array; render the spine and auto-highlight the terminal stage. Warn if any node lacks a label.',
+        json:'{\n  "component": "knowledge-diagram",\n  "nodes": ["Human Experience","Structured Knowledge","Programmable Intelligence","Lasting Legacy"],\n  "layout": "spine",\n  "highlight": "terminal",\n  "draw": "sequential"\n}'},
+
+      {code:'F · 06', name:'Network Visualization',
+        tagline:'Connection and community metaphor. A human hub with earned links — never a cold sci-fi mesh.',
+        render:renderNetwork,
+        crop11:cropLabel('hub\ncentered',T.ivory), crop11note:'trim outer nodes',
+        crop916:cropLabel('hub high,\nnodes below',T.ivory), crop916note:'reflow radial',
+        useWhen:'Showing movement, community, or one archive feeding many expressions.',
+        never:'Dense neon meshes, particle storms, or blue HUD grids. Humans stay the hero.',
+        anatomy:['Central gold hub (the person/archive)','Restrained links','Tri-color outer nodes','Mono caption strap'],
+        motion:'Hub pulses once; links draw outward; nodes settle. No perpetual float.',
+        a11y:'Caption states the meaning in words; motion is calm, not seizure-risk flicker.',
+        skills:['Generate','Animate','Adapt','Translate','Export','QA motion-safety'],
+        agent:'Cap node count for clarity; keep the hub human-labeled. Refuse cyberpunk palettes outside tokens.',
+        json:'{\n  "component": "network-viz",\n  "hub": "One Archive",\n  "nodes": 5,\n  "palette": ["green","gold","blue"],\n  "motion": "draw-out",\n  "caption": "One archive \\u00b7 infinite expressions"\n}'},
+
+      {code:'G · 07', name:'Closing Signature',
+        tagline:'The brand ending. Crown seal, MAIM wordmark, tri-bar and powered-by / MD signature — consistent across every production.',
+        render:renderClose,
+        crop11:cropLabel('seal +\nwordmark',T.ivory), crop11note:'centered lockup',
+        crop916:cropLabel('vertical\nlockup',T.ivory), crop916note:'centered, safe',
+        useWhen:'Every MAIM production ends here. The repeatable trust close.',
+        never:'Redraw or recolor the seal/wordmark. No alternate endings per film.',
+        anatomy:['Crown coin seal (approved asset slot)','MAIM wordmark','Tri-bar','Powered-by · MD signature'],
+        motion:'Seal settles, wordmark fades, tri-bar draws. Long final hold for breathing room.',
+        a11y:'High contrast lockup; mark sizes meet minimum legibility at 9:16.',
+        skills:['Generate','Animate','Adapt','Localize','Export','QA mark-integrity'],
+        agent:'Pull seal and wordmark from the approved vault only; never synthesize geometry. Enforce identical timing across productions.',
+        json:'{\n  "component": "closing-signature",\n  "seal": "vault://crown-coin",\n  "wordmark": "vault://maim",\n  "signature": "MD",\n  "poweredBy": true,\n  "finalHold": 36\n}'},
+
+      {code:'H · 08', name:'CTA / Offer Cards',
+        tagline:'The call to action and offer frame. Turns the mindset into a next step without breaking the editorial calm.',
+        render:renderCTA,
+        crop11:cropLabel('headline +\nbutton',T.ivory), crop11note:'stack tight',
+        crop916:cropLabel('button in\nsafe zone',T.ivory), crop916note:'above 22%',
+        useWhen:'Closing beat or derivative endcard that needs one clear action.',
+        never:'Multiple CTAs, hype stacking, or covering the closing signature.',
+        anatomy:['Tri-bar','Headline (doctrine line)','Support line','Single gold action pill'],
+        motion:'Content settles; pill arrives last with a subtle scale. One action, one motion.',
+        a11y:'Pill ≥ 44px touch target; gold-on-black label ≥ 4.5:1; one focus target.',
+        skills:['Generate','Animate','Adapt','Translate','Export','QA target-size'],
+        agent:'Enforce exactly one action; map the offer to the platform derivative and place the pill inside the safe zone.',
+        json:'{\n  "component": "cta-card",\n  "headline": "See it. Believe it. Build it.",\n  "support": "Start your archive with MAIM.",\n  "action": { "label": "Join the movement", "style": "gold-pill" },\n  "maxActions": 1\n}'},
+
+      {code:'APPLIED · 09', name:'ABC Lesson Card',
+        tagline:'The shipping form of ABC Progression — a full 26-part lesson series (A–Z). Corner brackets, MD seal, per-letter accent, and a 5-minute action. The template agents fill weekly.',
+        render:renderLesson,
+        crop11:cropLabel('native\nformat',T.gold), crop11note:'feed default',
+        crop916:cropLabel('story\nvariant',T.ivory), crop916note:'lift action box',
+        useWhen:'Publishing an evergreen alphabet lesson (01–26 of 26) to feed, story, or carousel.',
+        never:'For film title cards. Don’t change the letter accent mapping or the 26-count series frame.',
+        anatomy:['Corner brackets + optional PINNED tag','MD crown seal, top-center','“ABC LESSON · NN OF 26” kicker','Accent letter (A=gold · B=green · C=blue…)','“IS FOR” + word (ivory, condensed)','Tri-bar + two-line teaching couplet','5-minute action box (accent left rule)','Ghost letter watermark + footer strap'],
+        motion:'Static-first for feed. Optional: letter weight-in, tri-bar wipe, action box slide for reels.',
+        a11y:'Body ≥ 2 short lines; accent letter never sole carrier of meaning (kicker states the number). Ivory word on black.',
+        skills:['Generate A–Z','Recolor per-letter','Adapt 9:16','Translate','Batch export 26','QA series-consistency'],
+        agent:'Given a letter + word + couplet + 5-minute action, emit the card with the correct accent color and NN/26 index. Keep seal, brackets and footer strap fixed across the whole series.',
+        json:'{\n  "component": "abc-lesson-card",\n  "index": 1, "of": 26,\n  "letter": "A", "accent": "gold",\n  "word": "AWARENESS",\n  "teach": "Notice where AI can help. That is where you begin.",\n  "action": "Write down 3 tasks that drain your time every week.",\n  "handle": "@major_ai_mindset",\n  "site": "MAJORAIMINDSET.COM",\n  "format": "1:1 | 9:16"\n}'}
+    ];
+
+    const shots = [
+      {t:'0.0s', beat:'Cold open', screen:'Warm founder frame, slow documentary push-in. No text.', comp:'Documentary Lower Third (delayed)'},
+      {t:'4.0s', beat:'Name the human', screen:'Lower-third strap resolves: Major Dream · Founder.', comp:'Documentary Lower Third'},
+      {t:'8.0s', beat:'The transformation', screen:'Spine draws: Human Experience → … → Lasting Legacy.', comp:'Knowledge Diagram'},
+      {t:'14.0s', beat:'The doctrine', screen:'“AI is the Intelligence. You are the Wisdom.”', comp:'Quote Card'},
+      {t:'18.0s', beat:'The mindset ladder', screen:'AWARENESS → BELIEF → CONTEXT illuminate in sequence.', comp:'ABC Progression'},
+      {t:'23.0s', beat:'Resolve', screen:'Ladder collapses into MAJOR AI MINDSET. Hold.', comp:'Hero Title'},
+      {t:'27.0s', beat:'Close', screen:'Crown seal, wordmark, tri-bar, powered-by · MD.', comp:'Closing Signature'}
+    ];
+
+    const buildList = [
+      {n:'1', title:'Lock the token source', detail:'Sample real HEX from approved MAIM assets into the single token block; keep the PROVISIONAL flag until signed off. Everything downstream reads from here.', tag:'foundation'},
+      {n:'2', title:'Ship Hero Title + Closing Signature', detail:'The bookends. They establish type, tri-bar, marks and hold-time discipline that every other component inherits.', tag:'components'},
+      {n:'3', title:'Build the Knowledge Diagram', detail:'Encodes the Human Experience → Lasting Legacy spine — the film’s narrative backbone and the clearest proof of “programmable”.', tag:'components'},
+      {n:'4', title:'Add ABC Progression + Quote Card', detail:'Awareness · Belief · Context resolving to MAJOR AI MINDSET, plus one doctrine line. The emotional core.', tag:'components'},
+      {n:'5', title:'Documentary Lower Third + human frame', detail:'Keep the founder the hero. Wire the image slot to the approved footage and validate safe areas across 16:9 / 1:1 / 9:16.', tag:'components'},
+      {n:'6', title:'Assemble the 30s proof in Remotion', detail:'Compose the shot list deterministically from each component’s JSON config; render review, no-music and clean-text passes plus a contact sheet.', tag:'assembly'},
+      {n:'7', title:'QA + derivatives', detail:'Safe-area overlays, caption-collision, loudness report and provenance manifest. Only then cut YouTube / Shorts / course derivatives — and gate the 4:34 master on this proof passing.', tag:'release'}
+    ];
+
+    const capabilities = [
+      {n:'01', name:'Capture', color:'#B9B3A7', desc:'Bring in raw footage, audio, stills and lived experience.'},
+      {n:'02', name:'Interpret', color:'#B9B3A7', desc:'Transcribe, tag, structure. Turn material into knowledge.'},
+      {n:'03', name:'Compose', color:'#C9A227', desc:'Assemble frames from components. Fully specified in Vol I.'},
+      {n:'04', name:'Animate', color:'#B9B3A7', desc:'Apply motion grammar and beat-synced reveals.'},
+      {n:'05', name:'Adapt', color:'#B9B3A7', desc:'Reformat across 16:9 / 1:1 / 9:16 and languages.'},
+      {n:'06', name:'Publish', color:'#B9B3A7', desc:'Export, caption, deliver to each platform with provenance.'},
+      {n:'07', name:'Learn', color:'#B9B3A7', desc:'Feed performance and memory back into the graph.'}
+    ];
+
+    const skillVerbs = [
+      {name:'Generate', desc:'Create the component from a typed brief.'},
+      {name:'Rewrite', desc:'Revise copy within length + tone rules.'},
+      {name:'Translate', desc:'Localize text, keeping layout + safe areas.'},
+      {name:'Animate', desc:'Apply the component’s motion grammar.'},
+      {name:'Resize', desc:'Adapt to all three aspect ratios.'},
+      {name:'Caption-safe', desc:'Guarantee text clears platform UI zones.'},
+      {name:'Brand validate', desc:'Check tokens, marks and tri-bar integrity.'},
+      {name:'Export', desc:'Render deterministically from JSON config.'},
+      {name:'QA', desc:'Run the checklist; fail loudly on violations.'}
+    ];
+
+    const execStack = ['Design','Motion Recipe','Remotion Component','JSON Config','Agent Prompt'];
+
+    const volumes = [
+      {vol:'Vol I', title:'Media Design System', detail:'Tokens, marks, safe areas, the Compose components and their skills. The anchor everything reads from.', status:'THIS DOC', tagColor:'#C9A227', op:'1'},
+      {vol:'Vol II', title:'Media Skills', detail:'The executable verbs formalized into callable operations with typed I/O and QA gates across all seven capabilities.', status:'NEXT', tagColor:'#B9B3A7', op:'.72'},
+      {vol:'Vol III', title:'Production Runtime', detail:'The Remotion engine that renders components deterministically from JSON, plus review / clean-text / no-music passes.', status:'PLANNED', tagColor:'#7C7A74', op:'.6'},
+      {vol:'Vol IV', title:'Publishing System', detail:'Platform derivatives, captioning, loudness and delivery with a provenance manifest per asset.', status:'PLANNED', tagColor:'#7C7A74', op:'.5'},
+      {vol:'Vol V', title:'Knowledge & Memory Graph', detail:'Performance and archive feedback that lets agents Learn — closing the capability loop.', status:'PLANNED', tagColor:'#7C7A74', op:'.42'}
+    ];
+
+    return { components, shots, buildList, capabilities, skillVerbs, execStack, volumes };
+  }
+}
+</script>
+</body>
+</html>

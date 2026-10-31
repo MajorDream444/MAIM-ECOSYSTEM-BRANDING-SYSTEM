@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #050505; }
+  ::selection { background: #D8AF55; color: #050505; }
+</style>
+</helmet>
+
+<div style="background:#050505; color:#F7F4EA; font-family:'Archivo',sans-serif; min-height:100vh; padding:0 0 120px 0; overflow-x:hidden;">
+
+  <!-- ===================== COVER ===================== -->
+  <section data-screen-label="Cover" style="max-width:1240px; margin:0 auto; padding:96px 56px 72px; position:relative;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:80px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:#D8AF55; text-transform:uppercase;">Major&nbsp;AI&nbsp;Mindset</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:rgba(247,244,234,.45); text-transform:uppercase; text-align:right;">Course&nbsp;+&nbsp;Cohort&nbsp;/&nbsp;Volume&nbsp;07<br>Version&nbsp;1.0&nbsp;·&nbsp;June&nbsp;2026</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;">
+      <div style="aspect-ratio:1; border-radius:18px; overflow:hidden; border:1px solid rgba(216,175,85,.18); background:radial-gradient(120% 120% at 50% 35%,#15120d,#050505); box-shadow:0 30px 80px rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; padding:30px;">
+        <img src="./start-here-highlight-mqwblnep.png" alt="MAIM crown seal" style="width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(0 16px 36px rgba(0,0,0,.55));">
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:5px; color:#D8AF55; text-transform:uppercase; margin-bottom:24px;">The Delivery Board</div>
+        <h1 style="font-weight:900; font-size:76px; line-height:.92; letter-spacing:-2px; margin:0 0 8px; text-transform:uppercase;">Course<br><span style="font-weight:500; font-size:40px; letter-spacing:6px; color:#F7F4EA;">+&nbsp;Cohort&nbsp;Assets</span></h1>
+        <div style="width:200px; height:6px; border-radius:3px; margin:26px 0 28px; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+        <p style="font-size:22px; line-height:1.4; margin:0; max-width:540px; color:rgba(247,244,234,.85);">The complete operating manual for delivering a four-week MAIM Cohort — <span style="color:#1F7A3A; font-weight:700;">from enrollment through graduation.</span></p>
+      </div>
+    </div>
+
+    <div style="margin-top:64px; display:flex; flex-wrap:wrap; gap:14px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Platform-Agnostic</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Beginner-Friendly</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Transformation, Not Consumption</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Powered by Hanzo</div>
+    </div>
+
+    <div style="margin-top:48px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.4); margin-right:6px;">BUILDS ON</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#D8AF55; padding:7px 13px; border-radius:7px; background:rgba(216,175,85,.08); border:1px solid rgba(216,175,85,.25);">MAIM 00 · Brand System</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3FA45C; padding:7px 13px; border-radius:7px; background:rgba(31,122,58,.08); border:1px solid rgba(31,122,58,.3);">MAIM 03 · Learning Engine</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3a9be0; padding:7px 13px; border-radius:7px; background:rgba(0,107,182,.08); border:1px solid rgba(0,107,182,.3);">MAIM 06 · Conversion System</span>
+    </div>
+  </section>
+
+  <div style="max-width:1240px; margin:0 auto; height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent);"></div>
+
+  <!-- ===================== 01 COHORT ECOSYSTEM ===================== -->
+  <section data-screen-label="01 Cohort Ecosystem" style="max-width:1240px; margin:0 auto; padding:88px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">01</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Cohort Ecosystem</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The complete learning journey.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">One north-star path — from the first free download to lifelong alumni. MAIM 06 hands off the intake; MAIM 07 carries the member all the way to transformation.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative;">
+      <div style="grid-column:1 / -1; display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:14px;">
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:10px;">ATTRACT · 01</div><div style="font-weight:800; font-size:19px;">Lead Magnet</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Free ebook / guide pulls the visitor in.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:10px;">ATTRACT · 02</div><div style="font-weight:800; font-size:19px;">Weekly Live</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Major AI Mindset Live builds trust.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">CONVERT · 03</div><div style="font-weight:800; font-size:19px;">Application</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Enrollment — the MAIM 06 hand-off.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">ONBOARD · 04</div><div style="font-weight:800; font-size:19px;">Orientation</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Welcome, tools, and the promise.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">DELIVER · 05</div><div style="font-weight:800; font-size:19px;">Week 1</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Foundation — Awareness · Belief · Context.</div></div>
+      </div>
+      <div style="grid-column:1 / -1; display:grid; grid-template-columns:repeat(5,1fr); gap:14px;">
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">DELIVER · 06</div><div style="font-weight:800; font-size:19px;">Week 2</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Application — Direction · Experiment · Future.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">DELIVER · 07</div><div style="font-weight:800; font-size:19px;">Week 3</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Human-Centered Building — Growth · Human · Imagination.</div></div>
+        <div data-stage="" style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">DELIVER · 08</div><div style="font-weight:800; font-size:19px;">Week 4</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:6px; line-height:1.45;">Leverage — Judgment · Keep Learning · Leverage.</div></div>
+        <div data-stage="" style="background:#D8AF55; border:1px solid #D8AF55; border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(5,5,5,.6); margin-bottom:10px;">TRANSFORM · 09</div><div style="font-weight:900; font-size:19px; color:#050505;">Graduation</div><div style="font-size:12px; color:rgba(5,5,5,.7); margin-top:6px; line-height:1.45;">Certificate, badge, portfolio, spotlight.</div></div>
+        <div data-stage="" style="background:#1F7A3A; border:1px solid #1F7A3A; border-radius:14px; padding:22px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(255,255,255,.7); margin-bottom:10px;">LEGACY · 10</div><div style="font-weight:900; font-size:19px;">MAIM Alumni</div><div style="font-size:12px; color:rgba(247,244,234,.8); margin-top:6px; line-height:1.45;">Lifelong community + referral loop.</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:22px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:rgba(247,244,234,.55);">
+      <span style="display:flex; align-items:center; gap:8px;"><span style="width:11px; height:11px; border-radius:3px; background:#3a9be0;"></span>Attract</span>
+      <span style="display:flex; align-items:center; gap:8px;"><span style="width:11px; height:11px; border-radius:3px; background:#D8AF55;"></span>Convert &amp; Onboard</span>
+      <span style="display:flex; align-items:center; gap:8px;"><span style="width:11px; height:11px; border-radius:3px; background:#1F7A3A;"></span>Deliver &amp; Legacy</span>
+    </div>
+  </section>
+
+  <!-- ===================== 02 COHORT STRUCTURE ===================== -->
+  <section data-screen-label="02 Weekly Member Rhythm" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">02</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Weekly Member Rhythm</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Every cohort needs a heartbeat.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">A predictable weekly rhythm. Not because it can't change — because a steady cadence is what turns attendance into a habit.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:12px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:auto;">SUN</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Major AI Mindset Live</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">The anchor broadcast.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:auto;">MON</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Lesson</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">The week's core teach.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:auto;">TUE</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">AI Build Session</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">Hands on keyboard.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:auto;">WED</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Office Hours</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">Unblock &amp; coach.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:auto;">THU</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Accountability</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">Partner check-ins.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:auto;">FRI</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Wins + Reflection</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">Celebrate progress.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:14px; padding:22px 16px; display:flex; flex-direction:column; min-height:188px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-bottom:auto;">SAT</div>
+        <div style="font-weight:800; font-size:18px; line-height:1.1; margin-top:14px;">Prep for Live</div>
+        <div style="font-size:11px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.4;">Reset for Sunday.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 CURRICULUM SYSTEM ===================== -->
+  <section data-screen-label="03 Curriculum System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">03</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Curriculum System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The Learning Engine becomes the curriculum.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">MAIM 03's A–Z roadmap maps directly onto the four weeks. Three letters per week — one mindset move at a time.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:16px; padding:28px 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3FA45C;">WEEK 1</span><span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.4);">A · B · C</span></div>
+        <div style="font-weight:900; font-size:24px; text-transform:uppercase; margin-bottom:18px;">Foundation</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3FA45C; width:22px;">A</span><div><div style="font-weight:700; font-size:15px;">Awareness</div><div style="font-size:12px; color:rgba(247,244,234,.55);">See where help is needed.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3FA45C; width:22px;">B</span><div><div style="font-weight:700; font-size:15px;">Belief</div><div style="font-size:12px; color:rgba(247,244,234,.55);">If you can text, you can use AI.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3FA45C; width:22px;">C</span><div><div style="font-weight:700; font-size:15px;">Context</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Talk to AI like a person.</div></div></div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:16px; padding:28px 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55;">WEEK 2</span><span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.4);">D · E · F</span></div>
+        <div style="font-weight:900; font-size:24px; text-transform:uppercase; margin-bottom:18px;">Application</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#D8AF55; width:22px;">D</span><div><div style="font-weight:700; font-size:15px;">Direction</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Point AI at a real task.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#D8AF55; width:22px;">E</span><div><div style="font-weight:700; font-size:15px;">Experiment</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Try, tweak, repeat.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#D8AF55; width:22px;">F</span><div><div style="font-weight:700; font-size:15px;">Future</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Build toward what's next.</div></div></div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:16px; padding:28px 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3a9be0;">WEEK 3</span><span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.4);">G · H · I</span></div>
+        <div style="font-weight:900; font-size:24px; text-transform:uppercase; margin-bottom:18px;">Human-Centered Building</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3a9be0; width:22px;">G</span><div><div style="font-weight:700; font-size:15px;">Growth</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Stretch past your comfort zone.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3a9be0; width:22px;">H</span><div><div style="font-weight:700; font-size:15px;">Human</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Keep the person at the center.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#3a9be0; width:22px;">I</span><div><div style="font-weight:700; font-size:15px;">Imagination</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Dream bigger than the prompt.</div></div></div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:16px; padding:28px 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426;">WEEK 4</span><span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.4);">J · K · L</span></div>
+        <div style="font-weight:900; font-size:24px; text-transform:uppercase; margin-bottom:18px;">Leverage</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#F58426; width:22px;">J</span><div><div style="font-weight:700; font-size:15px;">Judgment</div><div style="font-size:12px; color:rgba(247,244,234,.55);">You stay the decision-maker.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#F58426; width:22px;">K</span><div><div style="font-weight:700; font-size:15px;">Keep Learning</div><div style="font-size:12px; color:rgba(247,244,234,.55);">The mindset never stops.</div></div></div>
+          <div style="display:flex; gap:12px; align-items:baseline;"><span style="font-weight:900; font-size:22px; color:#F58426; width:22px;">L</span><div><div style="font-weight:700; font-size:15px;">Leverage</div><div style="font-size:12px; color:rgba(247,244,234,.55);">Turn skill into real output.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px; background:rgba(0,107,182,.06); border:1px solid rgba(0,107,182,.25); border-radius:14px; padding:18px 24px; display:flex; gap:16px; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3a9be0; flex:none;">SOURCE</span>
+      <p style="font-size:14px; line-height:1.5; color:rgba(247,244,234,.75); margin:0;">The A–Z spine is the canonical curriculum from <strong style="color:#3a9be0;">MAIM 03 · Learning Engine.</strong> Every cohort runs the same letters in the same order — the rhythm changes, the spine never does.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 04 LESSON ANATOMY ===================== -->
+  <section data-screen-label="04 Lesson Anatomy" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">04</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Lesson Anatomy</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Every lesson, the same shape.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">Ten beats, start to finish. The template is the teaching system — a member always knows what comes next, and an instructor always knows what to build.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">01</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Headline</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">The promise of the lesson.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">02</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Story</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">A real human moment.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">03</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Concept</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">One clear idea.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">04</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Visual</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">See it to believe it.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#3a9be0;">05</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Live Demo</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">Watch it work.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#3FA45C;">06</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Exercise</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">Now you do it.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#3FA45C;">07</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Prompt</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">Copy-paste starter.</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55;">08</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Reflection</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">What changed for you?</div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F58426;">09</div><div style="font-weight:800; font-size:18px; margin-top:auto;">Action</div><div style="font-size:12px; color:rgba(247,244,234,.5); margin-top:6px; line-height:1.4;">The 5-minute move.</div></div>
+      <div style="background:#D8AF55; border:1px solid #D8AF55; border-radius:12px; padding:20px 18px; min-height:128px; display:flex; flex-direction:column;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(5,5,5,.6);">10</div><div style="font-weight:900; font-size:18px; margin-top:auto; color:#050505;">Next Step</div><div style="font-size:12px; color:rgba(5,5,5,.7); margin-top:6px; line-height:1.4;">Bridge to the next letter.</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 05 STUDENT WORKSPACE ===================== -->
+  <section data-screen-label="05 Student Workspace" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">05</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Student Workspace</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Everything a member receives.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">One home base. Eight tools, all in service of building — never of consuming more content.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">HOME</div><div style="font-weight:800; font-size:20px;">Dashboard</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">This week's lesson, action, and progress at a glance.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">DO</div><div style="font-weight:800; font-size:20px;">Workbook</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Exercises and reflections for each letter.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">REUSE</div><div style="font-weight:800; font-size:20px;">Prompt Vault</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Copy-paste prompts, organized by task.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">KEEP</div><div style="font-weight:800; font-size:20px;">Downloads</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Templates, ebooks, and worksheets.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">REWATCH</div><div style="font-weight:800; font-size:20px;">Replay Library</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Every Live and Build Session, on demand.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:12px;">MEASURE</div><div style="font-weight:800; font-size:20px;">Progress Tracker</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Letters completed and assets built.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:12px;">PUSH</div><div style="font-weight:800; font-size:20px;">Weekly Challenge</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">One shippable build, every week.</p></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:26px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:12px;">EXPLORE</div><div style="font-weight:800; font-size:20px;">Resource Links</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:8px 0 0; line-height:1.5;">Curated tools, vetted and beginner-safe.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== 06 COMMUNITY SYSTEM ===================== -->
+  <section data-screen-label="06 Community System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">06</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Community System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The cohort experience — any platform.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Define the experience, not the tool. Whether it lives in Discord, Skool, or Circle, every MAIM Cohort runs these nine spaces.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; flex:none; padding-top:2px;">01</span><div><div style="font-weight:800; font-size:18px;">Welcome</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">First stop. Set the tone and the promise.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; flex:none; padding-top:2px;">02</span><div><div style="font-weight:800; font-size:18px;">Introductions</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Every member says who they are and why.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3FA45C; flex:none; padding-top:2px;">03</span><div><div style="font-weight:800; font-size:18px;">Accountability</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Partner pods keep momentum honest.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3FA45C; flex:none; padding-top:2px;">04</span><div><div style="font-weight:800; font-size:18px;">Wins</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Celebrate every build, big or likkle.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; flex:none; padding-top:2px;">05</span><div><div style="font-weight:800; font-size:18px;">Questions</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">No question too basic. Ever.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#F58426; flex:none; padding-top:2px;">06</span><div><div style="font-weight:800; font-size:18px;">Weekly Challenges</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">A shared build prompt each week.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; flex:none; padding-top:2px;">07</span><div><div style="font-weight:800; font-size:18px;">Resource Library</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Shared vault of tools and prompts.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3a9be0; flex:none; padding-top:2px;">08</span><div><div style="font-weight:800; font-size:18px;">Office Hours</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Live unblock time with an instructor.</p></div></div>
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px; display:flex; gap:16px; align-items:flex-start;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; flex:none; padding-top:2px;">09</span><div><div style="font-weight:800; font-size:18px;">Replay Archive</div><p style="font-size:13px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Never miss a session — catch up anytime.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 07 INSTRUCTOR OS ===================== -->
+  <section data-screen-label="07 Instructor OS" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">07</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Instructor OS</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Your weekly operating manual.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">Everything an instructor needs to run one week — packaged so any facilitator can deliver the same MAIM experience.</p>
+
+    <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:24px; align-items:start;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">PLAN</div><div style="font-weight:800; font-size:18px;">Weekly Checklist</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">The one page that runs the week.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">TEACH</div><div style="font-weight:800; font-size:18px;">Slide Deck</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Branded, ready to present.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">RUN</div><div style="font-weight:800; font-size:18px;">Live Run Sheet</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Minute-by-minute show flow.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:10px;">BREATHE</div><div style="font-weight:800; font-size:18px;">NotebookLM Intermission</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">A mid-session audio reset.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">ENGAGE</div><div style="font-weight:800; font-size:18px;">Polls</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Keep the room participating.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">ANSWER</div><div style="font-weight:800; font-size:18px;">Q&amp;A</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Structured live question time.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">ASSIGN</div><div style="font-weight:800; font-size:18px;">Homework</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">The week's build, clearly briefed.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:24px 22px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:10px;">FOLLOW UP</div><div style="font-weight:800; font-size:18px;">Follow-up Email</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Recap, replay, and next move.</p></div>
+      </div>
+      <div style="background:linear-gradient(135deg,#0d0d0f,#0a0a0c); border:1px solid rgba(216,175,85,.25); border-radius:16px; padding:36px; height:100%; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">THE WEEKLY LOOP</div>
+        <div style="display:flex; flex-direction:column; gap:0;">
+          <div style="display:flex; gap:14px; align-items:center; padding:12px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D8AF55; width:46px;">PREP</span><span style="font-size:15px; color:rgba(247,244,234,.85);">Checklist → deck → run sheet</span></div>
+          <div style="display:flex; gap:14px; align-items:center; padding:12px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#3a9be0; width:46px;">LIVE</span><span style="font-size:15px; color:rgba(247,244,234,.85);">Teach · poll · intermission · Q&amp;A</span></div>
+          <div style="display:flex; gap:14px; align-items:center; padding:12px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#3FA45C; width:46px;">AFTER</span><span style="font-size:15px; color:rgba(247,244,234,.85);">Homework + follow-up email</span></div>
+          <div style="display:flex; gap:14px; align-items:center; padding:12px 0;"><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F58426; width:46px;">LOOP</span><span style="font-size:15px; color:rgba(247,244,234,.85);">Reset → repeat next letter</span></div>
+        </div>
+        <p style="font-size:14px; line-height:1.6; color:rgba(247,244,234,.6); margin:auto 0 0;">Same loop, every week. Predictable for the instructor, dependable for the member.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 08 STUDENT LIFECYCLE ===================== -->
+  <section data-screen-label="08 Student Lifecycle" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">08</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Student Lifecycle</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The delivery view of a member.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Ten states from sign-up to referral. This is about <strong style="color:#D8AF55;">delivery</strong>, not automation — a map of where every member stands and what moves them forward.</p>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:stretch;">
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0; margin-bottom:8px;">01</div><div style="font-weight:800; font-size:16px;">Registered</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0; margin-bottom:8px;">02</div><div style="font-weight:800; font-size:16px;">Attended</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0; margin-bottom:8px;">03</div><div style="font-weight:800; font-size:16px;">Downloaded</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55; margin-bottom:8px;">04</div><div style="font-weight:800; font-size:16px;">Participated</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C; margin-bottom:8px;">05</div><div style="font-weight:800; font-size:16px;">Completed Week 1</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C; margin-bottom:8px;">06</div><div style="font-weight:800; font-size:16px;">Completed Week 2</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C; margin-bottom:8px;">07</div><div style="font-weight:800; font-size:16px;">Completed Week 3</div></div>
+      <div style="flex:1; min-width:150px; background:#D8AF55; border:1px solid #D8AF55; border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(5,5,5,.6); margin-bottom:8px;">08</div><div style="font-weight:900; font-size:16px; color:#050505;">Graduated</div></div>
+      <div style="flex:1; min-width:150px; background:#1F7A3A; border:1px solid #1F7A3A; border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(255,255,255,.7); margin-bottom:8px;">09</div><div style="font-weight:900; font-size:16px;">Alumni</div></div>
+      <div style="flex:1; min-width:150px; background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:12px; padding:18px 16px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#F58426; margin-bottom:8px;">10</div><div style="font-weight:800; font-size:16px; color:#F58426;">Referral</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 09 GRADUATION SYSTEM ===================== -->
+  <section data-screen-label="09 Graduation System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">09</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Graduation System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Completion should feel meaningful.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">Finishing a cohort is a milestone, not a logout. Seven artifacts mark the moment and open the next door.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:28px; align-items:stretch;">
+      <div style="background:radial-gradient(120% 120% at 50% 0%,#16140e,#070707); border:1px solid rgba(216,175,85,.25); border-radius:18px; padding:44px 40px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+        <img src="assets/crown-coin.png" style="width:200px; height:auto; display:block; filter:drop-shadow(0 20px 50px rgba(0,0,0,.7));">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; color:#D8AF55; margin-top:24px;">THE GRADUATE SEAL</div>
+        <p style="font-size:14px; line-height:1.55; color:rgba(247,244,234,.55); margin:10px 0 0; max-width:300px;">The woven crown becomes the mark of a builder who finished. Earned, never given.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+        <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">PROOF</div><div style="font-weight:800; font-size:18px;">Certificate</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">A branded, printable record.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:10px;">SHARE</div><div style="font-weight:800; font-size:18px;">Digital Badge</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Wear it on socials &amp; profiles.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">SHOW</div><div style="font-weight:800; font-size:18px;">Portfolio</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">The assets they built, gathered.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:10px;">HONOR</div><div style="font-weight:800; font-size:18px;">Builder Spotlight</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Featured to the community.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.35); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:10px;">BELONG</div><div style="font-weight:800; font-size:18px;">Alumni</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Lifelong access to the network.</p></div>
+        <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:22px 20px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:10px;">GROW</div><div style="font-weight:800; font-size:18px;">Referral Invitation</div><p style="font-size:12px; color:rgba(247,244,234,.55); margin:6px 0 0; line-height:1.45;">Bring the next builder in.</p></div>
+        <div style="grid-column:1 / -1; background:#1F7A3A; border-radius:14px; padding:22px 24px; display:flex; align-items:center; justify-content:space-between;"><div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(255,255,255,.7); margin-bottom:6px;">CONTINUE</div><div style="font-weight:900; font-size:20px;">Next Cohort</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(255,255,255,.85);">THE LOOP CONTINUES →</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10 COHORT OPERATING SYSTEM ===================== -->
+  <section data-screen-label="10 Operating System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">10</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Cohort Operating System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">One page. The executive overview.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:720px; margin:0 0 44px;">Three roles, one shared engine. The whole delivery system reduced to nine moves.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:18px; padding:36px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3FA45C; margin-bottom:8px;">THE STUDENT</div>
+        <div style="font-weight:900; font-size:30px; margin-bottom:24px;">Transform</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3FA45C;">01</span><span style="font-weight:700; font-size:20px;">Learn</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3FA45C;">02</span><span style="font-weight:700; font-size:20px;">Build</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3FA45C;">03</span><span style="font-weight:700; font-size:20px;">Apply</span></div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.4); border-radius:18px; padding:36px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:8px;">THE INSTRUCTOR</div>
+        <div style="font-weight:900; font-size:30px; margin-bottom:24px;">Guide</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#D8AF55;">01</span><span style="font-weight:700; font-size:20px;">Teach</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#D8AF55;">02</span><span style="font-weight:700; font-size:20px;">Coach</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#D8AF55;">03</span><span style="font-weight:700; font-size:20px;">Encourage</span></div>
+        </div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.4); border-radius:18px; padding:36px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3a9be0; margin-bottom:8px;">MAIM</div>
+        <div style="font-weight:900; font-size:30px; margin-bottom:24px;">Improve</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3a9be0;">01</span><span style="font-weight:700; font-size:20px;">Capture</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3a9be0;">02</span><span style="font-weight:700; font-size:20px;">Measure</span></div>
+          <div style="display:flex; align-items:baseline; gap:14px;"><span style="font-weight:900; font-size:18px; color:#3a9be0;">03</span><span style="font-weight:700; font-size:20px;">Improve</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; background:linear-gradient(90deg,#1F7A3A,#0c3d1d); border-radius:16px; padding:30px 36px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <p style="font-weight:800; font-size:24px; line-height:1.25; margin:0; max-width:680px;">Student transforms. Instructor guides. MAIM improves. <span style="color:#D8AF55;">Likkle by likkle, the system delivers the promise.</span></p>
+      <div style="width:64px; height:64px; border-radius:12px; overflow:hidden; flex:none; border:1px solid rgba(216,175,85,.4);"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+    </div>
+  </section>
+
+  <!-- ===================== 11 TRANSFORMATION SCORECARD ===================== -->
+  <section data-screen-label="11 Transformation Scorecard" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#F58426;">+</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">The Transformation Scorecard</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Measure transformation, not consumption.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 40px;">Lessons watched and videos completed are vanity. MAIM measures the change in the human — what they can now do that they couldn't before.</p>
+
+    <div style="display:grid; grid-template-columns:0.8fr 1.2fr; gap:24px; align-items:stretch; margin-bottom:24px;">
+      <div style="background:rgba(245,132,38,.05); border:1px solid rgba(245,132,38,.3); border-radius:16px; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#F58426; margin-bottom:20px;">✕ STOP MEASURING</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; gap:12px; opacity:.6;"><span style="color:#F58426; font-size:16px;">✕</span><span style="font-size:16px; text-decoration:line-through; color:rgba(247,244,234,.7);">Lessons watched</span></div>
+          <div style="display:flex; align-items:center; gap:12px; opacity:.6;"><span style="color:#F58426; font-size:16px;">✕</span><span style="font-size:16px; text-decoration:line-through; color:rgba(247,244,234,.7);">Videos completed</span></div>
+          <div style="display:flex; align-items:center; gap:12px; opacity:.6;"><span style="color:#F58426; font-size:16px;">✕</span><span style="font-size:16px; text-decoration:line-through; color:rgba(247,244,234,.7);">Hours logged in</span></div>
+        </div>
+        <p style="font-size:14px; line-height:1.6; color:rgba(247,244,234,.55); margin:24px 0 0;">Activity is not achievement. Watching is not building.</p>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:16px; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">✓ START MEASURING</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">Confidence</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">AI conversations started</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">Hours saved</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">Assets created</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">Systems built</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">Income opportunities</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#3FA45C; font-size:16px;">✓</span><span style="font-size:15px; font-weight:600;">AI habits formed</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#D8AF55; font-size:16px;">★</span><span style="font-size:15px; font-weight:600; color:#D8AF55;">The change in you</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#0d0d0f,#0a0a0c); border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:36px 40px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:24px;">SAMPLE SCORECARD · GRADUATION SNAPSHOT</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+        <div><div style="font-weight:900; font-size:46px; line-height:1; color:#3FA45C;">+8</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:8px; line-height:1.4;">Confidence, on a 10-point self-scale</div></div>
+        <div><div style="font-weight:900; font-size:46px; line-height:1; color:#D8AF55;">12</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:8px; line-height:1.4;">AI-built assets shipped</div></div>
+        <div><div style="font-weight:900; font-size:46px; line-height:1; color:#3a9be0;">9 hrs</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:8px; line-height:1.4;">Saved per week, on average</div></div>
+        <div><div style="font-weight:900; font-size:46px; line-height:1; color:#F58426;">3</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:8px; line-height:1.4;">New income opportunities identified</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="max-width:1240px; margin:0 auto; padding:40px 56px;">
+    <div style="height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent); margin-bottom:32px;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:44px; height:44px; border-radius:8px; overflow:hidden; border:1px solid rgba(216,175,85,.3);"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div><div style="font-weight:800; font-size:14px; letter-spacing:1px;">MAJOR AI MINDSET</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45);">COURSE + COHORT · VOL 07</div></div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.45); text-align:right;">WE DON'T DELIVER CONTENT. <span style="color:#F58426;">WE DELIVER TRANSFORMATION.</span><br>Powered by Hanzo · major@hanzo.ai</div>
+    </div>
+  </footer>
+
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#050505">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#050505"></rect>
+    <image href="assets/crown-coin.png" x="475" y="170" width="250" height="250" preserveAspectRatio="xMidYMid meet"></image>
+    <rect x="510" y="470" width="56" height="12" rx="6" fill="#1F7A3A"></rect>
+    <rect x="572" y="470" width="56" height="12" rx="6" fill="#D8AF55"></rect>
+    <rect x="634" y="470" width="56" height="12" rx="6" fill="#006BB6"></rect>
+    <text x="600" y="552" font-family="Arial, sans-serif" font-weight="bold" font-size="44" letter-spacing="5" fill="#F7F4EA" text-anchor="middle">COURSE + COHORT</text>
+    <text x="600" y="598" font-family="monospace" font-size="21" letter-spacing="5" fill="rgba(247,244,234,0.5)" text-anchor="middle">VOLUME 07</text>
+  </svg>
+</template>
+</x-dc>
+</body>
+</html>

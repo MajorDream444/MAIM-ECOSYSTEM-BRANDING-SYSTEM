@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .ds-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 10 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-DATA-STANDARDS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 10 · The Language Every System Speaks</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Data &amp; Metadata Standards</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">GitHub, Airtable, Notion, Claude, ChatGPT, n8n, and every future agent need to reference the same objects the same way. This page defines that shared language.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Every standard defines required and optional fields, relationships to other objects, validation rules, naming and versioning conventions, and a worked example record.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-001</span>Sprint 01 — Universal Artifact Metadata</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-002</span>Sprint 02 — Client Data Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-003</span>Sprint 03 — Project Data Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-004</span>Sprint 04 — Template Metadata Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-005</span>Sprint 05 — Workflow Metadata Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-006</span>Sprint 06 — Agent Skill Metadata Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-007</span>Sprint 07 — Automation Metadata Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-008</span>Sprint 08 — Relationship Map</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-009</span>Sprint 09 — Naming Convention Standard</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">DS-010</span>Sprint 10 — SOS Data Dictionary</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as standards are defined — send each standard's spec (purpose, required/optional fields, relationships, validation rules, naming convention, versioning rules, example record, related objects, future automation opportunities) to add it here.</div>
+</div>
+
+<!-- ============ DS-001 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Universal Artifact Metadata</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Define the metadata every SOS artifact must contain — the base schema every other Data Standard on this page extends.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Artifact ID</div><div class="field-val">Unique identifier following the SOS naming convention, e.g. DOC-2026-00417.</div></div>
+    <div class="field-row"><div class="field-label">Artifact Type</div><div class="field-val">One of: Template, Component, Workflow, Journey, Package, Playbook, Skill, Automation, Standard.</div></div>
+    <div class="field-row"><div class="field-label">Client ID</div><div class="field-val">Reference to the owning client record; em-dash if internal-only.</div></div>
+    <div class="field-row"><div class="field-label">Project ID</div><div class="field-val">Reference to the active engagement this artifact belongs to.</div></div>
+    <div class="field-row"><div class="field-label">Workflow ID</div><div class="field-val">The WF-XXX this artifact was produced under, if any.</div></div>
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val">The TEMP-XXX this artifact was assembled from, if any.</div></div>
+    <div class="field-row"><div class="field-label">Version</div><div class="field-val">Semantic version string, e.g. v2.3, per the Versioning Rules below.</div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val">One of the standard SOS status values: Draft, In Review, Approved, Signed, Void, Expired.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Named individual accountable for the artifact.</div></div>
+    <div class="field-row"><div class="field-label">Created Date</div><div class="field-val">ISO 8601 date the artifact was first generated.</div></div>
+    <div class="field-row"><div class="field-label">Updated Date</div><div class="field-val">ISO 8601 date of the most recent revision.</div></div>
+    <div class="field-row"><div class="field-label">Approval State</div><div class="field-val">Free-text or fraction summary, e.g. "2 of 3 approved."</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Confidentiality</div><div class="field-val">One of: Public, Internal, Confidential — Client &amp; Internal, Restricted.</div></div>
+  </div>
+
+  <div class="sub-title">Optional Fields</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Effective Date, Related Artifacts (array of Artifact IDs), Skill ID (if AI-generated), Automation ID (if system-generated), Tags (free-text array for search).</p>
+</div>
+
+<!-- ============ DS-001 — CONVENTIONS & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Conventions &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Universal Artifact Metadata</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Naming Convention</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+    <div class="chip">COMP-XXX Components</div>
+    <div class="chip">TEMP-XXX Templates</div>
+    <div class="chip">WF-XXX Workflows</div>
+    <div class="chip">CJ-XXX Client Journey</div>
+    <div class="chip">PKG-XXX Packages</div>
+    <div class="chip">PB-XXX Playbooks</div>
+    <div class="chip">SKILL-XXX Skills</div>
+    <div class="chip">AUTO-XXX Automations</div>
+    <div class="chip">DS-XXX Data Standards</div>
+    <div class="chip">DOC-YYYY-NNNNN Client Documents</div>
+  </div>
+  <p style="font-size:11.5px; line-height:1.6; color:rgba(247,244,234,0.6); max-width:600px; margin:0 0 26px;">All library object IDs use a three-digit sequence (001–999) within their prefix; client document IDs use year + a five-digit running number, never reused.</p>
+
+  <div class="sub-title">Versioning Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Major version (v2.0) increments on a scope or pricing change; minor version (v2.3) increments on wording, formatting, or non-substantive edits. Signed documents are never re-versioned in place — a new version supersedes and the prior one is archived, never deleted.</p>
+
+  <div class="sub-title">Example Metadata Block</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">artifact_id: DOC-2026-00417
+artifact_type: Statement of Work
+client_id: CLIENT-0142
+project_id: PROJ-0088
+workflow_id: WF-003
+template_id: TEMP-002
+version: v2.3
+status: In Review
+owner: J. Alvarez
+created_date: 2026-06-02
+updated_date: 2026-07-08
+approval_state: 2 of 3 approved
+confidentiality: Confidential — Client &amp; Internal
+related_artifacts: [PROP-2026-00398, MSA-2025-0091]</div>
+</div>
+
+<!-- ============ DS-001 — RELATIONSHIPS & AUTOMATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Relationships &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Universal Artifact Metadata</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-001</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Universal Artifact Metadata</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">All 13 required fields must be present and non-empty (or explicitly em-dash); Artifact ID must be unique across every system of record.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Client ID and Project ID reference the CRM record; Workflow ID and Template ID reference their respective libraries; Related Artifacts form a directed graph, not a flat list.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">Every TEMP-XXX, COMP-XXX, WF-XXX, and Client Document in the system</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">A validation bot (SKILL-007 extension) can check every new artifact against this schema at creation; Airtable and Notion can both sync from this single schema definition rather than maintaining separate field lists.</div></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This standard is the foundation every other DS-XXX in this library builds on — Client, Project, and Financial standards each extend this schema rather than defining metadata from scratch.</div>
+</div>
+
+<!-- ============ DS-002 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Client Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize every client record so CRM, Airtable, and every automation reference the same fields the same way.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Client ID</div><div class="field-val">Unique identifier, e.g. CLIENT-0142, assigned at first CRM record creation (AUTO-001).</div></div>
+    <div class="field-row"><div class="field-label">Company</div><div class="field-val">Legal or trading name used consistently across every client-facing document.</div></div>
+    <div class="field-row"><div class="field-label">Primary Contact</div><div class="field-val">Name, role, email, and phone of the client's main point of contact.</div></div>
+    <div class="field-row"><div class="field-label">Industry</div><div class="field-val">Standard industry tag, used for case study and Package-fit pattern matching.</div></div>
+    <div class="field-row"><div class="field-label">Package</div><div class="field-val">Current active PKG-XXX; historical packages retained in Projects, not overwritten.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Status</div><div class="field-val">One of the Status Lifecycle values below.</div></div>
+  </div>
+
+  <div class="sub-title">Status Lifecycle</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="chip">Lead</div>
+    <div class="chip">Qualified</div>
+    <div class="chip">Active</div>
+    <div class="chip">Support</div>
+    <div class="chip">Dormant</div>
+    <div class="chip">Churned</div>
+  </div>
+  <p style="font-size:11.5px; line-height:1.6; color:rgba(247,244,234,0.6); max-width:600px; margin-top:10px;">Status only ever moves forward automatically (WF-001 through WF-010 advance it); moving backward (e.g. Active to Dormant) always requires a human-logged reason.</p>
+</div>
+
+<!-- ============ DS-002 — RELATIONSHIPS & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Relationships &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Client Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Relationships</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Projects</div><div class="field-val">One-to-many — every PROJ-XXXX this client has run, past and present.</div></div>
+    <div class="field-row"><div class="field-label">Contracts</div><div class="field-val">One-to-many — every signed TEMP-002 SOW/Agreement tied to this Client ID.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Invoices</div><div class="field-val">One-to-many — every TEMP-003 Invoice and its Receipt, linked for full financial history at a glance.</div></div>
+  </div>
+
+  <div class="sub-title">Example Client Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">client_id: CLIENT-0142
+company: Aurelia Capital Partners
+primary_contact: A. Whitfield, Client Sponsor
+industry: Financial Services
+package: PKG-002 Strategy Sprint
+status: Active
+projects: [PROJ-0088]
+contracts: [DOC-2026-00417]
+invoices: [DOC-2026-00512, DOC-2026-00549]</div>
+</div>
+
+<!-- ============ DS-002 — VALIDATION & AUTOMATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Client Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-002</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Client Data Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Client ID is immutable once assigned; Company name changes are logged, never silently overwritten; Status transitions backward require a reason field.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">CLIENT-NNNN, sequential, never reused even after Churned.</div></div>
+    <div class="field-row"><div class="field-label">Versioning Rules</div><div class="field-val">Client records are not versioned document-style — they are living records; every field change is timestamped in an audit log instead.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · DS-003 Project Data Standard · DS-004 Financial Data Standard</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">SKILL-008's Health Score can write directly to a Client Record field; CRM and Airtable can sync bidirectionally off this single schema rather than maintaining a separate mapping per tool.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-003 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Project Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Define every project consistently, so SKILL-005's Project Manager Skill and every Weekly Report read from one canonical shape.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Project ID</div><div class="field-val">Unique identifier, e.g. PROJ-0088, assigned at Onboarding (AUTO-005).</div></div>
+    <div class="field-row"><div class="field-label">Client</div><div class="field-val mono">Reference to Client ID (DS-002).</div></div>
+    <div class="field-row"><div class="field-label">Package</div><div class="field-val mono">Reference to the active PKG-XXX this project was assembled from.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Named Engagement Lead accountable for delivery.</div></div>
+    <div class="field-row"><div class="field-label">Start Date</div><div class="field-val">Kickoff date, set at WF-006.</div></div>
+    <div class="field-row"><div class="field-label">End Date</div><div class="field-val">Planned Final Delivery date; updated only with a logged reason if it slips.</div></div>
+    <div class="field-row"><div class="field-label">Current Phase</div><div class="field-val">The active Phase Card (COMP-405) label.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Current Workflow</div><div class="field-val mono">The WF-XXX step the project is presently inside.</div></div>
+  </div>
+
+  <div class="sub-title">Health Status</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="chip">On Track</div>
+    <div class="chip">At Risk</div>
+    <div class="chip">Delayed</div>
+    <div class="chip">Blocked</div>
+    <div class="chip">Complete</div>
+  </div>
+  <p style="font-size:11.5px; line-height:1.6; color:rgba(247,244,234,0.6); max-width:600px; margin-top:10px;">Set by SKILL-005's Risk Detection each weekly cycle; any move to At Risk or worse requires a logged reason and triggers AUTO-006's escalation path.</p>
+</div>
+
+<!-- ============ DS-003 — MILESTONES, DEPENDENCIES & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Milestones, Dependencies &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Project Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Milestones</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">An ordered array of Milestone objects (COMP-402), each with a name, due date, Gate Indicator status, and Approval Record reference (COMP-501) once cleared.</p>
+
+  <div class="sub-title">Dependencies</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A directed list of prior Milestones that must be Approved before the next can start — enforced by SKILL-005, not left to manual tracking.</p>
+
+  <div class="sub-title">Deliverables</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">An array of named deliverables per Milestone, each linked to its file location and Acceptance Criteria — the same list SKILL-007 QA validates against at Closeout.</p>
+
+  <div class="sub-title">Example Project Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">project_id: PROJ-0088
+client: CLIENT-0142
+package: PKG-002 Strategy Sprint
+owner: J. Alvarez
+start_date: 2026-06-15
+end_date: 2026-09-30
+current_phase: Implementation
+current_workflow: WF-007
+health_status: On Track
+milestones: [M1-Discovery (Approved), M2-Blueprint (Approved), M3-Rollout (In Progress)]</div>
+</div>
+
+<!-- ============ DS-003 — VALIDATION & AUTOMATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Project Data Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-003</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Project Data Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Current Workflow must always match one active WF-XXX; a project cannot show Complete health status while any Milestone remains unapproved.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">PROJ-NNNN, sequential across all clients, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Versioning Rules</div><div class="field-val">Not versioned document-style; every field change (dates, phase, health status) is timestamped in an audit log.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · DS-002 Client Data Standard · DS-004 Financial Data Standard</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">AUTO-006 can read Health Status directly to decide escalation without a human calculating it; a portfolio dashboard can aggregate every Active project's Current Phase from this one schema.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-004 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Template Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Ensure every template — TEMP-001 through TEMP-010 and any future addition — follows one consistent structural definition.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Template ID</div><div class="field-val mono">TEMP-XXX, assigned once at creation, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Template Name</div><div class="field-val">Human-readable name shown on the Template Library catalog page.</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">One-sentence statement of what the template exists to accomplish.</div></div>
+    <div class="field-row"><div class="field-label">Audience</div><div class="field-val">Who receives the assembled document — Prospective Client, Active Client, Internal.</div></div>
+    <div class="field-row"><div class="field-label">Lifecycle Stage</div><div class="field-val">Which stage of the client relationship the template belongs to.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Current Version</div><div class="field-val mono">The template's own version, distinct from any document generated from it.</div></div>
+  </div>
+
+  <div class="sub-title">Version Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A Template version increments only when its structure or required Components change — not when a generated document's content changes. Every document generated records which Template version it was built from, so historical documents remain interpretable even after the Template evolves.</p>
+</div>
+
+<!-- ============ DS-004 — DEPENDENCIES & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Dependencies &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Template Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Components Used</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">An explicit array of COMP-XXX references — the same list shown on each TEMP-XXX's "Components Used" page. A Template cannot ship without every listed Component existing in the Component Library.</p>
+
+  <div class="sub-title">Related Workflows</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">One or more WF-XXX references indicating which Workflow step(s) generate a document from this Template — enforced by SKILL-007 QA at generation time.</p>
+
+  <div class="sub-title">Example Template Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">template_id: TEMP-001
+template_name: Proposal
+purpose: Present a recommended solution, scope, timeline, pricing, and next steps
+audience: Prospective Client
+lifecycle_stage: Proposal
+current_version: v1.2
+components_used: [COMP-001, COMP-003, COMP-101, COMP-202, COMP-301, COMP-401, COMP-501, COMP-701, COMP-901]
+related_workflows: [WF-002, WF-003]</div>
+</div>
+
+<!-- ============ DS-004 — VALIDATION & AUTOMATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Template Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-004</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Template Metadata Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Every Component in components_used must resolve to an existing COMP-XXX; a Template cannot reference a Workflow that doesn't exist.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">TEMP-NNN, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Many-to-many with Components (a Template uses many; a Component appears in many Templates); one-to-many with generated documents.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · Component Library · Workflow Library</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">SKILL-002/003/004 can validate their own generated draft's component list against this schema automatically, before SKILL-007 QA even runs.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-005 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Workflow Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize workflows so every WF-XXX in the library can be read, validated, and eventually executed the same way by any system.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Workflow ID</div><div class="field-val mono">WF-XXX, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Workflow Name</div><div class="field-val">Human-readable name shown on the Workflow Library catalog page.</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">One-sentence statement of what the workflow converts or advances.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Trigger</div><div class="field-val">The precise Project or Client Status change that starts this workflow — never a vague "when appropriate."</div></div>
+  </div>
+
+  <div class="sub-title">Inputs &amp; Outputs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Inputs are the prior workflow's Outputs, named explicitly (e.g. WF-002's output "Approved Proposal" is WF-003's input). Outputs are the state changes and artifacts this workflow produces, each traceable to a Template or a Status field change.</p>
+</div>
+
+<!-- ============ DS-005 — DECISIONS, AUTOMATION & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Decisions, Automation &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Workflow Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Decision Points</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Any branch or loop in the flow (e.g. WF-003's Revisions loop) recorded explicitly with its condition, so an automation or agent can evaluate it rather than guessing intent from prose.</p>
+
+  <div class="sub-title">Automation References</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Every AUTO-XXX that executes some or all of this workflow, listed explicitly — a workflow with no Automation reference is understood to be fully manual today.</p>
+
+  <div class="sub-title">Example Workflow Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">workflow_id: WF-004
+workflow_name: Agreement to Payment
+purpose: Move from a signed agreement to a paid invoice and issued receipt
+trigger: Agreement Signed (WF-003 output)
+inputs: [Signed SOW, Signed Agreement]
+outputs: [Invoice, Receipt]
+decision_points: []
+automation_references: [AUTO-003, AUTO-004]</div>
+</div>
+
+<!-- ============ DS-005 — VALIDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Workflow Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-005</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Workflow Metadata Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Every listed input must equal a named output of some other workflow (or an initial system trigger); orphaned inputs fail validation.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">WF-NNN, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Chains sequentially by input/output matching; many-to-many with Templates and Automations.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · DS-003 Project Data Standard · Automation Library</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">A dependency graph can be generated automatically from every Workflow's inputs/outputs, visualizing the entire client lifecycle as one connected system rather than ten separate pages.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-006 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Skill Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize every AI capability so any agent framework — Claude, ChatGPT, or a future orchestrator — can discover and invoke SOS Skills the same way.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Skill ID</div><div class="field-val mono">SKILL-XXX, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Skill Name</div><div class="field-val">Human-readable name shown on the Agent Skill Library catalog page.</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">One-sentence statement of the capability this Skill provides.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Trigger</div><div class="field-val">The precise condition or event that should invoke this Skill.</div></div>
+  </div>
+
+  <div class="sub-title">Required Inputs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A typed list of what the Skill needs to run — each input traceable to a Template, Project, or Client field, never a free-text "context" blob.</p>
+
+  <div class="sub-title">Outputs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">What the Skill produces — a draft document, a structured recommendation, or a data update — each named the same way it appears in the Skill's own Page 08 spec.</p>
+</div>
+
+<!-- ============ DS-006 — LIMITATIONS, REVIEW & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Limitations, Review &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Skill Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Limitations</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Explicit statement of what the Skill must never do unattended — e.g. SKILL-004 never sends a mismatched Invoice, SKILL-002 never sends a Proposal without Internal Review.</p>
+
+  <div class="sub-title">Human Review Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Every Skill declares whether its output requires review before use (most do) or can proceed unattended (only SKILL-004's standard-path invoice matching qualifies today).</p>
+
+  <div class="sub-title">Example Skill Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">skill_id: SKILL-002
+skill_name: Proposal Skill
+purpose: Generate Proposal Version 1 for human review
+trigger: Discovery Report reviewed and Package matched
+required_inputs: [Discovery Report, Client Package, Pricing Inputs]
+outputs: [Proposal v1 Draft]
+limitations: [Never sends directly to client; never overrides Package pricing without escalation]
+human_review_required: true</div>
+</div>
+
+<!-- ============ DS-006 — VALIDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Skill Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-006</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Agent Skill Metadata Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">A Skill with human_review_required: false must have zero listed Limitations that involve client-facing send — enforced before that flag can be set.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">SKILL-NNN, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Many-to-many with Workflows (invoked inside) and Automations (wraps and schedules); one-to-many with generated draft outputs.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · DS-005 Workflow Metadata Standard · Automation Library</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">An orchestration layer can route a task to the correct Skill automatically by matching its declared Trigger, rather than a human deciding which Skill applies.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-007 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Automation Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Ensure every AUTO-XXX follows the same structure, so wiring one into Zapier / n8n is a mechanical translation, not a redesign.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; margin-bottom:24px;">
+    <div class="field-row"><div class="field-label">Automation ID</div><div class="field-val mono">AUTO-XXX, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Automation Name</div><div class="field-val">Human-readable name shown on the Automation Library catalog page.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">The precise event or schedule that fires this automation — never a vague description.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Systems</div><div class="field-val">The explicit list of external tools this automation touches, matching the Systems Involved chips on Page 09.</div></div>
+  </div>
+
+  <div class="sub-title">Conditions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Any branch this automation evaluates (e.g. AUTO-006's red-risk escalation) recorded as an explicit if/then, matching its Decision Points on Page 09 — never left implicit in prose.</p>
+</div>
+
+<!-- ============ DS-007 — ERROR HANDLING, LOGGING & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Error Handling, Logging &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Automation Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Outputs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">What the automation produces or changes — matched exactly to its Outputs field on Page 09, so a system integrator knows precisely what to expect back.</p>
+
+  <div class="sub-title">Error Handling</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Explicit failure behavior — retry once, hold for manual reconciliation, or halt and notify — never "fail silently" in any automation on this system.</p>
+
+  <div class="sub-title">Logging</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Every run is logged with timestamp, trigger source, and outcome (success, blocked, failed) — the raw material PB-010's KPI review draws on monthly.</p>
+
+  <div class="sub-title">Example Automation Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">automation_id: AUTO-004
+automation_name: Payment Automation
+trigger: Stripe payment webhook confirms payment
+systems: [Airtable, Gmail, Stripe (future)]
+conditions: [if payment matches an open Invoice -> proceed; if unmatched -> hold]
+outputs: [Paid Invoice, Issued Receipt, Updated Financial Record]
+error_handling: Unmatched payment held for manual reconciliation, never auto-matched by guess
+logging: timestamp, trigger_source, outcome recorded per run</div>
+</div>
+
+<!-- ============ DS-007 — VALIDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Automation Metadata Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-007</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Automation Metadata Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Every automation must declare Error Handling — "fail silently" is never a valid value; every Systems entry must match a known integration or be tagged (future).</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val mono">AUTO-NNN, sequential, never reused.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Many-to-many with Skills (invokes) and Workflows (executes a step of); one-to-many with logged runs.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 (extends) · DS-006 Agent Skill Metadata Standard · Automation Library</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">This exact schema is the direct input to wiring each AUTO-XXX into Zapier / n8n — trigger, conditions, and error handling map one-to-one onto that tool's own node structure.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-008 — RELATIONSHIP DIAGRAM ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Relationship Diagram</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Relationship Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 30px;">Define how everything connects — the single diagram every other Data Standard on this page has been building toward.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:420px; margin-bottom:16px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Client <span style="color:#D8AF55; font-size:10px;">(DS-002)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ one-to-many</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Project <span style="color:#D8AF55; font-size:10px;">(DS-003)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ current state</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Workflow <span style="color:#D8AF55; font-size:10px;">(DS-005)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ generates via</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Template <span style="color:#D8AF55; font-size:10px;">(DS-004)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ produces</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Artifact <span style="color:#D8AF55; font-size:10px;">(DS-001)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ executed by</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Automation <span style="color:#D8AF55; font-size:10px;">(DS-007)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓ invokes</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Agent Skill <span style="color:#D8AF55; font-size:10px;">(DS-006)</span></div>
+  </div>
+
+  <p style="font-size:11px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:600px; margin:0;">This chain is not strictly linear in practice — Agent Skills feed back into Artifacts (a Skill drafts a document), and Automations can trigger new Workflows directly. The diagram shows the dominant direction of data flow, not the only one.</p>
+</div>
+
+<!-- ============ DS-008 — VALIDATION & AUTOMATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Relationship Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-008</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Relationship Map</div></div>
+    <div class="field-row"><div class="field-label">Required Fields</div><div class="field-val">None of its own — this Standard defines the graph connecting DS-001 through DS-007, not a new record type.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Client → Project (one-to-many) → Workflow (current state) → Template (generates via) → Artifact (produces) → Automation (executed by) → Agent Skill (invokes), with feedback loops from Skill back to Artifact.</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Every Project must trace to exactly one Client; every Artifact must trace to exactly one Template and one Workflow — no orphaned records permitted in any system of record.</div></div>
+    <div class="field-row"><div class="field-label">Naming Convention</div><div class="field-val">Not applicable — this Standard has no records of its own to name.</div></div>
+    <div class="field-row"><div class="field-label">Versioning Rules</div><div class="field-val">The map itself versions alongside DS-001–007; any change to one of those schemas that alters a relationship requires updating this diagram in the same release.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 through DS-007 — this Standard is the index over all of them.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">This map is the direct schema for a graph database or a unified Airtable/Notion relational model — every future integration should validate against this shape before adding a new object type.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-009 — IDENTIFIER GUIDE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Identifier Guide</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Naming Convention Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize every identifier across the entire system — the single reference every human and every agent checks before inventing an ID scheme.</p>
+
+  <div class="sub-title">Object Identifiers</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px;">
+    <div class="chip">COMP-NNN Component</div>
+    <div class="chip">TEMP-NNN Template</div>
+    <div class="chip">WF-NNN Workflow</div>
+    <div class="chip">CJ-NNN Client Journey</div>
+    <div class="chip">PKG-NNN Package</div>
+    <div class="chip">PB-NNN Playbook</div>
+    <div class="chip">SKILL-NNN Agent Skill</div>
+    <div class="chip">AUTO-NNN Automation</div>
+    <div class="chip">DS-NNN Data Standard</div>
+    <div class="chip">CLIENT-NNNN Client</div>
+    <div class="chip">PROJ-NNNN Project</div>
+    <div class="chip">ART-NNNN Artifact</div>
+  </div>
+  <p style="font-size:11.5px; line-height:1.6; color:rgba(247,244,234,0.6); max-width:600px; margin-top:12px;">Library objects (COMP through DS) use a fixed 3-digit sequence; living records (CLIENT, PROJ, ART) use a 4-digit sequence with room to scale past 999. Client documents keep their own convention from DS-001: DOC-YYYY-NNNNN.</p>
+</div>
+
+<!-- ============ DS-009 — FILE, FOLDER & PLATFORM CONVENTIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">File, Folder &amp; Platform Conventions</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Naming Convention Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">File Naming</div>
+  <div class="sub-rule"></div>
+  <div class="code-block" style="margin-bottom:20px;">{ARTIFACT_ID} {Document Type} v{version}.pdf
+e.g. DOC-2026-00417 Statement of Work v2.3.pdf</div>
+
+  <div class="sub-title">Folder Naming</div>
+  <div class="sub-rule"></div>
+  <div class="code-block" style="margin-bottom:20px;">{CLIENT-ID} {Company Name}/
+  {PROJ-ID} {Project Name}/
+    Contracts/
+    Invoices/
+    Deliverables/
+e.g. CLIENT-0142 Aurelia Capital Partners/PROJ-0088 Q3 Advisory/</div>
+
+  <div class="sub-title">GitHub Conventions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Repository names use lowercase-kebab-case matching the object prefix, e.g. <span class="mono">sos-component-library</span>, <span class="mono">sos-automation-library</span>. Branch names reference the ID being worked, e.g. <span class="mono">auto-004-payment-automation</span>.</p>
+
+  <div class="sub-title">Notion Page Names</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;"><span class="mono">{ID} — {Name}</span>, exactly matching the catalog entry on its SOS page, e.g. "PB-004 — Weekly Operations Playbook."</p>
+
+  <div class="sub-title">Airtable Record Naming</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">The primary field of every table is always the ID itself, not the name — sorting, filtering, and linking all key off the ID; the Name lives in a secondary field for human readability.</p>
+</div>
+
+<!-- ============ DS-009 — VALIDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Naming Convention Standard</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-009</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">Naming Convention Standard</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">No ID prefix is ever reused for a different object type; no sequence number is ever reused, even after archival or churn.</div></div>
+    <div class="field-row"><div class="field-label">Relationships</div><div class="field-val">Applies uniformly across every DS-001–008 object and every file, folder, and platform record system-wide.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 through DS-008 — every one of them follows this convention.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">A naming-linter automation can check every new file, folder, or record against this Standard at creation time and block anything non-conforming before it enters the system.</div></div>
+  </div>
+</div>
+
+<!-- ============ DS-010 — DICTIONARY A-M ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Dictionary A–M</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — SOS Data Dictionary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Create the official vocabulary of the Service Operating System — the closing entry that ties every prior page's terms into one shared reference.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Artifact</div><div class="field-val">Any generated document or record with SOS metadata (DS-001). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Template, Workflow. Owner: Engagement Lead. Example: DOC-2026-00417.</span></div></div>
+    <div class="field-row"><div class="field-label">Automation</div><div class="field-val">A system-executed sequence connecting a trigger to a measurable outcome (DS-007). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Skill, Workflow. Owner: Operations. Example: AUTO-004.</span></div></div>
+    <div class="field-row"><div class="field-label">Client</div><div class="field-val">A company or individual with an active or historical MAIM engagement (DS-002). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Project. Owner: Engagement Lead. Example: CLIENT-0142.</span></div></div>
+    <div class="field-row"><div class="field-label">Component</div><div class="field-val">A reusable design element with defined layout, type, and spacing rules (Page 02). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Template. Owner: Design. Example: COMP-501.</span></div></div>
+    <div class="field-row"><div class="field-label">Deliverable</div><div class="field-val">A named, scoped output tied to a Milestone, tracked through to Acceptance. <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Project, Milestone. Owner: Engagement Lead. Example: "Phase 1 Report."</span></div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Milestone</div><div class="field-val">A scoped checkpoint within a Project's Timeline, gated by Approval (COMP-402/404). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Project, Approval. Owner: Engagement Lead. Example: "M2-Blueprint."</span></div></div>
+  </div>
+</div>
+
+<!-- ============ DS-010 — DICTIONARY P-W ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Dictionary P–W</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — SOS Data Dictionary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package</div><div class="field-val">A pre-assembled combination of Templates, Workflows, and pricing sold as a unit (Page 06). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Client, Template. Owner: Sales/Engagement Lead. Example: PKG-002.</span></div></div>
+    <div class="field-row"><div class="field-label">Playbook</div><div class="field-val">A step-by-step human execution guide for running a repeatable process (Page 07). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Workflow, Skill. Owner: Operations. Example: PB-004.</span></div></div>
+    <div class="field-row"><div class="field-label">Project</div><div class="field-val">A single active or completed client engagement (DS-003). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Client, Workflow. Owner: Engagement Lead. Example: PROJ-0088.</span></div></div>
+    <div class="field-row"><div class="field-label">Skill</div><div class="field-val">A reusable AI capability with defined inputs, outputs, and review rules (DS-006). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Automation, Playbook. Owner: Operations. Example: SKILL-002.</span></div></div>
+    <div class="field-row"><div class="field-label">Status</div><div class="field-val">The current lifecycle state of any Artifact, Client, or Project, drawn from a fixed enumerated list. <span class="mono" style="color:rgba(247,244,234,0.5);">Related: all objects. Owner: system-enforced. Example: "In Review."</span></div></div>
+    <div class="field-row"><div class="field-label">Template</div><div class="field-val">A fixed document structure assembled from Components (DS-004). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Component, Artifact. Owner: Design. Example: TEMP-001.</span></div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Workflow</div><div class="field-val">A defined internal sequence with a trigger, steps, and an output (DS-005). <span class="mono" style="color:rgba(247,244,234,0.5);">Related: Project, Template, Automation. Owner: Operations. Example: WF-004.</span></div></div>
+  </div>
+</div>
+
+<!-- ============ DS-010 — CLOSING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ds-id">DS-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Validation &amp; Automation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — SOS Data Dictionary</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Standard ID</div><div class="field-val mono">DS-010</div></div>
+    <div class="field-row"><div class="field-label">Standard Name</div><div class="field-val">SOS Data Dictionary</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Every term used across Pages 01–10 must trace to an entry here; a new term introduced anywhere else in the system requires an addition to this dictionary in the same release.</div></div>
+    <div class="field-row"><div class="field-label">Related Objects</div><div class="field-val mono">DS-001 through DS-009 — this dictionary is the plain-language index over all of them.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Automation Opportunities</div><div class="field-val">This dictionary can seed a shared glossary embedding for any future AI agent working across MAIM systems, ensuring "Milestone" or "Status" means the exact same thing to Claude, ChatGPT, and every human on the team.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Data &amp; Metadata Standards — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Standards Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

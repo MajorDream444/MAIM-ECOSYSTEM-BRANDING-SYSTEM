@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #050505; }
+  ::selection { background: #D8AF55; color: #050505; }
+</style>
+</helmet>
+
+<div style="background:#050505; color:#F7F4EA; font-family:'Archivo',sans-serif; min-height:100vh; padding:0 0 120px 0; overflow-x:hidden;">
+
+  <!-- ===================== COVER ===================== -->
+  <section data-screen-label="Cover" style="max-width:1240px; margin:0 auto; padding:96px 56px 72px; position:relative;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:80px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:#D8AF55; text-transform:uppercase;">Major&nbsp;AI&nbsp;Mindset</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:rgba(247,244,234,.45); text-transform:uppercase; text-align:right;">Media&nbsp;Vault&nbsp;/&nbsp;Volume&nbsp;09<br>Version&nbsp;1.0&nbsp;·&nbsp;June&nbsp;2026</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:340px 1fr; gap:56px; align-items:center;">
+      <div style="aspect-ratio:1; border-radius:18px; overflow:hidden; border:1px solid rgba(216,175,85,.18); background:radial-gradient(120% 120% at 50% 35%,#15120d,#050505); box-shadow:0 30px 80px rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; padding:34px;">
+        <img src="./start-here-highlight-mqwxop0t.png" alt="MAIM crown seal" style="width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(0 16px 36px rgba(0,0,0,.55));">
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:5px; color:#D8AF55; text-transform:uppercase; margin-bottom:24px;">The Owned-IP Board</div>
+        <h1 style="font-weight:900; font-size:72px; line-height:.92; letter-spacing:-2px; margin:0 0 8px; text-transform:uppercase;">Media&nbsp;Vault<br><span style="font-weight:500; font-size:38px; letter-spacing:5px; color:#F7F4EA;">+&nbsp;Merch&nbsp;Artifacts</span></h1>
+        <div style="width:200px; height:6px; border-radius:3px; margin:26px 0 28px; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+        <p style="font-size:22px; line-height:1.4; margin:0; max-width:540px; color:rgba(247,244,234,.85);">Where every broadcast, lesson and drop becomes <span style="color:#1F7A3A; font-weight:700;">organized, searchable, reusable IP.</span></p>
+      </div>
+    </div>
+
+    <div style="margin-top:64px; display:flex; flex-wrap:wrap; gap:14px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Platform-Agnostic</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Asset &amp; IP System</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Operational, Not Commerce</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.55); padding:9px 16px; border:1px solid rgba(247,244,234,.14); border-radius:99px;">Powered by Hanzo</div>
+    </div>
+
+    <div style="margin-top:48px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.4); margin-right:6px;">BUILDS ON</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#D8AF55; padding:7px 13px; border-radius:7px; background:rgba(216,175,85,.08); border:1px solid rgba(216,175,85,.25);">MAIM 00 · Brand System</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3FA45C; padding:7px 13px; border-radius:7px; background:rgba(31,122,58,.08); border:1px solid rgba(31,122,58,.3);">MAIM 07 · Course + Cohort</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3a9be0; padding:7px 13px; border-radius:7px; background:rgba(0,107,182,.08); border:1px solid rgba(0,107,182,.3);">MAIM 08 · Hanzo Powered-By</span>
+    </div>
+  </section>
+
+  <div style="max-width:1240px; margin:0 auto; height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent);"></div>
+
+  <!-- ===================== FORMULA BAND ===================== -->
+  <section data-screen-label="The Formula" style="max-width:1240px; margin:0 auto; padding:72px 56px 24px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:#D8AF55; text-transform:uppercase; margin-bottom:26px; text-align:center;">The Core Formula</div>
+    <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:0; align-items:stretch;">
+      <div style="text-align:center; padding:0 8px; position:relative;"><div style="font-weight:900; font-size:30px; color:#3a9be0;">Idea</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">SPARK</div></div>
+      <div style="text-align:center; padding:0 8px;"><div style="font-weight:900; font-size:30px; color:#3a9be0;">Asset</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">CAPTURE</div></div>
+      <div style="text-align:center; padding:0 8px;"><div style="font-weight:900; font-size:30px; color:#D8AF55;">IP</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">CLAIM</div></div>
+      <div style="text-align:center; padding:0 8px;"><div style="font-weight:900; font-size:30px; color:#D8AF55;">Vault</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">STORE</div></div>
+      <div style="text-align:center; padding:0 8px;"><div style="font-weight:900; font-size:30px; color:#3FA45C;">Reuse</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">COMPOUND</div></div>
+      <div style="text-align:center; padding:0 8px;"><div style="font-weight:900; font-size:30px; color:#F58426;">Revenue</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45); margin-top:8px;">FUTURE LAYER</div></div>
+    </div>
+    <div style="height:6px; border-radius:3px; margin:28px 0 0; background:linear-gradient(90deg,#3a9be0 0 33%,#D8AF55 33% 66%,#1F7A3A 66% 90%,#F58426 90% 100%);"></div>
+  </section>
+
+  <!-- ===================== 01 VAULT DOCTRINE ===================== -->
+  <section data-screen-label="01 Vault Doctrine" style="max-width:1240px; margin:0 auto; padding:64px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">01</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Vault Doctrine</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Content is rented. IP is owned.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Every post on a platform is a tenant on someone else's land. The Vault is the deed. We make one thing — a broadcast, a lesson, a drop — and we never let it leave as a single disposable post again.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:24px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:16px; padding:30px 26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3a9be0; margin-bottom:14px;">THE PRINCIPLE</div>
+        <div style="font-weight:800; font-size:24px; margin-bottom:10px;">Make once.</div>
+        <p style="font-size:14px; line-height:1.55; color:rgba(247,244,234,.6); margin:0;">Every creation enters the Vault the moment it exists — raw, captioned, tagged. Nothing is "just a livestream."</p>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:16px; padding:30px 26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:14px;">THE PRINCIPLE</div>
+        <div style="font-weight:800; font-size:24px; margin-bottom:10px;">Own forever.</div>
+        <p style="font-size:14px; line-height:1.55; color:rgba(247,244,234,.6); margin:0;">Rights, source files and metadata travel with the asset. The platform can disappear; the IP cannot.</p>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:16px; padding:30px 26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#3FA45C; margin-bottom:14px;">THE PRINCIPLE</div>
+        <div style="font-weight:800; font-size:24px; margin-bottom:10px;">Reuse endlessly.</div>
+        <p style="font-size:14px; line-height:1.55; color:rgba(247,244,234,.6); margin:0;">One asset feeds clips, carousels, workbooks, merch and licensing. Value compounds with every reuse.</p>
+      </div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#0d0d0f,#0a0a0c); border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:40px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:26px;">THE LIFECYCLE · IDEA → ASSET → IP → VAULT → REUSE → REVENUE</div>
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:12px;">
+        <div style="background:#050505; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#3a9be0; margin-bottom:8px;">01 · IDEA</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">A thought worth teaching is logged before it's filmed.</div></div>
+        <div style="background:#050505; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#3a9be0; margin-bottom:8px;">02 · ASSET</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">Captured as a file: video, audio, doc, design, concept.</div></div>
+        <div style="background:#050505; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#D8AF55; margin-bottom:8px;">03 · IP</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">Tagged with owner, rights and licence class.</div></div>
+        <div style="background:#050505; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#D8AF55; margin-bottom:8px;">04 · VAULT</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">Stored, versioned and searchable in one source of truth.</div></div>
+        <div style="background:#050505; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#3FA45C; margin-bottom:8px;">05 · REUSE</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">Re-cut, re-skinned and re-published across every channel.</div></div>
+        <div style="background:#050505; border:1px solid rgba(245,132,38,.4); border-radius:12px; padding:20px 16px;"><div style="font-weight:900; font-size:14px; color:#F58426; margin-bottom:8px;">06 · REVENUE</div><div style="font-size:12px; color:rgba(247,244,234,.6); line-height:1.45;">The payoff layer — built later through Hanzo / Lux.</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; background:rgba(245,132,38,.06); border:1px solid rgba(245,132,38,.3); border-radius:14px; padding:22px 26px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426; flex:none; margin-top:2px;">BOUNDARY</span>
+      <p style="font-size:15px; line-height:1.55; color:rgba(247,244,234,.8); margin:0;">MAIM 09 is the <strong>asset / IP system</strong> — not the store. No payment rails, no tokenized access, no checkout. Commerce, licensing automation and access control are built later through <strong style="color:#F58426;">Hanzo / Lux</strong>. This board makes the IP <em>ready</em> for that day.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 02 MEDIA ASSET MAP ===================== -->
+  <section data-screen-label="02 Media Asset Map" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">02</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Media Asset Map</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Everything we make has a shelf.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Nine asset classes, three families. If a thing can't be filed here, it doesn't enter the Vault until it can.</p>
+
+    <div style="display:flex; flex-direction:column; gap:22px;">
+      <!-- BROADCAST FAMILY -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3a9be0; margin-bottom:14px;">FAMILY A · BROADCAST &amp; VIDEO</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Broadcasts</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0;">VID</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Weekly Lives, webinars, masterclass recordings — the long-form source.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Clips &amp; Reels</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0;">CUT</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Short vertical cuts derived from broadcasts — the reach engine.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Transcripts</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0;">TXT</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Full text of every spoken asset — the raw material for everything written.</p></div>
+        </div>
+      </div>
+      <!-- LEARNING FAMILY -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:14px;">FAMILY B · LEARNING &amp; KNOWLEDGE</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Lessons</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55;">LSN</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">A–Z curriculum units from MAIM 07 — structured, sequenced teaching.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Prompts</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55;">PRM</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Tested, reusable AI prompts — the most copied, most valuable micro-IP.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Workbooks</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55;">WBK</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Ebooks, lead magnets, fill-in labs — packaged, downloadable assets.</p></div>
+        </div>
+      </div>
+      <!-- ARTIFACT FAMILY -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#3FA45C; margin-bottom:14px;">FAMILY C · DESIGN &amp; ARTIFACTS</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Design Boards</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C;">BRD</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Templates, system boards, key art — the MAIM volume library itself.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Merch Concepts</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C;">MCH</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Apparel, drops, Capt. Lucky artifacts — culture made physical.</p></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px;"><div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;"><div style="font-weight:800; font-size:19px;">Source Files</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C;">SRC</span></div><p style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin:0;">Layered originals, logos, fonts — the masters everything derives from.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 EPISODE CREATOR KIT ===================== -->
+  <section data-screen-label="03 Episode Creator Kit" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">03</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Episode Creator Kit</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">One episode. Twelve assets.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Every broadcast ships with the same repeatable kit. Hit record once, and the Vault fills itself — predictably, every time.</p>
+
+    <div style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:28px; align-items:stretch;">
+      <div style="background:radial-gradient(120% 120% at 50% 0%,#16140e,#070707); border:1px solid rgba(216,175,85,.25); border-radius:18px; padding:36px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">THE SOURCE</div>
+        <div style="font-weight:900; font-size:30px; line-height:1; text-transform:uppercase; margin-bottom:14px;">1× Broadcast</div>
+        <p style="font-size:14px; line-height:1.6; color:rgba(247,244,234,.65); margin:0 0 24px;">A single 45–60 minute Live or webinar is the master. Everything below is cut, written or designed from it — no net-new production required.</p>
+        <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12px; padding:9px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.7);">Production time</span><span style="color:#D8AF55;">1× record</span></div>
+          <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12px; padding:9px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.7);">Assets out</span><span style="color:#D8AF55;">12 per episode</span></div>
+          <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12px; padding:9px 0;"><span style="color:rgba(247,244,234,.7);">Vault entry</span><span style="color:#3FA45C;">EP-[n] folder</span></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:16px;">THE 12-ASSET YIELD</div>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Full Replay</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">YouTube + Vault master</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">3–5 Reels</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Vertical 9:16 cuts</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Transcript</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Time-coded text</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Carousel</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Key-points 4:5</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Quote Cards</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">3× best lines</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Newsletter</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Recap + CTA</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Prompt Drop</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">1× tested prompt</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Thumbnail</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">16:9 key art</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Audiogram</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Podcast-ready</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Story Set</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">9:16 promo frames</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Show Notes</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Links + timestamps</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.14); border-radius:12px; padding:16px 18px;"><div style="font-weight:800; font-size:15px;">Tag Sheet</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:3px;">Metadata for search</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 TRANSCRIPT + CLIP PIPELINE ===================== -->
+  <section data-screen-label="04 Transcript + Clip Pipeline" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">04</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Transcript + Clip Pipeline</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Long-form in. Many forms out.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">A repeatable five-stage flow turns one recording into a transcript, then into every short, written and social derivative — each one tagged back to its source.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:24px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; min-height:200px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:auto;">STAGE 01</div>
+        <div style="font-weight:800; font-size:19px; line-height:1.1; margin-top:16px;">Capture</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.45;">Raw recording lands in the EP folder, untouched master preserved.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; min-height:200px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:auto;">STAGE 02</div>
+        <div style="font-weight:800; font-size:19px; line-height:1.1; margin-top:16px;">Transcribe</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.45;">Speech → time-coded text. The searchable backbone of the asset.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; min-height:200px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:auto;">STAGE 03</div>
+        <div style="font-weight:800; font-size:19px; line-height:1.1; margin-top:16px;">Mine</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.45;">Mark the moments — quotes, hooks, teachable beats, prompt-worthy lines.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; min-height:200px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:auto;">STAGE 04</div>
+        <div style="font-weight:800; font-size:19px; line-height:1.1; margin-top:16px;">Cut &amp; Write</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.45;">Reels, quote cards, carousels, newsletter — produced from marked beats.</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:24px 20px; display:flex; flex-direction:column; min-height:200px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:auto;">STAGE 05</div>
+        <div style="font-weight:800; font-size:19px; line-height:1.1; margin-top:16px;">File &amp; Link</div>
+        <div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:8px; line-height:1.45;">Each derivative stored, tagged, and linked to its source timestamp.</div>
+      </div>
+    </div>
+
+    <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:30px 34px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">DERIVATIVE LEDGER · ONE SOURCE, EVERY OUTPUT</div>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3a9be0; padding:9px 15px; border-radius:8px; background:rgba(0,107,182,.1); border:1px solid rgba(0,107,182,.3);">EP-014.mp4</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; color:rgba(247,244,234,.4);">→</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">reel_hook-01</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">reel_hook-02</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">quote_07:42</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">carousel_key-pts</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">prompt_drop-014</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(247,244,234,.7); padding:9px 15px; border-radius:8px; background:rgba(247,244,234,.05); border:1px solid rgba(247,244,234,.12);">newsletter_recap</span>
+      </div>
+      <p style="font-size:13px; color:rgba(247,244,234,.5); margin:18px 0 0; line-height:1.55;">Every child knows its parent. Pull any derivative and you can trace it back to the exact second it came from — that traceability is what makes the IP licensable later.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 05 PROMPT + WORKBOOK LIBRARY ===================== -->
+  <section data-screen-label="05 Prompt + Workbook Library" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">05</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Prompt + Workbook Library</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The most reused IP we own.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Prompts and workbooks are the assets members actually take home. Each is a standalone, versioned object — written once, refined forever, packaged endlessly.</p>
+
+    <div style="display:grid; grid-template-columns:1.15fr 0.85fr; gap:28px; align-items:start;">
+      <!-- prompt card spec -->
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:16px; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">ANATOMY OF A VAULT PROMPT</div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.1); border-radius:12px; padding:24px; font-family:'JetBrains Mono',monospace;">
+          <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px;"><span style="color:#3FA45C;">PRM-031</span><span style="color:rgba(247,244,234,.45);">v3 · stable</span></div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:20px; color:#F7F4EA; margin-bottom:14px;">Weekly Content Engine</div>
+          <div style="font-size:12px; line-height:1.7; color:rgba(247,244,234,.6); border-left:2px solid #D8AF55; padding-left:14px;">"Act as my content strategist. From this transcript, pull 5 hooks, 3 quote cards and one newsletter angle in the MAIM voice…"</div>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+            <span style="font-size:10px; color:#D8AF55; padding:5px 10px; border-radius:6px; background:rgba(216,175,85,.1);">#repurpose</span>
+            <span style="font-size:10px; color:#3a9be0; padding:5px 10px; border-radius:6px; background:rgba(0,107,182,.12);">#content</span>
+            <span style="font-size:10px; color:#3FA45C; padding:5px 10px; border-radius:6px; background:rgba(31,122,58,.12);">#tested</span>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:18px;">
+          <div style="font-size:13px; color:rgba(247,244,234,.65); line-height:1.5;"><strong style="color:#D8AF55;">ID + version</strong> — stable handle, semver history.</div>
+          <div style="font-size:13px; color:rgba(247,244,234,.65); line-height:1.5;"><strong style="color:#D8AF55;">Use case</strong> — the job it does, in plain words.</div>
+          <div style="font-size:13px; color:rgba(247,244,234,.65); line-height:1.5;"><strong style="color:#D8AF55;">Body</strong> — the prompt text, variables marked.</div>
+          <div style="font-size:13px; color:rgba(247,244,234,.65); line-height:1.5;"><strong style="color:#D8AF55;">Tags</strong> — searchable, links to lessons.</div>
+        </div>
+      </div>
+      <!-- library taxonomy -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:16px;">LIBRARY SHELVES</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;"><div><div style="font-weight:800; font-size:16px;">Starter Prompts</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:2px;">Beginner-safe, A–C lessons</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55;">26</span></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;"><div><div style="font-weight:800; font-size:16px;">Workflow Prompts</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:2px;">Build, repurpose, automate</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55;">48</span></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;"><div><div style="font-weight:800; font-size:16px;">Workbooks</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:2px;">7-day labs, ebooks, guides</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55;">12</span></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.12); border-radius:12px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;"><div><div style="font-weight:800; font-size:16px;">Templates</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:2px;">Fill-in frameworks</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55;">19</span></div>
+        </div>
+        <div style="background:rgba(31,122,58,.08); border:1px solid rgba(31,122,58,.3); border-radius:12px; padding:18px 20px; margin-top:14px;">
+          <p style="font-size:13px; line-height:1.55; color:rgba(247,244,234,.7); margin:0;"><strong style="color:#3FA45C;">Rule:</strong> a prompt isn't shelved until it's tested, named, versioned and tagged. Untested prompts stay in the draft tray.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 06 MERCH ARTIFACT SYSTEM ===================== -->
+  <section data-screen-label="06 Merch Artifact System" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">06</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Merch Artifact System</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Culture you can hold.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Merch concepts are IP too. Each artifact is designed, spec'd and filed in the Vault as a ready-to-produce concept — the manufacturing and selling come later through Hanzo / Lux.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:24px;">
+      <!-- artifact A: tee -->
+      <div>
+        <div style="aspect-ratio:4/5; background:#050505; border:1px solid rgba(216,175,85,.3); border-radius:14px; overflow:hidden; position:relative; padding:26px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#D8AF55; position:absolute; top:20px; left:22px;">ARTIFACT · APRL</div>
+          <div style="width:54px; height:54px; border-radius:10px; overflow:hidden; margin-bottom:18px;"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div style="font-weight:900; font-size:30px; line-height:.95; text-transform:uppercase;">Likkle by Likkle</div>
+          <div style="width:70px; height:5px; border-radius:3px; margin:14px 0; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.5);">CORE TEE · BLACK</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.45); margin-top:12px;">MCH-001 · doctrine apparel</div>
+      </div>
+      <!-- artifact B: Capt Lucky drop -->
+      <div>
+        <div style="aspect-ratio:4/5; background:linear-gradient(160deg,#1a1206,#050505); border:1px solid rgba(245,132,38,.35); border-radius:14px; overflow:hidden; position:relative; padding:26px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#F58426; position:absolute; top:20px; left:22px;">ARTIFACT · DROP</div>
+          <div style="font-weight:900; font-size:34px; line-height:.9; text-transform:uppercase; color:#F58426;">Capt.<br>Lucky</div>
+          <div style="font-size:12px; color:rgba(247,244,234,.65); margin-top:14px; line-height:1.4; max-width:180px;">Seasonal culture drop — off-doctrine, fun, collectible.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.5); margin-top:16px;">LIMITED · SEASONAL</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.45); margin-top:12px;">MCH-014 · alter-ego lane</div>
+      </div>
+      <!-- artifact C: crown pin -->
+      <div>
+        <div style="aspect-ratio:4/5; background:radial-gradient(120% 120% at 50% 35%,#16140e,#050505); border:1px solid rgba(216,175,85,.3); border-radius:14px; overflow:hidden; position:relative; padding:26px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#D8AF55; position:absolute; top:20px; left:22px;">ARTIFACT · OBJ</div>
+          <img src="assets/crown-coin.png" style="width:140px; height:auto; filter:drop-shadow(0 16px 36px rgba(0,0,0,.6));">
+          <div style="font-weight:800; font-size:18px; margin-top:18px; text-transform:uppercase;">The Crown Seal</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; color:rgba(247,244,234,.5); margin-top:8px;">ENAMEL PIN · STICKER · COIN</div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:rgba(247,244,234,.45); margin-top:12px;">MCH-021 · collectible object</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:30px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:18px;">EVERY ARTIFACT CARRIES</div>
+        <div style="display:flex; flex-direction:column; gap:11px; font-size:14px; color:rgba(247,244,234,.78);">
+          <div style="display:flex; gap:12px;"><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; flex:none;">01</span><span>Concept board + mockup (front / back / detail)</span></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; flex:none;">02</span><span>Production spec — materials, colors, sizes, placement</span></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; flex:none;">03</span><span>Print-ready source files, locked to brand colors</span></div>
+          <div style="display:flex; gap:12px;"><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55; flex:none;">04</span><span>Lane tag — <strong>doctrine</strong> or <strong style="color:#F58426;">culture / Capt. Lucky</strong></span></div>
+        </div>
+      </div>
+      <div style="background:rgba(245,132,38,.06); border:1px solid rgba(245,132,38,.3); border-radius:16px; padding:30px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#F58426; margin-bottom:18px;">LANE DISCIPLINE</div>
+        <p style="font-size:15px; line-height:1.6; color:rgba(247,244,234,.8); margin:0 0 14px;">Doctrine merch carries the crown and the brand voice. <strong style="color:#F58426;">Capt. Lucky</strong> stays in the playful culture lane — never on a lesson, never on the ABC spine.</p>
+        <p style="font-size:13px; line-height:1.55; color:rgba(247,244,234,.55); margin:0;">A concept is filed as <em>ready-to-produce</em> only. No store, no inventory, no checkout in this volume — those live in the future commerce layer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 07 IP RIGHTS + LICENSING LAYER ===================== -->
+  <section data-screen-label="07 IP Rights + Licensing" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">07</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">IP Rights + Licensing Layer</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Every asset knows who owns it.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Rights metadata is attached at the moment of capture — not negotiated later. This layer <em>describes</em> licensing; the automation that enforces and sells it is a Hanzo / Lux job.</p>
+
+    <div style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:28px; align-items:start;">
+      <!-- rights record -->
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.3); border-radius:16px; padding:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">RIGHTS RECORD · ATTACHED TO EVERY ASSET</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:13px; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.55);">owner</span><span style="color:#F7F4EA;">Major AI Mindset</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.55);">creator</span><span style="color:#F7F4EA;">Major (founder)</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.55);">created</span><span style="color:#F7F4EA;">2026-06-22</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.55);">licence_class</span><span style="color:#D8AF55;">members-only</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid rgba(247,244,234,.08);"><span style="color:rgba(247,244,234,.55);">third_party</span><span style="color:#3FA45C;">none · original</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0;"><span style="color:rgba(247,244,234,.55);">resale_ready</span><span style="color:#F58426;">flagged · later</span></div>
+        </div>
+      </div>
+      <!-- licence classes -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:16px;">LICENCE CLASSES · DESCRIPTIVE ONLY</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:12px; padding:18px 22px;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-weight:800; font-size:17px;">Open</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0;">PUBLIC</span></div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px; line-height:1.45;">Free to share — clips, quote cards, awareness posts.</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:12px; padding:18px 22px;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-weight:800; font-size:17px;">Members-Only</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55;">GATED</span></div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px; line-height:1.45;">Inside the cohort / community — prompts, workbooks, lessons.</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:12px; padding:18px 22px;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-weight:800; font-size:17px;">Licensable</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C;">PARTNER</span></div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px; line-height:1.45;">Could be licensed to partners — flagged for the future deal layer.</div></div>
+          <div style="background:#0c0c0e; border:1px solid rgba(245,132,38,.4); border-radius:12px; padding:18px 22px;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-weight:800; font-size:17px;">Reserved</div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#F58426;">LOCKED</span></div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px; line-height:1.45;">Founder-only IP — never published or licensed without sign-off.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; background:rgba(245,132,38,.06); border:1px solid rgba(245,132,38,.3); border-radius:14px; padding:22px 26px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426; flex:none; margin-top:2px;">BOUNDARY</span>
+      <p style="font-size:15px; line-height:1.55; color:rgba(247,244,234,.8); margin:0;">This is a <strong>labelling system</strong>, not a contracts engine. It records ownership and intent so that when Hanzo / Lux builds licensing automation, every asset is already classified and deal-ready. No agreements are executed here.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 08 ACCESS + MEMBERSHIP LOGIC ===================== -->
+  <section data-screen-label="08 Access + Membership Logic" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">08</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Access + Membership Logic</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">Who can reach what.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">Four access tiers map cleanly onto the licence classes. This is the <em>logic</em> of access — the rules — not the gate. Tokenized access and enforcement are built later.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:24px;">
+      <div style="background:#0c0c0e; border:1px solid rgba(0,107,182,.3); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3a9be0; margin-bottom:14px;">TIER 0</div>
+        <div style="font-weight:900; font-size:24px; margin-bottom:8px;">Public</div>
+        <div style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin-bottom:18px;">Anyone on the internet. The top of the funnel.</div>
+        <div style="margin-top:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5); line-height:1.7;">→ Clips &amp; reels<br>→ Quote cards<br>→ Free guides</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(216,175,85,.35); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55; margin-bottom:14px;">TIER 1</div>
+        <div style="font-weight:900; font-size:24px; margin-bottom:8px;">Member</div>
+        <div style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin-bottom:18px;">Enrolled in a cohort or community.</div>
+        <div style="margin-top:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5); line-height:1.7;">→ Full lessons<br>→ Prompt library<br>→ Workbooks</div>
+      </div>
+      <div style="background:#0c0c0e; border:1px solid rgba(31,122,58,.4); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3FA45C; margin-bottom:14px;">TIER 2</div>
+        <div style="font-weight:900; font-size:24px; margin-bottom:8px;">Inner Circle</div>
+        <div style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin-bottom:18px;">Alumni, partners, build crew.</div>
+        <div style="margin-top:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5); line-height:1.7;">→ Source files<br>→ Early drops<br>→ Licensable IP</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#1a1206,#0c0c0e); border:1px solid rgba(245,132,38,.4); border-radius:16px; padding:28px 24px; display:flex; flex-direction:column;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#F58426; margin-bottom:14px;">TIER 3</div>
+        <div style="font-weight:900; font-size:24px; margin-bottom:8px;">Founder</div>
+        <div style="font-size:13px; color:rgba(247,244,234,.6); line-height:1.5; margin-bottom:18px;">Major + core team only.</div>
+        <div style="margin-top:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5); line-height:1.7;">→ Reserved IP<br>→ Masters<br>→ Everything</div>
+      </div>
+    </div>
+
+    <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:30px 34px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:18px;">ACCESS LOGIC · IF / THEN (RULES, NOT RAILS)</div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-family:'JetBrains Mono',monospace; font-size:13px;">
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:14px 18px; line-height:1.6;"><span style="color:#3a9be0;">IF</span> <span style="color:rgba(247,244,234,.75);">licence_class = open</span> <span style="color:#D8AF55;">THEN</span> <span style="color:rgba(247,244,234,.75);">visible to Tier 0+</span></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:14px 18px; line-height:1.6;"><span style="color:#3a9be0;">IF</span> <span style="color:rgba(247,244,234,.75);">licence_class = members-only</span> <span style="color:#D8AF55;">THEN</span> <span style="color:rgba(247,244,234,.75);">visible to Tier 1+</span></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:14px 18px; line-height:1.6;"><span style="color:#3a9be0;">IF</span> <span style="color:rgba(247,244,234,.75);">licence_class = licensable</span> <span style="color:#D8AF55;">THEN</span> <span style="color:rgba(247,244,234,.75);">visible to Tier 2+, deal-flagged</span></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:14px 18px; line-height:1.6;"><span style="color:#3a9be0;">IF</span> <span style="color:rgba(247,244,234,.75);">licence_class = reserved</span> <span style="color:#D8AF55;">THEN</span> <span style="color:rgba(247,244,234,.75);">Tier 3 only · sign-off required</span></div>
+      </div>
+      <p style="font-size:13px; color:rgba(247,244,234,.5); margin:18px 0 0; line-height:1.55;">The Vault stores these rules as metadata. Enforcing them — login walls, tokens, payments — is the commerce layer's job, not this volume's.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 09 SEARCHABLE KNOWLEDGE BANK ===================== -->
+  <section data-screen-label="09 Searchable Knowledge Bank" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">09</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Searchable Knowledge Bank</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">If you can't find it, you don't own it.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">A consistent metadata schema makes every asset findable in seconds. Search is what turns a pile of files into a usable knowledge bank.</p>
+
+    <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:18px; padding:30px; margin-bottom:24px;">
+      <!-- search bar mock -->
+      <div style="display:flex; align-items:center; gap:14px; background:#050505; border:1px solid rgba(216,175,85,.3); border-radius:12px; padding:16px 20px; margin-bottom:22px;">
+        <span style="color:#D8AF55; font-size:18px;">⌕</span>
+        <span style="font-family:'Archivo',sans-serif; font-size:17px; color:rgba(247,244,234,.85);">awareness prompt · beginner · tested</span>
+        <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.4);">42 RESULTS · 0.02s</span>
+      </div>
+      <!-- filter chips -->
+      <div style="display:flex; flex-wrap:wrap; gap:9px; margin-bottom:24px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#050505; background:#D8AF55; padding:7px 14px; border-radius:99px; font-weight:700;">type: prompt</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.7); background:rgba(247,244,234,.06); border:1px solid rgba(247,244,234,.14); padding:7px 14px; border-radius:99px;">letter: A</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.7); background:rgba(247,244,234,.06); border:1px solid rgba(247,244,234,.14); padding:7px 14px; border-radius:99px;">level: beginner</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.7); background:rgba(247,244,234,.06); border:1px solid rgba(247,244,234,.14); padding:7px 14px; border-radius:99px;">status: tested</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.7); background:rgba(247,244,234,.06); border:1px solid rgba(247,244,234,.14); padding:7px 14px; border-radius:99px;">licence: members-only</span>
+      </div>
+      <!-- result rows -->
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="display:grid; grid-template-columns:90px 1fr 130px 110px; gap:16px; align-items:center; background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 20px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3FA45C;">PRM-031</span>
+          <span style="font-weight:700; font-size:15px;">Weekly Content Engine</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5);">A · Awareness</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55; text-align:right;">members-only</span>
+        </div>
+        <div style="display:grid; grid-template-columns:90px 1fr 130px 110px; gap:16px; align-items:center; background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 20px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3FA45C;">WBK-004</span>
+          <span style="font-weight:700; font-size:15px;">7-Day Digital Asset Lab</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5);">A–C · Foundation</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55; text-align:right;">members-only</span>
+        </div>
+        <div style="display:grid; grid-template-columns:90px 1fr 130px 110px; gap:16px; align-items:center; background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 20px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3a9be0;">EP-014</span>
+          <span style="font-weight:700; font-size:15px;">See It, Believe It, Build It — Live</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,.5);">A · Awareness</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0; text-align:right;">open</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:30px 34px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:20px;">THE METADATA SCHEMA · EVERY ASSET, EVERY TIME</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">id</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">stable unique handle</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">type</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">one of nine classes</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">letter</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">A–Z spine link</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">level</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">beginner → leverage</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">source</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">parent asset + time</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">licence</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">access class</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">status</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">draft / tested / stable</div></div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.08); border-radius:10px; padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55;">tags</div><div style="font-size:12px; color:rgba(247,244,234,.55); margin-top:4px;">free-text search</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10 VAULT COMMAND CENTER ===================== -->
+  <section data-screen-label="10 Vault Command Center" style="max-width:1240px; margin:0 auto; padding:48px 56px 72px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:14px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#D8AF55;">10</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:rgba(247,244,234,.5); text-transform:uppercase;">Vault Command Center</span>
+    </div>
+    <h2 style="font-weight:900; font-size:52px; line-height:1.02; letter-spacing:-1px; margin:0 0 12px;">The whole vault, one view.</h2>
+    <p style="font-size:17px; line-height:1.6; color:rgba(247,244,234,.65); max-width:760px; margin:0 0 44px;">The command center is where Idea becomes Revenue-ready. It shows what's captured, what's reusable, and what's flagged for the future commerce layer — at a glance.</p>
+
+    <div style="background:linear-gradient(135deg,#0d0d0f,#0a0a0c); border:1px solid rgba(216,175,85,.25); border-radius:18px; padding:34px;">
+      <!-- header row -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:26px; flex-wrap:wrap; gap:16px;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:42px; height:42px; border-radius:8px; overflow:hidden; border:1px solid rgba(216,175,85,.3);"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div><div style="font-weight:800; font-size:18px;">MAIM Vault</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45);">SINGLE SOURCE OF TRUTH</div></div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#3FA45C; padding:7px 14px; border-radius:99px; border:1px solid rgba(63,164,92,.4);">● SYNCED · 26 JUN 2026</div>
+      </div>
+
+      <!-- stat tiles -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:24px;">
+        <div style="background:#050505; border:1px solid rgba(0,107,182,.3); border-radius:14px; padding:24px;"><div style="font-weight:900; font-size:40px; color:#3a9be0; line-height:1;">318</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-top:10px;">TOTAL ASSETS</div></div>
+        <div style="background:#050505; border:1px solid rgba(216,175,85,.35); border-radius:14px; padding:24px;"><div style="font-weight:900; font-size:40px; color:#D8AF55; line-height:1;">14</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-top:10px;">EPISODES BANKED</div></div>
+        <div style="background:#050505; border:1px solid rgba(31,122,58,.4); border-radius:14px; padding:24px;"><div style="font-weight:900; font-size:40px; color:#3FA45C; line-height:1;">93</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-top:10px;">REUSABLE PROMPTS</div></div>
+        <div style="background:#050505; border:1px solid rgba(245,132,38,.4); border-radius:14px; padding:24px;"><div style="font-weight:900; font-size:40px; color:#F58426; line-height:1;">21</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5); margin-top:10px;">LICENSABLE · FLAGGED</div></div>
+      </div>
+
+      <!-- two-col: pipeline + recent -->
+      <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:14px;">
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:18px;">PIPELINE STATUS</div>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:rgba(247,244,234,.75);">Captured</span><span style="font-family:'JetBrains Mono',monospace; color:#3a9be0;">100%</span></div><div style="height:7px; border-radius:4px; background:rgba(247,244,234,.08);"><div style="height:7px; border-radius:4px; width:100%; background:#3a9be0;"></div></div></div>
+            <div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:rgba(247,244,234,.75);">Tagged &amp; filed</span><span style="font-family:'JetBrains Mono',monospace; color:#D8AF55;">86%</span></div><div style="height:7px; border-radius:4px; background:rgba(247,244,234,.08);"><div style="height:7px; border-radius:4px; width:86%; background:#D8AF55;"></div></div></div>
+            <div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:rgba(247,244,234,.75);">Reused / republished</span><span style="font-family:'JetBrains Mono',monospace; color:#3FA45C;">64%</span></div><div style="height:7px; border-radius:4px; background:rgba(247,244,234,.08);"><div style="height:7px; border-radius:4px; width:64%; background:#3FA45C;"></div></div></div>
+            <div><div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px;"><span style="color:rgba(247,244,234,.75);">Revenue-ready (future)</span><span style="font-family:'JetBrains Mono',monospace; color:#F58426;">7%</span></div><div style="height:7px; border-radius:4px; background:rgba(247,244,234,.08);"><div style="height:7px; border-radius:4px; width:7%; background:#F58426;"></div></div></div>
+          </div>
+        </div>
+        <div style="background:#050505; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:24px 26px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#D8AF55; margin-bottom:18px;">RECENTLY BANKED</div>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:11px; border-bottom:1px solid rgba(247,244,234,.07);"><div><div style="font-weight:700; font-size:14px;">EP-014 · Full Replay</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.45);">VID · open</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3FA45C;">+12 derivatives</span></div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:11px; border-bottom:1px solid rgba(247,244,234,.07);"><div><div style="font-weight:700; font-size:14px;">PRM-031 · Content Engine</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.45);">PRM · members-only</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#D8AF55;">v3 stable</span></div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:11px; border-bottom:1px solid rgba(247,244,234,.07);"><div><div style="font-weight:700; font-size:14px;">MCH-021 · Crown Seal Pin</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.45);">MCH · licensable</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#F58426;">deal-flagged</span></div>
+            <div style="display:flex; justify-content:space-between; align-items:center;"><div><div style="font-weight:700; font-size:14px;">WBK-004 · Asset Lab</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(247,244,234,.45);">WBK · members-only</div></div><span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#3a9be0;">downloaded 240×</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px; display:flex; align-items:center; gap:14px; background:rgba(245,132,38,.06); border:1px solid rgba(245,132,38,.3); border-radius:12px; padding:18px 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#F58426; flex:none;">NEXT VOLUME</span>
+        <p style="font-size:14px; line-height:1.5; color:rgba(247,244,234,.8); margin:0;">The <strong style="color:#F58426;">Revenue-ready</strong> column is the handoff point. Commerce, tokenized access and licensing automation are built on top of this vault through <strong>Hanzo / Lux</strong> — not here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="max-width:1240px; margin:0 auto; padding:40px 56px;">
+    <div style="height:1px; background:linear-gradient(90deg,transparent,rgba(216,175,85,.4),transparent); margin-bottom:32px;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:44px; height:44px; border-radius:8px; overflow:hidden; border:1px solid rgba(216,175,85,.3);"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div><div style="font-weight:800; font-size:14px; letter-spacing:1px;">MAJOR AI MINDSET</div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.45);">MEDIA VAULT · VOL 09</div></div>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.45); text-align:right;">CONTENT IS RENTED. <span style="color:#F58426;">IP</span> IS OWNED.<br>Powered by Hanzo · major@hanzo.ai</div>
+    </div>
+  </footer>
+
+</div>
+
+
+<template id="__bundler_thumbnail" data-bg-color="#050505">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#050505"></rect>
+    <rect x="486" y="250" width="228" height="300" rx="20" fill="none" stroke="#D8AF55" stroke-width="10"></rect>
+    <rect x="556" y="222" width="88" height="56" rx="14" fill="none" stroke="#D8AF55" stroke-width="10"></rect>
+    <circle cx="600" cy="392" r="30" fill="#D8AF55"></circle>
+    <rect x="592" y="392" width="16" height="60" rx="6" fill="#050505"></rect>
+    <rect x="500" y="600" width="66" height="14" rx="7" fill="#1F7A3A"></rect>
+    <rect x="567" y="600" width="66" height="14" rx="7" fill="#D8AF55"></rect>
+    <rect x="634" y="600" width="66" height="14" rx="7" fill="#006BB6"></rect>
+    <text x="600" y="676" font-family="Arial, sans-serif" font-weight="bold" font-size="40" letter-spacing="5" fill="#F7F4EA" text-anchor="middle">MEDIA VAULT · VOL 09</text>
+  </svg>
+</template>
+</x-dc>
+</body>
+</html>

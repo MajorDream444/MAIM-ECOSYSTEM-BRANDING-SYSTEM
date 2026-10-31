@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #E7E2D6; }
+  ::selection { background: #D4AF37; color: #141414; }
+</style>
+</helmet>
+
+<article style="width:1080px; margin:0 auto; background:#FBFAF6; color:#1A1A1A; font-family:'Archivo',sans-serif; padding:72px 76px 60px; position:relative; border-top:6px solid #1A1A1A;">
+
+  <!-- corner registration marks -->
+  <div style="position:absolute; top:26px; right:76px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#9A9384;">MAJOR&nbsp;AI&nbsp;MINDSET</div>
+
+  <!-- ===== HEADER ===== -->
+  <header style="margin-bottom:44px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:30px;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; background:#1A1A1A; color:#D4AF37; font-weight:900; font-size:24px; border-radius:7px;">{{ letter }}</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:4px; color:#1A1A1A; text-transform:uppercase;">{{ letter }}&nbsp;is&nbsp;for&nbsp;{{ principle }}</span>
+      <span style="flex:1; height:1px; background:linear-gradient(90deg,#D4AF37,rgba(212,175,55,0));"></span>
+    </div>
+
+    <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:5px; color:#B89530; text-transform:uppercase; margin-bottom:14px;">A&nbsp;Recurring&nbsp;Section</div>
+    <h1 style="font-weight:900; font-size:84px; line-height:.9; letter-spacing:-2px; margin:0; text-transform:uppercase;">AI&nbsp;in&nbsp;the&nbsp;Wild</h1>
+    <div style="display:flex; align-items:baseline; gap:18px; margin-top:18px;">
+      <span style="width:64px; height:4px; background:#D4AF37; border-radius:2px; transform:translateY(-6px);"></span>
+      <p style="font-size:20px; font-weight:500; font-style:italic; color:#55503F; margin:0;">Real companies. Real problems. Real AI.</p>
+    </div>
+  </header>
+
+  <!-- ===== FOUR CARDS ===== -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#E4DECF; border:1px solid #E4DECF; border-radius:14px; overflow:hidden; margin-bottom:30px;">
+
+    <!-- 1 · COMPANY -->
+    <div style="background:#FFFFFF; padding:34px 34px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#B89530;">01&nbsp;·&nbsp;COMPANY</span>
+        <span style="width:8px; height:8px; border-radius:99px; background:#D4AF37;"></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:22px;">
+        <div style="width:60px; height:60px; border-radius:12px; background:#F4F1E8; border:1px solid #E4DECF; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:26px; color:#1A1A1A;">{{ companyInitial }}</div>
+        <div style="font-weight:800; font-size:30px; line-height:1; letter-spacing:-.5px;">{{ company }}</div>
+      </div>
+      <div style="display:flex; gap:0; border-top:1px solid #EEE9DC; padding-top:18px;">
+        <div style="flex:1;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#9A9384; margin-bottom:6px;">INDUSTRY</div>
+          <div style="font-weight:600; font-size:15px; color:#1A1A1A;">{{ industry }}</div>
+        </div>
+        <div style="flex:1; border-left:1px solid #EEE9DC; padding-left:20px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#9A9384; margin-bottom:6px;">SCALE</div>
+          <div style="font-weight:600; font-size:15px; color:#1A1A1A;">{{ companySize }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 · CHALLENGE -->
+    <div style="background:#FFFFFF; padding:34px 34px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#B89530;">02&nbsp;·&nbsp;CHALLENGE</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#C8462E;">BEFORE&nbsp;AI</span>
+      </div>
+      <h3 style="font-weight:800; font-size:21px; line-height:1.15; margin:0 0 14px; letter-spacing:-.3px;">{{ challengeTitle }}</h3>
+      <p style="font-size:16px; line-height:1.62; color:#55503F; margin:0;">{{ challenge }}</p>
+    </div>
+
+    <!-- 3 · AI SOLUTION -->
+    <div style="background:#FFFFFF; padding:34px 34px 32px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#B89530;">03&nbsp;·&nbsp;AI&nbsp;SOLUTION</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#1F7A3A;">THE&nbsp;AMPLIFIER</span>
+      </div>
+      <h3 style="font-weight:800; font-size:21px; line-height:1.15; margin:0 0 16px; letter-spacing:-.3px;">{{ solutionTitle }}</h3>
+      <div style="display:flex; flex-direction:column; gap:11px;">
+        <sc-for list="{{ solutionPoints }}" as="point" hint-placeholder-count="3">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <span style="flex:none; width:7px; height:7px; border-radius:99px; background:#D4AF37; margin-top:8px;"></span>
+            <span style="font-size:15px; line-height:1.5; color:#3A3629;">{{ point }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- 4 · MAJOR TAKEAWAY -->
+    <div style="background:#1A1A1A; color:#FBFAF6; padding:34px 34px 32px; position:relative;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D4AF37;">04&nbsp;·&nbsp;MAJOR&nbsp;TAKEAWAY</span>
+        <span style="width:30px; height:30px; display:flex; align-items:center; justify-content:center;"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:contain; display:block;"></span>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:#8A8676; margin-bottom:14px;">WHAT SHOULD BUILDERS LEARN?</div>
+      <p style="font-weight:800; font-size:25px; line-height:1.22; letter-spacing:-.4px; margin:0; color:#FBFAF6;">{{ takeaway }}</p>
+      <div style="width:54px; height:4px; background:#D4AF37; border-radius:2px; margin-top:22px;"></div>
+    </div>
+  </div>
+
+  <!-- ===== GOLD CTA ===== -->
+  <div style="background:linear-gradient(135deg,#D4AF37,#C8A02E); border-radius:14px; padding:32px 36px; display:flex; align-items:center; gap:28px;">
+    <div style="flex:none; width:54px; height:54px; border:2px solid rgba(26,26,26,.35); border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:26px; color:#1A1A1A;">→</div>
+    <div style="flex:1;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:rgba(26,26,26,.6); margin-bottom:8px;">THIS WEEK'S MOVE</div>
+      <div style="font-weight:900; font-size:26px; line-height:1.08; letter-spacing:-.5px; color:#1A1A1A;">How can <span style="text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:4px;">YOU</span> apply this idea this week?</div>
+      <p style="font-size:15px; line-height:1.5; color:#3A2F12; margin:10px 0 0; max-width:640px;">{{ action }}</p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="margin-top:34px; padding-top:24px; border-top:1px solid #E4DECF; display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:13px;">
+      <div style="width:38px; height:38px; display:flex; align-items:center; justify-content:center;"><img src="assets/maim-mark.png" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
+      <div>
+        <div style="font-weight:800; font-size:13px; letter-spacing:.5px;">MAJOR AI MINDSET</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#9A9384;">AI IN THE WILD · {{ letter }} SERIES</div>
+      </div>
+    </div>
+    <div style="font-weight:500; font-style:italic; font-size:15px; color:#55503F;">Likkle by likkle, <span style="color:#1A1A1A; font-weight:700; font-style:normal;">we build the future.</span></div>
+  </footer>
+
+</article>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1080, &quot;height&quot;: 1180 },
+  &quot;letter&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;A&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;principle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Awareness&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;company&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Netflix&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;industry&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Streaming / Media&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;companySize&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;260M+ subscribers&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;challengeTitle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;A catalog too big to browse.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;challenge&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;With thousands of titles, viewers spent more time scrolling than watching.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;solutionTitle&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Awareness, amplified.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;solutionPoints&quot;: { &quot;editor&quot;: null, &quot;default&quot;: [], &quot;tsType&quot;: &quot;string[]&quot; },
+  &quot;takeaway&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Awareness came first. AI amplified it.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;action&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Pick one pattern you already notice in your work.&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const company = p.company ?? "Netflix";
+    return {
+      letter: p.letter ?? "A",
+      principle: p.principle ?? "Awareness",
+      company,
+      companyInitial: (company.trim()[0] || "N").toUpperCase(),
+      industry: p.industry ?? "Streaming / Media",
+      companySize: p.companySize ?? "260M+ subscribers",
+      challengeTitle: p.challengeTitle ?? "A catalog too big to browse.",
+      challenge: p.challenge ?? "With thousands of titles, viewers spent more time scrolling than watching — and a frustrated viewer is a viewer who cancels. Netflix needed to understand what people actually wanted before they knew it themselves.",
+      solutionTitle: p.solutionTitle ?? "Awareness, amplified.",
+      solutionPoints: p.solutionPoints ?? [
+        "Noticed people binge-watched certain shows back-to-back.",
+        "Tracked what viewers skipped, paused, and re-watched.",
+        "Turned that awareness into recommendations that feel personal."
+      ],
+      takeaway: p.takeaway ?? "Awareness came first. AI simply amplified what Netflix already understood about its people.",
+      action: p.action ?? "Pick one place in your work where you already 'notice' a pattern. Write it down — that noticed pattern is the exact thing AI can help you scale."
+    };
+  }
+}
+</script>
+</body>
+</html>

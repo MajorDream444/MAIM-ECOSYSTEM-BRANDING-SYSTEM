@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .rm-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 15 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-IMPLEMENTATION-ROADMAP · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 15 · Architecture Into Execution</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Implementation Roadmap</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Transforms the completed SOS architecture (Pages 01–14) into a living operational platform — the master execution roadmap for Version 1.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This page does not redesign anything already built. It sequences what gets built first, what exists, what's missing, who owns each milestone, and how SOS rolls out over 30, 60, and 90 days.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-001</span>Sprint 01 — Vision &amp; Success Criteria</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-002</span>Sprint 02 — Current State Assessment</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-003</span>Sprint 03 — Phase 1 Build Plan</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-004</span>Sprint 04 — Phase 2 Build Plan</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-005</span>Sprint 05 — Phase 3 Build Plan</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-006</span>Sprint 06 — Platform Ownership Matrix</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-007</span>Sprint 07 — 30/60/90 Day Roadmap</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-008</span>Sprint 08 — Risk &amp; Readiness Assessment</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-009</span>Sprint 09 — Governance &amp; Continuous Improvement</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">IMP-010</span>Sprint 10 — Version 1 Launch Blueprint</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as sprints are defined — send each sprint's spec (purpose, objectives, deliverables, owners, dependencies, timeline, related SOS objects, platform responsibilities, risks, success metrics, completion criteria, future enhancements) to add it here.</div>
+</div>
+
+<!-- ============ IMP-001 — VISION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Vision</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Vision &amp; Success Criteria</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define what "SOS Version 1 Complete" actually means — the finish line every subsequent sprint on this page builds toward.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:16px 18px;">
+    <div class="mono" style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Success Statement</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:15px; line-height:1.5; color:#F7F4EA;">The MAIM Service Operating System enables every future client engagement to be delivered through one consistent, reusable, AI-assisted operating model.</div>
+  </div>
+</div>
+
+<!-- ============ IMP-001 — OBJECTIVES & SCOPE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Objectives &amp; Scope</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Vision &amp; Success Criteria</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Business Objectives</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>· Reduce time from lead to signed engagement</div>
+    <div>· Eliminate one-off document creation across proposals, invoices, and reports</div>
+    <div>· Make every engagement's status visible without asking someone directly</div>
+    <div>· Let AI agents handle drafting and validation, never final client-facing decisions</div>
+  </div>
+
+  <div class="sub-title">Guiding Principles</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Implement in the same order the architecture was designed: Foundation and Components first, Automation and AI Agents last — never wire an agent to a system that doesn't have its data model built yet.</p>
+
+  <div class="sub-title">Scope / Out of Scope</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">In scope: implementing Pages 01–14 as real, working systems. Out of scope for Version 1: Creative/Engineering AI departments (AG-010), Stripe/CRM integrations, and any client-specific customization beyond the ten Client Packages already defined.</p>
+</div>
+
+<!-- ============ IMP-001 — STAKEHOLDERS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Stakeholders &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Vision &amp; Success Criteria</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Roadmap ID</div><div class="field-val mono">IMP-001</div></div>
+    <div class="field-row"><div class="field-label">Success Criteria</div><div class="field-val">A new client can move from Lead to signed Agreement using only SOS-defined Templates and Workflows, with zero one-off documents created outside the system.</div></div>
+    <div class="field-row"><div class="field-label">Stakeholders</div><div class="field-val">Operations Lead (overall owner), Design Lead (GH-001 Component/Template Maintainer), Engagement Leads (daily users), Finance (Payments), Chief Vibe Officer (executive sponsor, AG-010).</div></div>
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead owns this roadmap end to end; each sprint below names its own platform owner.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">All Pages 01–14</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Success Statement and Business Objectives are agreed and signed off by all named Stakeholders before Sprint 02 begins.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-002 — COMPLETED & IN PROGRESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Completed &amp; In Progress</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Current State Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Document where SOS stands today — the honest inventory every rollout plan needs before it can sequence anything.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div>
+      <div class="sub-title" style="color:#1F7A3A;">Completed (Specification)</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+        <div>✓ Foundation Board</div>
+        <div>✓ Components</div>
+        <div>✓ Templates</div>
+        <div>✓ Workflows</div>
+        <div>✓ Client Journey</div>
+        <div>✓ Packages</div>
+        <div>✓ Playbooks</div>
+        <div>✓ Skills</div>
+        <div>✓ Automations</div>
+        <div>✓ Data Standards</div>
+        <div>✓ GitHub Guide</div>
+        <div>✓ Airtable Model</div>
+        <div>✓ Notion Architecture</div>
+        <div>✓ AI Agent Registry</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="color:#D8AF55;">Remaining (Real Build)</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+        <div>☐ GitHub Repository Build</div>
+        <div>☐ Airtable Base</div>
+        <div>☐ Notion Workspace</div>
+        <div>☐ Agent Deployment</div>
+        <div>☐ n8n / Zapier Automations</div>
+        <div>☐ Client Portal</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:16px; max-width:600px;">Every item on the left is a design specification (Pages 01–14). Every item on the right is a real, working system that doesn't exist until someone builds it — the gap this roadmap closes.</p>
+</div>
+
+<!-- ============ IMP-002 — RISKS & ASSUMPTIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Risks &amp; Assumptions</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Current State Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Risks</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>· Building all three platforms (GitHub, Airtable, Notion) in parallel risks inconsistent field naming — Page 10's Data Standards must be the single reference every builder checks.</div>
+    <div>· Deploying AI agents before their governing systems exist risks agents operating on incomplete data.</div>
+    <div>· Team adoption stalls if the system feels heavier than the ad hoc process it replaces.</div>
+  </div>
+
+  <div class="sub-title">Assumptions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Existing Platforms: the team already has GitHub, Airtable, Notion, and Claude Design access — this roadmap assumes provisioning these accounts is not itself a blocker.</p>
+
+  <div class="sub-title">Technical Debt</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">None yet — Version 1 has no legacy system to migrate away from, only ad hoc documents and spreadsheets, which simplifies Sprint 03's sequencing considerably.</p>
+</div>
+
+<!-- ============ IMP-002 — PRIORITIES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Priorities &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Current State Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Immediate Priorities</div><div class="field-val">1) GitHub Repository Build (GH-002 frozen root) — everything else references it. 2) Airtable core tables (AT-002). 3) Notion SOS Home (NT-002).</div></div>
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead confirms this assessment; each platform's Maintainer (per GH-001/AT-001/NT-001) validates their own section.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Pages 01–14 in full</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">This assessment is reviewed and confirmed accurate by all three platform Maintainers before Sprint 03 sequences the actual build.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-003 — PHASE 1 FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Phase 1 Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Phase 1 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Define the Minimum Viable SOS — the smallest real build that lets one engagement run through the system end to end.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">GitHub Repository <span style="color:#D8AF55; font-size:9.5px;">(GH-002)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Notion Workspace <span style="color:#D8AF55; font-size:9.5px;">(NT-002)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Airtable Base <span style="color:#D8AF55; font-size:9.5px;">(AT-002)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Template Migration</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Workflow Validation</div>
+  </div>
+</div>
+
+<!-- ============ IMP-003 — DELIVERABLES & OWNERSHIP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Deliverables &amp; Ownership</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Phase 1 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">GitHub Repository</div><div class="field-val">Create sos-core with the frozen 18-item root (GH-002); Owner: Design Lead.</div></div>
+    <div class="field-row"><div class="field-label">Notion Workspace</div><div class="field-val">SOS Home and 12-item nav live (NT-002); Owner: Operations Lead.</div></div>
+    <div class="field-row"><div class="field-label">Airtable Base</div><div class="field-val">Ten core tables provisioned with fields and links, no automations yet (AT-002); Owner: Operations Lead.</div></div>
+    <div class="field-row"><div class="field-label">Template Migration</div><div class="field-val">TEMP-001 through TEMP-010 migrated into GitHub object folders (GH-004) and mirrored into Airtable (AT-005); Owner: Design Lead.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Workflow Validation</div><div class="field-val">Run one real (or simulated) engagement through WF-001–004 manually, confirming every Template and Artifact hands off correctly; Owner: Operations Lead.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-003 — TIMELINE, RISKS & EXIT CRITERIA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Timeline, Risks &amp; Exit Criteria</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Phase 1 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Timeline</div><div class="field-val">Days 1–30 (this is "Phase 1," the substance of the roadmap's first 30 days).</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val">GitHub Repository must exist before Template Migration; Airtable Base must exist before Workflow Validation can track status.</div></div>
+    <div class="field-row"><div class="field-label">Risks</div><div class="field-val">Template Migration is the highest-effort item — if it slips, Workflow Validation slips with it; Operations Lead should track this dependency daily during Phase 1.</div></div>
+    <div class="field-row"><div class="field-label">Exit Criteria</div><div class="field-val">One complete, real engagement can move from Lead through a signed Agreement using only migrated Templates and the live Airtable Base — no ad hoc document created outside the system.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-002, NT-002, AT-002, GH-004, AT-005, WF-001–004</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-004 — INTEGRATION FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Integration Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Phase 2 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Operational rollout — connect the platforms Phase 1 stood up individually, then bring agents and automations online.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">GitHub</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Airtable</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Notion</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Claude Design</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Google Workspace</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">Timeline: Days 31–60 (Phase 2).</p>
+</div>
+
+<!-- ============ IMP-004 — DELIVERABLES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Deliverables</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Phase 2 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Platform Integrations</div><div class="field-val">GitHub registries sync into Airtable (AT-005); Notion links live to both GitHub and Airtable (NT-003).</div></div>
+    <div class="field-row"><div class="field-label">Agent Rollout</div><div class="field-val">First two agents deployed at Piloting status (AG-002): Discovery Agent (SKILL-001) and Proposal Agent (SKILL-002), both Draft-Only approval level initially (AG-005).</div></div>
+    <div class="field-row"><div class="field-label">Automations</div><div class="field-val">AUTO-001 Lead Automation and AUTO-005 Onboarding Automation turned on first — the two with no human approval gate in their standard path.</div></div>
+    <div class="field-row"><div class="field-label">QA</div><div class="field-val">SKILL-007 QA Skill wired into every agent-generated draft before Internal Review, per AG-008's security model.</div></div>
+    <div class="field-row"><div class="field-label">Training</div><div class="field-val">SOS Orientation and Service Operations tracks (NT-008) completed by every team member before Phase 2 agents go live.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Documentation</div><div class="field-val">Every migrated Template and Playbook has a published Notion page (NT-005) before its Workflow is used on a real client.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-004 — OWNERSHIP, RISKS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Ownership, Risks &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Phase 2 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead owns Agent Rollout and Automations; Design Lead owns Documentation completeness.</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val">Requires Phase 1's Exit Criteria (IMP-003) met — no agent goes live against an unvalidated Workflow.</div></div>
+    <div class="field-row"><div class="field-label">Risks</div><div class="field-val">Piloting two agents simultaneously risks conflating which one caused a QA failure — stagger activation by at least one week if issues emerge.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Both Phase 2 agents run for two full weekly cycles with a stable Health Score (AG-007) before Phase 3 begins.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Related SOS Objects</div><div class="field-val mono">AT-005, AG-002, AG-005, AUTO-001, AUTO-005, SKILL-007, NT-005, NT-008</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-005 — SCALE ELEMENTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Scale Elements</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Phase 3 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Scale the system — Days 61–90, expanding from a validated core into the full AI workforce and client-facing surface.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">AI Workforce</div><div class="field-val">Remaining Page 08 Skills deployed as agents at Piloting (Project Manager, Financial, Meeting Intelligence, QA, Client Success, Knowledge Capture, Expansion) — following AG-009's lifecycle, one at a time, never all at once.</div></div>
+    <div class="field-row"><div class="field-label">Client Portal</div><div class="field-val">A lightweight client-facing view (Google Drive + Airtable Interface, per AT-009) letting clients see their own Project Dashboard without base access.</div></div>
+    <div class="field-row"><div class="field-label">Dashboards</div><div class="field-val">All five AT-009 interfaces (Leadership, Service Operations, Project Manager, Client Success, Finance) live with real data, not placeholder rows.</div></div>
+    <div class="field-row"><div class="field-label">Reporting</div><div class="field-val">Weekly Reports (TEMP-007) generated by SKILL-005 for every Active project, reviewed by Engagement Leads before send.</div></div>
+    <div class="field-row"><div class="field-label">Knowledge Engine</div><div class="field-val">NT-006/007/009 (Decisions, Meeting Notes, Lessons Learned) actively populated from real engagements, not seeded examples.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement</div><div class="field-val">PB-010 Internal Operations Playbook's quarterly KPI review runs for the first time against real Phase 1–3 data.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-005 — OWNERSHIP, RISKS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Ownership, Risks &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Phase 3 Build Plan</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead owns AI Workforce rollout and Continuous Improvement; Client Success owns Client Portal and Dashboards.</div></div>
+    <div class="field-row"><div class="field-label">Timeline</div><div class="field-val">Days 61–90 (Phase 3) — the final phase of the 30/60/90 rollout.</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val">Requires Phase 2's two-cycle stable Health Score (IMP-004) before adding more agents — scale follows proof, not schedule pressure.</div></div>
+    <div class="field-row"><div class="field-label">Risks</div><div class="field-val">Rolling out seven agents in one 30-day window is aggressive — if Health Scores dip, slow the cadence rather than push through per AG-007's review trigger.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">All ten Skills operate as Active agents (AG-002), all five dashboards show live data, and one full quarterly KPI review (PB-010) has run.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 08 (all Skills), AG-009, AT-009, TEMP-007, NT-006/007/009, PB-010</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-006 — PLATFORM MATRIX ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Platform Matrix</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Platform Ownership Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Clearly define who owns what — one page any team member checks before asking "who do I talk to about this."</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">GitHub</div><div class="field-val">System Definitions — Owner: Design Lead (GH-001).</div></div>
+    <div class="field-row"><div class="field-label">Airtable</div><div class="field-val">Operations — Owner: Operations Lead (AT-001).</div></div>
+    <div class="field-row"><div class="field-label">Notion</div><div class="field-val">Knowledge — Owner: Operations Lead (NT-001).</div></div>
+    <div class="field-row"><div class="field-label">Claude Design</div><div class="field-val">Visual Assets — Owner: Design Lead.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Google Drive</div><div class="field-val">Client Deliverables — Owner: Engagement Leads (per Project).</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-006 — DEPENDENCIES & CADENCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Dependencies &amp; Cadence</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Platform Ownership Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Dependencies</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Airtable and Notion both depend on GitHub as source of truth (GH-010) — neither Owner may redefine a Template or Component independently; changes route back through Design Lead's pull request review.</p>
+
+  <div class="sub-title">Approval Owners</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Cross-platform changes (e.g. a new Data Standard field) require both the Design Lead and Operations Lead to sign off, matching GH-001's cross-cutting change rule.</p>
+
+  <div class="sub-title">Review Cadence</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">All five platforms reviewed on the same quarterly cadence established in NT-001/NT-008/AG-007 — one shared calendar, not five separate review schedules.</p>
+</div>
+
+<!-- ============ IMP-006 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Platform Ownership Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Responsibilities</div><div class="field-val">Each Owner is accountable for their platform's data integrity and access grants — not for the content itself, which stays with whoever authored it.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-001, AT-001, NT-001, GH-010</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every platform has exactly one named Owner, and the shared quarterly review calendar is scheduled with all five on it.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-007 — 30/60/90 TIMELINE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">30 / 60 / 90 Day Timeline</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — 30 / 60 / 90 Day Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Turn architecture into execution — the single timeline view compressing IMP-003/004/005 into one glance.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+    <div style="border:1px solid #1F7A3A; padding:14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#1F7A3A; margin-bottom:10px;">30 Days</div>
+      <div style="display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:rgba(247,244,234,0.85);">
+        <div>Repository</div>
+        <div>Notion</div>
+        <div>Airtable</div>
+        <div>Templates</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D8AF55; padding:14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; margin-bottom:10px;">60 Days</div>
+      <div style="display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:rgba(247,244,234,0.85);">
+        <div>Automations</div>
+        <div>Agent Skills</div>
+        <div>Testing</div>
+      </div>
+    </div>
+    <div style="border:1px solid #006BB6; padding:14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#006BB6; margin-bottom:10px;">90 Days</div>
+      <div style="display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:rgba(247,244,234,0.85);">
+        <div>Pilot Clients</div>
+        <div>Optimization</div>
+        <div>Expansion</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ IMP-007 — MILESTONES & KPIS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Milestones &amp; KPIs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — 30 / 60 / 90 Day Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">30-Day Milestone</div><div class="field-val">One real engagement moves Lead → signed Agreement inside SOS (IMP-003 Exit Criteria).</div></div>
+    <div class="field-row"><div class="field-label">60-Day Milestone</div><div class="field-val">Two agents Piloting for two stable cycles (IMP-004 Completion Criteria).</div></div>
+    <div class="field-row"><div class="field-label">90-Day Milestone</div><div class="field-val">All ten Skills Active, five dashboards live, one quarterly KPI review complete (IMP-005 Completion Criteria).</div></div>
+    <div class="field-row"><div class="field-label">KPIs</div><div class="field-val">Time from Lead to signed Agreement; % of documents generated from SOS Templates vs. ad hoc; Agent Health Score trend (AG-007); Client Health Score trend (SKILL-008).</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Dependencies</div><div class="field-val">Each 30-day block gates the next — 60 Days cannot start until 30 Days' Exit Criteria are met, matching IMP-004/005's stated dependency chain.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-007 — SUCCESS CRITERIA & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Success Criteria &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — 30 / 60 / 90 Day Roadmap</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Success Criteria</div><div class="field-val">By Day 90, the Success Statement from IMP-001 is demonstrably true for at least one real client engagement, start to finish.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">IMP-001, IMP-003, IMP-004, IMP-005</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">This single-page timeline is what Leadership reviews monthly — if it and IMP-003/004/005 ever disagree, IMP-003/004/005 are the detail and this page is corrected to match.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-008 — RISK REGISTER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Risk Register</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Risk &amp; Readiness Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Prepare for launch — consolidating every risk already flagged across IMP-002 through IMP-007 into one register, plus each risk's mitigation.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Template Migration slips (IMP-002/003)</div><div class="field-val">Mitigation: track daily during Phase 1; Design Lead escalates the moment it threatens the 30-day Exit Criteria.</div></div>
+    <div class="field-row"><div class="field-label">Inconsistent field naming across platforms (IMP-002)</div><div class="field-val">Mitigation: Page 10 Data Standards is the single reference every builder checks before adding a field.</div></div>
+    <div class="field-row"><div class="field-label">Agent Health Score declines under load (IMP-004/005)</div><div class="field-val">Mitigation: stagger activation, slow cadence rather than push through, per AG-007's review trigger.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Team adoption stalls (IMP-002)</div><div class="field-val">Mitigation: NT-008 training completed before any agent goes live, so the system never feels imposed without explanation.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-008 — READINESS CHECKLIST ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Readiness Checklist</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Risk &amp; Readiness Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85); margin-bottom:26px;">
+    <div>☐ GitHub repository exists with frozen root (GH-002)</div>
+    <div>☐ All 13 mandatory metadata fields validate on every object (DS-001)</div>
+    <div>☐ Airtable's ten core tables provisioned and linked (AT-002)</div>
+    <div>☐ Notion SOS Home published with all 12 sections (NT-002)</div>
+    <div>☐ All Stakeholders (IMP-001) have signed off on the Vision</div>
+    <div>☐ Every Owner named in the Platform Ownership Matrix (IMP-006) confirmed</div>
+  </div>
+
+  <div class="sub-title">Blockers</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A blocker is anything on the Readiness Checklist above still unchecked at the start of a Phase — Phase 2 does not begin with an open Phase 1 blocker, no exceptions.</p>
+</div>
+
+<!-- ============ IMP-008 — ASSUMPTIONS, DECISIONS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Assumptions, Decisions &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Risk &amp; Readiness Assessment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Assumptions</div><div class="field-val">Carried forward from IMP-002 — existing platform access is provisioned and not itself a blocker.</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val">This assessment depends on IMP-002's Current State Assessment remaining accurate; re-run this Sprint if IMP-002 is ever revised.</div></div>
+    <div class="field-row"><div class="field-label">Decision Log</div><div class="field-val">Any decision to proceed despite an open risk is logged as a Decision record (NT-006), never a verbal agreement — the same discipline as every other SOS decision.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">IMP-002, IMP-003–005, AG-007, NT-006, NT-008</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Readiness Checklist is fully checked before Phase 1 launches, and every open Risk has a named owner and mitigation in place.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-009 — GOVERNANCE STRUCTURE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance Structure</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Governance &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Ensure SOS keeps evolving after Day 90 — governance doesn't end at launch, it's how the system stays alive.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Governance Board</div><div class="field-val">Operations Lead, Design Lead, and Chief Vibe Officer — the same Stakeholders named in IMP-001, now meeting on a recurring cadence rather than a one-time sign-off.</div></div>
+    <div class="field-row"><div class="field-label">Monthly Reviews</div><div class="field-val">KPIs from IMP-007 checked against target; any Blocker or Risk from IMP-008 still open past 30 days escalates to the Board.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Quarterly Reviews</div><div class="field-val">The same cadence already established across NT-001/NT-008/AG-007/IMP-006 — one shared quarterly review, not a new separate one.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-009 — IMPROVEMENT CYCLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Improvement Cycle</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Governance &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Feedback</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Decision <span style="color:#D8AF55; font-size:9.5px;">(NT-006)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">GitHub Update <span style="color:#D8AF55; font-size:9.5px;">(GH-008)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Documentation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Release</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">This is the same Improvement Cycle established in NT-009, applied here at the whole-system level rather than a single Lesson.</p>
+</div>
+
+<!-- ============ IMP-009 — VERSION RELEASES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Version Releases &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Governance &amp; Continuous Improvement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Version Releases</div><div class="field-val">SOS itself may adopt a version number once release/* branches activate (GH-008) — "SOS v1.1" ships when a batch of approved Change Requests merge together, not on a fixed calendar date.</div></div>
+    <div class="field-row"><div class="field-label">Change Requests</div><div class="field-val">Logged in Notion's Change Requests database (NT-004), routed through the same GH-008 pull request review as any other GitHub change.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-008, NT-004, NT-006, NT-009, IMP-001 (Stakeholders)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Governance Board holds its first Monthly Review before Day 90 closes, and the Improvement Cycle has processed at least one real Change Request end to end.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-010 — LAUNCH CHECKLIST ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Launch Checklist</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Version 1 Launch Blueprint</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Celebrate and operationalize the first release — the closing sprint of Page 15, and of the entire SOS system.</p>
+
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85);">
+    <div>☐ IMP-008 Readiness Checklist fully cleared</div>
+    <div>☐ Phase 3 Completion Criteria met (IMP-005)</div>
+    <div>☐ Governance Board's first Monthly Review complete (IMP-009)</div>
+    <div>☐ Pilot Client selected and briefed</div>
+    <div>☐ Release Notes drafted and approved</div>
+    <div>☐ Internal Announcement sent</div>
+  </div>
+</div>
+
+<!-- ============ IMP-010 — ROLLOUT & ENABLEMENT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Rollout &amp; Enablement</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Version 1 Launch Blueprint</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Release Notes</div><div class="field-val">SOS v1.0.0 — the first CHANGELOG.md entry (GH-009), summarizing all 15 pages as one shipped system rather than 15 separate specs.</div></div>
+    <div class="field-row"><div class="field-label">Rollout Plan</div><div class="field-val">Pilot Client engagement runs fully inside SOS first; general rollout to all Active clients follows only after the pilot clears its own Weekly Report cadence cleanly (WF-007).</div></div>
+    <div class="field-row"><div class="field-label">Internal Announcement</div><div class="field-val">Sent by the Chief Vibe Officer to the whole team, linking directly to Notion's SOS Home (NT-002) as the single starting point.</div></div>
+    <div class="field-row"><div class="field-label">Team Enablement</div><div class="field-val">Every team member has completed their assigned NT-008 Learning Track and passed its Readiness Check before Pilot Client work begins.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Pilot Client Selection</div><div class="field-val">Chosen for a stable, low-complexity engagement (matches PKG-001 Standard Consulting Package) — not the most demanding client on the roster.</div></div>
+  </div>
+</div>
+
+<!-- ============ IMP-010 — METRICS, BACKLOG & COMPLETION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="rm-id">IMP-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Metrics, Backlog &amp; Completion Statement</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Version 1 Launch Blueprint</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="field-row"><div class="field-label">Success Metrics</div><div class="field-val">Same four KPIs as IMP-007, now measured against the Pilot Client's real engagement instead of a target.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Version 2 Backlog</div><div class="field-val">Creative &amp; Engineering AI departments (AG-010), Stripe/CRM integrations, and client-specific portal customization — everything named Out of Scope in IMP-001, revisited once v1.0 is stable.</div></div>
+  </div>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:20px 22px;">
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase; color:#D8AF55; margin-bottom:10px;">Completion Statement</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:900; font-size:20px; color:#F7F4EA; margin-bottom:14px; text-transform:uppercase;">MAIM Service Operating System — Version 1.0</div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Approved</div>
+      <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Operational</div>
+      <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Version Controlled</div>
+      <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">AI Enabled</div>
+      <div class="chip" style="border-color:#006BB6; color:#006BB6;">Ready for Client Delivery</div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Implementation Roadmap — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

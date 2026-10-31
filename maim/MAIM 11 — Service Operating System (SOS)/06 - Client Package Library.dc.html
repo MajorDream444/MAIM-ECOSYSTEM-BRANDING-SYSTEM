@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .pk-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .assembly-node { font-size:11.5px; border:1px solid rgba(247,244,234,0.25); padding:8px 14px; text-align:center; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 06 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-PACKAGES · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 06 · Reusable Offers, Not Client Records</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Client Package Library</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Reusable engagement packages — each one an assembly of approved Templates and Workflows that a future client engagement will instantiate.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">No package here names a specific client. Each entry is a spec: what's included, how it's assembled, and how success is measured.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-001</span>Sprint 01 — Standard Consulting Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-002</span>Sprint 02 — Strategy Sprint Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-003</span>Sprint 03 — Implementation Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-004</span>Sprint 04 — Advisory Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-005</span>Sprint 05 — Training Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-006</span>Sprint 06 — Maintenance Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-007</span>Sprint 07 — Expansion Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-008</span>Sprint 08 — Enterprise Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-009</span>Sprint 09 — White Label Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PKG-010</span>Sprint 10 — Custom Engagement Package</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as packages are defined — send each package's spec (name, purpose, target client, timeline, deliverables, templates, workflows, journeys, completion criteria, success metrics) to add it here.</div>
+</div>
+
+<!-- ============ PKG-001 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Standard Consulting Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Demonstrate the minimum viable client package — the baseline assembly every other package extends.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(9,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node">Lead<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-001</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Proposal<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-001</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">SOW<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-002</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Invoice<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-003</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Receipt<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-004</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Welcome<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-005</span></div>
+    <div class="assembly-node">Kickoff<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-006</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Wkly Reports<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-007</span></div>
+    <div class="assembly-node">Final Delivery<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-009</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template Library artifact; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Lead</span><span style="color:#D8AF55;">→</span><span>Proposal</span><span style="color:#D8AF55;">→</span><span>SOW</span><span style="color:#D8AF55;">→</span><span>Invoice</span><span style="color:#D8AF55;">→</span><span>Receipt</span><span style="color:#D8AF55;">→</span><span>Welcome Packet</span><span style="color:#D8AF55;">→</span><span>Kickoff</span><span style="color:#D8AF55;">→</span><span>Weekly Reports</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Final Delivery</span>
+  </div>
+</div>
+
+<!-- ============ PKG-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Standard Consulting Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-001</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Standard Consulting Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">The baseline engagement shape: advisory scope, delivered on a single SOW, with weekly cadence through final delivery.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A single-stakeholder engagement with one clear scope and no phased expansion at signing.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">6–10 weeks, Kickoff to Final Delivery.</div></div>
+    <div class="field-row"><div class="field-label">Included Templates</div><div class="field-val mono">TEMP-001 Proposal · TEMP-002 SOW · TEMP-003 Invoice · TEMP-004 Receipt · TEMP-005 Welcome Packet · TEMP-007 Weekly Report</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-001 through WF-009, run once each, in sequence</div></div>
+    <div class="field-row"><div class="field-label">Client Journey References</div><div class="field-val mono">CJ-001 through CJ-008</div></div>
+    <div class="field-row"><div class="field-label">Deliverables</div><div class="field-val">Proposal, SOW, Invoice, Receipt, Welcome Packet, weekly Progress Reports, Final Delivery Package.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Final Delivery accepted and Acceptance Certificate signed.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Metrics</div><div class="field-val">Zero missed Weekly Reports; Final Delivery accepted on first review.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-002 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Strategy Sprint Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">A short, high-intensity consulting engagement — no implementation, just clarity and a plan.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node">Discovery<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-001/002</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Business Audit<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-006</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Blueprint<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-703</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Exec Summary<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-707</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Recommendations<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-706</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template or Content-family component; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Deliverables Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Discovery</span><span style="color:#D8AF55;">→</span><span>Business Audit</span><span style="color:#D8AF55;">→</span><span>Blueprint</span><span style="color:#D8AF55;">→</span><span>Executive Summary</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Recommendations</span>
+  </div>
+</div>
+
+<!-- ============ PKG-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Strategy Sprint Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-002</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Strategy Sprint Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Deliver a sharp, fast diagnosis and a clear plan — no execution, no long-term commitment.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A prospect who needs clarity before committing to a full engagement, or a client wanting a standalone strategic review.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">2 weeks, Discovery to Recommendations.</div></div>
+    <div class="field-row"><div class="field-label">Deliverables</div><div class="field-val">Business Audit, Strategic Blueprint, Executive Summary, prioritized Recommendations.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-006 Discovery Report · COMP-703 Feature Card · COMP-706 Checklist · COMP-707 Bullet List</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-001 — Lead to Discovery · WF-002 — Discovery to Proposal (Business Audit stage only)</div></div>
+    <div class="field-row"><div class="field-label">Client Journey References</div><div class="field-val mono">CJ-001 · CJ-002</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Client receives and reviews the Recommendations with MAIM in a closing readout call.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-003 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Implementation Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Full implementation engagement — the package for building, not just recommending.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Planning<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-006</span></div>
+    <div class="assembly-node">Build<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-007</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Reviews<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-007</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Approvals<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-501</span></div>
+    <div class="assembly-node">Launch<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-009</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Support<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-010</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template or Approval-family component; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Planning</span><span style="color:#D8AF55;">→</span><span>Build</span><span style="color:#D8AF55;">→</span><span>Reviews</span><span style="color:#D8AF55;">→</span><span>Approvals</span><span style="color:#D8AF55;">→</span><span>Launch</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Support</span>
+  </div>
+</div>
+
+<!-- ============ PKG-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Implementation Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-003</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Implementation Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Carry a defined plan through to a launched, working result with formal milestone sign-off along the way.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A client with an approved plan (often following PKG-002) ready to move into multi-milestone build work.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">10–16 weeks, Planning to Launch, with Support continuing after.</div></div>
+    <div class="field-row"><div class="field-label">Deliverables</div><div class="field-val">Project Plan, milestone Progress Reports, Approval records at each gate, launched deliverable, post-launch Support terms.</div></div>
+    <div class="field-row"><div class="field-label">Milestones</div><div class="field-val">Planning Complete, each Build phase Review, Launch Readiness, Post-Launch Support Start.</div></div>
+    <div class="field-row"><div class="field-label">Templates</div><div class="field-val mono">TEMP-007 Weekly Report · COMP-401–406 Timeline family · COMP-501 Approval Block</div></div>
+    <div class="field-row"><div class="field-label">Workflows</div><div class="field-val mono">WF-006 · WF-007 · WF-008 · WF-009 · WF-010</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Client Journey Links</div><div class="field-val mono">CJ-005 through CJ-009</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-004 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Advisory Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">A recurring advisory client — no discrete build, just sustained monthly counsel.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node">Monthly Meeting<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-007</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Report<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-007</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Exec Summary<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-707</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Decision Log<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-504</span></div>
+    <div class="assembly-node">Next Cycle<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-007</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template or Information-family component; outline cells reference a Workflow gate only. Next Cycle loops back to Monthly Meeting.</div>
+
+  <div class="sub-title">Cadence</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Monthly Meeting</span><span style="color:#D8AF55;">→</span><span>Report</span><span style="color:#D8AF55;">→</span><span>Executive Summary</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Decision Log</span><span style="color:#D8AF55;">↻</span>
+  </div>
+</div>
+
+<!-- ============ PKG-004 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Advisory Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-004</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Advisory Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Sustain a recurring advisory relationship on a fixed monthly cadence, with no project end date.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A client wanting ongoing strategic counsel rather than a bounded project.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">Open-ended, billed and reviewed monthly.</div></div>
+    <div class="field-row"><div class="field-label">Monthly Cadence</div><div class="field-val">One standing advisory meeting per month, minimum.</div></div>
+    <div class="field-row"><div class="field-label">Reports</div><div class="field-val">A monthly Report (TEMP-007 variant) summarizing counsel given and topics covered.</div></div>
+    <div class="field-row"><div class="field-label">Executive Summaries</div><div class="field-val">A short summary atop each Report for the client's leadership team.</div></div>
+    <div class="field-row"><div class="field-label">Decision Logs</div><div class="field-val">Running Decision Box (COMP-504) record of what was advised and decided each cycle.</div></div>
+    <div class="field-row"><div class="field-label">Templates / Workflows</div><div class="field-val mono">TEMP-007 · COMP-504 · COMP-707 · WF-007 (recurring, no end state)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">No fixed completion — package ends only on client cancellation or conversion to PKG-003.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-005 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Training Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Knowledge transfer — equipping a client's team to operate independently, not delivering new work product.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Curriculum<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-701</span></div>
+    <div class="assembly-node">Training Sessions<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-009</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Resources<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-701</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Certificate<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-506</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Content or Approval-family component; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Curriculum</span><span style="color:#D8AF55;">→</span><span>Training Sessions</span><span style="color:#D8AF55;">→</span><span>Resources</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Completion Certificate</span>
+  </div>
+</div>
+
+<!-- ============ PKG-005 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Training Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-005</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Training Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Transfer knowledge so the client's own team can operate a delivered system without ongoing MAIM involvement.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A client whose team needs hands-on capability, typically layered onto PKG-001 or PKG-003 at handover.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">1–3 weeks, run alongside or immediately after Final Delivery.</div></div>
+    <div class="field-row"><div class="field-label">Curriculum</div><div class="field-val">A structured Feature Card sequence (COMP-701) covering each capability the client's team must retain.</div></div>
+    <div class="field-row"><div class="field-label">Training Sessions</div><div class="field-val">Live or recorded walkthroughs mapped to WF-009's Training step.</div></div>
+    <div class="field-row"><div class="field-label">Resources</div><div class="field-val">Reference documentation and job aids the team keeps after sessions end.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Certificate</div><div class="field-val">COMP-506 Acceptance Certificate variant, confirming the team completed the curriculum.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-006 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Maintenance Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Post-project support — keeping a delivered system healthy after the engagement that built it has closed.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Support Agreement<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-010</span></div>
+    <div class="assembly-node">Maintenance Schedule<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-401</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Monthly Reports<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-007</span></div>
+    <div class="assembly-node">Escalation<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-010</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template or Timeline-family component; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Support Agreement</span><span style="color:#D8AF55;">→</span><span>Maintenance Schedule</span><span style="color:#D8AF55;">→</span><span>Monthly Reports</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Escalation Process</span>
+  </div>
+</div>
+
+<!-- ============ PKG-006 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Maintenance Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-006</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Maintenance Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Keep a delivered system running reliably after Final Delivery, with clear escalation paths if something breaks.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A client who has completed PKG-001 or PKG-003 and wants continued technical stewardship, not new strategy.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">Open-ended, renewed annually.</div></div>
+    <div class="field-row"><div class="field-label">Support Agreement</div><div class="field-val">A signed terms document defining scope, response times, and coverage hours.</div></div>
+    <div class="field-row"><div class="field-label">Maintenance Schedule</div><div class="field-val">Recurring checkpoints (COMP-401 Timeline) for routine health checks and updates.</div></div>
+    <div class="field-row"><div class="field-label">Monthly Reports</div><div class="field-val">TEMP-007 variant summarizing issues resolved, uptime, and any recommended follow-up work.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Escalation Process</div><div class="field-val">A defined path from routine ticket to urgent response, with named owners at each tier.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-007 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Expansion Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">A Phase Two engagement — turning proven results into a new, larger scope with the same client.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Expansion Proposal<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-001</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">New Roadmap<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-405</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Updated Pricing<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-301</span></div>
+    <div class="assembly-node">Timeline<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-002</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template, Timeline, or Financial-family component; outline cells reference a Workflow gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Expansion Proposal</span><span style="color:#D8AF55;">→</span><span>New Roadmap</span><span style="color:#D8AF55;">→</span><span>Updated Pricing</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Timeline</span>
+  </div>
+</div>
+
+<!-- ============ PKG-007 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Expansion Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-007</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Expansion Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Convert a successful engagement's momentum into a formally scoped Phase Two, re-entering the pipeline as a warm sale.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">An existing client at or near Project Closed (WF-010) with a natural next-phase opportunity.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">2–3 weeks from expansion conversation to signed new SOW.</div></div>
+    <div class="field-row"><div class="field-label">Expansion Proposal</div><div class="field-val">A new TEMP-001, referencing Phase One outcomes as evidence.</div></div>
+    <div class="field-row"><div class="field-label">New Roadmap</div><div class="field-val">Updated Phase Cards (COMP-405) showing how Phase Two builds on what's already delivered.</div></div>
+    <div class="field-row"><div class="field-label">Updated Pricing</div><div class="field-val">A fresh Pricing Table (COMP-301) reflecting the new scope's investment.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Timeline / Workflow</div><div class="field-val mono">Re-enters WF-002 — Discovery to Proposal · Related: WF-010, CJ-010</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-008 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Enterprise Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">A large, multi-team engagement — the same core assembly as PKG-003, scaled with the governance a bigger stakeholder set requires.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node">Governance<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-501</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Reporting<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-007</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Exec Dashboards<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-802</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Stakeholder Comms<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-601</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template, Data, or Information-family component; outline cells reference a Workflow/Approval gate only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Governance</span><span style="color:#D8AF55;">→</span><span>Reporting</span><span style="color:#D8AF55;">→</span><span>Executive Dashboards</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Stakeholder Communications</span>
+  </div>
+</div>
+
+<!-- ============ PKG-008 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Enterprise Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-008</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Enterprise Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Deliver PKG-003's implementation work at enterprise scale, with the governance and reporting a multi-team stakeholder group requires.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A client with multiple internal teams and stakeholders who each need visibility, not just one sponsor.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">16–24 weeks, with standing governance cadence throughout.</div></div>
+    <div class="field-row"><div class="field-label">Governance</div><div class="field-val">A formal Approval Block (COMP-501) structure spanning multiple stakeholder sign-offs, not a single sponsor.</div></div>
+    <div class="field-row"><div class="field-label">Reporting</div><div class="field-val">TEMP-007 Weekly Reports rolled up into a steering-committee-level summary.</div></div>
+    <div class="field-row"><div class="field-label">Executive Dashboards</div><div class="field-val">KPI Cards and Metric Tiles (COMP-802/803) surfaced for leadership review.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Stakeholder Communications</div><div class="field-val">Callout-style (COMP-601) briefings tailored per stakeholder group, layered onto the standard WF-006–009 sequence.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-009 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — White Label Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Partner delivery — MAIM builds the work, but a partner agency's brand fronts the relationship with the end client.</p>
+
+  <div class="sub-title">Assembly — Templates &amp; Workflows per Stage</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node">Branding Rules<br/><span class="mono" style="color:#D8AF55; font-size:9px;">SOS Foundation</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Deliverables<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP-001–005</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Approval Chain<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-501</span></div>
+    <div class="assembly-node">Handover<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-009</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">Gold cells reference a Template or Approval-family component; outline cells reference the Foundation Board or a Workflow gate.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Branding Rules</span><span style="color:#D8AF55;">→</span><span>Deliverables</span><span style="color:#D8AF55;">→</span><span>Approval Chain</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Handover Process</span>
+  </div>
+</div>
+
+<!-- ============ PKG-009 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — White Label Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-009</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">White Label Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Deliver MAIM-quality work under a partner's brand, with the partner as the end client's sole point of contact.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">A partner agency or affiliated venture reselling MAIM delivery to their own client base.</div></div>
+    <div class="field-row"><div class="field-label">Typical Timeline</div><div class="field-val">Matches whichever base package (PKG-001/002/003) is being delivered underneath.</div></div>
+    <div class="field-row"><div class="field-label">Branding Rules</div><div class="field-val">All Templates re-skinned to the partner's palette and type per the Foundation Board's rebrand rules — MAIM's mark never appears.</div></div>
+    <div class="field-row"><div class="field-label">Deliverables</div><div class="field-val">The underlying package's Templates (TEMP-001–005), issued under partner letterhead.</div></div>
+    <div class="field-row"><div class="field-label">Approval Chain</div><div class="field-val">Partner sign-off precedes any document reaching the end client — an added Approval Block tier.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Handover Process</div><div class="field-val">Final Delivery routes to the partner (WF-009), who conducts their own end-client handover separately.</div></div>
+  </div>
+</div>
+
+<!-- ============ PKG-010 — FLOW / ASSEMBLY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow &amp; Assembly</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Custom Engagement Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Not a package itself — a framework for assembling one, when an engagement doesn't fit PKG-001 through PKG-009.</p>
+
+  <div class="sub-title">Assembly — Configuration Steps</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:10px;">
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Discovery Requirements<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-001</span></div>
+    <div class="assembly-node">Package Configuration<br/><span class="mono" style="color:#D8AF55; font-size:9px;">PKG-001–009</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Required Templates<br/><span class="mono" style="color:#D8AF55; font-size:9px;">TEMP Library</span></div>
+    <div class="assembly-node">Workflow Mapping<br/><span class="mono" style="color:#D8AF55; font-size:9px;">WF-001–010</span></div>
+    <div class="assembly-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Approval Requirements<br/><span class="mono" style="color:#D8AF55; font-size:9px;">COMP-501</span></div>
+  </div>
+  <div style="font-size:10.5px; color:rgba(247,244,234,0.45); margin-bottom:30px;">This package never ships as-is — it's the configuration procedure used to assemble a bespoke PKG-0XX from existing parts only.</div>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; justify-content:center; gap:6px; flex-wrap:wrap; font-size:11.5px; color:rgba(247,244,234,0.7); align-items:center;">
+    <span>Discovery Requirements</span><span style="color:#D8AF55;">→</span><span>Package Configuration</span><span style="color:#D8AF55;">→</span><span>Required Templates</span><span style="color:#D8AF55;">→</span><span>Workflow Mapping</span><span style="color:#D8AF55;">→</span><span style="font-weight:600; color:#F7F4EA;">Approval Requirements</span>
+  </div>
+</div>
+
+<!-- ============ PKG-010 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pk-id">PKG-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Custom Engagement Package</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Package ID</div><div class="field-val mono">PKG-010</div></div>
+    <div class="field-row"><div class="field-label">Package Name</div><div class="field-val">Custom Engagement Package</div></div>
+    <div class="field-row"><div class="field-label">Package Purpose</div><div class="field-val">Give MAIM a disciplined way to say yes to an unusual engagement without inventing new Templates or Workflows.</div></div>
+    <div class="field-row"><div class="field-label">Target Client</div><div class="field-val">Any client whose needs span or fall between PKG-001 through PKG-009.</div></div>
+    <div class="field-row"><div class="field-label">Discovery Requirements</div><div class="field-val">An expanded WF-001 Discovery pass specifically to identify which existing components apply.</div></div>
+    <div class="field-row"><div class="field-label">Package Configuration</div><div class="field-val">A documented selection of which PKG-001–009 elements are combined, with the exceptions noted.</div></div>
+    <div class="field-row"><div class="field-label">Required Templates</div><div class="field-val">Drawn only from the existing Template Library — no bespoke templates are created for a custom engagement.</div></div>
+    <div class="field-row"><div class="field-label">Workflow Mapping</div><div class="field-val">An explicit map of which WF-001–010 steps apply, skip, or repeat for this engagement.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Approval Requirements</div><div class="field-val">Any deviation from a standard package requires sign-off via COMP-501 before the engagement begins.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Client Package Library — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Packages Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

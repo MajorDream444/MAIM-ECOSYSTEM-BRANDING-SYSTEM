@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .pb-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .step-row { display:grid; grid-template-columns:32px 1fr; gap:14px; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.1); align-items:baseline; }
+  .step-num { font-family:'JetBrains Mono',monospace; font-size:12px; color:#D8AF55; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 07 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-PLAYBOOKS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 07 · Execution Guides, Not New Process</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Playbook Library</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">One playbook per Workflow — the step-by-step execution manual a team member or AI agent follows to run it consistently, every time.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Playbooks don't redesign Templates or Workflows — they instruct how to execute the ones that already exist.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-001</span>Sprint 01 — Discovery Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-002</span>Sprint 02 — Proposal Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-003</span>Sprint 03 — Onboarding Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-004</span>Sprint 04 — Weekly Operations Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-005</span>Sprint 05 — Approval Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-006</span>Sprint 06 — Financial Operations Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-007</span>Sprint 07 — Final Delivery Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-008</span>Sprint 08 — Support Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-009</span>Sprint 09 — Expansion Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">PB-010</span>Sprint 10 — Internal Operations Playbook</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as playbooks are defined — send each playbook's spec (owner, trigger, inputs, steps, decision points, templates, quality checklist, AI assistance, outputs, completion criteria, improvement notes) to add it here.</div>
+</div>
+
+<!-- ============ PB-001 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Discovery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize every discovery session so its quality never depends on who happens to be running it.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Preparation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Research</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Discovery Meeting</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Capture Notes</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Business Diagnosis</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Next Steps</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This playbook governs execution of WF-001's Discovery Meeting steps — it doesn't change what WF-001 defines, only how a person or agent carries it out.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">After Research</div><div class="field-val">If public information contradicts what the lead stated, flag it for the meeting rather than assuming an error.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">After Diagnosis</div><div class="field-val">If the business problem doesn't match a package in the Client Package Library, escalate to PKG-010 Custom Engagement before proposing.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-001 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Discovery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Confirm the meeting, send the calendar invite, and share a one-line agenda 24 hours ahead.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Research the prospect's public presence — site, recent news, any shared materials — for 15 minutes minimum.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Run the meeting using the standard discovery question set; let the client talk more than you do.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Capture notes live and read back the three biggest points before the call ends.</div></div>
+    <div class="step-row"><div class="step-num">05</div><div class="field-val">Within 24 hours, convert raw notes into a structured Business Diagnosis (TEMP-006 Discovery Report).</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">06</div><div class="field-val">Send the client a short Next Steps note confirming what happens before they hear from MAIM again.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Agenda sent at least 24 hours before the meeting</div>
+    <div>☐ Notes captured and read back to the client before the call ends</div>
+    <div>☐ Discovery Report completed within 24 hours of the meeting</div>
+    <div>☐ Next Steps sent before the client has to ask what's next</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can draft the pre-meeting research brief from public sources, transcribe and structure live notes into the Discovery Report format, and draft the Next Steps note for human review before sending.</p>
+</div>
+
+<!-- ============ PB-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Discovery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-001</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Discovery Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Standardize every discovery session so quality never depends on who is running it.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead running the session; Sales Ops maintains the playbook itself.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A Discovery meeting is confirmed on the calendar (WF-001).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Qualification call notes, lead's stated business context, calendar confirmation.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-006 — Discovery Report</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-001 — Lead to Discovery · WF-002 — Discovery to Proposal</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Completed Discovery Report, Next Steps note, qualified opportunity ready for Proposal.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Discovery Report delivered within 24 hours and Next Steps sent before any client follow-up.</div></div>
+    <div class="field-row"><div class="field-label">Common Mistakes</div><div class="field-val">Skipping pre-meeting research; letting notes go uncaptured until after the call; delaying Next Steps beyond 24 hours.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">Review this playbook quarterly against Sprint 02 conversion rates — if Proposals are missing context, tighten Step 03's question set first.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-002 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Proposal Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Create consistent proposals regardless of who drafts them or how complex the engagement is.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Discovery Notes</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Pricing</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Proposal Draft <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-001)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Internal Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Client Proposal</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Follow-up</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This playbook governs execution of WF-002 — it doesn't change what WF-002 defines, only how the Proposal gets built.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">At Pricing</div><div class="field-val">If the scope matches no existing Package, route to PKG-010 Custom Engagement before drafting pricing.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Internal Review</div><div class="field-val">Any Proposal above a set value threshold requires a second reviewer before it reaches the client.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-002 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Proposal Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Pull the Discovery Report and confirm the diagnosed problem matches an existing Client Package.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Build pricing using the matched Package's Pricing Table as the starting structure.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Draft the Proposal in TEMP-001, writing the Executive Summary last so it reflects the finished document.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Route to Internal Review; a second reviewer checks pricing math and scope-to-diagnosis fit.</div></div>
+    <div class="step-row"><div class="step-num">05</div><div class="field-val">Send the Client Proposal with a specific date for the walkthrough call, not an open-ended "let me know."</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">06</div><div class="field-val">If no response within 3 business days after the walkthrough, send one Follow-up before escalating internally.</div></div>
+  </div>
+
+  <div class="sub-title">Review Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Pricing matches an approved Package or has a documented custom rationale</div>
+    <div>☐ Executive Summary written after the rest of the Proposal, not before</div>
+    <div>☐ Second reviewer has signed off for any above-threshold Proposal</div>
+    <div>☐ Walkthrough call scheduled at time of sending, not left open-ended</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can draft the Proposal body from the Discovery Report and matched Package, flag pricing that deviates from Package norms for reviewer attention, and draft the Follow-up message on schedule for human approval before sending.</p>
+</div>
+
+<!-- ============ PB-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Proposal Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-002</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Proposal Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Create consistent, defensible proposals regardless of who drafts them.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead drafts; a designated second reviewer approves above-threshold Proposals.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A completed Discovery Report exists and the opportunity is qualified (WF-001 output).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Discovery Report, matched Client Package, any custom scope notes.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-001 — Proposal · COMP-301 — Pricing Table</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-002 — Discovery to Proposal</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">A sent Proposal, a scheduled walkthrough call, and a logged Follow-up if needed.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Proposal sent with a scheduled walkthrough, and Internal Review sign-off recorded.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If Follow-up is needed on more than a quarter of Proposals, revisit whether Step 05's walkthrough scheduling is being skipped.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-003 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Onboarding Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Deliver the same premium onboarding every time, regardless of package size or who runs it.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block; font-weight:600;">Welcome Process <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-005)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Portal Setup</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Kickoff Checklist</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Client Communication</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-005 and WF-006 — the client's first sustained experience of MAIM's operation, so consistency here matters more than in almost any other playbook.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Portal Setup</div><div class="field-val">If the client has multiple stakeholders needing access, escalate to PKG-008 Enterprise governance rules before granting permissions.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-003 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Onboarding Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Send the Welcome Packet (TEMP-005) within 24 hours of payment confirmation.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Provision portal access and send credentials with a short walkthrough video or live call offer.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Run through the Kickoff Checklist live with the client, confirming stakeholders, cadence, and first Milestone date.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">04</div><div class="field-val">Send a same-day recap confirming everything agreed in the Kickoff, in writing.</div></div>
+  </div>
+
+  <div class="sub-title">Kickoff Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Welcome Packet delivered within 24 hours of payment</div>
+    <div>☐ Portal access confirmed working before Kickoff, not during it</div>
+    <div>☐ First Milestone date agreed and entered into the Project Dashboard live</div>
+    <div>☐ Written recap sent same day as Kickoff</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can personalize the Welcome Packet's variable fields, verify portal provisioning completed correctly, and draft the same-day Kickoff recap from the meeting notes for human review before sending.</p>
+</div>
+
+<!-- ============ PB-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Onboarding Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-003</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Onboarding Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Deliver the same premium onboarding every time, regardless of package or team member.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead, with Portal Setup executed by Operations.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Payment confirmed (WF-004 output).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Signed Agreement, billing contact, primary client stakeholder list.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-005 — Welcome Packet</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-005 — Payment to Onboarding · WF-006 — Onboarding to Project Launch</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Delivered Welcome Packet, active portal access, completed Kickoff, written recap.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Client has logged into the portal and a written Kickoff recap has been sent.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If clients frequently ask onboarding questions already covered in the Welcome Packet, revise its clarity before adding new content.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-004 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Weekly Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize recurring project management so every active engagement gets the same cadence of attention.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Weekly Checklist</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Meetings</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Reports <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-007)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Risk Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Client Updates</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-007's recurring loop — the single most-repeated playbook in the library, run once per project per week for the life of every active engagement.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Risk Review</div><div class="field-val">Any risk rated red escalates to the Engagement Lead same-day, not at the next scheduled meeting.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-004 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Weekly Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Run the Weekly Checklist first thing Monday: task status, blockers, upcoming deadlines.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Hold internal team sync before any client-facing meeting that week.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Compile the Weekly Report (TEMP-007) from checklist and meeting outcomes.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Review risks against the project's risk log; rate each red, yellow, or green.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">Send the Client Update with the Weekly Report attached, before end of day Friday.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Review Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Weekly Checklist completed before any client meeting that week</div>
+    <div>☐ Every open risk has a current rating, not a carried-over one</div>
+    <div>☐ Red risks escalated same-day, not held for the report</div>
+    <div>☐ Client Update sent by end of day Friday, every week</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can compile the Weekly Report draft from task-tracker and meeting data, flag risks whose rating hasn't changed in three or more cycles for human re-review, and draft the Client Update for approval before sending.</p>
+</div>
+
+<!-- ============ PB-004 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Weekly Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-004</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Weekly Operations Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Standardize recurring project management across every active engagement.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead, run every week for the life of the project.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Project is Active (WF-006 output) — runs weekly until Final Delivery.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Task tracker status, prior week's risk log, project Timeline and Milestones.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-007 — Weekly Report</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-007 — Delivery &amp; Weekly Operations</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Weekly Report sent to client, updated risk ratings, internal team alignment.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Client Update sent by Friday end of day, every week, with no gaps in the cadence.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If a risk sits at red for more than two consecutive weeks without resolution, review whether this playbook's escalation step is being followed.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-005 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Approval Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Ensure approvals are consistent — the same bar for "done," milestone to milestone and reviewer to reviewer.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Milestone Complete</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Review Process</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Approval Checklist <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-501)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Acceptance Recorded</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-008 — the gate every milestone must clear the same way, whether the reviewer is a person or an AI agent doing a first pass.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Review</div><div class="field-val">If Acceptance Criteria are not fully met, the milestone returns to Weekly Operations (PB-004) rather than being approved with caveats.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-005 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Approval Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Confirm the milestone's deliverables match what was scoped in the Project Plan — no silent scope changes.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Run Internal Review against the Acceptance Criteria before the client ever sees the milestone.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Present the milestone to the client with the Approval Checklist visible, not hidden in a separate document.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">04</div><div class="field-val">Record Approval in COMP-501 the same day it's given — never retroactively.</div></div>
+  </div>
+
+  <div class="sub-title">Approval Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Deliverables match scoped Milestone definition exactly</div>
+    <div>☐ Internal Review completed before client presentation</div>
+    <div>☐ Acceptance Criteria shown to client alongside the deliverable</div>
+    <div>☐ Approval recorded same-day, not after the fact</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can run a first-pass check of deliverables against the scoped Acceptance Criteria and flag discrepancies before Internal Review, reducing what a human reviewer needs to check manually.</p>
+</div>
+
+<!-- ============ PB-005 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Approval Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-005</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Approval Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Ensure approvals are consistent — the same bar for "done" regardless of reviewer or milestone.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead conducts Internal Review; Client Sponsor grants final Approval.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A Milestone is marked complete in the project Timeline (WF-007 output).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Scoped Milestone definition, completed deliverables, Acceptance Criteria.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">COMP-501 — Approval Block · COMP-404 — Gate Indicator</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-008 — Milestone Review &amp; Approval</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Recorded Approval, updated Gate Indicator, cleared path to the next Milestone.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Approval recorded the same day it is granted, with no outstanding Acceptance Criteria.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If milestones are repeatedly returned to Weekly Operations at Review, revisit whether Acceptance Criteria are being scoped clearly enough upfront.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-006 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Financial Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Standardize invoicing and payments so the financial side of every engagement is as polished as the delivery side.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block; font-weight:600;">Invoice Process <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-003)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Payment Tracking</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Receipt Issuance <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-004)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Outstanding Balance Management</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-004 — precision here protects both cash flow and the premium tone the brand sets everywhere else.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Outstanding Balance</div><div class="field-val">Any invoice unpaid past 15 days triggers a direct call from the Engagement Lead, not another automated reminder.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-006 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Financial Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Generate the Invoice (TEMP-003) within 24 hours of the Agreement being signed.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Log the invoice in the payment tracker with its due date and terms.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Send an automated reminder at 3 days before due date, and again on the due date if unpaid.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">On payment, issue the Receipt (TEMP-004) same-day and update the tracker.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">If unpaid past 15 days, the Engagement Lead calls the client directly before any further automated contact.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Invoice sent within 24 hours of signed Agreement</div>
+    <div>☐ Payment tracker updated same-day as any status change</div>
+    <div>☐ Receipt issued same-day as payment received</div>
+    <div>☐ 15-day overdue invoices get a human call, not another email</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can generate the Invoice from the signed Agreement's terms, send scheduled reminders automatically, and flag any invoice crossing the 15-day threshold for the Engagement Lead to call.</p>
+</div>
+
+<!-- ============ PB-006 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Financial Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-006</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Financial Operations Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Standardize invoicing and payments so financial administration matches the brand's premium tone.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Finance/Operations, with Engagement Lead escalation past 15 days.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Agreement signed (WF-003 output).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Signed Agreement with pricing terms, billing contact details.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-003 — Invoice · TEMP-004 — Receipt · COMP-304 — Outstanding Balance</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-004 — Agreement to Payment</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Sent Invoice, tracked payment status, issued Receipt.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Receipt issued same-day as payment, with no invoice left untracked.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If overdue invoices are trending up, review whether Step 01's 24-hour issuance window is being met consistently.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-007 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Final Delivery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Deliver projects consistently — the last impression before handover, executed with the same care as the first.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Delivery Checklist</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Documentation</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Training</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Acceptance <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-506)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Handover</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-009 — the playbook that determines whether an engagement ends feeling complete or feeling loose.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Acceptance</div><div class="field-val">If the client raises any unresolved item at Acceptance, it must be closed before Handover — never deferred into Support.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-007 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Final Delivery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Run the Delivery Checklist against the original scope — every line item, not a sample.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Assemble Documentation the client's team can use without MAIM in the room.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Deliver Training sessions mapped to PB's Training Package curriculum, if included in scope.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Present the completed work and secure signed Acceptance (COMP-506) before scheduling Handover.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">Conduct Handover, transferring any credentials, access, or ownership formally and in writing.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Every scoped deliverable checked off, not spot-checked</div>
+    <div>☐ Documentation reviewed for clarity by someone outside the project team</div>
+    <div>☐ Acceptance signed before Handover is scheduled</div>
+    <div>☐ All credentials and access formally transferred in writing</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can cross-check the Delivery Checklist against the original scope for gaps, draft Documentation from project artifacts, and prepare the Handover transfer list for human verification before it's sent.</p>
+</div>
+
+<!-- ============ PB-007 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Final Delivery Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-007</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Final Delivery Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Deliver projects consistently, closing every engagement with the same care as it opened.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead, with Training delivered by whichever specialist owns that capability.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Final Milestone approved (WF-008 output).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Original scope document, all approved Milestone deliverables, client stakeholder list for Handover.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">COMP-506 — Acceptance Certificate</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-009 — Final Delivery &amp; Handover</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Final Delivery Package, Documentation, completed Training, signed Acceptance, completed Handover.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Acceptance signed and all access/credentials transferred in writing.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If Support requests spike immediately after Handover, review whether Documentation or Training is missing a topic clients repeatedly need.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-008 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Support Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Manage post-delivery support so a client's confidence doesn't drop the moment the formal engagement ends.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Support Intake</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Prioritization</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Resolution</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Follow-up</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Client Satisfaction</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-010's Support step — the playbook that keeps the relationship warm between formal engagements.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Prioritization</div><div class="field-val">Anything affecting the client's ability to operate the delivered system is urgent; everything else is routine.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-008 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Support Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Log the request through the portal at Support Intake, capturing what, when, and impact.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Prioritize as Urgent or Routine within the stated service level from the Support Agreement.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Resolve and document the fix or answer in plain language the client can reference later.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Follow up within 48 hours to confirm the resolution actually solved the problem.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">Log a brief Client Satisfaction note — this feeds Sprint 10's expansion and referral conversations.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Request acknowledged within the stated service level</div>
+    <div>☐ Urgent requests never sit in the Routine queue</div>
+    <div>☐ Resolution documented in plain language, not internal jargon</div>
+    <div>☐ Follow-up completed within 48 hours of resolution</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can triage incoming requests against the Urgent/Routine rule, draft the plain-language resolution note, and schedule the 48-hour follow-up automatically for human confirmation.</p>
+</div>
+
+<!-- ============ PB-008 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Support Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-008</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Support Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Manage post-delivery support so client confidence holds steady after the formal engagement ends.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Support/Operations, with Engagement Lead notified on Urgent requests.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A support request is submitted through the portal or inbox (WF-010).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Support Agreement service levels, the request itself, prior support history for the client.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">Support Agreement (WF-010 output)</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-010 — Support, Expansion &amp; Referral</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Resolved request, follow-up confirmation, logged Client Satisfaction note.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Client confirms the issue is resolved at the 48-hour follow-up.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If the same request type recurs across clients, consider whether it belongs in the Welcome Packet or Training curriculum instead of Support.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-009 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Expansion Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Identify and manage growth opportunities so expansion feels like a natural next step, not a sales pitch.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Opportunity Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">Proposal Process <span class="mono" style="color:#D8AF55; font-size:10px;">(PB-002)</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Roadmap Update</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Client Communication</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Governs execution of WF-010's Expansion Opportunity step and PKG-007 — reuses the Proposal Playbook (PB-002) rather than inventing a separate process.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At Opportunity Review</div><div class="field-val">Only raise expansion with the client once Support has shown a stable, satisfied relationship — never immediately after a rocky Handover.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-009 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Expansion Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Review the Closeout Report and Support history for a natural next-phase opportunity.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Raise the opportunity in conversation before drafting anything — confirm real interest first.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Run the Proposal Playbook (PB-002) using PKG-007's assembly as the starting structure.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Update the client's Roadmap to show Phase Two alongside what's already delivered.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">Communicate the expansion plan referencing Phase One's outcomes as evidence, not just future promises.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Real client interest confirmed before drafting the Expansion Proposal</div>
+    <div>☐ Proposal built on PKG-007, not a from-scratch scope</div>
+    <div>☐ Updated Roadmap shown alongside Phase One's completed work</div>
+    <div>☐ Client Communication references specific Phase One outcomes</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can scan Closeout Reports and Support history for expansion signals worth a human conversation, and pull Phase One outcomes into the new Proposal draft automatically.</p>
+</div>
+
+<!-- ============ PB-009 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Expansion Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-009</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Expansion Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Identify and manage growth opportunities so expansion feels earned, not pitched.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Engagement Lead, using the Proposal Playbook's owner structure for drafting.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">A stable Support relationship surfaces a next-phase opportunity (WF-010).</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Closeout Report, Support history, confirmed client interest.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">TEMP-001 — Proposal · COMP-405 — Phase Card · COMP-301 — Pricing Table</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">WF-010 — Support, Expansion &amp; Referral (re-enters WF-002)</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Expansion Proposal, updated Roadmap, client communication confirming Phase Two.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Client has reviewed the Expansion Proposal against real Phase One evidence, not projections alone.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">If expansion conversations stall, review whether Step 02's interest-confirmation step is being skipped in favor of leading with a draft proposal.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-010 — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Internal Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Run the MAIM service business itself — the playbook that keeps every other playbook honest.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block; font-weight:600;">Team Responsibilities</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Weekly Reviews</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; display:block;">KPI Review</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="step-row" style="border:1px solid rgba(247,244,234,0.25); padding:9px 16px; display:block;">Continuous Improvement</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono step-row" style="border:1px solid rgba(247,244,234,0.4); padding:9px 16px; display:block; font-weight:600;">Knowledge Capture</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The only playbook that governs no single Workflow — it governs all of them, closing the loop back into every Continuous Improvement Notes field in PB-001 through PB-009.</div>
+
+  <div class="sub-title" style="margin-top:28px;">Decision Points</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">At KPI Review</div><div class="field-val">Any KPI missed two cycles running triggers a formal playbook revision, not just a verbal note to try harder.</div></div>
+  </div>
+</div>
+
+<!-- ============ PB-010 — STEP-BY-STEP PROCESS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Step-by-Step Process</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Internal Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="step-row"><div class="step-num">01</div><div class="field-val">Confirm every active engagement has a named owner for each playbook role — no ambiguous ownership.</div></div>
+    <div class="step-row"><div class="step-num">02</div><div class="field-val">Run a weekly internal review of all active engagements against their Weekly Operations Playbook (PB-004) checklists.</div></div>
+    <div class="step-row"><div class="step-num">03</div><div class="field-val">Review KPIs — proposal conversion, on-time delivery, support response times — on a fixed monthly cadence.</div></div>
+    <div class="step-row"><div class="step-num">04</div><div class="field-val">Where a KPI or playbook Continuous Improvement Note points to a recurring gap, revise the playbook, not just the individual instance.</div></div>
+    <div class="step-row" style="border-bottom:none;"><div class="step-num">05</div><div class="field-val">Capture the revision and its rationale so the next person understands why the process changed.</div></div>
+  </div>
+
+  <div class="sub-title">Quality Checklist</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; font-size:12.5px; color:rgba(247,244,234,0.75); margin-bottom:26px;">
+    <div>☐ Every active engagement has a named owner per role</div>
+    <div>☐ Weekly review completed against every active engagement, not a sample</div>
+    <div>☐ KPIs reviewed on a fixed monthly cadence, never skipped</div>
+    <div>☐ Every playbook revision has a captured rationale</div>
+  </div>
+
+  <div class="sub-title">AI Assistance Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An AI agent can aggregate KPI data across all active engagements, flag playbooks whose Continuous Improvement Notes repeat the same issue across cycles, and draft the revision rationale for human sign-off.</p>
+</div>
+
+<!-- ============ PB-010 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="pb-id">PB-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Internal Operations Playbook</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Playbook ID</div><div class="field-val mono">PB-010</div></div>
+    <div class="field-row"><div class="field-label">Playbook Name</div><div class="field-val">Internal Operations Playbook</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Run the MAIM service business itself — the playbook that keeps every other playbook honest and current.</div></div>
+    <div class="field-row"><div class="field-label">Owner</div><div class="field-val">Operations Lead, reviewing across all engagements and all playbooks.</div></div>
+    <div class="field-row"><div class="field-label">Trigger</div><div class="field-val">Runs on a fixed internal cadence — weekly for reviews, monthly for KPIs — independent of any single client engagement.</div></div>
+    <div class="field-row"><div class="field-label">Required Inputs</div><div class="field-val">Every active engagement's Weekly Operations data, all playbooks' Continuous Improvement Notes, KPI dashboards.</div></div>
+    <div class="field-row"><div class="field-label">Templates Used</div><div class="field-val mono">COMP-802 — KPI Card · COMP-803 — Metric Tile</div></div>
+    <div class="field-row"><div class="field-label">Related Workflows</div><div class="field-val mono">All Workflows — this playbook is the meta-layer over WF-001 through WF-010</div></div>
+    <div class="field-row"><div class="field-label">Outputs</div><div class="field-val">Updated ownership assignments, monthly KPI review record, revised playbooks where needed, a running knowledge log.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Every KPI reviewed on schedule and every flagged Continuous Improvement Note either actioned or explicitly deferred with a reason.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Continuous Improvement Notes</div><div class="field-val">This playbook is reviewed annually against how well it caught and resolved gaps in PB-001 through PB-009 over the year.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Playbook Library — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Playbooks Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

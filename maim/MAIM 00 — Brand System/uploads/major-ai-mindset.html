@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major AI Mindset — The ABCs of Building with AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #0A0A0C;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- canvas ---- */
+    #glcanvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      display: block;
+    }
+
+    /* ---- scroll progress ---- */
+    #scroll-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #f97316, #fb923c);
+      z-index: 200;
+      width: 0%;
+      transition: width 80ms linear;
+    }
+
+    /* ---- nav ---- */
+    nav.site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    nav.site-nav.scrolled {
+      background: rgba(10,10,12,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(249,115,22,0.12);
+    }
+
+    /* ---- hero ---- */
+    #hero {
+      position: relative;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 4rem;
+      overflow: hidden;
+    }
+
+    /* masked word reveal */
+    .reveal-word {
+      display: inline-block;
+      transform: translateY(110%);
+      will-change: transform;
+    }
+    .word-wrapper {
+      display: inline-flex;
+      overflow: hidden;
+      vertical-align: top;
+      margin-right: 0.22em;
+      padding-bottom: 0.08em;
+      margin-bottom: -0.08em;
+    }
+
+    /* ---- letter spine ---- */
+    .abc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: 2px;
+    }
+    .abc-card {
+      background: #0f0f11;
+      border: 1px solid #1f1f24;
+      padding: 16px 10px;
+      text-align: center;
+      cursor: default;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .abc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #f97316, transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s;
+    }
+    .abc-card:hover::before { transform: scaleX(1); }
+    .abc-card:hover {
+      background: rgba(249,115,22,0.07);
+      border-color: rgba(249,115,22,0.3);
+      transform: translateY(-2px);
+    }
+    .abc-letter {
+      font-size: 22px;
+      font-weight: 700;
+      color: #f97316;
+      display: block;
+    }
+    .abc-word {
+      font-size: 9px;
+      color: #71717a;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ---- level cards ---- */
+    .level-card {
+      border: 1px solid #1f1f24;
+      background: #0f0f11;
+      padding: 36px 28px;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .level-card:hover {
+      border-color: rgba(249,115,22,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(249,115,22,0.08);
+    }
+
+    /* ---- section fade-in ---- */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- marquee ---- */
+    .marquee-wrap {
+      overflow: hidden;
+      border-top: 1px solid #1f1f24;
+      border-bottom: 1px solid #1f1f24;
+      background: #080808;
+      padding: 14px 0;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+
+    /* ---- caret blink ---- */
+    @keyframes blink { 50% { opacity: 0; } }
+    .caret {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: #f97316;
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-start infinite;
+    }
+
+    /* ---- input ---- */
+    .email-input {
+      background: #0f0f11;
+      border: 1px solid #27272a;
+      color: #fff;
+      padding: 14px 18px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      outline: none;
+      width: 100%;
+      border-radius: 10px;
+      transition: border-color 0.2s;
+    }
+    .email-input:focus { border-color: #f97316; }
+    .email-input::placeholder { color: #52525b; }
+
+    /* ---- btn ---- */
+    .btn-primary {
+      background: #fff;
+      color: #0a0a0c;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: #e4e4e7; transform: scale(1.02); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background 0.2s, transform 0.15s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.09); transform: scale(1.02); }
+
+    /* ---- mono ---- */
+    .mono { font-family: 'Courier New', monospace; }
+
+    /* ---- divider ---- */
+    .section-tag {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #f97316;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .section-tag::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: #f97316;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .abc-grid { grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WebGL Canvas -->
+<canvas id="glcanvas"></canvas>
+
+<!-- Scroll Progress -->
+<div id="scroll-bar"></div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="site-nav" id="sitenav">
+  <div style="max-width:1200px; margin:0 auto; padding:0 24px; height:70px; display:flex; align-items:center; justify-content:space-between;">
+    <!-- Logo -->
+    <a href="#hero" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+      <div style="width:28px; height:28px; border:1.5px solid #f97316; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; color:#f97316;">M</div>
+      <span style="font-weight:700; font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:#fff;">Major AI Mindset</span>
+    </a>
+    <!-- Links -->
+    <div class="hidden-mobile" style="display:flex; align-items:center; gap:32px;">
+      <a href="#abcs" style="font-size:13px; color:#a1a1aa; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a1a1aa'">ABCs</a>
+      <a href="#mindset" style="font-size:13px; color:#a1a1aa; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a1a1aa'">Mindset</a>
+      <a href="#levels" style="font-size:13px; color:#a1a1aa; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a1a1aa'">Spark Lab</a>
+      <a href="#join" style="font-size:13px; color:#a1a1aa; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#a1a1aa'">Workshops</a>
+      <a href="#join" style="font-size:13px; font-weight:700; color:#f97316; text-decoration:none; letter-spacing:0.05em;">Start →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" style="position:relative; z-index:10;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 24px; width:100%; display:flex; flex-direction:column; justify-content:flex-end; min-height:100dvh; padding-bottom:64px;">
+
+    <div style="display:flex; flex-direction:column; gap:0; max-width:760px;">
+
+      <!-- Badge -->
+      <div id="hero-badge" style="opacity:0; transform:translateY(12px); transition:opacity 0.6s 0.1s, transform 0.6s 0.1s;">
+        <div style="display:inline-flex; align-items:center; gap:10px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#f97316; border:1px solid rgba(249,115,22,0.25); background:rgba(249,115,22,0.06); padding:8px 16px; margin-bottom:28px; border-radius:4px;">
+          <span style="width:6px; height:6px; border-radius:50%; background:#f97316; animation:blink 1s step-start infinite;"></span>
+          Beginner · Builder · Architect — Learn in layers
+        </div>
+      </div>
+
+      <!-- Title (masked reveal) -->
+      <h1 id="hero-title" style="font-size:clamp(42px,7vw,80px); font-weight:500; line-height:1.04; letter-spacing:-0.02em; color:#fff; margin-bottom:28px;">
+        Where Mindset<br>Meets Machine.
+      </h1>
+
+      <!-- Body -->
+      <p id="hero-body" style="font-size:clamp(15px,1.8vw,18px); color:#a1a1aa; max-width:520px; line-height:1.65; margin-bottom:36px; opacity:0; transform:translateY(14px); transition:opacity 0.7s 0.5s, transform 0.7s 0.5s;">
+        AI is not just about tools.<br>
+        It's about awareness, belief, curiosity, discipline, systems, and action.<br><br>
+        Learn the alphabet of the new economy — one simple letter, one useful lesson, one real move at a time.
+      </p>
+
+      <!-- Typewriter line -->
+      <div id="hero-typed" style="font-family:'Courier New',monospace; font-size:13px; color:#f97316; margin-bottom:32px; height:20px; opacity:0; transition:opacity 0.5s 0.8s;">
+        <span id="typed-text"></span><span class="caret"></span>
+      </div>
+
+      <!-- CTAs -->
+      <div id="hero-ctas" style="display:flex; flex-wrap:wrap; gap:14px; opacity:0; transform:translateY(14px); transition:opacity 0.7s 0.65s, transform 0.7s 0.65s;">
+        <a href="#abcs">
+          <button class="btn-primary">Start Learning the ABCs</button>
+        </a>
+        <a href="#mindset">
+          <button class="btn-secondary">
+            Explore the Framework
+            <iconify-icon icon="solar:arrow-right-linear" style="font-size:16px; opacity:0.8;"></iconify-icon>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom right stat -->
+    <div style="position:absolute; bottom:64px; right:24px; text-align:right; opacity:0; transition:opacity 1s 1s;" id="hero-stat">
+      <p style="font-size:12px; color:#52525b; letter-spacing:0.08em; max-width:200px; line-height:1.5;">
+        26 letters.<br>One mindset shift at a time.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee-wrap" style="position:relative; z-index:10;">
+  <div class="marquee-track">
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Awareness</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Belief</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Curiosity</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Discipline</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Evidence</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Flow</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Growth</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Habit</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Identity</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Judgment</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Kindness</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Leverage</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <!-- doubled for seamless loop -->
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Awareness</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Belief</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Curiosity</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Discipline</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Evidence</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Flow</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Growth</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Habit</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Identity</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Judgment</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Kindness</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#52525b; margin:0 32px;">Leverage</span>
+    <span style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#f97316; margin:0 8px;">✦</span>
+  </div>
+</div>
+
+<!-- ===================== WHAT IS MAJOR AI MINDSET ===================== -->
+<section id="mindset" style="position:relative; z-index:10; padding:96px 0; border-bottom:1px solid #1f1f24;">
+  <div class="fade-section" style="max-width:1200px; margin:0 auto; padding:0 24px;">
+
+    <div class="section-tag">What is the Major AI Mindset</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+
+      <div>
+        <h2 style="font-size:clamp(32px,4.5vw,52px); font-weight:500; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
+          AI is a skill.<br>Confidence<br>is the foundation.
+        </h2>
+      </div>
+
+      <div>
+        <p style="font-size:16px; color:#a1a1aa; line-height:1.75; margin-bottom:24px;">
+          The Major AI Mindset is a framework for people who want to use AI with clarity — not panic. It is not a technical course. It is an alphabet of ideas, habits, and principles that help you build confidence, take action, and grow over time.
+        </p>
+        <p style="font-size:16px; color:#a1a1aa; line-height:1.75; margin-bottom:32px;">
+          Whether you are just starting or already building systems, the ABCs meet you where you are. Each letter is a lesson. Each lesson is a move you can make today.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#f97316; border:1px solid rgba(249,115,22,0.25); padding:6px 14px; border-radius:4px;">Beginner Friendly</span>
+          <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa; border:1px solid #27272a; padding:6px 14px; border-radius:4px;">Self-paced</span>
+          <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#a1a1aa; border:1px solid #27272a; padding:6px 14px; border-radius:4px;">Practical</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE ABCs ===================== -->
+<section id="abcs" style="position:relative; z-index:10; padding:96px 0; border-bottom:1px solid #1f1f24;">
+  <div class="fade-section" style="max-width:1200px; margin:0 auto; padding:0 24px;">
+
+    <div class="section-tag">The ABCs</div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:16px;">
+      <h2 style="font-size:clamp(28px,4vw,48px); font-weight:500; line-height:1.08; letter-spacing:-0.02em;">
+        Awareness → Belief →<br>Curiosity → and beyond.
+      </h2>
+      <p style="font-size:14px; color:#52525b; max-width:280px; text-align:right; line-height:1.6;">
+        26 letters. 26 principles.<br>One shared language for building with AI.
+      </p>
+    </div>
+
+    <div class="abc-grid">
+      <!-- A–Z cards -->
+      <div class="abc-card"><span class="abc-letter">A</span><span class="abc-word">Awareness</span></div>
+      <div class="abc-card"><span class="abc-letter">B</span><span class="abc-word">Belief</span></div>
+      <div class="abc-card"><span class="abc-letter">C</span><span class="abc-word">Curiosity</span></div>
+      <div class="abc-card"><span class="abc-letter">D</span><span class="abc-word">Discipline</span></div>
+      <div class="abc-card"><span class="abc-letter">E</span><span class="abc-word">Evidence</span></div>
+      <div class="abc-card"><span class="abc-letter">F</span><span class="abc-word">Flow</span></div>
+      <div class="abc-card"><span class="abc-letter">G</span><span class="abc-word">Growth</span></div>
+      <div class="abc-card"><span class="abc-letter">H</span><span class="abc-word">Habit</span></div>
+      <div class="abc-card"><span class="abc-letter">I</span><span class="abc-word">Identity</span></div>
+      <div class="abc-card"><span class="abc-letter">J</span><span class="abc-word">Judgment</span></div>
+      <div class="abc-card"><span class="abc-letter">K</span><span class="abc-word">Kindness</span></div>
+      <div class="abc-card"><span class="abc-letter">L</span><span class="abc-word">Leverage</span></div>
+      <div class="abc-card"><span class="abc-letter">M</span><span class="abc-word">Momentum</span></div>
+      <div class="abc-card"><span class="abc-letter">N</span><span class="abc-word">Narrative</span></div>
+      <div class="abc-card"><span class="abc-letter">O</span><span class="abc-word">Output</span></div>
+      <div class="abc-card"><span class="abc-letter">P</span><span class="abc-word">Patience</span></div>
+      <div class="abc-card"><span class="abc-letter">Q</span><span class="abc-word">Questions</span></div>
+      <div class="abc-card"><span class="abc-letter">R</span><span class="abc-word">Rhythm</span></div>
+      <div class="abc-card"><span class="abc-letter">S</span><span class="abc-word">Systems</span></div>
+      <div class="abc-card"><span class="abc-letter">T</span><span class="abc-word">Trust</span></div>
+      <div class="abc-card"><span class="abc-letter">U</span><span class="abc-word">Uplift</span></div>
+      <div class="abc-card"><span class="abc-letter">V</span><span class="abc-word">Vision</span></div>
+      <div class="abc-card"><span class="abc-letter">W</span><span class="abc-word">Workflow</span></div>
+      <div class="abc-card"><span class="abc-letter">X</span><span class="abc-word">X-Factor</span></div>
+      <div class="abc-card"><span class="abc-letter">Y</span><span class="abc-word">You-First</span></div>
+      <div class="abc-card"><span class="abc-letter">Z</span><span class="abc-word">Zero Fear</span></div>
+    </div>
+
+    <p style="margin-top:24px; font-family:'Courier New',monospace; font-size:11px; color:#3f3f46; letter-spacing:0.12em; text-transform:uppercase;">
+      Hover each letter to explore · Full curriculum launching in stages
+    </p>
+
+  </div>
+</section>
+
+<!-- ===================== THREE LEVELS ===================== -->
+<section id="levels" style="position:relative; z-index:10; padding:96px 0; background:#080808; border-bottom:1px solid #1f1f24;">
+  <div class="fade-section" style="max-width:1200px; margin:0 auto; padding:0 24px;">
+
+    <div class="section-tag">Three Levels</div>
+    <h2 style="font-size:clamp(28px,4vw,48px); font-weight:500; line-height:1.08; letter-spacing:-0.02em; margin-bottom:16px;">
+      Meet yourself where you are.
+    </h2>
+    <p style="font-size:15px; color:#71717a; max-width:540px; line-height:1.65; margin-bottom:56px;">
+      The same 26 letters teach different things depending on where you are in your journey. Each level shares the spine — the concepts deepen as you grow.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2px;">
+
+      <!-- Beginner -->
+      <div class="level-card">
+        <div style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#f97316; margin-bottom:20px;">Level 01</div>
+        <div style="font-size:28px; font-weight:700; margin-bottom:8px;">Beginner</div>
+        <div style="font-size:13px; color:#71717a; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:20px;">Build Confidence</div>
+        <div style="width:32px; height:2px; background:#f97316; margin-bottom:24px; border-radius:1px;"></div>
+        <p style="font-size:14px; color:#a1a1aa; line-height:1.7; margin-bottom:24px;">
+          You do not need to know how AI works. You need to know how to start. The Beginner level teaches simple use, everyday confidence, and the habit of showing up. One letter, one action, one win at a time.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#f97316;">→</span> Ask better questions</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#f97316;">→</span> Try one tool, one task</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#f97316;">→</span> Build belief through action</li>
+        </ul>
+      </div>
+
+      <!-- Builder -->
+      <div class="level-card" style="border-color:#2a1a10; background:#0f0a08;">
+        <div style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#f97316; margin-bottom:20px; opacity:0.6;">Level 02</div>
+        <div style="font-size:28px; font-weight:700; margin-bottom:8px; color:#d4b49a;">Builder</div>
+        <div style="font-size:13px; color:#71717a; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:20px;">Design Workflow</div>
+        <div style="width:32px; height:2px; background:#92400e; margin-bottom:24px; border-radius:1px;"></div>
+        <p style="font-size:14px; color:#a1a1aa; line-height:1.7; margin-bottom:24px;">
+          You are already using AI. Now you want it to work for you — not just when you ask, but as part of how you operate. The Builder level is about designing repeatable flows and turning habits into systems.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#92400e;">→</span> Create repeatable workflows</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#92400e;">→</span> Stack tools intentionally</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#92400e;">→</span> Document your process</li>
+        </ul>
+        <div style="margin-top:24px; padding:10px 14px; background:rgba(146,64,14,0.08); border:1px solid rgba(146,64,14,0.2); border-radius:6px;">
+          <p style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#78350f;">Coming next · Medium level</p>
+        </div>
+      </div>
+
+      <!-- Architect -->
+      <div class="level-card" style="border-color:#1e1e2a; background:#0c0c12;">
+        <div style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6366f1; margin-bottom:20px; opacity:0.5;">Level 03</div>
+        <div style="font-size:28px; font-weight:700; margin-bottom:8px; color:#8b8bb8;">Architect</div>
+        <div style="font-size:13px; color:#71717a; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:20px;">Build Systems</div>
+        <div style="width:32px; height:2px; background:#312e81; margin-bottom:24px; border-radius:1px;"></div>
+        <p style="font-size:14px; color:#a1a1aa; line-height:1.7; margin-bottom:24px;">
+          You are building for scale. The Architect level teaches systems design, governance, delegation to AI agents, and how to think about AI as infrastructure — not just a tool you use but a layer your operation runs on.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#4338ca;">→</span> AI-first operating systems</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#4338ca;">→</span> Governance and judgment layers</li>
+          <li style="font-size:13px; color:#71717a; display:flex; align-items:center; gap:10px;"><span style="color:#4338ca;">→</span> Multi-agent orchestration</li>
+        </ul>
+        <div style="margin-top:24px; padding:10px 14px; background:rgba(67,56,202,0.06); border:1px solid rgba(67,56,202,0.15); border-radius:6px;">
+          <p style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#312e81;">Expert level · Coming later</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPARK LAB ===================== -->
+<section id="sparklab" style="position:relative; z-index:10; padding:96px 0; border-bottom:1px solid #1f1f24;">
+  <div class="fade-section" style="max-width:1200px; margin:0 auto; padding:0 24px;">
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+
+      <div>
+        <div class="section-tag">Spark Lab</div>
+        <h2 style="font-size:clamp(28px,4vw,48px); font-weight:500; line-height:1.08; letter-spacing:-0.02em; margin-bottom:24px;">
+          Turn clarity<br>into systems.
+        </h2>
+        <p style="font-size:15px; color:#a1a1aa; line-height:1.7; margin-bottom:20px;">
+          Spark Lab is where the Major AI Mindset becomes your business. It's a focused container — a sprint — for people who are ready to stop learning and start building.
+        </p>
+        <p style="font-size:15px; color:#a1a1aa; line-height:1.7; margin-bottom:36px;">
+          If you know what you want but keep getting stuck before it takes shape, Spark Lab is the work session that breaks the loop.
+        </p>
+        <a href="#join">
+          <button class="btn-primary" style="margin-bottom:14px;">Book a Spark Lab Sprint</button>
+        </a>
+        <p style="font-size:12px; color:#52525b; letter-spacing:0.06em;">
+          Private 1:1 · Focused · Results in one session
+        </p>
+      </div>
+
+      <!-- Feature list -->
+      <div style="display:flex; flex-direction:column; gap:2px;">
+        <div style="border:1px solid #1f1f24; background:#0f0f11; padding:22px 24px; display:flex; gap:18px; align-items:flex-start; transition:background 0.2s;" onmouseover="this.style.background='rgba(249,115,22,0.05)'" onmouseout="this.style.background='#0f0f11'">
+          <div style="width:36px; height:36px; border:1px solid rgba(249,115,22,0.2); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+            <iconify-icon icon="solar:route-linear" style="font-size:18px; color:#f97316;"></iconify-icon>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:15px; margin-bottom:4px;">Stop the Bleed</div>
+            <div style="font-size:13px; color:#71717a; line-height:1.6;">Stabilize before you scale. Identify the leak in your system and close it first.</div>
+          </div>
+        </div>
+        <div style="border:1px solid #1f1f24; background:#0f0f11; padding:22px 24px; display:flex; gap:18px; align-items:flex-start; transition:background 0.2s;" onmouseover="this.style.background='rgba(249,115,22,0.05)'" onmouseout="this.style.background='#0f0f11'">
+          <div style="width:36px; height:36px; border:1px solid rgba(249,115,22,0.2); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+            <iconify-icon icon="solar:layers-minimalistic-linear" style="font-size:18px; color:#f97316;"></iconify-icon>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:15px; margin-bottom:4px;">First Doorway</div>
+            <div style="font-size:13px; color:#71717a; line-height:1.6;">Identify the one move that opens everything else. Then make that move.</div>
+          </div>
+        </div>
+        <div style="border:1px solid #1f1f24; background:#0f0f11; padding:22px 24px; display:flex; gap:18px; align-items:flex-start; transition:background 0.2s;" onmouseover="this.style.background='rgba(249,115,22,0.05)'" onmouseout="this.style.background='#0f0f11'">
+          <div style="width:36px; height:36px; border:1px solid rgba(249,115,22,0.2); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+            <iconify-icon icon="solar:chart-square-linear" style="font-size:18px; color:#f97316;"></iconify-icon>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:15px; margin-bottom:4px;">Evidence Ladder</div>
+            <div style="font-size:13px; color:#71717a; line-height:1.6;">Build proof you can see. Small wins that compound into unshakeable confidence.</div>
+          </div>
+        </div>
+        <div style="border:1px solid #1f1f24; background:#0f0f11; padding:22px 24px; display:flex; gap:18px; align-items:flex-start; transition:background 0.2s;" onmouseover="this.style.background='rgba(249,115,22,0.05)'" onmouseout="this.style.background='#0f0f11'">
+          <div style="width:36px; height:36px; border:1px solid rgba(249,115,22,0.2); flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+            <iconify-icon icon="solar:rocket-linear" style="font-size:18px; color:#f97316;"></iconify-icon>
+          </div>
+          <div>
+            <div style="font-weight:600; font-size:15px; margin-bottom:4px;">Build While You Heal</div>
+            <div style="font-size:13px; color:#71717a; line-height:1.6;">You do not have to wait until everything is figured out. The system holds you while you grow.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== JOIN ===================== -->
+<section id="join" style="position:relative; z-index:10; padding:112px 0; background:#060608;">
+  <div class="fade-section" style="max-width:640px; margin:0 auto; padding:0 24px; text-align:center;">
+
+    <div style="display:flex; justify-content:center; margin-bottom:20px;">
+      <div style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#f97316;">Join the List</div>
+    </div>
+
+    <h2 style="font-size:clamp(32px,5vw,56px); font-weight:500; line-height:1.08; letter-spacing:-0.02em; margin-bottom:20px;">
+      Start with A.<br>That's enough.
+    </h2>
+
+    <p style="font-size:15px; color:#71717a; line-height:1.65; margin-bottom:48px;">
+      Drop your email and get the first three lessons — A, B, C — delivered to your inbox. No tools required. No tech background needed. Just one letter, one idea, one action.
+    </p>
+
+    <!-- Form -->
+    <form id="join-form" style="display:flex; flex-direction:column; gap:12px; max-width:440px; margin:0 auto;">
+      <input class="email-input" type="email" id="join-email" placeholder="your@email.com" required>
+      <button class="btn-primary" type="submit" style="width:100%; padding:16px; font-size:15px; border-radius:10px;">
+        Start Learning the ABCs
+      </button>
+    </form>
+    <div id="form-status" style="height:24px; margin-top:14px; font-family:'Courier New',monospace; font-size:12px; letter-spacing:0.08em;"></div>
+
+    <p style="margin-top:32px; font-size:12px; color:#3f3f46; letter-spacing:0.06em;">
+      No spam. Unsubscribe anytime. You own your learning.
+    </p>
+
+    <!-- Secondary CTA -->
+    <div style="margin-top:48px; padding-top:40px; border-top:1px solid #1f1f24; display:flex; flex-direction:column; align-items:center; gap:16px;">
+      <p style="font-size:14px; color:#71717a;">Ready to build? Book a Spark Lab session.</p>
+      <a href="mailto:hello@majoraimindset.com">
+        <button class="btn-secondary" style="font-size:13px;">
+          <iconify-icon icon="solar:letter-linear" style="font-size:16px;"></iconify-icon>
+          Book a Spark Lab Sprint
+        </button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer style="position:relative; z-index:10; border-top:1px solid #1f1f24; padding:40px 24px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
+    <div style="font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#f97316;">
+      The ABCs of the Major AI Mindset
+    </div>
+    <div style="font-family:'Courier New',monospace; font-size:11px; color:#3f3f46; letter-spacing:0.12em; display:flex; align-items:center; gap:8px;">
+      <span>MAJOR AI MINDSET</span>
+      <span style="color:#1f1f24;">·</span>
+      <span>© 2026 Major Dream</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+// ---- Scroll progress bar ----
+const scrollBar = document.getElementById('scroll-bar');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+  scrollBar.style.width = (p * 100) + '%';
+}, { passive: true });
+
+// ---- Nav scroll style ----
+const nav = document.getElementById('sitenav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+// ---- Hero masked reveal ----
+document.addEventListener('DOMContentLoaded', () => {
+  const titleEl = document.getElementById('hero-title');
+  const rawHTML = titleEl.innerHTML;
+
+  // Split text preserving <br>
+  const parts = rawHTML.split(/(<br>)/i);
+  titleEl.innerHTML = '';
+  parts.forEach(part => {
+    if (part.toLowerCase() === '<br>') {
+      titleEl.appendChild(document.createElement('br'));
+    } else {
+      part.trim().split(' ').forEach((word, i) => {
+        if (!word) return;
+        const wrapper = document.createElement('span');
+        wrapper.setAttribute('style', 'display:inline-flex;overflow:hidden;vertical-align:top;margin-right:0.22em;padding-bottom:0.08em;margin-bottom:-0.08em;');
+        const inner = document.createElement('span');
+        inner.className = 'reveal-word';
+        inner.textContent = word;
+        wrapper.appendChild(inner);
+        titleEl.appendChild(wrapper);
+        titleEl.appendChild(document.createTextNode(' '));
+      });
+    }
+  });
+
+  // Staggered animation
+  const words = document.querySelectorAll('.reveal-word');
+  words.forEach((w, i) => {
+    setTimeout(() => {
+      w.style.transition = 'transform 1.1s cubic-bezier(0.16,1,0.3,1)';
+      w.style.transform = 'translateY(0%)';
+    }, 200 + i * 80);
+  });
+
+  // Fade in other elements
+  setTimeout(() => {
+    document.getElementById('hero-badge').style.opacity = '1';
+    document.getElementById('hero-badge').style.transform = 'translateY(0)';
+  }, 150);
+  setTimeout(() => {
+    document.getElementById('hero-body').style.opacity = '1';
+    document.getElementById('hero-body').style.transform = 'translateY(0)';
+  }, 500);
+  setTimeout(() => {
+    document.getElementById('hero-ctas').style.opacity = '1';
+    document.getElementById('hero-ctas').style.transform = 'translateY(0)';
+  }, 650);
+  setTimeout(() => {
+    document.getElementById('hero-stat').style.opacity = '1';
+  }, 900);
+  setTimeout(() => {
+    document.getElementById('hero-typed').style.opacity = '1';
+  }, 800);
+});
+
+// ---- Typewriter ----
+const phrases = [
+  'A is for Awareness. Start here.',
+  'B is for Belief. It comes through action.',
+  'C is for Curiosity. Never lose it.',
+  'S is for Systems. Build them once.',
+  'Y is for You-First. Always.',
+];
+let phraseIdx = 0, charIdx = 0, deleting = false;
+const typedEl = document.getElementById('typed-text');
+
+function typeStep() {
+  const phrase = phrases[phraseIdx];
+  if (!deleting && charIdx <= phrase.length) {
+    typedEl.textContent = phrase.slice(0, charIdx++);
+    if (charIdx > phrase.length) {
+      setTimeout(() => { deleting = true; setTimeout(typeStep, 20); }, 2000);
+      return;
+    }
+  } else if (deleting && charIdx >= 0) {
+    typedEl.textContent = phrase.slice(0, charIdx--);
+    if (charIdx < 0) {
+      deleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      charIdx = 0;
+    }
+  }
+  setTimeout(typeStep, deleting ? 18 : 52);
+}
+setTimeout(typeStep, 1200);
+
+// ---- Scroll fade sections ----
+const fadeSections = document.querySelectorAll('.fade-section');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeSections.forEach(el => obs.observe(el));
+
+// ---- Form ----
+document.getElementById('join-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const emailEl = document.getElementById('join-email');
+  const statusEl = document.getElementById('form-status');
+  const val = emailEl.value;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+    statusEl.style.color = '#ef4444';
+    statusEl.textContent = '⚠ Please enter a valid email address.';
+    return;
+  }
+  statusEl.style.color = '#22c55e';
+  statusEl.textContent = '✓ You are in. Watch your inbox for A, B, C.';
+  emailEl.value = '';
+  emailEl.disabled = true;
+  document.querySelector('#join-form button').disabled = true;
+  document.querySelector('#join-form button').textContent = 'You\'re on the list ✓';
+  document.querySelector('#join-form button').style.background = '#1a2e1a';
+  document.querySelector('#join-form button').style.color = '#22c55e';
+});
+
+// ---- WebGL ----
+(function() {
+  const canvas = document.getElementById('glcanvas');
+  const gl = canvas.getContext('webgl');
+  if (!gl) return;
+
+  const vsSource = `
+    attribute vec4 aPos;
+    void main() { gl_Position = aPos; }
+  `;
+
+  const fsSource = `
+    precision highp float;
+    uniform vec2 uRes;
+    uniform float uTime;
+
+    float rand(vec2 co) {
+      return fract(sin(dot(co, vec2(12.9898, 78.233))) * 43758.5453);
+    }
+    float noise(vec2 p) {
+      vec2 i = floor(p), f = fract(p);
+      float a = rand(i), b = rand(i+vec2(1,0)),
+            c = rand(i+vec2(0,1)), d = rand(i+vec2(1,1));
+      vec2 u = f*f*(3.-2.*f);
+      return mix(a,b,u.x)+(c-a)*u.y*(1.-u.x)+(d-b)*u.x*u.y;
+    }
+
+    void main() {
+      vec2 uv = gl_FragCoord.xy / uRes.xy;
+      vec2 nUV = vec2(uv.x*2.5, uv.y*0.12 - uTime*0.04);
+      float n = noise(nUV*3. + noise(nUV*1.5));
+
+      // palette: near-black, deep orange, dark blue
+      vec3 base    = vec3(0.04, 0.04, 0.05);
+      vec3 orange  = vec3(0.72, 0.28, 0.04);
+      vec3 blue    = vec3(0.05, 0.12, 0.60);
+      vec3 bright  = vec3(1.0,  0.65, 0.35);
+
+      float dx = uv.x + (n - 0.5)*0.18;
+
+      // orange glow — right side dominant
+      float og = smoothstep(0.35, 0.80, dx);
+      og *= 0.6 + 0.4 * sin(uv.x*45. - uTime*0.6 + n*8.);
+      vec3 col = mix(base, orange, og * 1.8);
+
+      // blue undertone — left/centre
+      float bl = smoothstep(0.10, 0.55, dx) - smoothstep(0.48, 0.85, dx);
+      bl *= 0.4 + 0.6 * sin(uv.x*38. + uTime*0.5);
+      col = mix(col, blue, bl * 1.2);
+
+      // highlights on orange
+      float hi = smoothstep(0.88, 0.97, noise(vec2(dx*12., uTime*0.08)));
+      col = mix(col, bright, hi * og * 0.7);
+
+      // subtle grain
+      col += (rand(uv * uTime) - 0.5) * 0.04;
+
+      // vignette left for text
+      col *= smoothstep(0., 0.18, uv.x) * 0.75 + 0.25;
+
+      // darken overall — it's a background
+      col *= 0.65;
+
+      gl_FragColor = vec4(col, 1.0);
+    }
+  `;
+
+  function compileShader(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(s)); return null; }
+    return s;
+  }
+
+  const prog = gl.createProgram();
+  gl.attachShader(prog, compileShader(gl.VERTEX_SHADER, vsSource));
+  gl.attachShader(prog, compileShader(gl.FRAGMENT_SHADER, fsSource));
+  gl.linkProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,1, 1,1, -1,-1, 1,-1]), gl.STATIC_DRAW);
+
+  const aPos = gl.getAttribLocation(prog, 'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+  const uRes = gl.getUniformLocation(prog, 'uRes');
+  const uTime = gl.getUniformLocation(prog, 'uTime');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  window.addEventListener('resize', resize); resize();
+
+  function render(t) {
+    gl.useProgram(prog);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, t * 0.001);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+})();
+</script>
+
+</body>
+</html>

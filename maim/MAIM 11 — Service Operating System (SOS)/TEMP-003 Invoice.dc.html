@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:56px 58px 40px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; display:flex; flex-direction:column; }
+  .sos-page:first-child { break-before: auto; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .footer-901 { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #D8AF55; padding-top:12px; margin-top:auto; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<div class="sos-page" data-screen-label="Invoice">
+
+  <!-- COMP-001 Compact Header -->
+  <div style="border-bottom:1px solid rgba(247,244,234,0.2); padding-bottom:12px; margin-bottom:22px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #D8AF55;"></div>
+      <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:12.5px; text-transform:uppercase;">Invoice</div>
+    </div>
+    <div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00521 · v1.0</div>
+  </div>
+
+  <!-- COMP-003 Metadata Block + COMP-201 Status Badge -->
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:22px;">
+    <div style="border:1px solid #D8AF55; padding:16px 20px; flex:1; margin-right:20px;">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px 20px;">
+        <div><div class="lbl">Client</div><div style="font-size:11.5px; margin-top:2px;">Aurelia Capital Partners</div></div>
+        <div><div class="lbl">Related</div><div style="font-size:11.5px; margin-top:2px;" class="mono">SOW-2026-00518</div></div>
+        <div><div class="lbl">Owner</div><div style="font-size:11.5px; margin-top:2px;">J. Alvarez</div></div>
+        <div><div class="lbl">Issued</div><div class="mono" style="font-size:11.5px; margin-top:2px;">07/22/2026</div></div>
+        <div><div class="lbl">Due Date</div><div class="mono" style="font-size:11.5px; margin-top:2px; color:#D8AF55;">08/21/2026</div></div>
+        <div><div class="lbl">Confidentiality</div><div style="font-size:11.5px; margin-top:2px;">Client &amp; Internal</div></div>
+      </div>
+    </div>
+    <div class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:5px 14px; white-space:nowrap;">Draft</div>
+  </div>
+
+  <!-- COMP-301 Pricing Table -->
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:16px;">
+    <thead><tr style="background:#F7F4EA; color:#050505;"><th style="text-align:left; padding:9px 12px; font-weight:700;">Line Item</th><th style="text-align:left; padding:9px 12px; font-weight:700;">Qty</th><th style="text-align:right; padding:9px 12px; font-weight:700;">Rate</th><th style="text-align:right; padding:9px 12px; font-weight:700;">Amount</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16);"><td style="padding:9px 12px;">Strategic Advisory — Phase 1</td><td class="mono" style="padding:9px 12px;">1</td><td class="mono" style="padding:9px 12px; text-align:right;">$24,000.00</td><td class="mono" style="padding:9px 12px; text-align:right;">$24,000.00</td></tr>
+      <tr><td style="padding:9px 12px;">Implementation Support</td><td class="mono" style="padding:9px 12px;">40 hrs</td><td class="mono" style="padding:9px 12px; text-align:right;">$425.00</td><td class="mono" style="padding:9px 12px; text-align:right;">$17,000.00</td></tr>
+    </tbody>
+  </table>
+
+  <!-- COMP-308 Currency Block -->
+  <div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.4); margin-bottom:20px;">Figures in USD unless noted</div>
+
+  <!-- COMP-302 Invoice Summary + COMP-306 Tax Summary -->
+  <div style="display:flex; justify-content:flex-end; margin-bottom:30px;">
+    <div style="width:280px; border:1px solid #D8AF55; padding:16px 18px;">
+      <div style="display:flex; justify-content:space-between; font-size:12px; color:rgba(247,244,234,0.6); margin-bottom:6px;"><span>Subtotal</span><span class="mono">$41,000.00</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:12px; color:rgba(247,244,234,0.6); margin-bottom:10px;"><span>State Sales Tax (7.25%)</span><span class="mono">$2,972.50</span></div>
+      <div style="height:1px; background:#D8AF55; margin-bottom:10px;"></div>
+      <div style="display:flex; justify-content:space-between; font-weight:900; font-size:17px;"><span>TOTAL DUE</span><span class="mono">$43,972.50</span></div>
+    </div>
+  </div>
+
+  <!-- Payment Instructions + Terms — plain body copy, no new component -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px;">
+    <div>
+      <div class="lbl" style="margin-bottom:6px;">Payment Instructions</div>
+      <div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.65);">Wire transfer to Major AI Mindset, Acct #00417-2288, Routing 0211-00089. Reference DOC-2026-00521 in the memo line.</div>
+    </div>
+    <div>
+      <div class="lbl" style="margin-bottom:6px;">Terms</div>
+      <div style="font-size:11px; line-height:1.6; color:rgba(247,244,234,0.65);">Net 30 from Issued date. Amounts unpaid past the Due Date are subject to the Outstanding Balance terms in the governing SOW.</div>
+    </div>
+  </div>
+
+  <!-- COMP-901 Footer -->
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00521 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 1 of 1</div></div>
+</div>
+
+<!-- PROPOSED FUTURE COMPONENT NOTE — not embedded, flagged only -->
+<div class="sos-page" data-screen-label="Invoice — Proposed Future Components">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Not Part of the Template</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Proposed Future Components</h2>
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 20px;">This Invoice was fully assembled from approved Identity, Financial, Status, and Footer components. One gap surfaced during assembly — noted here rather than solved by inventing something inside the template:</p>
+
+  <div style="border-left:3px solid rgba(247,244,234,0.4); padding:12px 16px; max-width:560px;">
+    <span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(247,244,234,0.6); display:block; margin-bottom:6px;">Proposed: Status Badge — Billing States</span>
+    <span style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.72);">COMP-201 Status Badge (Family 03) currently defines Draft, Internal Review, Client Review, Approved, Completed, Blocked, On Hold, Cancelled. Billing documents need <b style="color:#F7F4EA;">Sent</b>, <b style="color:#F7F4EA;">Paid</b>, and <b style="color:#F7F4EA;">Overdue</b> states, which don't exist yet. This Invoice uses "Draft" as the nearest available state rather than inventing new badge colors — the addition should go through Family 03 as a library update, not get drawn ad hoc inside TEMP-003.</span>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

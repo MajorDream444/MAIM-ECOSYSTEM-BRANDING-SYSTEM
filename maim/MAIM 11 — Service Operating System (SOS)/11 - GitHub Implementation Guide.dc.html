@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .gh-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 11 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-GITHUB-GUIDE · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 11 · From Specification to Source of Truth</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">GitHub Implementation Guide</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Pages 01–10 defined what SOS is. This page defines where it lives — the version-controlled home for every Component, Template, Workflow, Playbook, Skill, Automation, and Standard.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This is still a specification, not the repository itself — a precise enough model that Claude Code, Codex, developers, and agents can implement it without guessing.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-001</span>Sprint 01 — Repository Purpose &amp; Governance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-002</span>Sprint 02 — Repository Structure &amp; Folder Map</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-003</span>Sprint 03 — Documentation Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-004</span>Sprint 04 — Object Folder Standards</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-005</span>Sprint 05 — Schema Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-006</span>Sprint 06 — Registry Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-007</span>Sprint 07 — Naming &amp; File Standards</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-008</span>Sprint 08 — Branching, Review &amp; Approval</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-009</span>Sprint 09 — Versioning &amp; Change Management</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">GH-010</span>Sprint 10 — Integration &amp; Implementation Handoff</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as guides are defined — send each guide's spec (purpose, scope, repository rules, required structure, naming standards, ownership, review/approval requirements, versioning requirements, dependencies, example implementation, validation requirements, related SOS objects, completion criteria, future enhancements) to add it here.</div>
+</div>
+
+<!-- ============ GH-001 — GOVERNANCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Repository Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define what GitHub owns inside SOS — and just as importantly, what it deliberately does not.</p>
+
+  <div class="sub-title">Core Principle</div>
+  <div class="sub-rule"></div>
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:14px 18px; margin-bottom:22px;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:14px; color:#F7F4EA;">GitHub owns reusable system definitions — not client data, not private status, not one-off files.</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div>
+      <div class="sub-title" style="color:#1F7A3A;">Belongs in GitHub</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✓ Component, Template, Workflow definitions</div>
+        <div>✓ Playbook, Skill, Automation, Data Standard specs</div>
+        <div>✓ The SOS Foundation Board itself</div>
+        <div>✓ Naming conventions and schemas</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="color:#8A5A44;">Does Not Belong in GitHub</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✕ Live client records</div>
+        <div>✕ Private operational status</div>
+        <div>✕ Meeting notes</div>
+        <div>✕ Exported client PDFs</div>
+        <div>✕ Design experimentation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GH-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Repository Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-001</div></div>
+    <div class="field-row"><div class="field-label">Repository Name</div><div class="field-val mono">sos-core</div></div>
+    <div class="field-row"><div class="field-label">Repository Purpose</div><div class="field-val">The single version-controlled home for the reusable SOS architecture — every Component, Template, Workflow, Package, Playbook, Skill, Automation, and Data Standard.</div></div>
+    <div class="field-row"><div class="field-label">Source-of-Truth Statement</div><div class="field-val">If a definition in Airtable, Notion, or a client document conflicts with what's in <span class="mono">sos-core</span>, the repository is correct until a reviewed pull request says otherwise.</div></div>
+    <div class="field-row"><div class="field-label">What Belongs in GitHub</div><div class="field-val">Reusable system definitions only — Components, Templates, Workflows, Playbooks, Skills, Automations, Data Standards, and the Foundation Board.</div></div>
+    <div class="field-row"><div class="field-label">What Does Not Belong in GitHub</div><div class="field-val">Live client records, private operational status, meeting notes, exported client PDFs, design experimentation — these live in Airtable, Notion, and Google Drive respectively.</div></div>
+    <div class="field-row"><div class="field-label">Repository Owner</div><div class="field-val">Operations Lead — accountable for the repository's overall integrity.</div></div>
+    <div class="field-row"><div class="field-label">Maintainers</div><div class="field-val">Design Lead (Components, Templates), Operations Lead (Workflows, Playbooks, Standards), a designated AI/Automation Lead (Skills, Automations).</div></div>
+    <div class="field-row"><div class="field-label">Contribution Rules</div><div class="field-val">All changes via pull request; no direct commits to the main branch, including by maintainers.</div></div>
+    <div class="field-row"><div class="field-label">Approval Authority</div><div class="field-val">The relevant Maintainer approves changes to their domain; cross-cutting changes (e.g. DS-001 schema) require Operations Lead sign-off regardless of domain.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Related Systems</div><div class="field-val">Airtable (live records), Notion (knowledge base), Claude Design (this specification), Google Drive (client files).</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-002 — REPOSITORY MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Repository Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Repository Structure &amp; Folder Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Give <span class="mono">sos-core</span> a folder structure understandable at a glance, even to someone who has never opened GitHub before.</p>
+
+  <div class="sub-title">Four Zones</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:8px;">
+    <div style="border:1px solid #1F7A3A; padding:12px 14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#1F7A3A; margin-bottom:6px;">System Definitions</div>
+      <div style="font-size:11.5px; color:rgba(247,244,234,0.75); line-height:1.6;">components/ · templates/ · workflows/ · packages/</div>
+    </div>
+    <div style="border:1px solid #D8AF55; padding:12px 14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; margin-bottom:6px;">Execution Intelligence</div>
+      <div style="font-size:11.5px; color:rgba(247,244,234,0.75); line-height:1.6;">playbooks/ · skills/ · automations/</div>
+    </div>
+    <div style="border:1px solid #006BB6; padding:12px 14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#006BB6; margin-bottom:6px;">Control Layer</div>
+      <div style="font-size:11.5px; color:rgba(247,244,234,0.75); line-height:1.6;">schemas/ · registries/ · tests/ · scripts/</div>
+    </div>
+    <div style="border:1px solid rgba(247,244,234,0.4); padding:12px 14px;">
+      <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.7); margin-bottom:6px;">Knowledge &amp; Evidence</div>
+      <div style="font-size:11.5px; color:rgba(247,244,234,0.75); line-height:1.6;">docs/ · examples/ · archive/</div>
+    </div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px;">Every folder in the repository belongs to exactly one of these four zones — a contributor should be able to guess which zone a new file belongs to without reading this guide.</p>
+</div>
+
+<!-- ============ GH-002 — FOLDER TREE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Folder Tree</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Repository Structure &amp; Folder Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">MAIM_Service_OS/
+├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── docs/                 # KNOWLEDGE & EVIDENCE
+├── design-system/        # SYSTEM DEFINITIONS — MAIM 00 + Foundation Board
+├── components/           # SYSTEM DEFINITIONS
+│   └── COMP-001.../
+├── templates/            # SYSTEM DEFINITIONS
+│   └── TEMP-001.../
+├── workflows/            # SYSTEM DEFINITIONS
+│   └── WF-001.../
+├── packages/             # SYSTEM DEFINITIONS
+│   └── PKG-001.../
+├── playbooks/            # EXECUTION INTELLIGENCE
+│   └── PB-001.../
+├── skills/               # EXECUTION INTELLIGENCE
+│   └── SKILL-001.../
+├── automations/          # EXECUTION INTELLIGENCE
+│   └── AUTO-001.../
+├── schemas/              # CONTROL LAYER
+│   └── DS-001.../
+├── registries/           # CONTROL LAYER
+│   └── object-index.json
+├── examples/             # KNOWLEDGE & EVIDENCE
+│   └── sample-artifacts/
+├── tests/                # CONTROL LAYER
+│   └── validate-metadata.*
+├── scripts/              # CONTROL LAYER
+│   └── promote-template.*
+└── archive/              # KNOWLEDGE & EVIDENCE
+    └── deprecated/</div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:10px;">This root level is kept stable by design — new detail goes inside existing folders, not into new root-level additions.</p>
+</div>
+
+<!-- ============ GH-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Repository Structure &amp; Folder Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-002</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Repository Structure &amp; Folder Map</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">The complete, stable top-level folder architecture of <span class="mono">MAIM_Service_OS</span>, organized into the four understandable zones.</div></div>
+    <div class="field-row"><div class="field-label">Purpose of Each Folder</div><div class="field-val"><span class="mono">design-system/</span> holds MAIM 00 + this Foundation Board; <span class="mono">docs/</span> holds prose guides; <span class="mono">registries/</span> holds the generated object index; every other folder matches its SOS library page one-to-one.</div></div>
+    <div class="field-row"><div class="field-label">Allowed Object Types</div><div class="field-val">Only the object type matching a folder's name may live inside it — e.g. no Playbook content inside <span class="mono">workflows/</span>.</div></div>
+    <div class="field-row"><div class="field-label">Repository Rules</div><div class="field-val">Every object folder is named by its ID (e.g. <span class="mono">COMP-001-primary-header/</span>), never by a free-text title alone; the root level above is frozen — new detail goes inside folders, not beside them.</div></div>
+    <div class="field-row"><div class="field-label">Required Structure</div><div class="field-val">The 18-item root shown above, with README, CHANGELOG, CONTRIBUTING, and LICENSE as the only root-level files.</div></div>
+    <div class="field-row"><div class="field-label">Naming Standards</div><div class="field-val mono">{ID}-{kebab-case-name}/, matching DS-009's naming convention.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Each zone maps to a Maintainer role from GH-001: System Definitions → Design Lead; Execution Intelligence → AI/Automation Lead; Control Layer &amp; Knowledge → Operations Lead.</div></div>
+    <div class="field-row"><div class="field-label">Dependency Rules</div><div class="field-val"><span class="mono">registries/object-index.json</span> is generated from, and must stay in sync with, every ID folder across all four zones; it is never hand-edited.</div></div>
+    <div class="field-row"><div class="field-label">Example Files</div><div class="field-val mono">components/COMP-001-primary-header/spec.md · templates/TEMP-001-proposal/components-used.json</div></div>
+    <div class="field-row"><div class="field-label">Validation Requirements</div><div class="field-val"><span class="mono">tests/validate-metadata</span> checks that every folder's contents satisfy its Data Standard (DS-001–010) before a pull request can merge.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-009 Naming Convention · DS-001–010 all schemas</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Every existing SOS object (Pages 01–10) has a corresponding folder in its correct zone, with no object left unfiled, and the root level contains exactly these 18 entries.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">A repository README badge or generated diagram can render this four-zone map automatically from folder structure, keeping this guide and the real repository visibly in sync.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-003 — DOCS MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Documentation Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Documentation Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define how the human-readable system documentation is stored inside <span class="mono">docs/</span> — the Knowledge &amp; Evidence zone's largest folder.</p>
+
+  <div class="code-block">docs/
+├── 00-foundation/            # Foundation Board, brand, principles
+├── 01-service-architecture/  # Components, Templates, Workflows
+├── 02-client-experience/     # Client Journey
+├── 03-commercial/            # Packages, pricing
+├── 04-onboarding/            # Welcome, Kickoff
+├── 05-delivery/              # Weekly Ops, Milestones
+├── 06-governance/            # Approval, review rules
+├── 07-finance/                # Invoicing, payment
+├── 08-legal/                  # Agreements, confidentiality
+├── 09-reporting/              # Reports, KPIs
+├── 10-handover/               # Final Delivery, Closeout
+└── 11-expansion/              # Support, Referral, Growth</div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:10px;">Numbering follows the client lifecycle order established across Pages 04–06, not alphabetical order — so reading the folder list top to bottom tells the story of an engagement.</p>
+</div>
+
+<!-- ============ GH-003 — CONVENTIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Conventions</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Documentation Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Numbering Convention</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Two-digit prefix, zero-padded, fixed at creation — a new topic is inserted using a decimal folder (e.g. <span class="mono">04.1-mid-project-changes/</span>) rather than renumbering everything after it.</p>
+
+  <div class="sub-title">Navigation Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">The root <span class="mono">docs/README.md</span> links to every numbered folder in order — that file is the single entry point, never a folder listing left to speak for itself.</p>
+
+  <div class="sub-title">Internal Linking Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Links between docs use relative paths, never absolute URLs, so the documentation set stays valid if the repository is renamed or forked.</p>
+
+  <div class="sub-title">README Requirements</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every numbered folder eventually contains its own <span class="mono">README.md</span> stating: what this folder covers, which SOS pages it corresponds to, and a table of contents for its files.</p>
+</div>
+
+<!-- ============ GH-003 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Documentation Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-003</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Documentation Architecture</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">The internal structure of <span class="mono">docs/</span> only — one of the four root zones defined in GH-002.</div></div>
+    <div class="field-row"><div class="field-label">Repository Rules</div><div class="field-val">No file lives directly in <span class="mono">docs/</span> root except the master README — everything else sits inside a numbered folder.</div></div>
+    <div class="field-row"><div class="field-label">Document Metadata Requirements</div><div class="field-val">Every doc file opens with a front-matter block: title, related SOS page, last updated date, owner — matching DS-001's spirit even for prose files.</div></div>
+    <div class="field-row"><div class="field-label">Status Rules</div><div class="field-val">A doc marked Draft in its front-matter cannot be linked from the master README's table of contents until it reaches Approved.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Operations Lead owns docs/ overall; each numbered folder's content owner matches the corresponding SOS page's stated Owner.</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val">Folder numbering must stay aligned with the Client Journey and Workflow Library page order — a new SOS page requires a corresponding docs/ folder in the same pull request.</div></div>
+    <div class="field-row"><div class="field-label">Example Implementation</div><div class="field-val mono">docs/05-delivery/README.md links to weekly-operations.md, milestone-review.md</div></div>
+    <div class="field-row"><div class="field-label">Validation Requirements</div><div class="field-val">A link-checker script confirms every relative link in docs/ resolves, and every numbered folder has a README before merge.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Pages 01–10 — each numbered folder maps to one or more of them</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">All 12 numbered folders exist with a README stub, even before every file inside them is written.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">A generated site (e.g. GitHub Pages) can render docs/ as a browsable manual, using the numbering as its navigation order automatically.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-004 — OBJECT MAPPING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Object Mapping</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Object Folder Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define exactly where each SOS object type lives, and what a single object's own folder must always contain.</p>
+
+  <div class="sub-title">Object-to-Folder Mapping</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px 20px; font-size:12px; margin-bottom:8px;">
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Component</span><span class="mono" style="color:#D8AF55;">components/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Template</span><span class="mono" style="color:#D8AF55;">templates/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Workflow</span><span class="mono" style="color:#D8AF55;">workflows/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Package</span><span class="mono" style="color:#D8AF55;">packages/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Playbook</span><span class="mono" style="color:#D8AF55;">playbooks/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Skill</span><span class="mono" style="color:#D8AF55;">skills/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Automation</span><span class="mono" style="color:#D8AF55;">automations/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Schema</span><span class="mono" style="color:#D8AF55;">schemas/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Registry</span><span class="mono" style="color:#D8AF55;">registries/</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Example</span><span class="mono" style="color:#D8AF55;">examples/</span></div>
+  </div>
+</div>
+
+<!-- ============ GH-004 — EXAMPLE OBJECT FOLDER ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Example Object Folder</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Object Folder Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">templates/
+└── commercial/
+    └── TEMP-001-proposal/
+        ├── README.md            # what it is, when to use it
+        ├── template.md          # the structural spec itself
+        ├── metadata.yaml        # DS-004 Template Metadata Standard fields
+        ├── component-map.yaml   # COMP-XXX references used
+        └── examples/            # sample assembled documents</div>
+
+  <div class="sub-title" style="margin-top:24px;">File-Type Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Structure and prose live in Markdown (<span class="mono">.md</span>); machine-read metadata and references live in YAML (<span class="mono">.yaml</span>) — never mixed in the same file.</p>
+
+  <div class="sub-title">Required Metadata</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;"><span class="mono">metadata.yaml</span> must satisfy its object type's Data Standard exactly (DS-001 base fields plus DS-004/005/006/007 as applicable) — this is what <span class="mono">tests/validate-metadata</span> checks.</p>
+
+  <div class="sub-title">Naming Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Object folder name is always <span class="mono">{ID}-{kebab-case-name}</span>; internal files use fixed lowercase names (<span class="mono">readme.md</span> capitalization aside) so scripts can find them without per-object configuration.</p>
+</div>
+
+<!-- ============ GH-004 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Object Folder Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-004</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Object Folder Standards</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">The internal contents of any single object's folder, across all ten object types.</div></div>
+    <div class="field-row"><div class="field-label">Dependency References</div><div class="field-val"><span class="mono">component-map.yaml</span> (or equivalent) lists every related object ID; <span class="mono">registries/object-index.json</span> is built by scanning these references across all folders.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">The Maintainer for that object type (GH-001) owns every folder of that type; a Design Lead cannot merge changes to a skills/ folder.</div></div>
+    <div class="field-row"><div class="field-label">Example Object</div><div class="field-val mono">templates/commercial/TEMP-001-proposal/</div></div>
+    <div class="field-row"><div class="field-label">Validation Requirements</div><div class="field-val">A pull request touching any object folder must include a passing <span class="mono">metadata.yaml</span> validation and an updated README if the object's purpose changed.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-001 through DS-007 (per-type schemas) · GH-002 zone map · GH-003 docs structure</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Every object across Pages 02–10 has a folder matching this exact five-file (or equivalent) shape, with no ad hoc structure per object.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">A scaffolding script (<span class="mono">scripts/new-object.sh</span>) can generate this folder shape automatically from an object type and ID, removing manual setup entirely.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-005 — SCHEMA DIRECTORY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema Directory</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Schema Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define the machine-readable validation layer that turns Pages 01–10's schemas into something a script can actually enforce.</p>
+
+  <div class="code-block">schemas/
+├── artifact.schema.json      # DS-001 base — every other schema extends this
+├── client.schema.json        # DS-002
+├── project.schema.json       # DS-003
+├── component.schema.json
+├── template.schema.json      # DS-004
+├── workflow.schema.json      # DS-005
+├── package.schema.json
+├── playbook.schema.json
+├── skill.schema.json         # DS-006
+├── automation.schema.json    # DS-007
+└── approval.schema.json</div>
+
+  <div style="margin-top:16px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:12px 16px;">
+    <div style="font-size:12px; color:#F7F4EA;">Build order: start with <span class="mono">artifact.schema.json</span>'s shared metadata fields only. Extend each object-specific schema carefully, one at a time — do not attempt full coverage on day one.</div>
+  </div>
+</div>
+
+<!-- ============ GH-005 — TYPES, VALIDATION & VERSIONING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Types, Validation &amp; Versioning</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Schema Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Schema Types</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">All schemas are JSON Schema documents — chosen because it validates both JSON and YAML metadata files and is readable by nearly every language and CI tool without extra dependencies.</p>
+
+  <div class="sub-title">Required Validation Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Every schema requires the 13 DS-001 base fields at minimum; type-specific schemas add their own required fields (e.g. <span class="mono">template.schema.json</span> requires <span class="mono">components_used</span>).</p>
+
+  <div class="sub-title">Versioning Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Each schema file carries its own <span class="mono">$id</span> and version; a breaking change (removing or retyping a required field) increments the major version and requires migrating every existing metadata.yaml that used it.</p>
+
+  <div class="sub-title">Relationship Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every object-specific schema uses <span class="mono">$ref</span> to extend <span class="mono">artifact.schema.json</span> rather than redeclaring the base fields — one definition, inherited everywhere, exactly like DS-001 in prose form.</p>
+</div>
+
+<!-- ============ GH-005 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Schema Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-005</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Schema Architecture</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">The <span class="mono">schemas/</span> folder in the Control Layer zone — the machine-enforceable counterpart to Page 10's prose Data Standards.</div></div>
+    <div class="field-row"><div class="field-label">Example Schema Map</div><div class="field-val mono">artifact.schema.json ← template.schema.json ← (TEMP-001/metadata.yaml validates against it)</div></div>
+    <div class="field-row"><div class="field-label">Error-Reporting Expectations</div><div class="field-val">Validation failures report the exact field, the expected type or value, and the file path — never a bare "validation failed" with no location.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Operations Lead owns <span class="mono">artifact.schema.json</span>; each object-type Maintainer owns their own schema file, but changes to the base require Operations Lead sign-off (per GH-001).</div></div>
+    <div class="field-row"><div class="field-label">Dependencies</div><div class="field-val"><span class="mono">tests/validate-metadata</span> (GH-002/004) loads every schema in this folder to check object folders at pull-request time.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-001 through DS-007 — each schema file is the JSON Schema translation of one Data Standard.</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val"><span class="mono">artifact.schema.json</span> exists and validates the shared metadata fields; other schema files may start as stubs extending it, expanded incrementally.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">Once schemas are stable, Airtable and Notion field definitions can be generated directly from these JSON Schema files rather than maintained by hand in three places.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-006 — REGISTRY DIRECTORY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Registry Directory</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Registry Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Create the index that lets any human or agent locate every approved object without walking the entire folder tree.</p>
+
+  <div class="code-block">registries/
+├── components.yaml
+├── templates.yaml
+├── workflows.yaml
+├── packages.yaml
+├── playbooks.yaml
+├── skills.yaml
+├── automations.yaml
+└── statuses.yaml    # canonical status enum, shared by every registry</div>
+
+  <div class="sub-title" style="margin-top:24px;">Registry Types</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">One flat registry file per object type, each a list of lightweight entries — never the full object content, just enough to locate and reference it.</p>
+</div>
+
+<!-- ============ GH-006 — EXAMPLE ENTRY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Example Entry</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Registry Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">id: TEMP-001
+name: Proposal
+version: 1.0.0
+status: Approved
+path: templates/commercial/TEMP-001-proposal
+owner: MAIM Service Operations
+depends_on:
+  - COMP-001
+  - COMP-003
+  - COMP-301</div>
+
+  <div class="sub-title" style="margin-top:24px;">Required Fields</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">id, name, version, status, path, owner, depends_on — every entry in every registry file, no exceptions and no optional subset.</p>
+
+  <div class="sub-title">Status Handling</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Status values are drawn only from <span class="mono">statuses.yaml</span>'s canonical enum (Draft, In Review, Approved, Signed, Void, Expired) — an object cannot be promoted to Approved in its own registry entry without also passing GH's Approval requirements.</p>
+</div>
+
+<!-- ============ GH-006 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Registry Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-006</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Registry Architecture</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">The <span class="mono">registries/</span> folder — the flat, fast-lookup index over every object folder in the repository.</div></div>
+    <div class="field-row"><div class="field-label">Dependency References</div><div class="field-val">depends_on lists direct references only; a full dependency graph (e.g. TEMP-001's transitive Component tree) is computed from these entries, never hand-maintained separately.</div></div>
+    <div class="field-row"><div class="field-label">Update Responsibility</div><div class="field-val">Registries are never hand-edited directly — a script regenerates them from each object's metadata.yaml on every merge to main, so drift between folder contents and registry is structurally impossible.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Operations Lead owns the regeneration script; individual Maintainers own the source metadata.yaml files the script reads from.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-004 Object Folder Standards (source of truth) · GH-005 Schema Architecture (validates entries)</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">All eight registry files exist and regenerate cleanly from the current state of every object folder, with zero manual edits required.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">Airtable can sync directly from these registry files via a scheduled import, giving Operations a live, browsable view of every SOS object without leaving Airtable.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-007 — NAMING RULES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Naming Rules</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Naming &amp; File Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Make every repository object predictable and searchable — no two contributors inventing a different naming style for the same kind of thing.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:6px 20px; font-size:12px;">
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Folders</span><span class="mono" style="color:#D8AF55;">lowercase-kebab-case</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Object folders</span><span class="mono" style="color:#D8AF55;">TEMP-001-proposal</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Markdown</span><span class="mono" style="color:#D8AF55;">README.md, template.md</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Metadata</span><span class="mono" style="color:#D8AF55;">metadata.yaml</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Schemas</span><span class="mono" style="color:#D8AF55;">template.schema.json</span></div>
+    <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(247,244,234,0.1); padding:5px 0;"><span>Dates</span><span class="mono" style="color:#D8AF55;">YYYY-MM-DD</span></div>
+    <div style="display:flex; justify-content:space-between; padding:5px 0;"><span>Versions</span><span class="mono" style="color:#D8AF55;">1.0.0 (SemVer)</span></div>
+  </div>
+</div>
+
+<!-- ============ GH-007 — CLIENT INSTANCE NAMING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Client-Instance Naming</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Naming &amp; File Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">examples/
+└── clients/
+    └── CLIENT-THEO/
+        └── PROJ-001/
+            └── ART-001-receipt-v1.0.0.md</div>
+
+  <div style="margin-top:16px; border:1px solid #8A5A44; padding:12px 16px;">
+    <div style="font-size:12px; color:#F7F4EA;">Client-specific information is never copied into a canonical object folder (e.g. <span class="mono">templates/commercial/TEMP-001-proposal/</span>) — it lives only under <span class="mono">examples/clients/</span>, keeping the reusable definition permanently clean.</div>
+  </div>
+
+  <div class="sub-title" style="margin-top:24px;">Capitalization Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">ID prefixes are always uppercase (TEMP, COMP, CLIENT); folder and file names are always lowercase except the ID segment itself and the fixed filenames README.md and LICENSE.</p>
+</div>
+
+<!-- ============ GH-007 — VALID/INVALID EXAMPLES & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Valid / Invalid Examples &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Naming &amp; File Standards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px;">
+    <div>
+      <div class="sub-title" style="color:#1F7A3A;">Valid</div>
+      <div class="sub-rule"></div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,0.8); display:flex; flex-direction:column; gap:6px;">
+        <div>TEMP-001-proposal/</div>
+        <div>metadata.yaml</div>
+        <div>2026-07-11</div>
+        <div>1.2.0</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="color:#8A5A44;">Invalid</div>
+      <div class="sub-rule"></div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:rgba(247,244,234,0.8); display:flex; flex-direction:column; gap:6px;">
+        <div>Proposal_Template/</div>
+        <div>Metadata.YAML</div>
+        <div>07/11/2026</div>
+        <div>v2</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-007</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Naming &amp; File Standards</div></div>
+    <div class="field-row"><div class="field-label">Scope</div><div class="field-val">Every folder, file, identifier, date, and version string in the repository, canonical and client-instance alike.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Operations Lead; a linter enforces this in CI so it never depends on manual review alone.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-009 Naming Convention Standard (this guide is its GitHub-specific implementation)</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">A naming-lint script rejects any pull request introducing a folder or file that violates this page.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">The same lint rules can run as a pre-commit hook, catching naming violations before a pull request is even opened.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-008 — BRANCHING MODEL ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Branching Model</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Branching, Review &amp; Approval</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define how changes move safely into the official system — deliberately the simplest model that works, not an enterprise branching scheme.</p>
+
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:14px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:90px;">main</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Official approved source of truth — protected, no direct commits.</div></div>
+    <div style="display:flex; gap:14px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:90px;">feature/*</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">New systems, templates, or improvements.</div></div>
+    <div style="display:flex; gap:14px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:90px;">fix/*</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Corrections that do not change the system model.</div></div>
+    <div style="display:flex; gap:14px; align-items:baseline;"><div class="mono" style="color:rgba(247,244,234,0.4); font-weight:600; width:90px;">release/*</div><div style="font-size:12.5px; color:rgba(247,244,234,0.5);">Optional later, only once formal releases begin.</div></div>
+  </div>
+
+  <div style="margin-top:20px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px;">Three branch types cover everything today; release/* is named here so it has a reserved place, not because it's used yet.</div>
+</div>
+
+<!-- ============ GH-008 — APPROVAL FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Approval Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Branching, Review &amp; Approval</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:420px; margin-bottom:20px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Draft Change</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Feature Branch</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.5); padding:9px 16px; width:100%; box-sizing:border-box;">Internal Review <span style="font-size:9.5px; color:rgba(247,244,234,0.5);">HUMAN</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Validation <span style="font-size:9.5px; color:#D8AF55;">AUTOMATED</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Approved Pull Request</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Merge to Main</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Registry Updated</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Changelog Updated</div>
+  </div>
+
+  <div class="sub-title">Approval Roles</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">The domain Maintainer (GH-001) performs Internal Review; Validation runs unattended via <span class="mono">tests/validate-metadata</span>; only a Maintainer can mark a pull request Approved and merge.</p>
+</div>
+
+<!-- ============ GH-008 — PROCESS DETAIL & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Process Detail &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Branching, Review &amp; Approval</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-008</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Branching, Review &amp; Approval</div></div>
+    <div class="field-row"><div class="field-label">Pull Request Checklist</div><div class="field-val">Metadata validated · README updated if purpose changed · registry entry will regenerate cleanly · naming lint passes.</div></div>
+    <div class="field-row"><div class="field-label">Status Transitions</div><div class="field-val">Draft → In Review happens on PR open; In Review → Approved happens on Maintainer approval; Approved → merged status is set automatically on merge.</div></div>
+    <div class="field-row"><div class="field-label">Merge Rules</div><div class="field-val">Squash merge only, so main's history stays one commit per change — easy to scan, easy to revert.</div></div>
+    <div class="field-row"><div class="field-label">Emergency Correction Process</div><div class="field-val">A <span class="mono">fix/*</span> branch may skip a full Internal Review only for a factual typo with zero model impact, and still requires Validation to pass and a Maintainer's merge.</div></div>
+    <div class="field-row"><div class="field-label">Superseded-Object Handling</div><div class="field-val">A superseded object moves to <span class="mono">archive/</span> (GH-002) with its status set to Void in the registry — it is never deleted outright.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-001 Governance (Maintainer roles) · GH-005/006 (Validation, Registry)</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Branch protection on main is enabled, requiring passing Validation and one Maintainer approval before merge is possible.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">release/* branches can be introduced once client-facing versioned releases of the system itself are needed — not before.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-009 — VERSION MEANING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Version Meaning</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Versioning &amp; Change Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define how SOS evolves without losing history — every object's past state stays reconstructable, never overwritten silently.</p>
+
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:70px;">1.0.0</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">First approved version.</div></div>
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:70px;">1.0.1</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Correction with no structural change.</div></div>
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#D8AF55; font-weight:600; width:70px;">1.1.0</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Backward-compatible feature or component addition.</div></div>
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#8A5A44; font-weight:600; width:70px;">2.0.0</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Breaking structural or workflow change.</div></div>
+  </div>
+
+  <div class="sub-title" style="margin-top:26px;">Breaking-Change Definition</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A change is breaking if any existing dependent object (per its <span class="mono">depends_on</span> registry entry) would fail Validation against the new version without modification.</p>
+</div>
+
+<!-- ============ GH-009 — CHANGE RECORD ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Change Record</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Versioning &amp; Change Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Every Approved Change Identifies</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>· What changed</div>
+    <div>· Why it changed</div>
+    <div>· Objects affected</div>
+    <div>· Dependencies affected</div>
+    <div>· Migration required (yes/no, and how)</div>
+    <div>· Approval owner</div>
+    <div>· Effective date</div>
+  </div>
+
+  <div class="sub-title">Changelog Standard</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">## [1.1.0] - 2026-07-11
+### Added
+- COMP-506 Acceptance Certificate variant for Training Package
+
+### Changed
+- TEMP-005 Welcome Packet: personalization fields expanded
+
+### Migration Required
+- None — fully backward compatible</div>
+
+  <div class="sub-title" style="margin-top:20px;">Migration-Note Requirements</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Any 2.0.0 (breaking) change must ship with a migration note describing exactly how existing dependents update — a breaking change with no migration note fails Validation automatically.</p>
+</div>
+
+<!-- ============ GH-009 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Versioning &amp; Change Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Guide ID</div><div class="field-val mono">GH-009</div></div>
+    <div class="field-row"><div class="field-label">Guide Name</div><div class="field-val">Versioning &amp; Change Management</div></div>
+    <div class="field-row"><div class="field-label">Semantic Versioning Rules</div><div class="field-val">Every object version follows MAJOR.MINOR.PATCH exactly as shown; a version is never decremented or reused.</div></div>
+    <div class="field-row"><div class="field-label">Object Version Rules</div><div class="field-val">An object's version lives in its own metadata.yaml and registry entry; both must match at all times or Validation fails.</div></div>
+    <div class="field-row"><div class="field-label">Repository Release Rules</div><div class="field-val">The repository itself is not versioned as a whole yet — individual objects version independently until release/* branches are introduced (GH-008).</div></div>
+    <div class="field-row"><div class="field-label">Superseded Status Rules</div><div class="field-val">A superseded object version moves to Void status and archive/ (GH-008); the prior version file is retained, never deleted.</div></div>
+    <div class="field-row"><div class="field-label">Rollback Expectations</div><div class="field-val">Because merges are squashed per change (GH-008), rolling back a version is a single revert of that change's commit.</div></div>
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">The object's Maintainer sets its own version bump; a MAJOR bump requires Operations Lead sign-off regardless of domain.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-001 Versioning Rules (prose) · GH-006 Registry (version field) · GH-008 Approval Flow</div></div>
+    <div class="field-row"><div class="field-label">Completion Criteria</div><div class="field-val">Every object has a version matching SemVer, and CHANGELOG.md reflects every merged change with its full record.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Enhancements</div><div class="field-val">A bot can auto-draft the changelog entry from a pull request's metadata diff, leaving a human only to confirm accuracy before merge.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-010 — RESPONSIBILITY MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Responsibility Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Integration &amp; Implementation Handoff</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define how GitHub connects to the rest of the SOS technology stack — the closing page of the implementation guide.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">GitHub</div><div class="field-val">Canonical definitions, schemas, templates, and version history — the source of truth (GH-001).</div></div>
+    <div class="field-row"><div class="field-label">Notion</div><div class="field-val">Readable manuals, decisions, training material, and explanation — generated from, and linking back to, GitHub docs/.</div></div>
+    <div class="field-row"><div class="field-label">Airtable</div><div class="field-val">Live clients, projects, statuses, approvals, and payments — synced from GitHub's registries, never the reverse.</div></div>
+    <div class="field-row"><div class="field-label">Claude Design</div><div class="field-val">Visual foundation, Components, and designed Template references — this project is where the definitions in GitHub are authored and previewed.</div></div>
+    <div class="field-row"><div class="field-label">Google Drive</div><div class="field-val">Generated client-facing exports and delivery files — outputs, never inputs, to the canonical system.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">AI Agents</div><div class="field-val">Read approved definitions from GitHub and produce controlled instances — agents never write directly back to <span class="mono">sos-core</span>.</div></div>
+  </div>
+</div>
+
+<!-- ============ GH-010 — INTEGRATION MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Integration Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Integration &amp; Implementation Handoff</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">GitHub (sos-core)
+  ├──sync──> Airtable        # registries/*.yaml → live tables
+  ├──publish──> Notion       # docs/ → readable manuals
+  ├──author in──> Claude Design  # this project is the design surface
+  ├──generate to──> Google Drive # client exports, never synced back
+  └──read by──> AI Agents    # approved definitions only, read-only</div>
+
+  <div class="sub-title" style="margin-top:22px;">Agent Access Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 18px;">Agents (SKILL-XXX, AUTO-XXX) may read any Approved-status object; Draft or In Review objects are invisible to agent access until promoted, so an agent never assembles a document from an unfinished definition.</p>
+
+  <div class="sub-title">Export Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A generated client document goes to Google Drive, never back into GitHub — client instances live under <span class="mono">examples/clients/</span> only when used as an internal reference sample (GH-007), not as live delivery.</p>
+</div>
+
+<!-- ============ GH-010 — IMPLEMENTATION PHASES & COMPLETION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="gh-id">GH-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Implementation Phases &amp; Completion</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Integration &amp; Implementation Handoff</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Implementation Phases</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8); margin-bottom:24px;">
+    <div>1. Create <span class="mono">sos-core</span> with the frozen root (GH-002) and empty zone folders.</div>
+    <div>2. Populate <span class="mono">schemas/</span> starting with <span class="mono">artifact.schema.json</span> (GH-005).</div>
+    <div>3. Migrate Pages 01–10's objects into their folders (GH-004), generating registries (GH-006).</div>
+    <div>4. Enable branch protection and Validation on main (GH-008).</div>
+    <div>5. Connect Airtable and Notion as read-only consumers of registries/ and docs/ (this sprint).</div>
+  </div>
+
+  <div class="sub-title">Page 11 Completion Criteria</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85);">
+    <div>☑ One stable root structure — GH-002</div>
+    <div>☑ One object-to-folder map — GH-004</div>
+    <div>☑ One schema architecture — GH-005</div>
+    <div>☑ One registry architecture — GH-006</div>
+    <div>☑ One naming standard — GH-007</div>
+    <div>☑ One review process — GH-008</div>
+    <div>☑ One versioning standard — GH-009</div>
+    <div>☑ One integration map — GH-010</div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">GitHub Implementation Guide — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Guides Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

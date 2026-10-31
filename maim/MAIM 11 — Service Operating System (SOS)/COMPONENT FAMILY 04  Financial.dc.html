@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 04</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Financial</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Components that carry money — pricing, invoicing, receipts, balances, tax, and discount, appearing across nearly every document type.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">All figures set in JetBrains Mono, right-aligned, with gold reserved for the single total that matters on a given page.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);">
+    <div><span style="color:#D8AF55;">COMP-301</span> Pricing Table</div>
+    <div><span style="color:#D8AF55;">COMP-302</span> Invoice Summary</div>
+    <div><span style="color:#D8AF55;">COMP-303</span> Payment Schedule</div>
+    <div><span style="color:#D8AF55;">COMP-304</span> Receipt Summary</div>
+    <div><span style="color:#D8AF55;">COMP-305</span> Outstanding Balance</div>
+    <div><span style="color:#D8AF55;">COMP-306</span> Tax Summary</div>
+    <div><span style="color:#D8AF55;">COMP-307</span> Discount Block</div>
+    <div><span style="color:#D8AF55;">COMP-308</span> Currency Block</div>
+  </div>
+</div>
+
+<!-- ============ COMP-301 PRICING TABLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-301</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Pricing Table</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Itemizes what's being sold and at what rate. <b style="color:#F7F4EA;">Used on:</b> Proposals, SOWs, and any pre-sale document quoting a scope of work.</p>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:18px;">
+    <thead><tr style="background:#F7F4EA; color:#050505;"><th style="text-align:left; padding:9px 12px; font-weight:700;">Line Item</th><th style="text-align:left; padding:9px 12px; font-weight:700;">Qty</th><th style="text-align:right; padding:9px 12px; font-weight:700;">Rate</th><th style="text-align:right; padding:9px 12px; font-weight:700;">Amount</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16);"><td style="padding:9px 12px;">Strategic Advisory — Phase 1</td><td class="mono" style="padding:9px 12px;">1</td><td class="mono" style="padding:9px 12px; text-align:right;">$24,000.00</td><td class="mono" style="padding:9px 12px; text-align:right;">$24,000.00</td></tr>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16); background:rgba(247,244,234,0.04);"><td style="padding:9px 12px;">Implementation Support</td><td class="mono" style="padding:9px 12px;">40 hrs</td><td class="mono" style="padding:9px 12px; text-align:right;">$425.00</td><td class="mono" style="padding:9px 12px; text-align:right;">$17,000.00</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">4 columns: description (flexible), qty, rate, amount (fixed, right-aligned). Header row inverts to white-clarity fill.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Header: Archivo 700, 12px. Description cells: Archivo 400. Numeric cells: JetBrains Mono 400, always right-aligned.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">9px vertical / 12px horizontal cell padding. Alternating rows tint at 4% ivory, never a hard zebra color.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Header row uses a real `&lt;thead&gt;` — never styled body rows — so assistive tech announces column headers per cell.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Rows carry `break-inside: avoid`; header repeats if the table spans a page break.</div></div>
+</div>
+
+<!-- ============ COMP-302 INVOICE SUMMARY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-302</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Invoice Summary</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Rolls a Pricing Table up to what's actually owed. <b style="color:#F7F4EA;">Used on:</b> Invoices, at the foot of the line-item table.</p>
+
+  <div style="display:flex; justify-content:flex-end; margin-bottom:18px;">
+    <div style="width:280px; border:1px solid #D8AF55; padding:16px 18px;">
+      <div style="display:flex; justify-content:space-between; font-size:12px; color:rgba(247,244,234,0.6); margin-bottom:6px;"><span>Subtotal</span><span class="mono">$41,000.00</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:12px; color:rgba(247,244,234,0.6); margin-bottom:10px;"><span>Tax (0%)</span><span class="mono">$0.00</span></div>
+      <div style="height:1px; background:#D8AF55; margin-bottom:10px;"></div>
+      <div style="display:flex; justify-content:space-between; font-weight:900; font-size:17px;"><span>TOTAL DUE</span><span class="mono">$41,000.00</span></div>
+    </div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Right-aligned card, fixed 280px width, stacked rows: Subtotal → Tax → gold hairline → Total Due.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Row labels Archivo 400, 12px. Total Due label in Archivo Black 900, 17px — the one moment display weight appears inside a data block.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">16/18px card padding, 6–10px between rows, 10px clearance around the closing hairline.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Total Due is always the last row and the only bolded one — position and weight both signal finality, not gold alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Card never splits across a page break; if the preceding Pricing Table runs long, this component starts a fresh page.</div></div>
+</div>
+
+<!-- ============ COMP-303 PAYMENT SCHEDULE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-303</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Payment Schedule</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Breaks a total into installments over time. <b style="color:#F7F4EA;">Used on:</b> SOWs and Proposals with milestone or retainer billing.</p>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:18px;">
+    <thead><tr style="border-bottom:1px solid #D8AF55;"><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Milestone</th><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Due</th><th style="text-align:right; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Amount</th><th style="text-align:right; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10px; text-transform:uppercase; letter-spacing:0.05em;">Status</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.12);"><td style="padding:8px 10px;">Deposit</td><td class="mono" style="padding:8px 10px; color:rgba(247,244,234,0.6);">On signing</td><td class="mono" style="padding:8px 10px; text-align:right;">$16,400.00</td><td style="padding:8px 10px; text-align:right; color:#1F7A3A; font-size:10px;" class="mono">PAID</td></tr>
+      <tr><td style="padding:8px 10px;">Phase 1 Delivery</td><td class="mono" style="padding:8px 10px; color:rgba(247,244,234,0.6);">07/15/26</td><td class="mono" style="padding:8px 10px; text-align:right;">$24,600.00</td><td style="padding:8px 10px; text-align:right; color:#D8AF55; font-size:10px;" class="mono">UPCOMING</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">4-column table: milestone, due trigger (date or condition), amount, payment state — state as text, not a badge, to stay compact.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Due trigger and status in mono, small caps size (10px); status color-coded (green=paid, gold=upcoming, orange=overdue).</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">7–8px cell padding; tighter than Pricing Table since rows are typically fewer and status-scannable.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Status column always spells PAID / UPCOMING / OVERDUE — never a color swatch alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Entire schedule kept on one page where possible; if it must split, the header row repeats.</div></div>
+</div>
+
+<!-- ============ COMP-304 RECEIPT SUMMARY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-304</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Receipt Summary</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Confirms a completed payment, after the fact. <b style="color:#F7F4EA;">Used on:</b> Receipts, sent immediately after a payment clears.</p>
+
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:18px 20px; margin-bottom:18px;">
+    <div style="display:flex; justify-content:space-between; margin-bottom:10px;"><span class="lbl">Amount Paid</span><span class="mono" style="font-size:20px; color:#D8AF55; font-weight:700;">$16,400.00</span></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:11.5px; color:rgba(247,244,234,0.65);">
+      <div><span class="lbl">Paid On</span><br/><span class="mono">07/08/2026</span></div>
+      <div><span class="lbl">Method</span><br/>Wire Transfer</div>
+      <div><span class="lbl">Reference</span><br/><span class="mono">TXN-88213</span></div>
+      <div><span class="lbl">Applied To</span><br/><span class="mono">DOC-2026-00417</span></div>
+    </div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Amount Paid leads at top, largest figure on the page; supporting details in a 2×2 grid below.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Amount Paid in JetBrains Mono 700, 20px, gold — the single largest and only colored number in the Financial family.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">18/20px card padding, 10px row gap in the supporting grid.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">"Applied To" always cross-references the Document Identifier it settles, closing the audit trail.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Designed to fit on a single small page or half-page — receipts should never require page 2.</div></div>
+</div>
+
+<!-- ============ COMP-305 OUTSTANDING BALANCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-305</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary + Alternate</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Outstanding Balance</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Flags money still owed. <b style="color:#F7F4EA;">Used on:</b> Invoices with partial payment, statements, and reminder documents.</p>
+
+  <div style="display:flex; gap:16px; margin-bottom:18px;">
+    <div style="border:1px solid #D8AF55; padding:14px 18px; flex:1;"><div class="lbl">Balance Due</div><div class="mono" style="font-size:18px; color:#D8AF55; margin-top:4px;">$24,600.00</div></div>
+    <div style="border:1px solid #F58426; padding:14px 18px; flex:1;"><div class="lbl" style="color:#F58426;">Past Due</div><div class="mono" style="font-size:18px; color:#F58426; margin-top:4px;">$24,600.00 · 12 days</div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Standalone card; Past Due alternate adds a day-count, always paired, never the amount alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Balance figure in mono 700, 18px; label above in tracked mono 9px, matching the color of its border (gold vs. orange).</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">14/18px card padding; 16px gap when Balance Due and Past Due appear side by side.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Past Due always states the day count in text — never orange color as the sole urgency signal.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Past Due variant is the one Financial component permitted to repeat in a footer strip on reminder documents.</div></div>
+</div>
+
+<!-- ============ COMP-306 TAX SUMMARY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-306</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Tax Summary</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Itemizes tax lines when more than a flat rate applies. <b style="color:#F7F4EA;">Used on:</b> Invoices and Receipts in multi-jurisdiction or multi-rate engagements.</p>
+
+  <table style="width:100%; border-collapse:collapse; font-size:11.5px; margin-bottom:18px;">
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.12);"><td style="padding:7px 10px; color:rgba(247,244,234,0.65);">State Sales Tax (7.25%)</td><td class="mono" style="padding:7px 10px; text-align:right;">$2,972.50</td></tr>
+      <tr><td style="padding:7px 10px; color:rgba(247,244,234,0.65);">Local Surcharge (1%)</td><td class="mono" style="padding:7px 10px; text-align:right;">$410.00</td></tr>
+    </tbody>
+  </table>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Compact 2-column list, no header row — always nested directly above or inside an Invoice Summary, never standalone.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Jurisdiction/rate label in Archivo 400, 11.5px, muted; amount in mono, right-aligned, full opacity.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">7px row padding — the tightest row spacing in the Financial family, since it's a supporting detail, not a headline figure.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Rate is always stated in the label text (7.25%) — never omitted in favor of the dollar figure alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Never separated from the Invoice Summary it feeds — both stay on the same printed page.</div></div>
+</div>
+
+<!-- ============ COMP-307 DISCOUNT BLOCK ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-307</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Discount Block</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Shows a reduction applied to a total, and why. <b style="color:#F7F4EA;">Used on:</b> Proposals and Invoices with negotiated, loyalty, or promotional pricing.</p>
+
+  <div style="display:flex; justify-content:space-between; align-items:center; border:1px solid #1F7A3A; padding:10px 16px; margin-bottom:18px; max-width:400px;">
+    <div><div class="lbl" style="color:#3FA96A;">Loyalty Discount — 10%</div></div>
+    <div class="mono" style="color:#3FA96A; font-size:14px;">– $4,100.00</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Single row, green-outlined, reason on the left, signed negative amount on the right.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Reason in tracked mono 9px; amount in mono 14px, always prefixed with an en-dash minus, never parentheses.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">10/16px padding, max-width 400px — a discount is a line item, not a headline block.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Green is the one place in Financial components a culture accent (Jamaican Green) is explicitly permitted — signals a favorable adjustment.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Sits directly above the line it discounts in the Pricing Table or Invoice Summary — never floats separately.</div></div>
+</div>
+
+<!-- ============ COMP-308 CURRENCY BLOCK ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-308</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Currency Block</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> States which currency governs a figure or a whole document, for cross-border engagements. <b style="color:#F7F4EA;">Used on:</b> the metadata block or table header of any non-USD document.</p>
+
+  <div class="mono" style="font-size:11px; color:rgba(247,244,234,0.6); border:1px solid rgba(247,244,234,0.25); display:inline-block; padding:4px 12px; margin-bottom:18px;">Figures in <span style="color:#F7F4EA;">USD</span> unless noted</div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Single inline tag, placed once per document — in the metadata block if global, or a table header note if mixed.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">JetBrains Mono 400, 11px; the currency code itself in full-opacity ivory, surrounding text muted.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">4px vertical / 12px horizontal padding, matching the Version Badge's proportions for family consistency.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Currency is always spelled as a 3-letter ISO code (USD, EUR) — never a symbol alone, which can be ambiguous ($ vs. other dollar currencies).</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">If a document mixes currencies, every affected table repeats its own Currency Block in the header — never assumed from page 1 alone.</div></div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Financial Components, Assembled</h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:11px; margin-bottom:14px;">
+    <thead><tr style="background:#F7F4EA; color:#050505;"><th style="text-align:left; padding:7px 10px; font-weight:700;">Line Item</th><th style="text-align:right; padding:7px 10px; font-weight:700;">Amount</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16);"><td style="padding:7px 10px;">Strategic Advisory — Phase 1</td><td class="mono" style="padding:7px 10px; text-align:right;">$24,000.00</td></tr>
+      <tr><td style="padding:7px 10px;">Implementation Support</td><td class="mono" style="padding:7px 10px; text-align:right;">$17,000.00</td></tr>
+    </tbody>
+  </table>
+
+  <div style="display:flex; justify-content:space-between; align-items:center; border:1px solid #1F7A3A; padding:8px 14px; margin-bottom:14px; max-width:400px;">
+    <div class="lbl" style="color:#3FA96A;">Loyalty Discount — 10%</div>
+    <div class="mono" style="color:#3FA96A; font-size:12px;">– $4,100.00</div>
+  </div>
+
+  <div style="display:flex; justify-content:flex-end; margin-bottom:16px;">
+    <div style="width:260px; border:1px solid #D8AF55; padding:14px 16px;">
+      <div style="display:flex; justify-content:space-between; font-size:11px; color:rgba(247,244,234,0.6); margin-bottom:5px;"><span>Subtotal</span><span class="mono">$36,900.00</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:11px; color:rgba(247,244,234,0.6); margin-bottom:8px;"><span>State Sales Tax (7.25%)</span><span class="mono">$2,675.25</span></div>
+      <div style="height:1px; background:#D8AF55; margin-bottom:8px;"></div>
+      <div style="display:flex; justify-content:space-between; font-weight:900; font-size:15px;"><span>TOTAL DUE</span><span class="mono">$39,575.25</span></div>
+    </div>
+  </div>
+
+  <div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.4); margin-bottom:16px;">Figures in USD unless noted</div>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px;">Pricing Table (301) feeds a Discount Block (307) and a Tax Summary (306) folded into the Invoice Summary (302)'s subtotal-to-total stack, closed by a Currency Block (308). Payment Schedule (303), Receipt Summary (304), and Outstanding Balance (305) attach downstream once billing begins.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

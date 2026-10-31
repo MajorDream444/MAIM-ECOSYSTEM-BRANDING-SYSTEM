@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .at-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 12 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-AIRTABLE-MODEL · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 12 · What Is Happening Now</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Airtable Operational Data Model</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">GitHub defines the reusable system. Airtable tracks what is happening right now — live clients, projects, statuses, approvals, and payments, referencing GitHub's definitions rather than redefining them.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This page visualizes the data model only. The actual Airtable base is built once this model is approved.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-001</span>Sprint 01 — Base Purpose &amp; Governance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-002</span>Sprint 02 — Core Table Architecture</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-003</span>Sprint 03 — Clients Table</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-004</span>Sprint 04 — Projects &amp; Engagements Tables</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-005</span>Sprint 05 — Templates, Components &amp; Workflows Tables</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-006</span>Sprint 06 — Artifact Registry</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-007</span>Sprint 07 — Milestones, Tasks &amp; Approvals</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-008</span>Sprint 08 — Payments &amp; Financial Operations</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-009</span>Sprint 09 — Views, Interfaces &amp; Dashboards</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AT-010</span>Sprint 10 — Airtable Automations &amp; Integration Map</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as sprints are defined — send each sprint's spec (purpose, table/system scope, primary record, required/optional fields, linked records, status values, ownership, validation rules, required views, interface requirements, automation opportunities, related SOS objects, related systems, example record, completion criteria, future enhancements) to add it here.</div>
+</div>
+
+<!-- ============ AT-001 — GOVERNANCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Governance</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Base Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define Airtable's role inside the Service Operating System — the live operational counterpart to GitHub's canonical definitions.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div>
+      <div class="sub-title" style="color:#1F7A3A;">Airtable Owns</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✓ Live clients</div>
+        <div>✓ Live projects</div>
+        <div>✓ Active engagements</div>
+        <div>✓ Artifact records</div>
+        <div>✓ Current statuses</div>
+        <div>✓ Assignments</div>
+        <div>✓ Approvals</div>
+        <div>✓ Milestones</div>
+        <div>✓ Payments</div>
+        <div>✓ Operational relationships</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="color:#8A5A44;">Airtable Does Not Own</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:6px; font-size:12px; color:rgba(247,244,234,0.8);">
+        <div>✕ Canonical template definitions</div>
+        <div>✕ Code</div>
+        <div>✕ Schemas</div>
+        <div>✕ Design source files</div>
+        <div>✕ Long-form playbooks</div>
+        <div>✕ Final client deliverables</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AT-001 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Base Purpose &amp; Governance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Airtable Guide ID</div><div class="field-val mono">AT-001</div></div>
+    <div class="field-row"><div class="field-label">Base Name</div><div class="field-val mono">MAIM Service OS</div></div>
+    <div class="field-row"><div class="field-label">Base Purpose</div><div class="field-val">The single live operational record for every active Client, Project, Artifact, and their current status — Airtable answers "what's happening now," GitHub answers "what is the system."</div></div>
+    <div class="field-row"><div class="field-label">Operational Scope</div><div class="field-val">Everything with a status that changes day to day: clients, projects, artifacts, approvals, milestones, and payments.</div></div>
+    <div class="field-row"><div class="field-label">Source-of-Truth Boundaries</div><div class="field-val">Airtable is authoritative for current state; GitHub is authoritative for what a Template, Workflow, or Component is structurally. Airtable references GitHub IDs, never redefines them.</div></div>
+    <div class="field-row"><div class="field-label">Owners</div><div class="field-val">Operations Lead — full schema and permission control.</div></div>
+    <div class="field-row"><div class="field-label">Editors</div><div class="field-val">Engagement Leads and Finance — record-level edit rights within their assigned Clients/Projects.</div></div>
+    <div class="field-row"><div class="field-label">Viewers</div><div class="field-val">All internal team members; clients never get direct base access — they see assembled documents only.</div></div>
+    <div class="field-row"><div class="field-label">Data Governance Rules</div><div class="field-val">No canonical definition (Template structure, Component spec) is ever recreated as an Airtable field — those stay referenced by ID only.</div></div>
+    <div class="field-row"><div class="field-label">Related Systems</div><div class="field-val">GitHub (sos-core, read-only source), Notion (linked knowledge), Google Drive (linked exports), Gmail/Calendar (linked automations).</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The base exists with Operations Lead as sole schema owner, and every internal team member has appropriate Editor/Viewer access assigned.</div></div>
+  </div>
+</div>
+
+<!-- ============ AT-002 — CORE TABLE MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Table Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Core Table Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define the minimum viable Airtable structure — ten tables, enough to operate Version 1 without redesigning canonical definitions inside Airtable.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip" style="padding:8px 12px;">Clients</div>
+    <div class="chip" style="padding:8px 12px;">Projects</div>
+    <div class="chip" style="padding:8px 12px;">Engagements</div>
+    <div class="chip" style="padding:8px 12px;">Artifacts</div>
+    <div class="chip" style="padding:8px 12px; border-color:rgba(216,175,85,0.4); color:#D8AF55;">Templates (reference only)</div>
+    <div class="chip" style="padding:8px 12px; border-color:rgba(216,175,85,0.4); color:#D8AF55;">Workflows (reference only)</div>
+    <div class="chip" style="padding:8px 12px; border-color:rgba(216,175,85,0.4); color:#D8AF55;">Components (reference only)</div>
+    <div class="chip" style="padding:8px 12px;">Milestones</div>
+    <div class="chip" style="padding:8px 12px;">Approvals</div>
+    <div class="chip" style="padding:8px 12px;">Payments</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:12px; max-width:600px;">Templates, Workflows, and Components are lightweight mirror tables — an ID, name, and status synced read-only from GitHub's registries, never edited in Airtable directly.</p>
+</div>
+
+<!-- ============ AT-002 — RELATIONSHIP DIAGRAM ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Relationship Diagram</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Core Table Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">Clients ──one-to-many──> Projects ──one-to-many──> Engagements
+                                │                        │
+                                ├──one-to-many──> Milestones
+                                │                        │
+                                ├──one-to-many──> Artifacts ──links──> Templates
+                                │                                          │
+                                ├──one-to-many──> Approvals            (reference)
+                                │
+                                └──one-to-many──> Payments</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">Every table links back to Projects, and every Project links back to exactly one Client — the same shape as DS-002/003's relationships, expressed as Airtable link fields instead of prose.</p>
+</div>
+
+<!-- ============ AT-002 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Core Table Architecture</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Airtable Guide ID</div><div class="field-val mono">AT-002</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">Core Table Architecture</div></div>
+    <div class="field-row"><div class="field-label">Purpose of Each Table</div><div class="field-val">Clients/Projects/Engagements track the relationship; Artifacts tracks generated documents; Templates/Workflows/Components are read-only mirrors; Milestones/Approvals/Payments track operational checkpoints.</div></div>
+    <div class="field-row"><div class="field-label">Primary Field</div><div class="field-val">Every table's primary field is its ID (CLIENT-XXXX, PROJ-XXXX, ART-XXXX, etc.), per DS-009 — never a free-text name.</div></div>
+    <div class="field-row"><div class="field-label">Record Ownership</div><div class="field-val">Clients/Projects → Engagement Lead; Payments → Finance; Templates/Workflows/Components → synced automatically, owned by no human editor.</div></div>
+    <div class="field-row"><div class="field-label">Main Relationships</div><div class="field-val">Clients → Projects → Engagements, with Milestones, Artifacts, Approvals, and Payments each linking to Projects.</div></div>
+    <div class="field-row"><div class="field-label">Required Views</div><div class="field-val">Each table needs at minimum an "Active" view filtered to non-terminal status — full view specs arrive in a later sprint.</div></div>
+    <div class="field-row"><div class="field-label">Expansion Rules</div><div class="field-val">A new table is added only when an object type needs live status tracking that none of these ten can represent — not for convenience.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-002 Client · DS-003 Project · DS-004 Template · DS-005 Workflow</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">All ten tables exist with their primary field set to ID and the core links established, even before every field is populated.</div></div>
+  </div>
+</div>
+
+<!-- ============ AT-003 — FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Clients Table</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Create the master operational record for every client organization or individual.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8); margin-bottom:18px;">
+    <div>Client ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Client Name</div>
+    <div>Client Type</div>
+    <div>Primary Contact</div>
+    <div>Email</div>
+    <div>Client Status</div>
+    <div>Account Owner</div>
+    <div>Created Date</div>
+    <div>Updated Date</div>
+    <div>Confidentiality Level</div>
+  </div>
+
+  <div class="sub-title">Optional Fields</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Phone, Industry, Location, Total Contract Value, Outstanding Balance.</p>
+</div>
+
+<!-- ============ AT-003 — STATUS & VIEWS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Status &amp; Views</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Clients Table</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Client Status</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+    <div class="chip">Lead</div>
+    <div class="chip">Qualified</div>
+    <div class="chip">Proposal</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Active</div>
+    <div class="chip">On Hold</div>
+    <div class="chip">Completed</div>
+    <div class="chip">Former Client</div>
+    <div class="chip" style="opacity:0.6;">Archived</div>
+  </div>
+
+  <div class="sub-title">Linked Tables</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Projects (Active Projects), Engagements (Active Engagements), Artifacts (Related Artifacts), Payments.</p>
+
+  <div class="sub-title">Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Active Clients (Status = Active/On Hold), All Leads (Status = Lead/Qualified/Proposal), Former Clients (Status = Completed/Former/Archived), grouped by Account Owner.</p>
+</div>
+
+<!-- ============ AT-003 — EXAMPLE & VALIDATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Example &amp; Validation</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Clients Table</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="code-block">Client ID: CLIENT-0142
+Client Name: Aurelia Capital Partners
+Client Type: Corporate
+Primary Contact: A. Whitfield, Client Sponsor
+Client Status: Active
+Account Owner: J. Alvarez
+Confidentiality Level: Confidential
+Active Projects: [PROJ-0088]
+Total Contract Value: $48,500.00</div>
+
+  <div style="margin-top:20px; display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Table ID</div><div class="field-val mono">TABLE-001</div></div>
+    <div class="field-row"><div class="field-label">Table Name</div><div class="field-val">Clients</div></div>
+    <div class="field-row"><div class="field-label">Automations</div><div class="field-val">AUTO-001 creates a new record on lead capture; Client Status advances automatically as Workflows complete (WF-001 through WF-010).</div></div>
+    <div class="field-row"><div class="field-label">Validation Rules</div><div class="field-val">Client ID is immutable once set; Status can only move backward with a logged reason field, matching DS-002.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-002 Client Data Standard</div></div>
+  </div>
+</div>
+
+<!-- ============ AT-004 — WHY SEPARATE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Why Separate</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Projects &amp; Engagements Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Separate the relationship being sold (Engagement) from the work being delivered (Project) — one commercial commitment can contain several parallel projects.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:16px 18px;">
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; margin-bottom:10px;">Engagement</div>
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:14px;">MAIM Business Transformation</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.5); margin-bottom:8px;">Projects</div>
+    <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85);">
+      <div>· Brand Foundation</div>
+      <div>· Website Build</div>
+      <div>· AI Agent Setup</div>
+      <div>· Content System</div>
+    </div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">Each Project has its own Health Status, Milestones, and Completion Percentage — a delay on Website Build doesn't have to mean the whole Engagement looks at risk.</p>
+</div>
+
+<!-- ============ AT-004 — SCHEMAS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schemas</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Projects &amp; Engagements Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div>
+      <div class="sub-title">Engagement Fields</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:4px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+        <div>Engagement ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+        <div>Client</div>
+        <div>Package</div>
+        <div>Proposal</div>
+        <div>Agreement</div>
+        <div>Contract Value</div>
+        <div>Payment Structure</div>
+        <div>Engagement Owner</div>
+        <div>Engagement Status</div>
+        <div>Start Date</div>
+        <div>End Date</div>
+        <div>Related Projects</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title">Project Fields</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:4px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+        <div>Project ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+        <div>Project Name</div>
+        <div>Client</div>
+        <div>Engagement</div>
+        <div>Project Owner</div>
+        <div>Current Phase</div>
+        <div>Project Status</div>
+        <div>Health Status</div>
+        <div>Start Date</div>
+        <div>Target End Date</div>
+        <div>Milestones</div>
+        <div>Artifacts</div>
+        <div>Approvals</div>
+        <div>Completion Percentage</div>
+        <div>Next Action</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AT-004 — STATUS, VIEWS & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Status, Views &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Projects &amp; Engagements Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Status Lifecycle</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 8px;"><span class="mono" style="color:#D8AF55;">Engagement Status:</span> Proposed → Signed → Active → Complete → Closed</p>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;"><span class="mono" style="color:#D8AF55;">Project Status / Health Status:</span> matches DS-003 — On Track, At Risk, Delayed, Blocked, Complete.</p>
+
+  <div class="sub-title">Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Active Engagements by Owner; All Projects grouped by Engagement; At Risk / Delayed Projects (portfolio health view).</p>
+
+  <div class="sub-title">Example Records</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Engagement ID: ENG-0031
+Client: CLIENT-0142
+Engagement Status: Active
+Related Projects: [PROJ-0088, PROJ-0089]
+
+Project ID: PROJ-0088
+Project Name: Website Build
+Engagement: ENG-0031
+Health Status: On Track
+Completion Percentage: 62%</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px;">Related SOS Objects: DS-003 Project Data Standard. This sprint introduces Engagements as a new operational concept not previously defined at the schema level — DS-003 should be extended in a future Page 10 revision to cover it formally.</p>
+</div>
+
+<!-- ============ AT-005 — CORE RULE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Rule</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Templates, Components &amp; Workflows Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Mirror the approved GitHub registries inside Airtable for operational reference — browsable and linkable, never editable in place.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:14px 18px;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:14px; color:#F7F4EA;">Airtable references approved system objects. It does not silently redefine them.</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">Every field in these three tables is either copied read-only from GitHub's registries (GH-006) at sync time, or a link used to connect operational records to the reference — none are hand-edited in Airtable.</p>
+</div>
+
+<!-- ============ AT-005 — TABLE SCHEMAS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Table Schemas</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Templates, Components &amp; Workflows Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+    <div>
+      <div class="sub-title" style="font-size:13px;">Templates</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:3px; font-size:10.5px; color:rgba(247,244,234,0.8);">
+        <div>Template ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+        <div>Template Name</div>
+        <div>Template Family</div>
+        <div>Version</div>
+        <div>Status</div>
+        <div>GitHub Path</div>
+        <div>Claude Design Reference</div>
+        <div>Components Used</div>
+        <div>Related Workflows</div>
+        <div>Owner</div>
+        <div>Effective Date</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="font-size:13px;">Components</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:3px; font-size:10.5px; color:rgba(247,244,234,0.8);">
+        <div>Component ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+        <div>Component Name</div>
+        <div>Component Family</div>
+        <div>Version</div>
+        <div>Status</div>
+        <div>Design Reference</div>
+        <div>GitHub Path</div>
+        <div>Templates Using Component</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub-title" style="font-size:13px;">Workflows</div>
+      <div class="sub-rule"></div>
+      <div style="display:flex; flex-direction:column; gap:3px; font-size:10.5px; color:rgba(247,244,234,0.8);">
+        <div>Workflow ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+        <div>Workflow Name</div>
+        <div>Lifecycle Stage</div>
+        <div>Trigger</div>
+        <div>Owner</div>
+        <div>Related Templates</div>
+        <div>Related Automations</div>
+        <div>Status</div>
+        <div>GitHub Path</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AT-005 — SYNC RULES & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Sync Rules &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Templates, Components &amp; Workflows Tables</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Sync Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A scheduled import reads <span class="mono">registries/*.yaml</span> (GH-006) and upserts these three tables; any manual edit to a synced field is overwritten on the next sync rather than preserved — Airtable is not the place to correct a Template definition.</p>
+
+  <div class="sub-title">GitHub Reference Fields</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;"><span class="mono">GitHub Path</span> links directly to the object's folder (GH-004); <span class="mono">Claude Design Reference</span> links to the DC file where the Template's visual definition lives.</p>
+
+  <div class="sub-title">Example Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Template ID: TEMP-001
+Template Name: Proposal
+Version: 1.2.0
+Status: Approved
+GitHub Path: templates/commercial/TEMP-001-proposal/
+Components Used: [COMP-001, COMP-003, COMP-301, COMP-501]
+Related Workflows: [WF-002, WF-003]</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px;">Related SOS Objects: GH-004 Object Folder Standards, GH-006 Registry Architecture, DS-004/005 Template/Workflow Data Standards.</p>
+</div>
+
+<!-- ============ AT-006 — SCHEMA ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Schema</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Artifact Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Track every real document, record, deliverable, or operational output created for a client — the operational mirror of DS-001's Universal Artifact Metadata.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Artifact ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Artifact Name</div>
+    <div>Artifact Type</div>
+    <div>Client</div>
+    <div>Project</div>
+    <div>Engagement</div>
+    <div>Source Template</div>
+    <div>Version</div>
+    <div>Status</div>
+    <div>Approval State</div>
+    <div>Owner</div>
+    <div>Created Date</div>
+    <div>Updated Date</div>
+    <div>Effective Date</div>
+    <div>Confidentiality</div>
+  </div>
+</div>
+
+<!-- ============ AT-006 — REFERENCES & FILE LOCATION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">References &amp; File Location</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Artifact Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">File-Location Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">The Artifact record never stores the file itself — <span class="mono">Google Drive File</span> links to the actual PDF, living under the client's folder per DS-009's file convention.</p>
+
+  <div class="sub-title">Reference Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:4px; font-size:11.5px; color:rgba(247,244,234,0.8); margin-bottom:20px;">
+    <div>GitHub Reference — links to the Source Template's canonical definition, not the Artifact itself</div>
+    <div>Notion Reference — links to any related knowledge base entry (e.g. meeting notes that produced it)</div>
+    <div>Google Drive File — links to the actual generated document</div>
+    <div>Related Artifacts — other Artifacts this one supersedes, references, or is referenced by</div>
+    <div>Dependencies — Artifacts that must exist before this one can be generated (e.g. Agreement before Invoice)</div>
+    <div>Next Action — what happens to this Artifact next (e.g. "Awaiting client signature")</div>
+  </div>
+
+  <div class="sub-title">Version Handling</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">A new version creates a new linked record rather than overwriting the field — Related Artifacts shows the version chain, so v1.0 is never lost when v2.0 supersedes it.</p>
+</div>
+
+<!-- ============ AT-006 — APPROVAL, VIEWS & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Approval, Views &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Artifact Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Approval State</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Draft, In Review, Approved, Signed, Void, Expired — the same enum as DS-001/GH-006's <span class="mono">statuses.yaml</span>, so an Artifact's state means the same thing whether read in GitHub or Airtable.</p>
+
+  <div class="sub-title">Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">By Client (grouped), Awaiting Approval (Status = In Review), Recently Completed (Status = Completed, sorted by Updated Date).</p>
+
+  <div class="sub-title">Example Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Artifact ID: ART-2026-001
+Artifact Name: Theo Payment Receipt
+Artifact Type: Receipt
+Source Template: TEMP-004
+Client: Theo
+Project: PROJ-001
+Status: Completed
+Approval State: Approved</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px;">Related SOS Objects: DS-001 Universal Artifact Metadata, DS-009 Naming Convention (file location).</p>
+</div>
+
+<!-- ============ AT-007 — TASK STRATEGY & MILESTONE FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Task Strategy &amp; Milestone Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Milestones, Tasks &amp; Approvals</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Track the movement of work through delivery and review, from day-to-day tasks up to formal client approvals.</p>
+
+  <div class="sub-title">Task Strategy</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Day-to-day tasks are not a tenth core table — they live as a lightweight checklist field on the Milestone record (or in a dedicated PM tool if volume demands it later). Airtable tracks Milestones as the operationally meaningful unit; granular task management is intentionally out of scope for Version 1.</p>
+
+  <div class="sub-title">Milestone Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Milestone ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Milestone Name</div>
+    <div>Project</div>
+    <div>Owner</div>
+    <div>Start Date</div>
+    <div>Due Date</div>
+    <div>Status</div>
+    <div>Progress</div>
+    <div>Deliverables</div>
+    <div>Dependencies</div>
+    <div>Approval Required</div>
+    <div>Approval Record</div>
+    <div>Next Milestone</div>
+  </div>
+</div>
+
+<!-- ============ AT-007 — APPROVAL FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Approval Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Milestones, Tasks &amp; Approvals</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>Approval ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Approval Type</div>
+    <div>Client</div>
+    <div>Project</div>
+    <div>Artifact</div>
+    <div>Milestone</div>
+    <div>Requested By</div>
+    <div>Approver</div>
+    <div>Requested Date</div>
+    <div>Decision Date</div>
+    <div>Approval Status</div>
+    <div>Comments</div>
+    <div>Revision Required</div>
+    <div>Evidence</div>
+  </div>
+
+  <div class="sub-title">Approval Status</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="chip" style="opacity:0.5;">Not Required</div>
+    <div class="chip">Draft</div>
+    <div class="chip">Internal Review</div>
+    <div class="chip">Client Review</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Awaiting Approval</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Approved</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Rejected</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Revision Required</div>
+    <div class="chip" style="opacity:0.4;">Superseded</div>
+  </div>
+</div>
+
+<!-- ============ AT-007 — GATES, VIEWS & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Review Gates, Views &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Milestones, Tasks &amp; Approvals</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Review Gates</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A Milestone with <span class="mono">Approval Required = true</span> cannot move to Status = Complete until its linked Approval record reaches Approved — enforced by an Airtable automation, not manual discipline.</p>
+
+  <div class="sub-title">Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Upcoming Milestones (Due Date within 14 days), Awaiting Approval (Approval Status = Awaiting Approval, sorted by Requested Date), Rejected/Revision Needed (escalation view).</p>
+
+  <div class="sub-title">Example Records</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Milestone ID: MS-0088-02
+Milestone Name: Blueprint Delivery
+Project: PROJ-0088
+Status: Approved
+Approval Required: true
+Approval Record: APR-0142
+
+Approval ID: APR-0142
+Approval Type: Milestone
+Milestone: MS-0088-02
+Approver: A. Whitfield
+Approval Status: Approved
+Decision Date: 2026-07-08</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px;">Related SOS Objects: DS-003 Project (Milestones array), COMP-501/502/504 Approval family components.</p>
+</div>
+
+<!-- ============ AT-008 — CORE RULE & FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Rule &amp; Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Payments &amp; Financial Operations</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Track financial events without turning Airtable into an accounting platform.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:14px 18px; margin-bottom:22px;">
+    <div style="font-family:Archivo,sans-serif; font-weight:600; font-size:13px; color:#F7F4EA;">Airtable tracks operational payment status. Stripe, QuickBooks, Xero, or another financial system remains the financial transaction authority.</div>
+  </div>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Payment ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Client</div>
+    <div>Engagement</div>
+    <div>Project</div>
+    <div>Invoice Artifact</div>
+    <div>Receipt Artifact</div>
+    <div>Payment Type</div>
+    <div>Amount Due</div>
+    <div>Amount Paid</div>
+    <div>Currency</div>
+    <div>Due Date</div>
+    <div>Payment Date</div>
+    <div>Payment Status</div>
+    <div>Payment Method</div>
+    <div>Transaction Reference</div>
+    <div>Remaining Balance</div>
+    <div>Notes</div>
+  </div>
+</div>
+
+<!-- ============ AT-008 — STATUS & BALANCE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Status &amp; Balance</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Payments &amp; Financial Operations</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Payment Status</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px;">
+    <div class="chip">Scheduled</div>
+    <div class="chip">Invoice Draft</div>
+    <div class="chip">Invoice Sent</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Due</div>
+    <div class="chip">Partially Paid</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Paid</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Overdue</div>
+    <div class="chip" style="opacity:0.6;">Refunded</div>
+    <div class="chip" style="opacity:0.4;">Cancelled</div>
+  </div>
+
+  <div class="sub-title">Balance Calculations</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;"><span class="mono">Remaining Balance</span> is a formula field: Amount Due − Amount Paid, never hand-entered — Status auto-derives to Overdue when Remaining Balance &gt; 0 and Due Date has passed.</p>
+
+  <div class="sub-title">Invoice and Receipt Links</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Invoice Artifact and Receipt Artifact link into the Artifact Registry (AT-006) rather than storing document data redundantly — a Payment record is the financial state, the Artifact is the document.</p>
+</div>
+
+<!-- ============ AT-008 — VIEWS, AUTOMATION & EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Views, Automation &amp; Example</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Payments &amp; Financial Operations</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Views</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Outstanding (Status = Due/Partially Paid/Overdue), Overdue Alert (Status = Overdue, sorted by days overdue), Paid This Month.</p>
+
+  <div class="sub-title">Automation Opportunities</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">AUTO-004 Payment Automation writes directly to this table on Stripe webhook; an overdue reminder can trigger automatically at Due Date + 3 days without a human checking the Outstanding view daily.</p>
+
+  <div class="sub-title">Example Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Payment ID: PAY-0088-01
+Client: CLIENT-0142
+Engagement: ENG-0031
+Invoice Artifact: ART-2026-000512
+Amount Due: $48,500.00
+Amount Paid: $48,500.00
+Payment Status: Paid
+Payment Method: Wire Transfer
+Remaining Balance: $0.00</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px;">Related SOS Objects: AUTO-004 Payment Automation, DS-001 (Confidentiality inherited from linked Artifact). Related Systems: Stripe (future transaction authority).</p>
+</div>
+
+<!-- ============ AT-009 — VIEWS CATALOG ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Views Catalog</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Views, Interfaces &amp; Dashboards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Turn the data model from Sprints 01–08 into usable operational workspaces — the layer people actually open every day.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip">Executive Overview</div>
+    <div class="chip">Active Clients</div>
+    <div class="chip">Active Projects</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Projects at Risk</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Awaiting Approval</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Payments Due</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Overdue Payments</div>
+    <div class="chip">Upcoming Milestones</div>
+    <div class="chip">Artifacts in Review</div>
+    <div class="chip">Recently Completed</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Expansion Opportunities</div>
+  </div>
+</div>
+
+<!-- ============ AT-009 — INTERFACES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Interfaces</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Views, Interfaces &amp; Dashboards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Leadership Dashboard</div><div class="field-val">Executive Overview + core metrics — Active Clients, Open Engagement Value, Outstanding Balance, Expansion Pipeline.</div></div>
+    <div class="field-row"><div class="field-label">Service Operations Dashboard</div><div class="field-val">Projects at Risk, Awaiting Approval, Milestones Due This Week — the daily operations triage view.</div></div>
+    <div class="field-row"><div class="field-label">Project Manager Workspace</div><div class="field-val">Active Projects filtered to the logged-in Owner, with linked Milestones and Artifacts inline.</div></div>
+    <div class="field-row"><div class="field-label">Client Success Workspace</div><div class="field-val">Active Clients grouped by Health Score, Expansion Opportunities, Recently Completed for testimonial follow-up.</div></div>
+    <div class="field-row"><div class="field-label">Finance Operations Workspace</div><div class="field-val">Payments Due, Overdue Payments, and a rolled-up Outstanding Balance by Client.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Template Registry</div><div class="field-val">Read-only browse of Templates, Components, Workflows (AT-005) — reference only, no edit surface.</div></div>
+  </div>
+</div>
+
+<!-- ============ AT-009 — METRICS & COMPLETION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Metrics &amp; Completion</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Views, Interfaces &amp; Dashboards</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Core Metrics</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:12px; color:rgba(247,244,234,0.8); margin-bottom:22px;">
+    <div>Active Clients</div>
+    <div>Open Engagement Value</div>
+    <div>Outstanding Balance</div>
+    <div>Projects at Risk</div>
+    <div>Approvals Waiting</div>
+    <div>Milestones Due This Week</div>
+    <div>Average Project Completion</div>
+    <div>Expansion Pipeline</div>
+  </div>
+
+  <div class="sub-title">Record-Detail Layouts</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A Project record-detail layout surfaces its Milestones, Artifacts, and Approvals inline, so no workspace requires jumping between five separate tables to answer "where does this stand."</p>
+
+  <div class="sub-title">Completion Criteria</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">All five interfaces exist with their named views and metrics live, and every core metric pulls from a real formula or rollup field — never a manually typed number.</p>
+
+  <div style="margin-top:20px; font-size:11px; color:rgba(247,244,234,0.5);">Related SOS Objects: AT-001 through AT-008 (every table feeds these dashboards).</div>
+</div>
+
+<!-- ============ AT-010 — PRIORITY AUTOMATIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Priority Automations</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Airtable Automations &amp; Integration Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define how Airtable becomes the operational control center — the closing sprint of Page 12.</p>
+
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">New Client Created</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Generate Client ID</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">New Project Created</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Generate Project ID → Create default Milestones</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">Proposal Approved</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Update Engagement Status → Start Agreement workflow</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">Payment Marked Paid</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Create Receipt Artifact record → Start Onboarding workflow</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">Milestone Completed</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Create Approval request</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">Approval Granted</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Activate next Milestone</div></div>
+    <div style="display:flex; gap:14px;"><div class="mono" style="color:#D8AF55; width:170px; flex-shrink:0; font-size:11.5px;">Project Completed</div><div style="font-size:12px; color:rgba(247,244,234,0.75);">→ Start Closeout workflow → Flag Case Study opportunity</div></div>
+  </div>
+
+  <div style="margin-top:22px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px;">Human Approval Points: Milestone Completed only creates the Approval request — it never sets Approval Status to Approved automatically. Error Handling: any automation that can't resolve a linked record (e.g. no matching Client) logs to a Failures view rather than creating an orphaned record.</div>
+</div>
+
+<!-- ============ AT-010 — INTEGRATION MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Integration Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Airtable Automations &amp; Integration Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">GitHub</div><div class="field-val">Approved definitions and registries — Airtable reads, never writes back (GH-010).</div></div>
+    <div class="field-row"><div class="field-label">Notion</div><div class="field-val">Playbooks, decisions, operating manuals — linked from Project/Client records for context, not duplicated.</div></div>
+    <div class="field-row"><div class="field-label">Claude Design</div><div class="field-val">Visual references and designed masters — linked via the Templates table's Claude Design Reference field.</div></div>
+    <div class="field-row"><div class="field-label">Google Drive</div><div class="field-val">Client-facing deliverables — linked via the Artifact Registry's Google Drive File field.</div></div>
+    <div class="field-row"><div class="field-label">Gmail</div><div class="field-val">Notifications and client communications, triggered by the Priority Automations above.</div></div>
+    <div class="field-row"><div class="field-label">Google Calendar</div><div class="field-val">Kickoffs, reviews, and Milestone due dates, kept in sync with the Milestones table.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">AI Agents</div><div class="field-val">Record creation, validation, summaries, and recommendations — reading and writing operational records, never redefining canonical Templates or Workflows.</div></div>
+  </div>
+</div>
+
+<!-- ============ AT-010 — PHASES & COMPLETION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="at-id">AT-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Phases &amp; Page Completion</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Airtable Automations &amp; Integration Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Implementation Phases</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.8); margin-bottom:24px;">
+    <div>1. Build all ten core tables (AT-002 through AT-008) with fields and links only, no automations yet.</div>
+    <div>2. Connect the GitHub registry sync (AT-005) so Templates/Components/Workflows populate automatically.</div>
+    <div>3. Turn on the seven Priority Automations one at a time, verifying each against its logged Failures view.</div>
+    <div>4. Build the five interfaces and dashboards (AT-009) once live data exists to populate them meaningfully.</div>
+    <div>5. Connect Gmail and Google Calendar integrations last, once the underlying data is trustworthy.</div>
+  </div>
+
+  <div class="sub-title">Page 12 Completion Criteria</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85);">
+    <div>☑ One base purpose — AT-001</div>
+    <div>☑ One core table map — AT-002</div>
+    <div>☑ One client model — AT-003</div>
+    <div>☑ One project and engagement model — AT-004</div>
+    <div>☑ One artifact registry — AT-006</div>
+    <div>☑ One approval model — AT-007</div>
+    <div>☑ One payment model — AT-008</div>
+    <div>☑ One dashboard system — AT-009</div>
+    <div>☑ One automation map — AT-010</div>
+    <div>☑ One integration map — AT-010</div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Airtable Operational Data Model — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

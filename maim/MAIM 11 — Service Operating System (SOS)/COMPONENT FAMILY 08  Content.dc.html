@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .rule-row { display:grid; grid-template-columns:120px 1fr; gap:10px; font-size:11px; line-height:1.55; padding:7px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .rule-label { font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .rule-val { color:rgba(247,244,234,0.72); }
+  .comp-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ COVER ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-COMPONENTS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Component Family 08</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:60px; line-height:1.0; margin:0 0 4px; text-transform:uppercase;">Content</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">The general-purpose building blocks of a document's body — cards, columns, quotes, and lists.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Where other families carry a specific job (financial, timeline, approval), Content components carry whatever text and structure a page needs.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; color:rgba(247,244,234,0.55);">
+    <div><span style="color:#D8AF55;">COMP-701</span> Card</div>
+    <div><span style="color:#D8AF55;">COMP-702</span> Two Column Layout</div>
+    <div><span style="color:#D8AF55;">COMP-703</span> Three Column Layout</div>
+    <div><span style="color:#D8AF55;">COMP-704</span> Feature Card</div>
+    <div><span style="color:#D8AF55;">COMP-705</span> Summary Box</div>
+    <div><span style="color:#D8AF55;">COMP-706</span> Quote Block</div>
+    <div><span style="color:#D8AF55;">COMP-707</span> Checklist</div>
+    <div><span style="color:#D8AF55;">COMP-708</span> Bullet List</div>
+  </div>
+</div>
+
+<!-- ============ COMP-701 CARD ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-701</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Card</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> The default container for grouped content with no specific data role. <b style="color:#F7F4EA;">Used on:</b> any document, wherever a paragraph needs a visible boundary.</p>
+
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:16px 18px; max-width:400px; margin-bottom:18px;">
+    <div style="font-weight:600; font-size:14px; margin-bottom:6px;">Standard Card</div>
+    <div style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.6);">A neutral container for a scope item, a note, or a grouped set of facts.</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">1px ivory-20% border, no fill, no shadow — the plainest container in the system.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Title Archivo 600, 14px; body Archivo 400, 12px, muted.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">16/18px padding; 6px title-to-body gap.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Border alone signals grouping — never relied on as the sole way to convey related content (heading always present).</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">1px border holds at any print resolution; card contents never split across a page break.</div></div>
+</div>
+
+<!-- ============ COMP-702 TWO COLUMN LAYOUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-702</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Two Column Layout</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Places two related ideas side by side for comparison or pairing. <b style="color:#F7F4EA;">Used on:</b> before/after comparisons, two signature lines, two linked stats.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:18px;">
+    <div><div style="font-weight:600; font-size:13px; margin-bottom:5px;">Column One</div><div style="font-size:11.5px; color:rgba(247,244,234,0.6); line-height:1.6;">Content occupies equal width, top-aligned by default.</div></div>
+    <div><div style="font-weight:600; font-size:13px; margin-bottom:5px;">Column Two</div><div style="font-size:11.5px; color:rgba(247,244,234,0.6); line-height:1.6;">The grid gap is the only separator — no vertical rule between columns.</div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">CSS grid, two equal fractions, 24px gap. No divider line — whitespace alone separates the columns.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Inherits whatever component sits inside each column — the layout itself sets no type rules.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">24px column gap is fixed system-wide; never tightened below 20px or content starts to feel cramped.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Reading order is always left-column-first, top-to-bottom — never right column first, even visually.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Collapses to a single stacked column if either column's content would otherwise force an awkward mid-content page break.</div></div>
+</div>
+
+<!-- ============ COMP-703 THREE COLUMN LAYOUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-703</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Three Column Layout</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Presents three parallel items — pillars, values, service tiers. <b style="color:#F7F4EA;">Used on:</b> Executive Summaries and Proposal cover pages (as seen on the SOS Foundation Board cover itself).</p>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:18px;">
+    <div><div style="font-weight:600; font-size:13px; margin-bottom:5px;">Consistency</div><div style="font-size:11px; color:rgba(247,244,234,0.6); line-height:1.6;">One grammar across every document type.</div></div>
+    <div><div style="font-weight:600; font-size:13px; margin-bottom:5px;">Assembly</div><div style="font-size:11px; color:rgba(247,244,234,0.6); line-height:1.6;">Components combine rather than get redrawn.</div></div>
+    <div><div style="font-weight:600; font-size:13px; margin-bottom:5px;">Trust</div><div style="font-size:11px; color:rgba(247,244,234,0.6); line-height:1.6;">Clear status and provenance, every page.</div></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">CSS grid, three equal fractions, 20px gap — slightly tighter than Two Column since each cell carries less content.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Each cell typically opens with an Archivo 600, 13px label — matches the pattern used on the Foundation Board cover.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">20px gap; cells are never unequal widths within one instance.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Reads left-to-right, top-to-bottom; never used for more than three items — a fourth forces a new layout, not a fourth column.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Below 6in content width, collapses to a single column rather than shrinking type past 11px.</div></div>
+</div>
+
+<!-- ============ COMP-704 FEATURE CARD ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-704</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Feature Card</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Elevates one item above a plain Card — the gold-bordered escalation of COMP-701. <b style="color:#F7F4EA;">Used on:</b> the single most important scope item, stat, or deliverable on a page.</p>
+
+  <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:16px 18px; max-width:400px; margin-bottom:18px;">
+    <div class="lbl" style="margin-bottom:6px;">Featured</div>
+    <div style="font-weight:600; font-size:14px; margin-bottom:6px;">Feature Card</div>
+    <div style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.6);">Reserved for the single figure or decision the reader must not miss on this page.</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Identical geometry to Card, plus a gold border and 6% gold tint, and a "Featured" eyebrow.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow tracked mono, gold, 9px — the only addition versus the standard Card's type stack.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">Identical to Card: 16/18px padding, max-width 400px.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Never more than one Feature Card per page — stacking gold borders dilutes the emphasis it's meant to carry.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Tint holds at low-ink print settings, matching the Warning/AI Recommendation tint-contrast standard.</div></div>
+</div>
+
+<!-- ============ COMP-705 SUMMARY BOX ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-705</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Summary Box</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Condenses a long section into a few scannable lines. <b style="color:#F7F4EA;">Used on:</b> the top of Executive Summaries and Weekly Reports, before the detailed body.</p>
+
+  <div style="background:#F7F4EA; color:#050505; padding:18px 20px; max-width:480px; margin-bottom:18px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#8C6D2F; margin-bottom:8px;">In Summary</div>
+    <div style="font-size:12.5px; line-height:1.65;">Phase 1 is on schedule and 62% complete. One risk item (data migration) is blocked pending client input. No budget or timeline changes are proposed.</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Solid white-clarity fill, black text — the one Content component that inverts the page's default polarity.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Eyebrow in deep gold on white for sufficient contrast; body Archivo 400, 12.5px, black.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">18/20px padding, max-width 480px — wide enough for 3–4 sentence summaries, no wider.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Black-on-white contrast exceeds 15:1 — the highest-contrast component in the system, appropriate for its lead position on the page.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Solid fill prints cleanly on any printer — no gradient or tint that could bleed color inconsistently.</div></div>
+</div>
+
+<!-- ============ COMP-706 QUOTE BLOCK ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-706</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Quote Block</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Sets off a client testimonial, an executive statement, or a quoted contract clause. <b style="color:#F7F4EA;">Used on:</b> Proposals (testimonials) and Agreements (quoted terms).</p>
+
+  <div style="background:#050505; border-left:2px solid #D8AF55; padding:16px 20px; max-width:480px; margin-bottom:18px;">
+    <div style="font-style:normal; font-weight:500; font-size:14px; line-height:1.6; color:#F7F4EA; margin-bottom:8px;">"MAIM didn't just deliver a plan — they delivered a team that could execute it."</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">— A. Whitfield, Aurelia Capital Partners</div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">Gold left border (2px), no background fill, attribution line beneath in mono, right of nothing — left-aligned like the quote.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Quote text Archivo 500, 14px — the only body text in the system permitted above 13px outside headings.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">16/20px padding, 8px between quote and attribution, max-width 480px for readable line length.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Attribution is mandatory — an unattributed quote is never used in a client-facing document.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Kept whole; quote and attribution never separated by a page break.</div></div>
+</div>
+
+<!-- ============ COMP-707 CHECKLIST ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-707</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Checklist</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Tracks discrete, completable items. <b style="color:#F7F4EA;">Used on:</b> Onboarding Guides and Delivery Packets — setup steps, handoff items.</p>
+
+  <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:18px;">
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12.5px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Access credentials issued</span></div>
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12.5px;"><div style="width:14px; height:14px; border:1.5px solid rgba(247,244,234,0.4); flex-shrink:0; margin-top:1px;"></div><span>Kickoff call scheduled</span></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">14×14px square box + label; checked items fill green and strike through, unchecked stay outline.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Archivo 400, 12.5px — matches standard body copy exactly, since a checklist is still running text.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">9px between rows, 10px between box and label.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Strikethrough plus muted color both signal "done" — never fill color alone.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Boxes print as real checkable squares on a paper copy — the system supports a printed, hand-marked variant identically.</div></div>
+</div>
+
+<!-- ============ COMP-708 BULLET LIST ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="comp-id">COMP-708</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Primary Variant</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:28px; margin:6px 0 4px; text-transform:uppercase;">Bullet List</h2>
+  <div class="tribar" style="width:110px; height:4px; margin-bottom:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.65); max-width:640px; margin:0 0 18px;"><b style="color:#F7F4EA;">Purpose:</b> Enumerates non-sequential items with no completion state. <b style="color:#F7F4EA;">Used on:</b> any document body — scope inclusions, feature lists, assumptions.</p>
+
+  <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:18px;">
+    <div style="display:flex; gap:10px; font-size:12.5px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:7px; flex-shrink:0;"></div><span>Stakeholder discovery interviews (up to 6)</span></div>
+    <div style="display:flex; gap:10px; font-size:12.5px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:7px; flex-shrink:0;"></div><span>Current-state operational audit</span></div>
+  </div>
+
+  <div class="rule-row"><div class="rule-label">Layout</div><div class="rule-val">5px gold dot marker, never a dash, asterisk, or default browser bullet.</div></div>
+  <div class="rule-row"><div class="rule-label">Typography</div><div class="rule-val">Archivo 400, 12.5px — identical to Checklist's body size, since the two are visually paired list types.</div></div>
+  <div class="rule-row"><div class="rule-label">Spacing</div><div class="rule-val">7px between items — tighter than Checklist's 9px, since bullet items skew shorter on average.</div></div>
+  <div class="rule-row"><div class="rule-label">Accessibility</div><div class="rule-val">Marked up as a real list (not manually typed dashes) so assistive tech announces item count.</div></div>
+  <div class="rule-row"><div class="rule-label">Print / PDF</div><div class="rule-val">Gold dot marker holds visible at print resolutions down to 8pt equivalent body size.</div></div>
+</div>
+
+<!-- ============ COMBINATION EXAMPLE ============ -->
+<div class="sos-page">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:8px;">Combination Example</div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:26px; margin:0 0 16px; text-transform:uppercase;">Content Components, Assembled</h2>
+
+  <div style="background:#F7F4EA; color:#050505; padding:14px 16px; max-width:480px; margin-bottom:16px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8C6D2F; margin-bottom:6px;">In Summary</div>
+    <div style="font-size:11.5px; line-height:1.6;">Phase 1 is on schedule. One item is blocked pending client input.</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:16px;">
+    <div>
+      <div style="font-weight:600; font-size:12px; margin-bottom:6px;">Scope Includes</div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="display:flex; gap:8px; font-size:11px;"><div style="width:4px; height:4px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Discovery interviews</span></div>
+        <div style="display:flex; gap:8px; font-size:11px;"><div style="width:4px; height:4px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Operational audit</span></div>
+      </div>
+    </div>
+    <div style="border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:12px 14px;">
+      <div class="lbl" style="margin-bottom:4px;">Featured</div>
+      <div style="font-weight:600; font-size:12px;">On-Time Delivery Guarantee</div>
+    </div>
+  </div>
+
+  <p style="font-size:11.5px; line-height:1.65; color:rgba(247,244,234,0.55); max-width:640px;">A Summary Box (705) opens the page; a Two Column Layout (702) pairs a Bullet List (708) against a Feature Card (704). Card (701), Three Column Layout (703), Quote Block (706), and Checklist (707) attach wherever the body content calls for them.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:56px 58px 40px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; display:flex; flex-direction:column; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .footer-901 { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #D8AF55; padding-top:12px; margin-top:auto; }
+  .sec-eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#D8AF55; margin-bottom:4px; }
+  .sec-title { font-family:Archivo,sans-serif; font-weight:900; font-size:26px; text-transform:uppercase; margin-bottom:8px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:16px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- PAGE 1 — COMP-001 Header + COMP-003 Metadata -->
+<div class="sos-page" data-screen-label="SOW — 01 Cover">
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:20px 24px; margin-bottom:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:34px; height:34px; border-radius:50%; border:2px solid #D8AF55; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:7px; color:rgba(247,244,234,0.4); text-align:center;">CROWN<br/>SEAL</div>
+        <div><div class="lbl">Major AI Mindset</div><div style="font-family:Archivo,sans-serif; font-weight:900; font-size:19px; text-transform:uppercase; margin-top:2px;">Statement of Work</div></div>
+      </div>
+      <div style="text-align:right;" class="mono"><div style="font-size:10px; color:rgba(247,244,234,0.6);">DOC-2026-00518</div><div style="font-size:10px; color:rgba(247,244,234,0.6);">v1.0 · Effective 07/15/2026</div></div>
+    </div>
+    <div class="tribar" style="width:100%; height:4px; margin-top:16px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  </div>
+
+  <div style="border:1px solid #D8AF55; padding:16px 20px; margin-bottom:26px;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px 20px;">
+      <div><div class="lbl">Client</div><div style="font-size:11.5px; margin-top:2px;">Aurelia Capital Partners</div></div>
+      <div><div class="lbl">Project</div><div style="font-size:11.5px; margin-top:2px;">Q3 Advisory Engagement</div></div>
+      <div><div class="lbl">Owner</div><div style="font-size:11.5px; margin-top:2px;">J. Alvarez</div></div>
+      <div><div class="lbl">Effective</div><div class="mono" style="font-size:11.5px; margin-top:2px;">07/15/2026</div></div>
+      <div><div class="lbl">Related</div><div style="font-size:11.5px; margin-top:2px;">PROP-2026-00512</div></div>
+      <div><div class="lbl">Confidentiality</div><div style="font-size:11.5px; margin-top:2px;">Client &amp; Internal</div></div>
+    </div>
+  </div>
+
+  <div class="sec-eyebrow">01 · Project Overview</div>
+  <div class="sec-title">Project Overview</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:18px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px;">This Statement of Work formalizes the phased advisory engagement described in Proposal PROP-2026-00512: a 16-week program combining strategic advisory, implementation support, and standardized quarterly reporting for Aurelia Capital Partners.</p>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00518 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 1 of 5</div></div>
+</div>
+
+<!-- PAGE 2 — Objectives + Scope + Deliverables (COMP-101/102) -->
+<div class="sos-page" data-screen-label="SOW — 02 Objectives + Scope">
+  <div class="sub-title">Objectives</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Consolidate reporting across three regional teams, reduce leadership decision cycles from 9 days to 3, and cut new-hire ramp time from 6 weeks to 3.</p>
+
+  <div class="sec-eyebrow">02 · Scope</div>
+  <div class="sec-title">Scope</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:18px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+  <p style="font-size:12px; line-height:1.7; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 8px;">Stakeholder discovery interviews (up to 6), a current-state operational audit, a strategic roadmap, and rollout of a unified quarterly reporting template across all three regions.</p>
+
+  <div class="sub-title" style="margin-top:20px;">Deliverables</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.7; color:rgba(247,244,234,0.7); max-width:600px;">Discovery findings report, operational audit and roadmap document, and a standardized quarterly reporting template with training for regional leads.</p>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00518 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 2 of 5</div></div>
+</div>
+
+<!-- PAGE 3 — Assumptions + Exclusions + Timeline (COMP-401/405) -->
+<div class="sos-page" data-screen-label="SOW — 03 Assumptions + Timeline">
+  <div class="sub-title">Assumptions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Client will provide access to regional leads within 5 business days of kickoff and designate one internal point of contact for the duration of the engagement.</p>
+
+  <div class="sub-title">Exclusions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">This engagement does not include software implementation, staff augmentation, or ongoing managed reporting services beyond the rollout period.</p>
+
+  <div class="sec-eyebrow">03 · Timeline</div>
+  <div class="sec-title">Timeline</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; align-items:flex-start; margin-bottom:22px;">
+    <div style="flex:1; text-align:center;"><div style="width:10px; height:10px; border-radius:50%; background:#D8AF55; margin:0 auto 8px;"></div><div style="font-size:11px; font-weight:600;">Kickoff</div><div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">Week 1</div></div>
+    <div style="flex:1; text-align:center; position:relative; top:-24px;"><div style="height:1px; background:rgba(247,244,234,0.2);"></div></div>
+    <div style="flex:1; text-align:center;"><div style="width:10px; height:10px; border-radius:50%; border:2px solid rgba(247,244,234,0.3); background:#050505; margin:0 auto 8px;"></div><div style="font-size:11px; font-weight:600; color:rgba(247,244,234,0.6);">Roadmap Delivered</div><div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">Week 6</div></div>
+    <div style="flex:1; text-align:center; position:relative; top:-24px;"><div style="height:1px; background:rgba(247,244,234,0.2);"></div></div>
+    <div style="flex:1; text-align:center;"><div style="width:10px; height:10px; border-radius:50%; border:2px solid rgba(247,244,234,0.3); background:#050505; margin:0 auto 8px;"></div><div style="font-size:11px; font-weight:600; color:rgba(247,244,234,0.6);">Engagement Close</div><div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">Week 16</div></div>
+  </div>
+
+  <div style="border:1px solid rgba(247,244,234,0.2); padding:14px 16px; max-width:440px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><div class="lbl">Phase 1</div><div class="mono" style="font-size:10px; color:rgba(247,244,234,0.5);">Week 1 – Week 6</div></div>
+    <div style="font-weight:600; font-size:13px; margin-bottom:4px;">Discovery &amp; Strategic Advisory</div>
+    <div style="font-size:11px; line-height:1.5; color:rgba(247,244,234,0.6);">Stakeholder interviews, current-state audit, and strategic roadmap delivered to the client team.</div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00518 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 3 of 5</div></div>
+</div>
+
+<!-- PAGE 4 — Roles & Responsibilities + Acceptance Criteria -->
+<div class="sos-page" data-screen-label="SOW — 04 Roles + Acceptance Criteria">
+  <div class="sub-title">Roles &amp; Responsibilities</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:26px; max-width:600px;">
+    <div style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7);"><span style="color:#F7F4EA; font-weight:600;">J. Alvarez</span> — Engagement Lead. Owns delivery, weekly client communication, and final sign-off readiness.</div>
+    <div style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7);"><span style="color:#F7F4EA; font-weight:600;">R. Chen</span> — Finance. Confirms the payment schedule and reconciles invoices against this SOW.</div>
+    <div style="font-size:12px; line-height:1.6; color:rgba(247,244,234,0.7);"><span style="color:#F7F4EA; font-weight:600;">A. Whitfield</span> — Client Sponsor. Provides access, approves deliverables, and holds final acceptance authority.</div>
+  </div>
+
+  <div class="sub-title">Acceptance Criteria</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px;">Each deliverable is deemed accepted if the Client Sponsor raises no written objection within 10 business days of delivery. Silence beyond that window constitutes acceptance.</p>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00518 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 4 of 5</div></div>
+</div>
+
+<!-- PAGE 5 — COMP-501 Approval Block + COMP-502 Signature Block -->
+<div class="sos-page" data-screen-label="SOW — 05 Signatures">
+  <div class="sec-eyebrow">04 · Approval</div>
+  <div class="sec-title">Approval Chain</div>
+  <div class="tribar" style="width:100%; height:3px; margin-bottom:20px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin-bottom:30px;">
+    <thead><tr style="border-bottom:1px solid #D8AF55;"><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase;">Role</th><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase;">Name</th><th style="text-align:left; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase;">Status</th><th style="text-align:right; padding:7px 10px; color:rgba(247,244,234,0.55); font-size:10.5px; text-transform:uppercase;">Date</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid rgba(247,244,234,0.16);"><td style="padding:8px 10px;">Engagement Lead</td><td style="padding:8px 10px;">J. Alvarez</td><td style="padding:8px 10px;"><span class="mono" style="background:#F7F4EA; color:#050505; font-size:9.5px; padding:3px 8px; letter-spacing:0.06em; text-transform:uppercase;">Approved</span></td><td class="mono" style="padding:8px 10px; text-align:right;">07/12/2026</td></tr>
+      <tr><td style="padding:8px 10px;">Client Sponsor</td><td style="padding:8px 10px;">A. Whitfield</td><td style="padding:8px 10px;"><span class="mono" style="border:1px solid #D8AF55; color:#D8AF55; font-size:9.5px; padding:3px 8px; letter-spacing:0.06em; text-transform:uppercase;">Pending</span></td><td class="mono" style="padding:8px 10px; text-align:right; color:rgba(247,244,234,0.5);">—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">Signatures</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:30px;">
+    <div><div style="height:40px; border-bottom:1px solid #F7F4EA;"></div><div style="display:flex; justify-content:space-between; margin-top:6px; font-size:10.5px; color:rgba(247,244,234,0.55);"><span>Signature</span><span>Date</span></div><div style="font-size:12px; font-weight:600; margin-top:8px;">J. Alvarez</div><div style="font-size:10.5px; color:rgba(247,244,234,0.5);">Engagement Lead, Major AI Mindset</div></div>
+    <div><div style="height:40px; border-bottom:1px solid #F7F4EA;"></div><div style="display:flex; justify-content:space-between; margin-top:6px; font-size:10.5px; color:rgba(247,244,234,0.55);"><span>Signature</span><span>Date</span></div><div style="font-size:12px; font-weight:600; margin-top:8px;">A. Whitfield</div><div style="font-size:10.5px; color:rgba(247,244,234,0.5);">Client Sponsor, Aurelia Capital Partners</div></div>
+  </div>
+
+  <div class="footer-901"><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">DOC-2026-00518 · v1.0</div><div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55;">Confidential — Client &amp; Internal</div><div class="mono" style="font-size:9.5px; color:rgba(247,244,234,0.5);">Page 5 of 5</div></div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

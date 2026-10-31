@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:200px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .flow-node { font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; }
+  .flow-arrow { font-size:13px; color:#D8AF55; margin:1px 0 1px 24px; }
+  .wf-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 04 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-WORKFLOWS · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 04 · Not a Design Page — a Systems Page</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Workflow Library</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Ten sprints, covering the full client lifecycle end to end — mirroring the Template Library's structure so every operational step and every document it produces stay in sync.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">Every workflow answers four questions, in order: what starts it, what happens, what gets produced, what happens next.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-001</span>Sprint 01 — Lead to Discovery</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-002</span>Sprint 02 — Discovery to Proposal</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-003</span>Sprint 03 — Proposal to Agreement</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-004</span>Sprint 04 — Agreement to Payment</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-005</span>Sprint 05 — Payment to Onboarding</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-006</span>Sprint 06 — Onboarding to Project Launch</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-007</span>Sprint 07 — Delivery &amp; Weekly Operations</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-008</span>Sprint 08 — Milestone Review &amp; Approval</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-009</span>Sprint 09 — Final Delivery &amp; Handover</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">WF-0010</span>Sprint 10 — Support, Expansion &amp; Referral</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 01 — LEAD TO DISCOVERY — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Lead to Discovery</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Convert an interested lead into a qualified discovery session.</p>
+
+  <div class="sub-title">Trigger</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Lead expresses interest.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Lead</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Initial Contact</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Qualification</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Discovery Scheduled</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Discovery Confirmation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Discovery Preparation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Discovery Meeting Complete</div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 01 — LEAD TO DISCOVERY — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Lead to Discovery</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 22px;">Nothing in this sprint produces a client-facing document — no TEMP-XXX template is referenced. It ends with a completed meeting and internal notes that seed Sprint 02.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Discovery Meeting</div><div class="field-val">A scheduled, confirmed conversation with the qualified lead — the event this sprint exists to produce.</div></div>
+    <div class="field-row"><div class="field-label">Discovery Notes</div><div class="field-val">Internal record of what was learned — feeds directly into TEMP-006 Discovery Report in Sprint 02.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Qualified Opportunity</div><div class="field-val">The lead is confirmed as a real, budgeted opportunity — the gate that lets Sprint 02 begin.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 02 — DISCOVERY TO PROPOSAL — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Discovery to Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Turn discovery into a proposal.</p>
+
+  <div class="sub-title">Flow</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Discovery Notes</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Business Audit</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Solution Design</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Pricing</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Proposal Generated <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-001)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Proposal Sent</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Discovery Notes is the same artifact Sprint 01 ends with — the handoff point between the two sprints.</div>
+</div>
+
+<!-- ============ SPRINT 02 — DISCOVERY TO PROPOSAL — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Discovery to Proposal</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 22px;">The first sprint to produce a client-facing document — everything below lives inside TEMP-001 Proposal, not as separate artifacts.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Proposal</div><div class="field-val">TEMP-001, sent to the client — the deliverable this sprint exists to produce.</div></div>
+    <div class="field-row"><div class="field-label">Executive Summary</div><div class="field-val">The Summary Box atop the Proposal's cover page, condensing Business Audit and Solution Design into a few lines.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Pricing</div><div class="field-val">The Pricing Table and Investment section inside the Proposal — the number Sprint 03's Client Review responds to.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 03 — PROPOSAL TO AGREEMENT — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Proposal to Agreement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Proposal Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Questions</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Revisions</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Proposal Approved <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-001)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Statement of Work <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-002)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Agreement Signed</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Revisions can loop back to Proposal Review any number of times before Approved — the flow shows the intended path, not every possible iteration.</div>
+</div>
+
+<!-- ============ SPRINT 03 — PROPOSAL TO AGREEMENT — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Proposal to Agreement</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 22px;">This sprint's job is converting an offer into a binding commitment — its three outputs are three states of sign-off, not three new documents.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Approved Proposal</div><div class="field-val">TEMP-001 with its Approval Chain cleared — the trigger that authorizes drafting the SOW.</div></div>
+    <div class="field-row"><div class="field-label">Signed SOW</div><div class="field-val">TEMP-002 with the Client Sponsor's row in its Approval Block moved from Pending to Approved.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Signed Agreement</div><div class="field-val">The completed Signature Block on TEMP-002 — the gate that lets Sprint 04 (Agreement to Payment) begin.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 04 — AGREEMENT TO PAYMENT — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Agreement to Payment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Agreement Signed</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Invoice Created <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-003)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Invoice Sent</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Payment Received</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Receipt Issued <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-004)</span></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Agreement Signed is the same state Sprint 03 ends on — the shortest sprint in the library, deliberately: it's a billing mechanic, not a relationship moment.</div>
+</div>
+
+<!-- ============ SPRINT 04 — AGREEMENT TO PAYMENT — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Agreement to Payment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Invoice</div><div class="field-val">TEMP-003, sent to the billing contact once the Agreement is signed.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Receipt</div><div class="field-val">TEMP-004, issued once payment clears — the gate that lets Sprint 05 (Payment to Onboarding) begin.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT TO ONBOARDING — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment to Onboarding</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Payment Confirmed</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Welcome Packet <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-005)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Portal Access</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Information Collection</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Kickoff Scheduled</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">First sprint where the client experiences the brand directly rather than a transaction — Welcome Packet sets the tone for the entire engagement.</div>
+</div>
+
+<!-- ============ SPRINT 05 — PAYMENT TO ONBOARDING — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Payment to Onboarding</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Welcome Packet</div><div class="field-val">TEMP-005, delivered the moment payment clears — introduces team, process, and what to expect.</div></div>
+    <div class="field-row"><div class="field-label">Client Portal</div><div class="field-val">Access credentials and orientation to the shared workspace where the engagement will run.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Kickoff Meeting</div><div class="field-val">Scheduled once information collection is complete — the gate that lets Sprint 06 (Onboarding to Project Launch) begin.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 06 — ONBOARDING TO PROJECT LAUNCH — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Onboarding to Project Launch</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Kickoff</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Project Plan</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Milestones <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-401–406)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Tasks Created</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Project Active</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The last purely internal-setup sprint — everything from Sprint 07 onward is recurring delivery work, not one-time setup.</div>
+</div>
+
+<!-- ============ SPRINT 06 — ONBOARDING TO PROJECT LAUNCH — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Onboarding to Project Launch</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <p style="font-size:12.5px; line-height:1.65; color:rgba(247,244,234,0.65); max-width:600px; margin:0 0 22px;">These three outputs aren't separate documents — they're the Timeline family components (Family 05) populated for this specific project.</p>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Roadmap</div><div class="field-val">The Project Plan expressed as Phase Cards (COMP-405) — the client-visible shape of the engagement.</div></div>
+    <div class="field-row"><div class="field-label">Timeline</div><div class="field-val">COMP-401, populated with this project's actual dates and phases.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Milestones</div><div class="field-val">Milestone Cards (COMP-402) with Gate Indicators — the checkpoints Sprint 08 (Milestone Review) will review against.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 07 — DELIVERY & WEEKLY OPERATIONS — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Delivery &amp; Weekly Operations</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Weekly Work</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Progress Report <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-007)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Client Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Adjustments</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Continue Delivery</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This is a loop, not a line — Continue Delivery feeds back into Weekly Work every cycle until a milestone is reached and Sprint 08 begins.</div>
+</div>
+
+<!-- ============ SPRINT 07 — DELIVERY & WEEKLY OPERATIONS — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Delivery &amp; Weekly Operations</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Weekly Report</div><div class="field-val">TEMP-007, the recurring cadence artifact — progress against Milestones, status of open items.</div></div>
+    <div class="field-row"><div class="field-label">Decision Log</div><div class="field-val">Client Review outcomes recorded as Decision Boxes (COMP-504) — a running record of what was agreed.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Action Items</div><div class="field-val">Adjustments captured as Checklists (COMP-706) — carried into the next cycle's Weekly Work.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 08 — MILESTONE REVIEW & APPROVAL — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Milestone Review &amp; Approval</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Milestone Complete</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Internal Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Client Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Approval <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-501)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Next Milestone</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Next Milestone loops back into Sprint 07's Weekly Work — this sprint is the gate between delivery cycles, repeating once per milestone until the final one routes into Sprint 09 instead.</div>
+</div>
+
+<!-- ============ SPRINT 08 — MILESTONE REVIEW & APPROVAL — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Milestone Review &amp; Approval</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Milestone Report</div><div class="field-val">A Gate Indicator (COMP-404) set to Passed, with the deliverables reviewed at Internal Review attached.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Approval Record</div><div class="field-val">An Approval Block (COMP-501) entry — the durable record that this milestone was formally accepted.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY & HANDOVER — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery &amp; Handover</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Final Deliverables</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Documentation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Training</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Acceptance <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-506)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Project Closed</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The last milestone from Sprint 08's loop routes here instead of back to Weekly Work — Project Closed is the gate that lets Sprint 10 (Support, Expansion &amp; Referral) begin.</div>
+</div>
+
+<!-- ============ SPRINT 09 — FINAL DELIVERY & HANDOVER — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Final Delivery &amp; Handover</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Final Delivery Package</div><div class="field-val">Every Final Deliverable and piece of Documentation, bound together as one client-facing packet.</div></div>
+    <div class="field-row"><div class="field-label">Acceptance Certificate</div><div class="field-val">COMP-506, the client's formal sign-off that scope is complete.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Closeout Report</div><div class="field-val">Internal record of the engagement's outcomes — feeds Sprint 10's expansion and referral conversations.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 10 — SUPPORT, EXPANSION & REFERRAL — FLOW ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-0010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Flow</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Support, Expansion &amp; Referral</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Support</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Optimization</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Expansion Opportunity <span class="mono" style="color:#D8AF55; font-size:10px;">(WF-002)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Case Study</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Testimonial</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Referral</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The library's closing loop: Expansion Opportunity re-enters at Sprint 02 (Discovery to Proposal) for the next engagement; Referral re-enters at Sprint 01 (Lead to Discovery) for a new client entirely.</div>
+</div>
+
+<!-- ============ SPRINT 10 — SUPPORT, EXPANSION & REFERRAL — OUTPUTS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="wf-id">WF-0010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Outputs</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Support, Expansion &amp; Referral</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Support Agreement</div><div class="field-val">A lightweight TEMP-002 variant covering ongoing Support terms after Project Closed.</div></div>
+    <div class="field-row"><div class="field-label">Expansion Proposal</div><div class="field-val">A new TEMP-001, re-entering the library at Sprint 02 for additional scope.</div></div>
+    <div class="field-row"><div class="field-label">Case Study</div><div class="field-val">Outcomes from the Closeout Report reframed as a Feature Card (COMP-703) for future proposals.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Referral Package</div><div class="field-val">Introduction materials handed to a referred lead — re-entering the library at Sprint 01.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Workflow Library — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

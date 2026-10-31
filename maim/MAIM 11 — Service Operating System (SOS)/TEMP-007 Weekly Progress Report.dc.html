@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:56px 58px 40px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; display:flex; flex-direction:column; }
+  .sos-page:first-child { break-before: auto; }
+  .lbl { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<div class="sos-page" data-screen-label="Weekly Progress Report">
+
+  <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(247,244,234,0.35); margin-bottom:20px; border-bottom:1px dashed rgba(247,244,234,0.2); padding-bottom:10px;">Week of 07/07/2026 — delivered inline, no standalone Header</div>
+
+  <!-- COMP-705 Summary Box — Week Summary -->
+  <div style="background:#F7F4EA; color:#050505; padding:16px 18px; max-width:520px; margin-bottom:22px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#8C6D2F; margin-bottom:8px;">Week Summary</div>
+    <div style="font-size:12px; line-height:1.6;">Phase 1 discovery work wrapped on schedule. One risk item surfaced around data access — flagged below with a proposed resolution path.</div>
+  </div>
+
+  <!-- COMP-403 Progress Bar -->
+  <div style="margin-bottom:26px; max-width:520px;">
+    <div style="font-size:11px; color:rgba(247,244,234,0.6); margin-bottom:6px; display:flex; justify-content:space-between;"><span>Overall Progress</span><span class="mono">38% · on track</span></div>
+    <div style="height:6px; background:rgba(247,244,234,0.15); width:100%;"><div style="height:6px; width:38%; background:#1F7A3A;"></div></div>
+  </div>
+
+  <!-- COMP-707 Checklist — Completed Tasks -->
+  <div class="sub-title">Completed Tasks</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:22px;">
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Stakeholder discovery interviews (6 of 6)</span></div>
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12px;"><div style="width:14px; height:14px; border:1.5px solid #1F7A3A; background:#1F7A3A; flex-shrink:0; margin-top:1px;"></div><span style="text-decoration:line-through; color:rgba(247,244,234,0.5);">Current-state operational audit draft</span></div>
+  </div>
+
+  <!-- COMP-707 Checklist — In Progress (unticked) -->
+  <div class="sub-title">In Progress</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:22px;">
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12px;"><div style="width:14px; height:14px; border:1.5px solid rgba(247,244,234,0.4); flex-shrink:0; margin-top:1px;"></div><span>Strategic roadmap draft</span></div>
+    <div style="display:flex; align-items:baseline; gap:10px; font-size:12px;"><div style="width:14px; height:14px; border:1.5px solid rgba(247,244,234,0.4); flex-shrink:0; margin-top:1px;"></div><span>Quarterly reporting template design</span></div>
+  </div>
+
+  <!-- COMP-708 Bullet List + COMP-201 Status Badge inline — Risks -->
+  <div class="sub-title">Risks</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:22px; max-width:600px;">
+    <div style="display:flex; align-items:flex-start; gap:10px; font-size:12px;">
+      <div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div>
+      <div>Data access from the Northeast desk is delayed pending IT approval. <span class="mono" style="border:1px solid #F58426; color:#F58426; font-size:9px; padding:2px 7px; letter-spacing:0.06em; text-transform:uppercase; margin-left:4px;">Blocked</span></div>
+    </div>
+  </div>
+
+  <!-- COMP-708 Bullet List — Decisions -->
+  <div class="sub-title">Decisions</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:26px;">
+    <div style="display:flex; gap:10px; font-size:12px;"><div style="width:5px; height:5px; border-radius:50%; background:#D8AF55; margin-top:6px; flex-shrink:0;"></div><span>Client agreed to escalate IT access directly rather than wait on the standard ticket queue.</span></div>
+  </div>
+
+  <!-- Next Week — plain body copy -->
+  <div class="sub-title">Next Week</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12px; line-height:1.65; color:rgba(247,244,234,0.7); max-width:600px;">Finalize the strategic roadmap and begin quarterly reporting template design, contingent on Northeast data access clearing this week.</p>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:#050505; }
+  ::selection { background:#D8AF55; color:#050505; }
+  ::-webkit-scrollbar { width:11px; height:11px; }
+  ::-webkit-scrollbar-thumb { background:rgba(216,175,85,.28); border-radius:9px; }
+  ::-webkit-scrollbar-track { background:#0a0a0c; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:radial-gradient(120% 80% at 50% -10%, #0d0d10 0%, #050505 55%); font-family:'Archivo',sans-serif; color:#F7F4EA; padding:0 0 100px;">
+
+  <!-- ============ TOP BAR ============ -->
+  <div style="position:sticky; top:0; z-index:20; backdrop-filter:blur(14px); background:rgba(5,5,5,.78); border-bottom:1px solid rgba(247,244,234,.08);">
+    <div style="max-width:1180px; margin:0 auto; padding:15px 32px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:14px; cursor:pointer;" onClick="{{ goHome }}">
+        <img src="assets/maim-mark.png" alt="MAIM seal" style="width:42px; height:42px; display:block;">
+        <div>
+          <div style="font-weight:800; font-size:15px; letter-spacing:.5px; line-height:1;">Major&nbsp;AI&nbsp;Mindset</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:2.5px; color:#D8AF55; margin-top:4px;">LEARNING&nbsp;ENGINE&nbsp;·&nbsp;VOL.&nbsp;03</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.4);">BEGINNER&nbsp;TRACK</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#1F7A3A;">A&ndash;E&nbsp;LIVE&nbsp;·&nbsp;5/26</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 32px;">
+
+    <!-- ============ A–Z SPINE ============ -->
+    <div style="padding:34px 0 30px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:4px; color:rgba(247,244,234,.45);">THE&nbsp;A&ndash;Z&nbsp;SPINE</div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.3);">CLICK&nbsp;A&nbsp;LIVE&nbsp;LETTER</div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:9px;">
+        <sc-for list="{{ letters }}" as="item" hint-placeholder-count="26">
+          <button onClick="{{ item.onClick }}" title="{{ item.word }}" style="width:54px; height:54px; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:800; font-size:23px; display:flex; align-items:center; justify-content:center; transition:transform .15s ease; background:{{ item.bg }}; color:{{ item.fg }}; border:{{ item.bd }}; cursor:{{ item.cur }}; box-shadow:{{ item.shadow }};">{{ item.letter }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- ============ HOME: HERO + TEMPLATE SPEC ============ -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div>
+
+      <!-- HERO (Editorial Split energy) -->
+      <div style="display:grid; grid-template-columns:1.15fr .85fr; gap:38px; align-items:stretch; padding:22px 0 18px;">
+        <div style="display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:4px; color:#D8AF55;">THE&nbsp;EDUCATIONAL&nbsp;FOUNDATION</div>
+          <h1 style="font-weight:900; font-size:62px; line-height:.98; letter-spacing:-1.8px; margin:16px 0 0;">One alphabet.<br>The whole<br>mindset.</h1>
+          <p style="font-size:18px; line-height:1.6; color:rgba(247,244,234,.7); margin:22px 0 0; max-width:520px;">Every letter is one complete learning module &mdash; a single question, a memorable metaphor, a five-minute action, and a memory hook people repeat months later. Built once. Repurposed into ten formats.</p>
+          <div style="display:flex; gap:10px; margin-top:30px; flex-wrap:wrap;">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#F7F4EA; border:1px solid rgba(247,244,234,.16); border-radius:99px; padding:9px 16px;">EMOTIONAL&nbsp;GOAL:&nbsp;CONFIDENCE</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:#050505; background:#D8AF55; border-radius:99px; padding:9px 16px; font-weight:700;">VISUAL&nbsp;GOAL:&nbsp;CALM&nbsp;AUTHORITY</div>
+          </div>
+        </div>
+
+        <!-- right rail: A–E memory hook teaser -->
+        <div style="background:linear-gradient(160deg,#111014,#08080a); border:1px solid rgba(216,175,85,.22); border-radius:18px; padding:24px; display:flex; flex-direction:column;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55; margin-bottom:6px;">LIVE&nbsp;MODULES</div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:8px;">
+            <sc-for list="{{ active }}" as="row" hint-placeholder-count="5">
+              <button onClick="{{ row.onClick }}" style="text-align:left; background:rgba(247,244,234,.03); border:1px solid rgba(247,244,234,.08); border-radius:13px; padding:13px 15px; cursor:pointer; display:flex; align-items:center; gap:14px; transition:border-color .15s ease;" style-hover="border-color:rgba(216,175,85,.55);">
+                <span style="font-weight:900; font-size:26px; color:#D8AF55; width:24px; line-height:1; flex:none;">{{ row.letter }}</span>
+                <span style="display:flex; flex-direction:column; gap:3px;">
+                  <span style="font-weight:700; font-size:14px; letter-spacing:.2px;">{{ row.word }}</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.35; color:rgba(247,244,234,.55);">{{ row.hook }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- divider -->
+      <div style="height:1px; background:linear-gradient(90deg,transparent,rgba(247,244,234,.14),transparent); margin:46px 0 40px;"></div>
+
+      <!-- TEMPLATE SPEC -->
+      <div style="text-align:center; max-width:680px; margin:0 auto 8px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:4px; color:#D8AF55;">THE&nbsp;REUSABLE&nbsp;MODULE&nbsp;TEMPLATE</div>
+        <h2 style="font-weight:900; font-size:38px; line-height:1.05; letter-spacing:-1px; margin:14px 0 0;">Every letter is built from the same nine slots.</h2>
+        <p style="font-size:16px; line-height:1.6; color:rgba(247,244,234,.65); margin:14px 0 0;">Fill the slots, and the lesson is ready to become a post, a page, a slide, or an episode. This is the spec the entire A&ndash;Z inherits.</p>
+      </div>
+
+      <!-- bento skeleton (the spec) -->
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:13px; margin:34px 0 0;">
+        <div style="grid-column:span 2; background:linear-gradient(150deg,#161208,#0a0a0c); border:1px solid rgba(216,175,85,.3); border-radius:15px; padding:22px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;01</div>
+          <div><div style="font-weight:800; font-size:19px;">Letter&nbsp;+&nbsp;Word</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px;">The identity. One concept, named.</div></div>
+        </div>
+        <div style="grid-column:span 4; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:15px; padding:22px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;02</div>
+          <div><div style="font-weight:800; font-size:19px;">The One Question</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px;">Every lesson answers a single, simple question a beginner is actually asking.</div></div>
+        </div>
+        <div style="grid-column:span 2; border:1px solid rgba(216,175,85,.25); border-radius:15px; background:repeating-linear-gradient(45deg,#101012 0 11px,#0b0b0d 11px 22px); padding:22px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;03</div>
+          <div><div style="font-weight:800; font-size:19px;">The Metaphor</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px;">One memorable image. Striped placeholder &rarr; real art later.</div></div>
+        </div>
+        <div style="grid-column:span 4; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:15px; padding:22px; min-height:150px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;04</div>
+          <div><div style="font-weight:800; font-size:19px;">The Lesson</div><div style="font-size:13px; color:rgba(247,244,234,.6); margin-top:4px;">Short, warm teaching body. Calm authority, never overwhelming.</div></div>
+        </div>
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:15px; padding:20px; min-height:108px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;05</div>
+          <div style="font-weight:800; font-size:17px; margin-top:10px;">The Mantra</div>
+        </div>
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:15px; padding:20px; min-height:108px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5);">SLOT&nbsp;06</div>
+          <div style="font-weight:800; font-size:17px; margin-top:10px;">What to Avoid</div>
+        </div>
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:15px; padding:20px; min-height:108px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.5);">SLOT&nbsp;07</div>
+          <div style="font-weight:800; font-size:17px; margin-top:10px;">Reflect&nbsp;/&nbsp;Discuss</div>
+        </div>
+        <div style="grid-column:span 4; background:#F58426; color:#050505; border-radius:15px; padding:22px; min-height:108px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; font-weight:700;">SLOT&nbsp;08</div>
+          <div><div style="font-weight:800; font-size:19px;">The 5-Minute Action</div><div style="font-size:13px; opacity:.8; margin-top:4px;">One small thing they can do in under five minutes.</div></div>
+        </div>
+        <div style="grid-column:span 2; background:radial-gradient(120% 140% at 50% 0%,#16140e,#080808); border:1px solid rgba(216,175,85,.4); border-radius:15px; padding:22px; min-height:108px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#D8AF55;">SLOT&nbsp;09</div>
+          <div style="font-weight:800; font-size:19px; color:#D8AF55;">The Memory Hook</div>
+        </div>
+      </div>
+
+      <!-- principles + repurposing -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:42px;">
+        <div style="background:#0a0a0c; border:1px solid rgba(247,244,234,.09); border-radius:18px; padding:28px 30px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55; margin-bottom:18px;">FOUR&nbsp;DESIGN&nbsp;PRINCIPLES</div>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; gap:14px; align-items:baseline;"><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55; flex:none;">01</span><span style="font-size:15.5px; line-height:1.45;">Every lesson answers <strong>one simple question</strong>.</span></div>
+            <div style="display:flex; gap:14px; align-items:baseline;"><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55; flex:none;">02</span><span style="font-size:15.5px; line-height:1.45;">Every lesson has <strong>one memorable metaphor</strong>.</span></div>
+            <div style="display:flex; gap:14px; align-items:baseline;"><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55; flex:none;">03</span><span style="font-size:15.5px; line-height:1.45;">Every lesson ends in <strong>one five-minute action</strong>.</span></div>
+            <div style="display:flex; gap:14px; align-items:baseline;"><span style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#D8AF55; flex:none;">04</span><span style="font-size:15.5px; line-height:1.45;">Every lesson leaves <strong>one memory hook</strong> they repeat months later.</span></div>
+          </div>
+        </div>
+        <div style="background:#0a0a0c; border:1px solid rgba(247,244,234,.09); border-radius:18px; padding:28px 30px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55; margin-bottom:18px;">ONE&nbsp;MODULE&nbsp;&rarr;&nbsp;TEN&nbsp;FORMATS</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:9px 18px;">
+            <sc-for list="{{ formats }}" as="f" hint-placeholder-count="10">
+              <div style="display:flex; gap:10px; align-items:baseline; border-bottom:1px solid rgba(247,244,234,.06); padding-bottom:8px;">
+                <span style="font-weight:700; font-size:13.5px; flex:none;">{{ f.name }}</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:9.5px; color:rgba(247,244,234,.45); line-height:1.3;">{{ f.from }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- Major guide strip -->
+      <div style="display:flex; align-items:center; gap:24px; margin-top:42px; background:linear-gradient(110deg,#100f0a,#070708); border:1px solid rgba(216,175,85,.2); border-radius:18px; padding:24px 30px;">
+        <img src="assets/comic-major.png" alt="Major, the guide" style="width:84px; height:84px; object-fit:cover; border-radius:14px; flex:none; border:1px solid rgba(216,175,85,.3);">
+        <div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-.3px;">Major guides every lesson.</div>
+          <div style="font-size:14.5px; line-height:1.5; color:rgba(247,244,234,.65); margin-top:5px; max-width:760px;">The same calm teacher across all 26 letters. Beginners never feel lost &mdash; they feel led. Pick any live letter from the spine above to open its full module.</div>
+        </div>
+      </div>
+
+    </div>
+    </sc-if>
+
+    <!-- ============ MODULE VIEW (Bento) ============ -->
+    <sc-if value="{{ hasSelection }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:8px 0 0;">
+
+      <!-- module top: breadcrumb + nav -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;">
+        <button onClick="{{ goHome }}" style="display:flex; align-items:center; gap:9px; background:transparent; border:1px solid rgba(247,244,234,.16); border-radius:99px; padding:9px 16px; color:#F7F4EA; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px;" style-hover="border-color:rgba(216,175,85,.6);">&larr;&nbsp;&nbsp;ENGINE&nbsp;HOME</button>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:rgba(247,244,234,.4);">BEGINNER&nbsp;·&nbsp;{{ m.letter }}&nbsp;/&nbsp;26</div>
+          <img src="assets/maim-mark.png" alt="MAIM seal" style="width:30px; height:30px; display:block;">
+        </div>
+      </div>
+
+      <!-- bento module -->
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:14px;">
+        <!-- 01 letter -->
+        <div style="grid-column:span 2; background:linear-gradient(150deg,#171307,#0a0a0c); border:1px solid rgba(216,175,85,.32); border-radius:16px; padding:26px; display:flex; flex-direction:column; justify-content:space-between; min-height:230px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55;">{{ m.letter }}&nbsp;IS&nbsp;FOR</div>
+          <div style="font-weight:900; font-size:118px; line-height:.78; letter-spacing:-4px; color:#D8AF55;">{{ m.letter }}</div>
+          <div>
+            <div style="font-weight:800; font-size:27px; letter-spacing:-.5px; text-transform:uppercase;">{{ m.word }}</div>
+            <div style="width:96px; height:6px; border-radius:3px; margin-top:13px; background:linear-gradient(90deg,#1F7A3A 0 33%,#D8AF55 33% 66%,#006BB6 66% 100%);"></div>
+          </div>
+        </div>
+        <!-- 02 question -->
+        <div style="grid-column:span 4; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:30px 32px; display:flex; flex-direction:column; justify-content:center; min-height:230px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:14px;">THE&nbsp;QUESTION</div>
+          <div style="font-weight:800; font-size:36px; line-height:1.14; letter-spacing:-.6px;">{{ m.question }}</div>
+        </div>
+        <!-- 03 metaphor -->
+        <div style="grid-column:span 2; border:1px solid rgba(216,175,85,.25); border-radius:16px; background:repeating-linear-gradient(45deg,#101012 0 12px,#0b0b0d 12px 24px); padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:center; min-height:210px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:2px; color:#D8AF55;">THE&nbsp;METAPHOR</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.5px; color:rgba(247,244,234,.5); margin-top:11px;">{{ m.metaphorTag }}</div>
+          <div style="font-size:13.5px; line-height:1.45; color:rgba(247,244,234,.82); margin-top:11px;">{{ m.metaphorLine }}</div>
+        </div>
+        <!-- 04 lesson -->
+        <div style="grid-column:span 4; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:28px 32px; min-height:210px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; color:#D8AF55; margin-bottom:13px;">THE&nbsp;LESSON</div>
+          <p style="font-size:16.5px; line-height:1.62; color:rgba(247,244,234,.8); margin:0;">{{ m.lesson }}</p>
+        </div>
+        <!-- 05 mantra -->
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:24px; display:flex; flex-direction:column; justify-content:center; min-height:130px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55; margin-bottom:9px;">MANTRA</div>
+          <div style="font-weight:800; font-size:19px; line-height:1.28;">{{ m.mantra }}</div>
+        </div>
+        <!-- 06 avoid -->
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:24px; display:flex; flex-direction:column; justify-content:center; min-height:130px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:rgba(247,244,234,.5); margin-bottom:9px;">WHAT&nbsp;TO&nbsp;AVOID</div>
+          <div style="font-size:14.5px; line-height:1.46; color:rgba(247,244,234,.74);">{{ m.avoid }}</div>
+        </div>
+        <!-- 07 reflect -->
+        <div style="grid-column:span 2; background:#0c0c0e; border:1px solid rgba(247,244,234,.1); border-radius:16px; padding:24px; display:flex; flex-direction:column; justify-content:center; min-height:130px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:rgba(247,244,234,.5); margin-bottom:9px;">REFLECT&nbsp;/&nbsp;DISCUSS</div>
+          <div style="font-size:14.5px; line-height:1.46; color:rgba(247,244,234,.82);">{{ m.reflect }}</div>
+        </div>
+        <!-- 08 action -->
+        <div style="grid-column:span 4; background:#F58426; color:#050505; border-radius:16px; padding:26px 28px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:11px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:3px; font-weight:700;">THE&nbsp;5-MINUTE&nbsp;ACTION</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; font-weight:700; background:rgba(5,5,5,.16); padding:5px 11px; border-radius:99px;">&lt;&nbsp;5&nbsp;MIN</span>
+          </div>
+          <div style="font-weight:700; font-size:17px; line-height:1.42;">{{ m.action }}</div>
+        </div>
+        <!-- 09 memory hook -->
+        <div style="grid-column:span 2; background:radial-gradient(120% 140% at 50% 0%,#16140e,#080808); border:1px solid rgba(216,175,85,.4); border-radius:16px; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:center;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:3px; color:#D8AF55;">MEMORY&nbsp;HOOK</div>
+          <div style="font-weight:900; font-size:20px; line-height:1.24; letter-spacing:-.3px; margin-top:11px;">{{ m.hook }}</div>
+        </div>
+      </div>
+
+      <!-- next-level nudge -->
+      <div style="display:flex; align-items:center; gap:18px; margin-top:14px; background:linear-gradient(110deg,#0a1410,#07100c); border:1px solid rgba(31,122,58,.35); border-radius:16px; padding:20px 26px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:#3ECF7F; border:1px solid rgba(62,207,127,.4); border-radius:99px; padding:7px 13px; flex:none;">NEXT&nbsp;LEVEL</div>
+        <div style="font-size:15px; line-height:1.5; color:rgba(247,244,234,.82);">{{ m.nudge }}</div>
+      </div>
+
+      <!-- prev / next letter -->
+      <div style="display:flex; justify-content:space-between; gap:14px; margin-top:24px;">
+        <button onClick="{{ m.onPrev }}" style="flex:1; text-align:left; background:#0a0a0c; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:18px 22px; color:#F7F4EA; cursor:{{ m.prevCur }}; opacity:{{ m.prevOp }};" style-hover="border-color:rgba(216,175,85,.45);">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.4);">&larr;&nbsp;PREVIOUS</div>
+          <div style="font-weight:800; font-size:17px; margin-top:5px;">{{ m.prevLabel }}</div>
+        </button>
+        <button onClick="{{ m.onNext }}" style="flex:1; text-align:right; background:#0a0a0c; border:1px solid rgba(247,244,234,.1); border-radius:14px; padding:18px 22px; color:#F7F4EA; cursor:{{ m.nextCur }}; opacity:{{ m.nextOp }};" style-hover="border-color:rgba(216,175,85,.45);">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; color:rgba(247,244,234,.4);">NEXT&nbsp;&rarr;</div>
+          <div style="font-weight:800; font-size:17px; margin-top:5px;">{{ m.nextLabel }}</div>
+        </button>
+      </div>
+
+    </div>
+    </sc-if>
+
+  </div>
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#050505">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#050505"/>
+    <text x="600" y="430" font-family="Arial, sans-serif" font-weight="bold" font-size="320" fill="#D8AF55" text-anchor="middle">A</text>
+    <rect x="486" y="520" width="72" height="15" rx="7" fill="#1F7A3A"/>
+    <rect x="564" y="520" width="72" height="15" rx="7" fill="#D8AF55"/>
+    <rect x="642" y="520" width="72" height="15" rx="7" fill="#006BB6"/>
+    <text x="600" y="620" font-family="monospace" font-size="28" letter-spacing="6" fill="#8a877f" text-anchor="middle">LEARNING ENGINE</text>
+  </svg>
+</template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { selected: null };
+
+  modules = {
+    A: {
+      letter: "A", word: "Awareness",
+      question: "Where in my day could a little help go a long way?",
+      metaphorTag: "[ a torch lighting one corner of a dark room ]",
+      metaphorLine: "Awareness is noticing where the light needs to point.",
+      lesson: "AI doesn't start with tools. It starts with noticing. Before you open any app, look at your ordinary day \u2014 the message you rewrite five times, the email you keep putting off, the caption you can't find words for. That little friction is the signal. Awareness is simply naming one spot where a bit of help would go a long way.",
+      mantra: "AI begins the moment you notice.",
+      avoid: "Thinking you need to learn everything before you start. You don't \u2014 you just need to notice one thing.",
+      action: "Write down three moments today where you felt stuck, slow, or unsure. Circle the one that costs you the most time. That's your starting point.",
+      reflect: "What task have you been avoiding simply because it drains you?",
+      hook: "\u201CYou can't automate what you haven't noticed.\u201D",
+      nudge: "Once you can spot friction, start grouping it \u2014 repeated patterns reveal your highest-leverage place to bring AI in first."
+    },
+    B: {
+      letter: "B", word: "Belief",
+      question: "What could I do if I trusted that I could learn this?",
+      metaphorTag: "[ stepping onto the first plank of a bridge into fog ]",
+      metaphorLine: "Belief is trusting the first plank before you can see the whole bridge.",
+      lesson: "Most people don't quit AI because it's too hard \u2014 they quit because they decided in advance it wasn't for them. Belief isn't blind hype. It's the working assumption that you can figure out the next small step. Skill grows from reps, and you only take the reps when you believe they'll add up to something.",
+      mantra: "You learn it by believing you can.",
+      avoid: "Waiting until you \u201Cfeel ready.\u201D Confidence is built by doing, not before it.",
+      action: "Write one sentence: \u201CI am becoming the kind of person who ____.\u201D Fill it with who you're growing into, not who you are today. Read it out loud once.",
+      reflect: "Where has doubt stopped you before you even gave yourself a chance to try?",
+      hook: "\u201CBelief comes before skill.\u201D",
+      nudge: "Catch the story you tell yourself mid-task and rewrite it in real time \u2014 from \u201CI can't\u201D to \u201CI haven't yet.\u201D"
+    },
+    C: {
+      letter: "C", word: "Context",
+      question: "What does the AI actually need to know to help me well?",
+      metaphorTag: "[ handing a clear map to a helpful stranger ]",
+      metaphorLine: "Context is telling the AI where you're trying to go.",
+      lesson: "AI isn't a mind reader. A vague ask gets a vague answer. The difference between a flat reply and a brilliant one is almost always context \u2014 who you are, who it's for, what you want, and what to avoid. You don't need perfect prompts. You just need to share the picture that's already in your head.",
+      mantra: "Better context, better answers.",
+      avoid: "Blaming the tool for a generic answer when it never got the full picture from you.",
+      action: "Take one thing you asked AI recently and add three lines: who it's for, the tone you want, and one thing to avoid. Run it again and compare the two.",
+      reflect: "When you ask people for help, how much of the picture do you usually leave out?",
+      hook: "\u201CContext creates clarity.\u201D",
+      nudge: "Save a reusable \u201Cabout me\u201D block you can paste into any tool, so every conversation starts with full context instantly."
+    },
+    D: {
+      letter: "D", word: "Direction",
+      question: "What is the one outcome I actually want here?",
+      metaphorTag: "[ a fast car finally pointed at one destination ]",
+      metaphorLine: "Direction is choosing where the energy goes.",
+      lesson: "AI makes it easy to do more, faster \u2014 which also makes it easy to race in the wrong direction. Speed without direction is just busywork with better tools. Before you generate anything, decide what \u201Cdone\u201D looks like. One clear outcome quietly focuses every prompt that follows it.",
+      mantra: "Decide where you're going first.",
+      avoid: "Generating endless options because you haven't decided what you actually want yet.",
+      action: "Before your next AI task, finish this line in one sentence: \u201CThis is done when ____.\u201D Keep it short enough to say out loud.",
+      reflect: "Where in your life are you moving fast but not quite sure what you're moving toward?",
+      hook: "\u201CDirection beats speed.\u201D",
+      nudge: "Set the outcome first, then work backward into the three steps that actually reach it \u2014 plan in reverse."
+    },
+    E: {
+      letter: "E", word: "Experiment",
+      question: "What's the smallest thing I could just try right now?",
+      metaphorTag: "[ a scientist running one small, safe test ]",
+      metaphorLine: "Experiments are small tries that teach you something.",
+      lesson: "You won't think your way to confidence \u2014 you'll experiment your way there. Treat every AI attempt as a test, not a verdict on your ability. A \u201Cbad\u201D result isn't failure; it's data. The people who get good aren't smarter, they just run more small experiments and keep whatever works.",
+      mantra: "Try small, learn fast.",
+      avoid: "Waiting for the perfect plan instead of running a quick five-minute test.",
+      action: "Pick one tiny task and try it with AI right now \u2014 no stakes, no perfection. Note one thing that worked and one thing you'd change next time.",
+      reflect: "What would you attempt if you knew a messy result still counted as progress?",
+      hook: "\u201CProgress belongs to the people who experiment.\u201D",
+      nudge: "Keep a running log of your experiments \u2014 over time, your small wins become your own personal playbook."
+    }
+  };
+
+  order = ["A", "B", "C", "D", "E"];
+
+  componentDidMount() {
+    try {
+      const s = localStorage.getItem("maim_sel");
+      if (s && this.modules[s]) this.setState({ selected: s });
+    } catch (e) {}
+  }
+
+  select(L) {
+    this.setState({ selected: L });
+    try {
+      if (L) localStorage.setItem("maim_sel", L);
+      else localStorage.removeItem("maim_sel");
+    } catch (e) {}
+    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  renderVals() {
+    const sel = this.state.selected;
+    const isHome = !sel;
+    const ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+    const letters = ALPHA.map((L) => {
+      const mod = this.modules[L];
+      const active = !!mod;
+      const isSel = L === sel;
+      let bg, fg, bd, cur, shadow;
+      if (isSel) {
+        bg = "#D8AF55"; fg = "#050505"; bd = "1px solid #D8AF55"; cur = "pointer";
+        shadow = "0 8px 22px rgba(216,175,85,.3)";
+      } else if (active) {
+        bg = "rgba(216,175,85,.06)"; fg = "#D8AF55"; bd = "1px solid rgba(216,175,85,.5)"; cur = "pointer";
+        shadow = "none";
+      } else {
+        bg = "transparent"; fg = "rgba(247,244,234,.16)"; bd = "1px solid rgba(247,244,234,.06)"; cur = "default";
+        shadow = "none";
+      }
+      return {
+        letter: L,
+        word: active ? mod.word : "",
+        bg, fg, bd, cur, shadow,
+        onClick: active ? () => this.select(L) : null
+      };
+    });
+
+    const active = this.order.map((L) => ({
+      letter: L,
+      word: this.modules[L].word,
+      hook: this.modules[L].hook,
+      onClick: () => this.select(L)
+    }));
+
+    const formats = [
+      { name: "Instagram post", from: "HOOK + METAPHOR" },
+      { name: "Carousel", from: "ALL 9 SLOTS" },
+      { name: "Reel cover", from: "LETTER + QUESTION" },
+      { name: "Story", from: "5-MINUTE ACTION" },
+      { name: "Webinar slide", from: "QUESTION + LESSON" },
+      { name: "Workbook page", from: "FULL MODULE" },
+      { name: "Podcast episode", from: "LESSON + REFLECT" },
+      { name: "Newsletter", from: "LESSON + MANTRA" },
+      { name: "Community thread", from: "REFLECT PROMPT" },
+      { name: "Course lesson", from: "MODULE + NUDGE" }
+    ];
+
+    let m = {};
+    if (!isHome) {
+      const base = this.modules[sel];
+      const i = this.order.indexOf(sel);
+      const prev = i > 0 ? this.modules[this.order[i - 1]] : null;
+      const next = i < this.order.length - 1 ? this.modules[this.order[i + 1]] : null;
+      m = Object.assign({}, base, {
+        onPrev: prev ? () => this.select(prev.letter) : null,
+        onNext: next ? () => this.select(next.letter) : null,
+        prevLabel: prev ? prev.letter + " \u00B7 " + prev.word : "Start of track",
+        nextLabel: next ? next.letter + " \u00B7 " + next.word : "More coming soon",
+        prevCur: prev ? "pointer" : "default",
+        nextCur: next ? "pointer" : "default",
+        prevOp: prev ? "1" : ".4",
+        nextOp: next ? "1" : ".4"
+      });
+    }
+
+    return {
+      letters, active, formats, m,
+      isHome, hasSelection: !isHome,
+      goHome: () => this.select(null)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .cj-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .flow-node { font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; }
+  .flow-arrow { font-size:13px; color:#D8AF55; margin:1px 0 1px 24px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 05 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-CLIENT-JOURNEY · v0.2</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 05 · Client Experience, Not Internal Process</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">Client Journey</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Ten sprints mirroring the Workflow Library one-for-one — but told from the client's seat: what they feel, see, and receive as MAIM moves them through the Service Operating System.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This page never redesigns a Template or a Workflow — it only illustrates the lived experience those systems produce.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-001</span>Sprint 01 — Awareness &amp; First Contact</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-002</span>Sprint 02 — Discovery Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-003</span>Sprint 03 — Proposal Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-004</span>Sprint 04 — Agreement &amp; Payment</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-005</span>Sprint 05 — Welcome &amp; Onboarding</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-006</span>Sprint 06 — Delivery Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-007</span>Sprint 07 — Approval Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-008</span>Sprint 08 — Final Delivery Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-009</span>Sprint 09 — Support Experience</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">CJ-010</span>Sprint 10 — Expansion &amp; Advocacy</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 01 — AWARENESS & FIRST CONTACT — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Awareness &amp; First Contact</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Design the client's first impression of MAIM.</p>
+
+  <div class="sub-title">Journey</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Prospect</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Website</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Social Proof</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Lead Magnet</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Contact</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Discovery Invitation <span class="mono" style="color:#D8AF55; font-size:10px;">(WF-001)</span></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Discovery Invitation is the client-facing face of WF-001's Initial Contact and Qualification steps — the same moment, seen from the outside in.</div>
+</div>
+
+<!-- ============ SPRINT 01 — AWARENESS & FIRST CONTACT — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — Awareness &amp; First Contact</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-001</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Design the client's first impression of MAIM.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Decide, within a few minutes of looking, whether MAIM is credible and worth contacting.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Skeptical → intrigued → willing to reach out.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Website, case studies / social proof, lead magnet offer, contact form or inbound message.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Lead magnet asset and a Discovery invitation — the client's first tangible artifact from MAIM.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-001 — Lead to Discovery</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Prospect self-identifies as qualified and accepts the Discovery invitation without friction or follow-up chasing.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 02 — DISCOVERY EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Discovery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Discovery Scheduled</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Preparation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Discovery Meeting <span class="mono" style="color:#D8AF55; font-size:10px;">(WF-001)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Discovery Notes</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Business Diagnosis</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Next Steps</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This sprint straddles the internal seam between WF-001 and WF-002 — Discovery Notes is the same handoff artifact, experienced here as the moment the client feels understood.</div>
+</div>
+
+<!-- ============ SPRINT 02 — DISCOVERY EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Discovery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-002</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Give the client a discovery experience where they feel deeply understood and see a clear path forward.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Confirm MAIM has correctly diagnosed my business problem and get a sense of what happens next.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Attentive → validated → cautiously excited about next steps.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Discovery meeting itself, visible note-taking, verbal framing of Next Steps before the call ends.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Discovery Notes shared back for accuracy, plus a verbal preview of what the Proposal will address.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-001 (Discovery Meeting Complete) → WF-002 (Discovery Notes → Business Audit)</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">TEMP-006 — Discovery Report</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client confirms the Discovery Notes accurately reflect their business and agrees to receive a Proposal.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 03 — PROPOSAL EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Proposal Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Proposal Ready <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-001)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Presentation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Questions</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Approval Decision</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Presentation and Review mirror WF-002's close and WF-003's Proposal Review — the client experiences these as one continuous conversation, not two separate workflow steps.</div>
+</div>
+
+<!-- ============ SPRINT 03 — PROPOSAL EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Proposal Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-003</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Give the client full confidence in the recommended solution and its price before they commit.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Understand exactly what I'm buying, why it costs what it costs, and feel safe saying yes.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Evaluative → reassured by answers to questions → decisive.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Proposal walkthrough call, live Q&amp;A, follow-up clarifications.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">The Proposal document itself, plus written answers to any open questions before decision.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-002 — Discovery to Proposal · WF-003 — Proposal to Agreement</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">TEMP-001 — Proposal</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client approves the Proposal without a pricing renegotiation cycle.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 04 — AGREEMENT & PAYMENT — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Agreement &amp; Payment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Agreement <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-002)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Signature</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Invoice <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-003)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Payment</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Receipt <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-004)</span></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The most transactional sprint in the journey — the experience goal here is friction-free efficiency, not warmth. It maps almost exactly onto WF-004.</div>
+</div>
+
+<!-- ============ SPRINT 04 — AGREEMENT & PAYMENT — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — Agreement &amp; Payment</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-004</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Make the transition from decision to commitment feel effortless and administratively painless.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Sign, pay, and get a clean receipt without chasing anyone or re-explaining anything.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Committed → slightly transactional → relieved once payment is confirmed.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">E-signature request, invoice delivery, payment confirmation, receipt email.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Countersigned Agreement, Invoice, and Receipt — a complete paper trail with no gaps.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-003 — Proposal to Agreement · WF-004 — Agreement to Payment</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">TEMP-002 — Statement of Work · TEMP-003 — Invoice · TEMP-004 — Receipt</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Signature to payment completes in a single sitting, with zero follow-up questions about the invoice.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 05 — WELCOME & ONBOARDING — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Welcome &amp; Onboarding</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Welcome <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-005)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Portal Access</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Kickoff</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Project Dashboard</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">First Milestone</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The client's first sustained look inside MAIM's operation — Portal Access and Project Dashboard are where the brand system has to hold up under daily use, not just first impressions.</div>
+</div>
+
+<!-- ============ SPRINT 05 — WELCOME & ONBOARDING — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Welcome &amp; Onboarding</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-005</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Turn a new client into an oriented, confident participant in their own engagement.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Know where to look, who to talk to, and what happens next without having to ask.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Excited but slightly unmoored → oriented → engaged.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Welcome Packet, portal invitation and walkthrough, kickoff meeting, first dashboard view.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Welcome Packet, portal credentials, and a live Project Dashboard reflecting the Roadmap from WF-006.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-005 — Payment to Onboarding · WF-006 — Onboarding to Project Launch</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">TEMP-005 — Welcome Packet</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client logs into the portal unprompted and can state their first Milestone date without asking.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 06 — DELIVERY EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Delivery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Weekly Updates <span class="mono" style="color:#D8AF55; font-size:10px;">(TEMP-007)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Milestones</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Reviews</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Adjustments</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Momentum</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">This is the recurring loop, seen from the client's seat — it repeats every cycle for as long as WF-007 and WF-008 continue running underneath it.</div>
+</div>
+
+<!-- ============ SPRINT 06 — DELIVERY EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Delivery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-006</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Keep the client feeling informed and in control through the longest stretch of the engagement.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Trust that things are on track without having to chase status themselves.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Settled routine → reassured by visible progress → occasional concern, resolved quickly at Review.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Weekly Report delivery, milestone check-ins, review calls, adjustment conversations.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Weekly Report (TEMP-007) every cycle, plus updated Timeline and Progress views on the dashboard.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-006 — Onboarding to Project Launch · WF-007 — Delivery &amp; Weekly Operations · WF-008 — Milestone Review &amp; Approval</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">TEMP-007 — Weekly Report</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client never has to initiate a status-check conversation — MAIM always reports first.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 07 — APPROVAL EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Approval Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Milestone Complete</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Review</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Approval <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-501)</span></div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Next Phase</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The client-facing view of WF-008's gate — short and deliberate. Each pass through feels like a milestone worth marking, not a routine checkbox.</div>
+</div>
+
+<!-- ============ SPRINT 07 — APPROVAL EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Approval Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-007</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Make each milestone approval feel like a shared moment of progress, not a procedural sign-off.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Review the work quickly, confirm it meets expectations, and see clearly what comes next.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Evaluative → satisfied → forward-looking.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Milestone review call or async walkthrough, approval request, next-phase preview.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Milestone Report and an Approval record the client can point back to.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-008 — Milestone Review &amp; Approval</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">COMP-501 — Approval Block</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client approves within one review cycle, with no more than minor clarifying questions.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 08 — FINAL DELIVERY EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Final Delivery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Delivery</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Training</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Documentation</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Acceptance <span class="mono" style="color:#D8AF55; font-size:10px;">(COMP-506)</span></div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The client-facing close of WF-009 — this is where the engagement earns its ending. Training and Documentation exist so the client feels equipped, not abandoned.</div>
+</div>
+
+<!-- ============ SPRINT 08 — FINAL DELIVERY EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Final Delivery Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-008</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Send the client off feeling fully equipped and formally recognized for completing the engagement.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Receive everything needed to operate independently, with nothing left ambiguous.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Anticipatory → confident → proud of the outcome.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Final delivery walkthrough, training session, documentation handoff, acceptance signing.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Final Delivery Package, training materials, full documentation, signed Acceptance Certificate.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-009 — Final Delivery &amp; Handover</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">COMP-506 — Acceptance Certificate</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client signs Acceptance with no outstanding questions and can operate the deliverable unassisted.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 09 — SUPPORT EXPERIENCE — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Support Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Support</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Questions</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Maintenance</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:#D8AF55; background:rgba(216,175,85,0.06);">Optimization</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">Life after the engagement ends but the relationship doesn't — the client-facing layer over WF-010's Support Agreement, sustaining trust between formal projects.</div>
+</div>
+
+<!-- ============ SPRINT 09 — SUPPORT EXPERIENCE — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Support Experience</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-009</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Keep the client feeling cared for and prioritized after the formal engagement has closed.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Get quick, competent help without needing to re-explain who they are or what was built.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Occasionally uncertain → attended to → confident the relationship continues.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Support inbox or portal ticket, response within stated service levels, periodic optimization check-ins.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">Resolved support requests and, periodically, an Optimization recommendation.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-010 — Support, Expansion &amp; Referral</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">Support Agreement (WF-010 output)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Support requests are acknowledged within the stated service level, every time.</div></div>
+  </div>
+</div>
+
+<!-- ============ SPRINT 10 — EXPANSION & ADVOCACY — JOURNEY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Journey</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Expansion &amp; Advocacy</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:28px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono flow-node" style="font-weight:600;">Results</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Case Study</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node">Testimonial</div>
+    <div class="flow-arrow">↓</div>
+    <div class="flow-node" style="border-color:#D8AF55; background:rgba(216,175,85,0.06);">Referral</div>
+    <div class="flow-arrow">↓</div>
+    <div class="mono flow-node" style="font-weight:600; border-color:rgba(247,244,234,0.4);">Next Project</div>
+  </div>
+
+  <div style="margin-top:24px; font-size:11px; color:rgba(247,244,234,0.5); line-height:1.7; max-width:600px;">The client experience closes its own loop here: Next Project re-enters at CJ-003 for expansion work, and a satisfied client's Referral sends someone new into CJ-001.</div>
+</div>
+
+<!-- ============ SPRINT 10 — EXPANSION & ADVOCACY — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="cj-id">CJ-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — Expansion &amp; Advocacy</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Journey ID</div><div class="field-val mono">CJ-010</div></div>
+    <div class="field-row"><div class="field-label">Purpose</div><div class="field-val">Turn a satisfied client into a willing advocate and a source of future work.</div></div>
+    <div class="field-row"><div class="field-label">Client Goal</div><div class="field-val">Feel proud enough of the results to put their name behind them publicly.</div></div>
+    <div class="field-row"><div class="field-label">Client Emotions</div><div class="field-val">Proud → generous → invested in MAIM's continued success.</div></div>
+    <div class="field-row"><div class="field-label">MAIM Touchpoints</div><div class="field-val">Results conversation, case study interview, testimonial request, referral ask.</div></div>
+    <div class="field-row"><div class="field-label">Client Deliverables</div><div class="field-val">A published Case Study crediting the client, and an easy way to refer someone in their network.</div></div>
+    <div class="field-row"><div class="field-label">Internal Workflow References</div><div class="field-val mono">WF-010 — Support, Expansion &amp; Referral</div></div>
+    <div class="field-row"><div class="field-label">Related Templates</div><div class="field-val mono">Case Study, Referral Package (WF-010 outputs)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Success Criteria</div><div class="field-val">Client agrees to a testimonial or refers at least one new lead without being asked twice.</div></div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">Client Journey — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#1a1a1a; }
+  doc-page:not(:defined){ visibility:hidden; }
+  .sos-page { break-before: page; background:#050505; padding:60px 58px; box-sizing:border-box; min-height:11in; font-family:Archivo,sans-serif; color:#F7F4EA; }
+  .sos-page:first-child { break-before: auto; }
+  .tribar { display:flex; gap:4px; }
+  .tribar > div { flex:1; }
+  .mono { font-family:'JetBrains Mono',monospace; }
+  .field-row { display:grid; grid-template-columns:220px 1fr; gap:16px; padding:12px 0; border-bottom:1px solid rgba(247,244,234,0.1); }
+  .field-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#D8AF55; }
+  .field-val { font-size:13px; line-height:1.55; color:#F7F4EA; }
+  .ai-id { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; border:1px solid #D8AF55; color:#D8AF55; padding:3px 9px; }
+  .sub-title { font-family:Archivo,sans-serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+  .sub-rule { height:1px; background:rgba(247,244,234,0.2); width:100%; margin-bottom:12px; }
+  .code-block { font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; background:rgba(216,175,85,0.05); border:1px solid rgba(216,175,85,0.25); padding:16px 18px; white-space:pre-wrap; color:#E8DCC0; }
+  .chip { font-family:'JetBrains Mono',monospace; font-size:10px; border:1px solid rgba(247,244,234,0.3); padding:4px 10px; color:rgba(247,244,234,0.8); }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0" orientation="portrait" hint-size="100%,1100px">
+
+<!-- ============ PAGE 14 — CATALOG ============ -->
+<div class="sos-page" style="display:flex; flex-direction:column;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:18px; border-bottom:1px solid rgba(247,244,234,0.2);">
+    <div class="mono" style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(247,244,234,0.55);">Major AI Mindset · Service Operating System</div>
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; color:rgba(247,244,234,0.4);">SOS-AI-REGISTRY · v0.1</div>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:56px 0;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:#D8AF55; margin-bottom:18px;">Page 14 · HR for the AI Workforce</div>
+    <h1 style="font-family:Archivo,sans-serif; font-weight:900; font-size:52px; line-height:1.05; margin:0 0 4px; text-transform:uppercase;">AI Agent Registry &amp; Governance</h1>
+    <div class="tribar" style="width:210px; height:6px; margin:22px 0 26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+    <p style="font-size:16px; color:rgba(247,244,234,0.78); max-width:560px; margin:0 0 16px; line-height:1.6;">Defines every AI agent in the MAIM ecosystem — what it's responsible for, which Skills it may use, which systems it can touch, and where human approval is required.</p>
+    <p style="font-size:13.5px; line-height:1.7; color:rgba(247,244,234,0.5); max-width:560px; margin:0;">This governs reusable AI workers, not chatbot personalities — responsibilities, permissions, and execution standards.</p>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,234,0.2); padding-top:20px;">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-001</span>Sprint 01 — AI Workforce Philosophy</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-002</span>Sprint 02 — Agent Registry</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-003</span>Sprint 03 — Skills &amp; Capability Matrix</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-004</span>Sprint 04 — System Permissions</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-005</span>Sprint 05 — Human Approval Framework</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-006</span>Sprint 06 — Agent Collaboration Model</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-007</span>Sprint 07 — Monitoring &amp; Performance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-008</span>Sprint 08 — Security &amp; Compliance</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(247,244,234,0.12);"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-009</span>Sprint 09 — Lifecycle Management</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+      <div style="display:flex; justify-content:space-between; padding:10px 0;"><span><span class="mono" style="color:#D8AF55; margin-right:12px;">AG-010</span>Sprint 10 — MAIM AI Workforce Map</span><span class="mono" style="color:#1F7A3A; font-size:10px;">COMPLETE</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px; font-size:11px; color:rgba(247,244,234,0.4); line-height:1.6;">Catalog grows as sprints are defined — send each sprint's spec (purpose, governance scope, required standards, agent roles, responsibilities, skills, permissions, human approval requirements, connected systems, related workflows/automations/playbooks, monitoring requirements, security requirements, example agent, completion criteria, future enhancements) to add it here.</div>
+</div>
+
+<!-- ============ AG-001 — CORE PRINCIPLES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Core Principles</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — AI Workforce Philosophy</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">AI Workforce Mission</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 24px;">Define the principles that govern every MAIM AI agent — the HR handbook for a workforce that never sleeps, never quits, and must never be trusted with unchecked authority.</p>
+
+  <div style="display:flex; flex-direction:column; gap:8px;">
+    <div style="border-left:2px solid #D8AF55; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Agents execute.</div>
+    <div style="border-left:2px solid #D8AF55; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Humans approve.</div>
+    <div style="border-left:2px solid #1F7A3A; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">GitHub defines.</div>
+    <div style="border-left:2px solid #1F7A3A; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Airtable operates.</div>
+    <div style="border-left:2px solid #006BB6; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Notion explains.</div>
+    <div style="border-left:2px solid #006BB6; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9);">Claude Design visualizes.</div>
+    <div style="border-left:2px solid #8A5A44; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9); font-weight:600;">No agent owns the system.</div>
+    <div style="border-left:2px solid #8A5A44; padding-left:14px; font-size:13px; color:rgba(247,244,234,0.9); font-weight:600;">Every agent is accountable.</div>
+  </div>
+</div>
+
+<!-- ============ AG-001 — PHILOSOPHY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Philosophy</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — AI Workforce Philosophy</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Agent Categories</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Every agent maps to one existing SKILL-XXX (Page 08) — this registry never introduces a new capability, only governs the ones already defined.</p>
+
+  <div class="sub-title">Human-in-the-Loop Philosophy</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">An agent drafts, validates, or recommends by default; only Financial Skill's exact-match invoice path (SKILL-004) runs unattended end to end — every other Skill's output waits for a named human before it reaches a client.</p>
+
+  <div class="sub-title">Escalation Philosophy</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An agent that cannot complete its task with confidence escalates to a named human rather than guessing — silence or a best-effort guess is never an acceptable failure mode.</p>
+</div>
+
+<!-- ============ AG-001 — SECURITY, GOVERNANCE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-001</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Security, Governance &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 01 — AI Workforce Philosophy</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Security Principles</div><div class="field-val">An agent's access is scoped to exactly the systems its Skill requires (per SKILL-XXX's Required Inputs) — never broad, standing access "just in case."</div></div>
+    <div class="field-row"><div class="field-label">Governance Principles</div><div class="field-val">This registry is reviewed on the same quarterly cadence as NT-001/NT-008; any new agent must map to an existing Skill and pass the Permissions Model (AG-004) before activation.</div></div>
+    <div class="field-row"><div class="field-label">Registry ID</div><div class="field-val mono">AG-001</div></div>
+    <div class="field-row"><div class="field-label">Sprint Name</div><div class="field-val">AI Workforce Philosophy</div></div>
+    <div class="field-row"><div class="field-label">Governance Scope</div><div class="field-val">Every AI agent operating anywhere in the SOS ecosystem, regardless of underlying model provider.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 08 Agent Skill Library, GH-001 Governance, PB-010 Internal Operations</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The eight Core Principles are published and referenced from every subsequent AG-XXX sprint — no agent definition contradicts them.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-002 — FIELDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Fields</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Agent Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Create the master registry of all agents — the AG-XXX counterpart to GH-006's Registry Architecture, but for the AI workforce rather than design objects.</p>
+
+  <div class="sub-title">Required Fields</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:4px 20px; font-size:11.5px; color:rgba(247,244,234,0.8);">
+    <div>Agent ID <span class="mono" style="color:#D8AF55;">(primary)</span></div>
+    <div>Agent Name</div>
+    <div>Purpose</div>
+    <div>Department</div>
+    <div>Owner</div>
+    <div>Status</div>
+    <div>Primary Skills</div>
+    <div>Connected Systems</div>
+    <div>Approval Level</div>
+    <div>Version</div>
+    <div>Last Reviewed</div>
+  </div>
+</div>
+
+<!-- ============ AG-002 — CATEGORIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Categories</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Agent Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip" style="padding:8px 12px;">Operations</div>
+    <div class="chip" style="padding:8px 12px;">Sales</div>
+    <div class="chip" style="padding:8px 12px;">Client Success</div>
+    <div class="chip" style="padding:8px 12px;">Finance</div>
+    <div class="chip" style="padding:8px 12px;">Knowledge</div>
+    <div class="chip" style="padding:8px 12px;">Marketing</div>
+    <div class="chip" style="padding:8px 12px;">Engineering</div>
+    <div class="chip" style="padding:8px 12px;">Creative</div>
+    <div class="chip" style="padding:8px 12px;">Executive</div>
+    <div class="chip" style="padding:8px 12px;">Research</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:12px; max-width:600px;">Department groups agents for reporting and ownership purposes only — it does not grant any additional system access beyond what the agent's own Primary Skills define.</p>
+</div>
+
+<!-- ============ AG-002 — STATUS, EXAMPLE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-002</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Status, Example &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 02 — Agent Registry</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Status Lifecycle</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px;">
+    <div class="chip">Proposed</div>
+    <div class="chip">In Development</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Piloting</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Active</div>
+    <div class="chip" style="border-color:#8A5A44; color:#8A5A44;">Suspended</div>
+    <div class="chip" style="opacity:0.5;">Retired</div>
+  </div>
+
+  <div class="sub-title">Example Agent Record</div>
+  <div class="sub-rule"></div>
+  <div class="code-block">Agent ID: AGENT-004
+Agent Name: Financial Skill Agent
+Department: Finance
+Owner: Operations Lead
+Status: Active
+Primary Skills: [SKILL-004]
+Connected Systems: [Airtable, Gmail, Stripe (future)]
+Approval Level: Autonomous — Standard Path Only
+Version: 1.0.0</div>
+
+  <div style="margin-top:20px; display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Ownership</div><div class="field-val">Every agent has exactly one accountable Owner — never a team or "shared" ownership.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 08 Agent Skill Library (Primary Skills source)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Agent Registry table exists with all 11 fields, seeded with at least one record per active Skill from Page 08.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-003 — CAPABILITY MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Capability Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Skills &amp; Capability Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Define which Skills each agent can use — an explicit allow-list, never an assumed default of "everything."</p>
+
+  <div class="code-block">Proposal Agent
+✓ Proposal Skill (SKILL-002)
+✓ Research Skill
+✓ Meeting Summary Skill (SKILL-006)
+✗ Payment Approval
+✗ Contract Approval</div>
+
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; margin-top:14px; max-width:600px;">Every agent's capability map lists both what it can do and explicitly what it cannot — the ✗ lines exist so no one has to infer the boundary from silence.</p>
+</div>
+
+<!-- ============ AG-003 — MATRICES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Matrices</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Skills &amp; Capability Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Skill Matrix</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A grid of every Agent (rows) against every SKILL-XXX (columns) — each cell is a checkmark or blank, maintained in Airtable as a many-to-many link, never duplicated in prose per agent.</p>
+
+  <div class="sub-title">Permission Matrix</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A second grid crossing Agent against Connected System, each cell marked Read, Write, or none — an agent with Proposal Skill gets Airtable Write on the Templates table only, never blanket Write access to every table.</p>
+
+  <div class="sub-title">Skill Dependencies</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An agent cannot be granted a Skill whose Required Inputs (per Page 08) it has no Connected System access to satisfy — the dependency is checked at grant time, not discovered at runtime failure.</p>
+</div>
+
+<!-- ============ AG-003 — REVIEWS & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-003</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Reviews &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 03 — Skills &amp; Capability Matrix</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Required Reviews</div><div class="field-val">Any new Skill grant to an existing agent requires the same domain Maintainer sign-off as a GH-008 pull request — capability expansion is never self-service.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 08 Agent Skill Library, AG-002 Agent Registry (Primary Skills field)</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Skill Matrix and Permission Matrix both exist as live Airtable views, and every Active agent (AG-002) has a complete row with no ambiguous cells.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-004 — PERMISSION LEVELS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Permission Levels</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — System Permissions</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Control what every agent can access — four graduated levels, applied per system, never an all-or-nothing switch.</p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="chip" style="opacity:0.5;">None</div>
+    <div class="chip">Read</div>
+    <div class="chip" style="border-color:#D8AF55; color:#D8AF55;">Write</div>
+    <div class="chip" style="border-color:#1F7A3A; color:#1F7A3A;">Approve</div>
+  </div>
+
+  <div class="code-block" style="margin-top:20px;">GitHub
+Read: yes (approved definitions only)
+Write: no
+Approve: no
+None: (all other repository actions)</div>
+</div>
+
+<!-- ============ AG-004 — SYSTEM MATRIX ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">System Matrix</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — System Permissions</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Connected Systems</div>
+  <div class="sub-rule"></div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:22px;">
+    <div class="chip" style="padding:8px 12px;">GitHub</div>
+    <div class="chip" style="padding:8px 12px;">Airtable</div>
+    <div class="chip" style="padding:8px 12px;">Notion</div>
+    <div class="chip" style="padding:8px 12px;">Google Drive</div>
+    <div class="chip" style="padding:8px 12px;">Gmail</div>
+    <div class="chip" style="padding:8px 12px;">Calendar</div>
+    <div class="chip" style="padding:8px 12px; opacity:0.6;">Slack</div>
+    <div class="chip" style="padding:8px 12px; opacity:0.6;">Stripe</div>
+    <div class="chip" style="padding:8px 12px; opacity:0.6;">CRM</div>
+  </div>
+
+  <div class="sub-title">Read/Write Matrix &amp; Restricted Systems</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">GitHub is Read-only for every agent without exception (per AG-001's "no agent owns the system"). Stripe and CRM are Restricted Systems — Read only, with Write reserved exclusively for AUTO-004/AUTO-001 automations, never a general-purpose agent grant.</p>
+
+  <div class="sub-title">Approval Gates</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Approve-level access exists for exactly zero agents today — it is reserved on the matrix for a future, narrowly-scoped case (e.g. auto-approving a sub-$500 expense) and requires an AG-001 philosophy update before first use.</p>
+</div>
+
+<!-- ============ AG-004 — REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-004</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 04 — System Permissions</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">GH-010 Integration Map, AT-010 Automation Map, AG-003 Skill Matrix</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every Connected System has a defined default permission level, and no Active agent (AG-002) holds Write access beyond what its granted Skills require.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-005 — APPROVAL LEVELS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Approval Levels</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Human Approval Framework</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Clearly define where humans stay in control — the operational enforcement of AG-001's "agents execute, humans approve."</p>
+
+  <div style="display:flex; flex-direction:column; gap:10px;">
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:rgba(247,244,234,0.5); width:150px;">Draft Only</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Agent output never leaves internal review — default for any new Skill.</div></div>
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#D8AF55; width:150px;">Named Approver</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">A specific human (not a role) must approve before send — Proposal, Invoice, Contract.</div></div>
+    <div style="display:flex; gap:16px; align-items:baseline;"><div class="mono" style="color:#1F7A3A; width:150px;">Autonomous — Bounded</div><div style="font-size:12.5px; color:rgba(247,244,234,0.75);">Runs unattended only within a validated range (e.g. SKILL-004 exact-match invoices).</div></div>
+  </div>
+
+  <div class="code-block" style="margin-top:22px;">Proposal:  Agent drafts → Human approves
+Invoice:   Agent prepares → Finance approves
+Contract:  Agent drafts → Legal approves</div>
+</div>
+
+<!-- ============ AG-005 — ESCALATION & THRESHOLDS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Escalation &amp; Thresholds</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Human Approval Framework</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Escalation Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">An agent operating at Autonomous — Bounded that hits a case outside its validated range escalates to Named Approver automatically, per AG-001's escalation philosophy — it never widens its own scope to cope.</p>
+
+  <div class="sub-title">Confidence Thresholds</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Any agent producing a recommendation with stated confidence below a Skill-defined threshold routes to Draft Only regardless of its normal approval level — low confidence always downgrades, never upgrades.</p>
+
+  <div class="sub-title">Required Human Decisions</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Pricing deviation from a Package norm, any client-facing legal language, and anything touching Confidentiality: Restricted or above always require Named Approver — no exceptions regardless of agent confidence.</p>
+</div>
+
+<!-- ============ AG-005 — AUDIT & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-005</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Audit &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 05 — Human Approval Framework</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Audit Requirements</div><div class="field-val">Every approval decision is logged with the Named Approver, timestamp, and the exact agent output reviewed — reconstructable months later without relying on memory.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 08 Human Review Rules (DS-006), AG-004 System Permissions</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every Active agent (AG-002) has a stated Approval Level, and every Named-Approver case logs its decision per the Audit Requirements above.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-006 — COLLABORATION MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Collaboration Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Collaboration Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Show how agents work together — a single agent handles a Skill, but a client engagement passes through several in sequence.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Discovery Agent</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Proposal Agent</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Project Manager Agent</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Client Success Agent</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Knowledge Agent</div>
+  </div>
+</div>
+
+<!-- ============ AG-006 — HANDOFFS & DEPENDENCIES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Handoffs &amp; Dependencies</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Collaboration Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Handoffs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Each arrow is a Workflow transition (WF-001–010) — the Discovery Agent's output (Discovery Report) is the Proposal Agent's declared input, exactly matching DS-005's input/output chaining. An agent never hands off to another agent directly; it hands off through the Artifact or record the Workflow defines.</p>
+
+  <div class="sub-title">Dependencies</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">The Proposal Agent cannot start until the Discovery Agent's output is Approved (per AG-005) — a downstream agent never operates on an unapproved upstream draft.</p>
+
+  <div class="sub-title">Shared Skills</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Meeting Summary Skill (SKILL-006) and Knowledge Capture Skill (SKILL-009) are used by more than one agent in this chain — shared Skills are still governed by the same single Skill Matrix (AG-003), never duplicated per agent.</p>
+</div>
+
+<!-- ============ AG-006 — CONFLICT RESOLUTION & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-006</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Conflict Resolution &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 06 — Agent Collaboration Model</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Conflict Resolution</div><div class="field-val">If two agents' outputs disagree (e.g. Client Success Agent flags churn risk while Project Manager Agent reports On Track), the disagreement itself escalates to the Named Approver rather than one agent's output silently overriding the other.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">Page 04 Workflow Library (handoff sequence), DS-005 Workflow Metadata Standard</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">The Collaboration Map is published showing every multi-agent chain currently in use, with each handoff traced to a real Workflow ID.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-007 — METRICS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Metrics</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Monitoring &amp; Performance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Measure agent effectiveness — every agent earns its Approval Level (AG-005) through demonstrated performance, not assumed competence.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:8px;">
+    <div class="chip" style="padding:8px 12px;">Tasks Completed</div>
+    <div class="chip" style="padding:8px 12px;">Accuracy</div>
+    <div class="chip" style="padding:8px 12px; border-color:#1F7A3A; color:#1F7A3A;">Approval Rate</div>
+    <div class="chip" style="padding:8px 12px; border-color:#D8AF55; color:#D8AF55;">Revision Rate</div>
+    <div class="chip" style="padding:8px 12px; border-color:#8A5A44; color:#8A5A44;">Escalation Rate</div>
+    <div class="chip" style="padding:8px 12px;">Client Satisfaction</div>
+  </div>
+</div>
+
+<!-- ============ AG-007 — HEALTH SCORE & QUALITY ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Health Score &amp; Quality</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Monitoring &amp; Performance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Health Score</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">A composite of Approval Rate and Revision Rate, tracked per agent the same way SKILL-008 tracks Client Health Score — a declining trend triggers review before it triggers removal.</p>
+
+  <div class="sub-title">Quality Metrics</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Accuracy is measured against SKILL-007 QA's automated checks, not human opinion alone — an agent's draft either passes structural validation or it doesn't.</p>
+
+  <div class="sub-title">Failure Tracking</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every escalation and every rejected draft logs to a Failures view (mirroring AT-010's error-handling pattern) — failures are data, not embarrassments to hide.</p>
+</div>
+
+<!-- ============ AG-007 — IMPROVEMENT CYCLE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-007</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Improvement Cycle &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 07 — Monitoring &amp; Performance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:26px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Improvement Cycle</div><div class="field-val">A high Revision Rate on a specific failure type feeds directly into NT-009's Lessons Learned cycle — Observation → Lesson Captured → Pattern Identified, same loop as any other operational lesson.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">SKILL-007 QA, SKILL-008 Client Success (Health Score pattern), NT-009 Continuous Improvement</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every Active agent (AG-002) reports its six metrics on a dashboard, and any agent whose Health Score declines two cycles running is flagged for Owner review.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-008 — ACCESS & DATA HANDLING ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Access &amp; Data Handling</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Security &amp; Compliance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 22px;">Protect clients and the operating system — security is not a separate concern from governance, it's AG-004's Permission Model enforced under adversarial assumptions.</p>
+
+  <div class="sub-title">Access Rules</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Every agent authenticates with its own scoped credential — never a shared "AI service account" — so a single compromised credential never grants access beyond one agent's already-narrow permission set (AG-004).</p>
+
+  <div class="sub-title">Sensitive Data Handling</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">An agent never receives more of a record than its Skill's Required Inputs specify (DS-006) — a Proposal Agent sees pricing and scope, never a client's full financial history unless a Skill explicitly requires it.</p>
+</div>
+
+<!-- ============ AG-008 — CONFIDENTIALITY & AUDIT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Confidentiality &amp; Audit</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Security &amp; Compliance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Confidentiality</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Any record marked Confidential or Restricted (DS-001) is off-limits to an agent unless that agent's Skill is explicitly named on the record's access list — inherited confidentiality blocks by default, never opens by default.</p>
+
+  <div class="sub-title">Audit Logs</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Every read and write an agent makes is logged with Agent ID, timestamp, and record touched — the same durable trail as AG-005's approval audit, extended to cover routine access, not just approvals.</p>
+</div>
+
+<!-- ============ AG-008 — COMPLIANCE, INCIDENT & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-008</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Compliance, Incident Response &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 08 — Security &amp; Compliance</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Compliance Rules</div><div class="field-val">Any agent touching a Client marked with a specific data-handling obligation inherits that obligation automatically from the Client record — never a manual per-agent checklist.</div></div>
+    <div class="field-row"><div class="field-label">Incident Response</div><div class="field-val">A suspected credential compromise or unexpected access pattern moves the agent to Suspended (AG-002 status) immediately, pending Owner and Operations Lead review — suspension is reversible, silence is not acceptable.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">DS-001 Confidentiality field, AG-004 System Permissions, AG-005 Audit Requirements</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every agent has its own scoped credential, every access is logged, and an incident response runbook exists naming who to notify and how fast.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-009 — LIFECYCLE STAGES ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Lifecycle Stages</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Lifecycle Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Manage agents from creation through retirement — the counterpart to AG-002's Status Lifecycle, with the process behind each transition.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Idea</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Prototype</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box;">Testing</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Approved</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid #1F7A3A; padding:9px 16px; width:100%; box-sizing:border-box;">Production</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Maintenance</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600; opacity:0.6;">Retired</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">This maps directly onto AG-002's Status field: Idea/Prototype = Proposed, Testing = In Development, Approved/Production = Piloting → Active, Maintenance stays Active, Retired = Retired.</p>
+</div>
+
+<!-- ============ AG-009 — VERSIONING, TESTING & DEPLOYMENT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Versioning, Testing &amp; Deployment</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Lifecycle Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Versioning</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Agent versions follow GH-009's SemVer rules exactly — a MAJOR bump (e.g. a new Skill granted) requires the same Operations Lead sign-off as any breaking GitHub change.</p>
+
+  <div class="sub-title">Testing</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 20px;">Testing stage runs the agent against real (anonymized) past engagements — the same Practice Scenario approach as NT-008's human Readiness Check — before any live client ever sees its output.</p>
+
+  <div class="sub-title">Deployment</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0;">Production deployment starts at the most conservative Approval Level (AG-005) for that agent's category and only relaxes after a defined number of clean cycles — trust is earned incrementally, never granted at launch.</p>
+</div>
+
+<!-- ============ AG-009 — RETIREMENT, ARCHIVE & REQUIRED OUTPUT ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-009</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Retirement, Archive &amp; Required Output</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 09 — Lifecycle Management</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Retirement</div><div class="field-val">An agent moves to Retired when its Skill is superseded or its Health Score (AG-007) fails to recover after review — retirement revokes all credentials and permission grants immediately.</div></div>
+    <div class="field-row"><div class="field-label">Archive Rules</div><div class="field-val">A Retired agent's full record (registry entry, audit logs, performance history) is retained indefinitely — never deleted, matching GH-008/NT-004's non-destructive archive pattern.</div></div>
+    <div class="field-row"><div class="field-label">Related SOS Objects</div><div class="field-val mono">AG-002 Status Lifecycle, GH-009 Versioning, NT-008 Training/Readiness Check</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Completion Criteria</div><div class="field-val">Every agent's current lifecycle stage maps cleanly to its AG-002 Status, and a retirement runbook exists specifying credential revocation as the first step.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-010 — EXECUTIVE MAP ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Executive Map</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — MAIM AI Workforce Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div class="sub-title">Purpose</div>
+  <div class="sub-rule"></div>
+  <p style="font-size:12.5px; line-height:1.6; color:rgba(247,244,234,0.7); max-width:600px; margin:0 0 26px;">Present the complete AI organization — the closing sprint of Page 14, giving every agent from AG-002 a place in one org chart.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:400px;">
+    <div class="mono" style="font-size:12.5px; border:1px solid #D8AF55; background:rgba(216,175,85,0.06); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Chief Vibe Officer <span style="font-size:9.5px; color:rgba(247,244,234,0.5);">HUMAN</span></div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Executive Agents</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Operations</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Sales</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Client Success</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Finance</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Knowledge</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.25); padding:9px 16px; width:100%; box-sizing:border-box;">Creative</div>
+    <div style="color:#D8AF55; font-size:13px; margin:1px 0 1px 24px;">↓</div>
+    <div class="mono" style="font-size:12.5px; border:1px solid rgba(247,244,234,0.4); padding:9px 16px; width:100%; box-sizing:border-box; font-weight:600;">Engineering</div>
+  </div>
+  <p style="font-size:11px; color:rgba(247,244,234,0.5); line-height:1.6; max-width:600px; margin-top:14px;">The Chief Vibe Officer is a human role, never an agent — no automated position sits above every other agent, per AG-001's "no agent owns the system."</p>
+</div>
+
+<!-- ============ AG-010 — DEPARTMENT CONNECTIONS ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Department Connections</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — MAIM AI Workforce Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:24px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column;">
+    <div class="field-row"><div class="field-label">Operations</div><div class="field-val">Discovery, Project Manager, QA agents — Skills SKILL-001/005/007, Workflows WF-001/006/007, Playbooks PB-001/004/010.</div></div>
+    <div class="field-row"><div class="field-label">Sales</div><div class="field-val">Proposal, SOW agents — Skills SKILL-002/003, Workflows WF-002/003, Playbook PB-002.</div></div>
+    <div class="field-row"><div class="field-label">Client Success</div><div class="field-val">Client Success, Expansion agents — Skills SKILL-008/010, Workflow WF-010, Playbook PB-009.</div></div>
+    <div class="field-row"><div class="field-label">Finance</div><div class="field-val">Financial Skill agent — Skill SKILL-004, Workflow WF-004, Automation AUTO-004.</div></div>
+    <div class="field-row"><div class="field-label">Knowledge</div><div class="field-val">Meeting Intelligence, Knowledge Capture agents — Skills SKILL-006/009, Automation AUTO-007, feeds NT-006/007/009.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Creative &amp; Engineering</div><div class="field-val">Reserved departments for future agents — no active agent occupies these categories yet, per AG-002's Future Enhancements.</div></div>
+  </div>
+</div>
+
+<!-- ============ AG-010 — SHARED RESOURCES, EXPANSION & PAGE COMPLETION ============ -->
+<div class="sos-page">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+    <div class="ai-id">AG-010</div>
+    <div class="mono" style="font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,244,234,0.4);">Shared Resources, Expansion &amp; Page Completion</div>
+  </div>
+  <h2 style="font-family:Archivo,sans-serif; font-weight:900; font-size:30px; margin:6px 0 4px; text-transform:uppercase;">Sprint 10 — MAIM AI Workforce Map</h2>
+  <div class="tribar" style="width:120px; height:4px; margin-bottom:22px;"><div style="background:#1F7A3A;"></div><div style="background:#D8AF55;"></div><div style="background:#006BB6;"></div></div>
+
+  <div style="display:flex; flex-direction:column; margin-bottom:26px;">
+    <div class="field-row"><div class="field-label">Shared Skills</div><div class="field-val">SKILL-006 Meeting Intelligence and SKILL-007 QA are used across nearly every department — governed once in the Skill Matrix (AG-003), never redefined per department.</div></div>
+    <div class="field-row"><div class="field-label">Shared Automations</div><div class="field-val">AUTO-007 Knowledge Automation runs regardless of which department's meeting it's summarizing.</div></div>
+    <div class="field-row" style="border-bottom:none;"><div class="field-label">Future Expansion</div><div class="field-val">Creative and Engineering departments activate only once a real Skill is defined for them on Page 08 — this map reserves their place without inventing capability ahead of need.</div></div>
+  </div>
+
+  <div class="sub-title">Page 14 Completion Criteria</div>
+  <div class="sub-rule"></div>
+  <div style="display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:rgba(247,244,234,0.85);">
+    <div>☑ One AI workforce philosophy — AG-001</div>
+    <div>☑ One master agent registry — AG-002</div>
+    <div>☑ One skills matrix — AG-003</div>
+    <div>☑ One permissions model — AG-004</div>
+    <div>☑ One human approval framework — AG-005</div>
+    <div>☑ One collaboration model — AG-006</div>
+    <div>☑ One monitoring framework — AG-007</div>
+    <div>☑ One security model — AG-008</div>
+    <div>☑ One lifecycle model — AG-009</div>
+    <div>☑ One AI organization map — AG-010</div>
+  </div>
+
+  <div style="margin-top:40px; padding-top:20px; border-top:1px solid rgba(247,244,234,0.2); display:flex; justify-content:space-between; align-items:center;">
+    <div class="mono" style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#D8AF55;">AI Agent Registry &amp; Governance — End of Cycle</div>
+    <div class="mono" style="font-size:10px; color:rgba(247,244,234,0.4);">10 of 10 Sprints Complete</div>
+  </div>
+</div>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>
