@@ -35,7 +35,7 @@ Each project folder is a Claude Design export: open its main `.html` file in a b
 
 ## Where this lives
 
-- `MajorDream444/MAIM-ECOSYTEM-BRANDING-SYSTEM` (personal account)
-- `Major-Dream-Williams/MAIM-ECOSYTEM-BRANDING-SYSTEM` (org, private)
+- `MajorDream444/MAIM-ECOSYSTEM-BRANDING-SYSTEM` (personal account)
+- `Major-Dream-Williams/MAIM-ECOSYSTEM-BRANDING-SYSTEM` (org, private)
 
 Imported 2026-10-31 from the Claude Design exports in `MAIM - BRANDING SYSTEM`.
